@@ -17,5 +17,9 @@ export default {
         { title: 'Network states (with a privacy focus)' },
         { title: 'Solarpunk vs Lunarpunk' },
         { title: 'Veksl' }
-    ]
+    ],
+    tickets: [
+        { title: 'Conference ticket' },
+        { title: 'Party ticket' }
+    ],
 }

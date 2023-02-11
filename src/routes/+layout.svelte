@@ -3,11 +3,11 @@
   export let data;
 
   const menu = [
-    { title: 'About', url: '/#about' },
-    { title: 'Speakers', url: '/#speakers' },
-    { title: 'Program', url: '/#program' },
-    { title: 'Sponsors', url: '/#sponsors' },
-    { title: 'Ticket', url: '/#ticket', class: 'button' }
+    { title: 'About', url: '#about' },
+    { title: 'Speakers', url: '#speakers' },
+    { title: 'Program', url: '#program' },
+    { title: 'Sponsors', url: '#sponsors' },
+    { title: 'Ticket', url: '#ticket', class: 'button' }
   ]
 
 </script>
