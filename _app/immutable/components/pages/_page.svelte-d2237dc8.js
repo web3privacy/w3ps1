@@ -49,9 +49,9 @@ function create_each_block_1(ctx) {
       this.h();
     },
     h() {
-      attr(div0, "class", "text-black text-2xl uppercase");
-      attr(div1, "class", "text-black mt-4 text-lg");
-      attr(div2, "class", "bg-white px-4 py-6");
+      attr(div0, "class", "text-2xl uppercase");
+      attr(div1, "class", "mt-4 text-lg");
+      attr(div2, "class", "bg-[#0d1117] hover:text-black hover:bg-white px-4 py-6 cursor-pointer");
     },
     m(target, anchor) {
       insert_hydration(target, div2, anchor);
@@ -161,7 +161,8 @@ function create_fragment(ctx) {
   let t14;
   let div16;
   document.title = title_value = /*data*/
-  ctx[0].config.title;
+  ctx[0].config.title + " | " + /*data*/
+  ctx[0].config.date;
   let each_value_1 = (
     /*data*/
     ctx[0].config.themes
@@ -223,7 +224,7 @@ function create_fragment(ctx) {
       this.h();
     },
     l(nodes) {
-      const head_nodes = head_selector("svelte-smlx4f", document.head);
+      const head_nodes = head_selector("svelte-a0ctph", document.head);
       head_nodes.forEach(detach);
       t0 = claim_space(nodes);
       div4 = claim_element(nodes, "DIV", { class: true, id: true });
@@ -375,7 +376,8 @@ function create_fragment(ctx) {
     p(ctx2, [dirty]) {
       if (dirty & /*data*/
       1 && title_value !== (title_value = /*data*/
-      ctx2[0].config.title)) {
+      ctx2[0].config.title + " | " + /*data*/
+      ctx2[0].config.date)) {
         document.title = title_value;
       }
       if (dirty & /*data*/

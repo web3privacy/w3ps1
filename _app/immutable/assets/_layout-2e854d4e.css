@@ -483,8 +483,14 @@ body{
 
 *{
   font-family: Ubuntu Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+footer a{
+  text-decoration-line: underline;
+}
+
+footer a:hover{
+  text-decoration-line: none;
 }
 
 .middle-pane-medium{
@@ -566,6 +572,10 @@ body{
   margin-top: 1rem;
 }
 
+.mt-8{
+  margin-top: 2rem;
+}
+
 .inline-block{
   display: inline-block;
 }
@@ -618,6 +628,10 @@ body{
   flex-grow: 1;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -646,14 +660,14 @@ body{
   border-width: 1px;
 }
 
+.bg-\[\#0d1117\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(13 17 23 / var(--tw-bg-opacity));
+}
+
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .px-3{
@@ -719,8 +733,8 @@ body{
   line-height: 1;
 }
 
-.text-7xl{
-  font-size: 4.5rem;
+.text-8xl{
+  font-size: 6rem;
   line-height: 1;
 }
 
@@ -742,13 +756,27 @@ body{
   text-transform: uppercase;
 }
 
-.text-black{
+.text-white{
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-white\/50{
+  color: rgb(255 255 255 / 0.5);
 }
 
 .underline{
   text-decoration-line: underline;
+}
+
+.hover\:bg-white:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:text-black:hover{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .hover\:no-underline:hover{
