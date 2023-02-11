@@ -15,41 +15,39 @@
 
 <div class="relative w-full min-h-screen">
 
-  <div class="w-full h-screen">
-    <div class="fixed w-full h-18 bg-black pt-6 md:pt-2 pb-2">
-      <div class="middle-pane-big bg-black">
-        <div class="flex">
-          <div class="flex items-center gap-4 grow">
-            <div class="w-20">
-              <a href="https://web3privacy.info"><img src="/web3privacy.png" /></a>
-            </div>
-            <!--h1 class="text-2xl uppercase">{data.config.title}</h1-->  
+
+  <div class="fixed w-full h-18 bg-black pt-6 md:pt-2 pb-2">
+    <div class="middle-pane-big bg-black">
+      <div class="flex">
+        <div class="flex items-center gap-4 grow">
+          <div class="w-20">
+            <a href="https://web3privacy.info"><img src="/web3privacy.png" /></a>
           </div>
-          <div class="flex items-center gap-6 uppercase text-xl">
-            {#each menu as mi}
-              <div class={mi.class}><a href={mi.url}>{mi.title}</a></div>
-            {/each}
-          </div>
+          <!--h1 class="text-2xl uppercase">{data.config.title}</h1-->  
+        </div>
+        <div class="flex items-center gap-6 uppercase text-xl">
+          {#each menu as mi}
+            <div class={mi.class}><a href={mi.url}>{mi.title}</a></div>
+          {/each}
         </div>
       </div>
     </div>
-    <div class="w-full h-full">
-      <div class="w-full h-full flex items-center text-center">
-        <div class="mx-auto">
-          <div class="text-7xl font-bold uppercase mb-8">{data.config.shortname}</div>
-          <div class="text-5xl mb-4">{data.config.date}</div>
-          <div class="text-5xl">{data.config.venue}</div>
-        </div>
-
+  </div>
+  <div class="w-full h-screen">
+    <div class="w-full h-full flex items-center text-center">
+      <div class="mx-auto">
+        <div class="text-7xl font-bold uppercase mb-8">{data.config.shortname}</div>
+        <div class="text-5xl mb-4">{data.config.date}</div>
+        <div class="text-5xl">{data.config.venue}</div>
       </div>
+
     </div>
   </div>
 
   <slot />
 
-
   <div class="pb-16 bg-black">
-    <div class="middle-pane-medium pt-6 mx-auto">
+    <div class="middle-pane-big pt-6 mx-auto">
       <div class="flex items-center">
         <div class="grow">
           <div class="w-48">
