@@ -900,7 +900,7 @@ const __vitePreload = function preload(baseModule, deps, importerUrl) {
 };
 const matchers = {};
 const nodes = [
-  () => __vitePreload(() => import("./chunks/0-96e52675.js"), true ? ["./chunks/0-96e52675.js","./chunks/_layout-505b36c8.js","./components/pages/_layout.svelte-5af7c4a4.js","./chunks/index-dc145a1c.js","./assets/_layout-ea040a37.css"] : void 0, import.meta.url),
+  () => __vitePreload(() => import("./chunks/0-ef4e4093.js"), true ? ["./chunks/0-ef4e4093.js","./chunks/_layout-505b36c8.js","./components/pages/_layout.svelte-988768a8.js","./chunks/index-dc145a1c.js","./assets/_layout-ea040a37.css"] : void 0, import.meta.url),
   () => __vitePreload(() => import("./chunks/1-1cedc3a7.js"), true ? ["./chunks/1-1cedc3a7.js","./components/error.svelte-63d63419.js","./chunks/index-dc145a1c.js","./chunks/singletons-57b7ce3e.js"] : void 0, import.meta.url),
   () => __vitePreload(() => import("./chunks/2-14d5175e.js"), true ? ["./chunks/2-14d5175e.js","./components/pages/_page.svelte-e1dabd3b.js","./chunks/index-dc145a1c.js"] : void 0, import.meta.url)
 ];
