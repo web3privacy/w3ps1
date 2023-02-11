@@ -1,0 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    body {
+        @apply bg-[#0d1117];
+    }
+
+    * {
+        @apply text-white font-mono;
+    }
+
+    .middle-pane-medium {
+        @apply max-w-7xl mx-auto px-4 xl:px-0;
+    }
+    .middle-pane-big {
+        @apply max-w-screen-2xl mx-auto px-4 2xl:px-0;
+    }
+
+    .button {
+        @apply px-3 py-1.5 text-black bg-white;
+    }
+    .section-header {
+        @apply text-5xl mb-16 font-bold;
+    }
+}
