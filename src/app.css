@@ -12,7 +12,11 @@
     }
 
     * {
-        @apply text-white font-mono;
+        @apply font-mono;
+    }
+
+    footer a {
+        @apply underline hover:no-underline;
     }
 
     .middle-pane-medium {

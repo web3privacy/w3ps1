@@ -1,6 +1,6 @@
 export default {
     title: 'Web3Privacy Prague 2023',
-    shortname: 'Web3Privacy Prague',
+    shortname: 'Web3Privacy Summit',
     date: 'Monday, 5. June 2023',
     venue: 'X10, Prague',
     themes: [

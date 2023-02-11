@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-    <title>{data.config.title}</title>
+    <title>{data.config.title} | {data.config.date}</title>
 </svelte:head>
 
 <div class="bg-black" id="about">
@@ -14,9 +14,9 @@
         <div class="section-header">Key themes</div>
         <div class="grid grid-cols-3 gap-10">
             {#each data.config.themes as ti}
-                <div class="bg-white px-4 py-6">
-                    <div class="text-black text-2xl uppercase">{ti.title}</div>
-                    <div class="text-black mt-4 text-lg">
+                <div class="bg-[#0d1117] hover:text-black hover:bg-white px-4 py-6 cursor-pointer">
+                    <div class="text-2xl uppercase">{ti.title}</div>
+                    <div class="mt-4 text-lg">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum tincidunt eros eu malesuada. Vivamus in urna at ex dictum pretium quis a erat.</div>
                 </div>
             {/each}

@@ -13,9 +13,7 @@
 </script>
 
 
-<div class="relative w-full min-h-screen">
-
-
+<div class="relative w-full min-h-screen text-white">
   <div class="fixed w-full h-18 bg-black pt-6 md:pt-2 pb-2">
     <div class="middle-pane-big bg-black">
       <div class="flex">
@@ -36,9 +34,13 @@
   <div class="w-full h-screen">
     <div class="w-full h-full flex items-center text-center">
       <div class="mx-auto">
-        <div class="text-7xl font-bold uppercase mb-8">{data.config.shortname}</div>
+        <div class="text-8xl font-bold uppercase mb-8">{data.config.shortname}</div>
         <div class="text-5xl mb-4">{data.config.date}</div>
         <div class="text-5xl">{data.config.venue}</div>
+        <div class="mt-8 text-lg text-white/50">
+          <p>Diving into the culture of the Web3 privacy industry</p>
+          <p><a href="https://prgblockweek.com" class="underline hover:no-underline">Prague Blockchain Week 2023</a></p>
+        </div>
       </div>
 
     </div>
@@ -46,7 +48,7 @@
 
   <slot />
 
-  <div class="pb-16 bg-black">
+  <footer class="pb-16 bg-black">
     <div class="middle-pane-big pt-6 mx-auto">
       <div class="flex items-center">
         <div class="grow">
@@ -62,9 +64,9 @@
               </svg>
             </a>
           </div>
-          <div class="mt-4">💛 Organized by <a href="https://ethbrno.cz" class="underline hover:no-underline">ETHBrno</a> team</div>
+          <div class="mt-4">💛 Collaboration of <a href="https://web3privacy.info">Web3Privacy Now</a> & <a href="https://ethbrno.cz">ETHBrno</a> team</div>
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 </div>
