@@ -25,7 +25,7 @@
 		@apply max-w-7xl mx-auto px-4 xl:px-0;
 	}
 	.middle-pane-big {
-		@apply max-w-screen-2xl mx-auto px-4 2xl:px-0;
+		@apply max-w-screen-2xl mx-auto px-6 2xl:px-0;
 	}
 
 	.button {

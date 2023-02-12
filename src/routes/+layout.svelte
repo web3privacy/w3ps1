@@ -2,6 +2,8 @@
 	import '../app.css';
 	export let data;
 
+  let navbar = false;
+
 	const menu = [
 		{ title: 'About', url: '#about' },
 		{ title: 'Speakers', url: '#speakers' },
@@ -12,23 +14,34 @@
 </script>
 
 <div class="relative w-full min-h-screen text-white">
-	<div class="fixed w-full h-18 bg-black pt-6 md:pt-2 pb-2 z-40">
+	<div class="fixed w-full h-18 bg-black pt-2 pb-2 z-40">
 		<div class="middle-pane-big bg-black">
 			<div class="flex">
 				<div class="flex items-center gap-4 grow">
-					<div class="w-20">
-						<a href="https://web3privacy.info"><img src="/web3privacy.png" /></a>
+					<div class="w-16 py-2">
+						<a href="https://web3privacy.info"><img src="/web3privacy-cropped.jpg" /></a>
 					</div>
 					<!--h1 class="text-2xl uppercase">{data.config.title}</h1-->
 				</div>
 				<div class="flex items-center gap-6 uppercase text-xl">
+          <button class="md:hidden text-3xl" on:click={() => navbar = !navbar}>☰</button>
 					{#each menu as mi}
-						<div class={mi.class}><a href={mi.url}>{mi.title}</a></div>
+						<div class="{mi.class} hidden md:block"><a href={mi.url}>{mi.title}</a></div>
 					{/each}
 				</div>
 			</div>
 		</div>
+    {#if navbar}
+      <div class="w-full md:hidden p-4">
+        {#each menu as mi}
+          <div class="my-3 mx-4">
+            <a href={mi.url} on:click={() => navbar = false}><button class="{mi.class} uppercase text-xl">{mi.title}</button></a>
+          </div>
+        {/each}
+      </div>
+    {/if}
 	</div>
+
 	<div class="w-full h-screen">
 		<div class="w-full h-full flex items-center text-center">
 			<div class="mx-auto">
@@ -55,11 +68,11 @@
 	<slot />
 
 	<footer class="pb-16 bg-black">
-		<div class="middle-pane-big pt-6 mx-auto">
-			<div class="flex items-center">
+		<div class="middle-pane-big pt-10 mx-auto">
+			<div class="flex gap-4">
 				<div class="grow">
-					<div class="w-48">
-						<a href="https://web3privacy.info"><img src="/web3privacy.png" /></a>
+					<div class="w-32 sm:w-42">
+						<a href="https://web3privacy.info"><img src="/web3privacy-cropped.jpg" /></a>
 					</div>
 				</div>
 				<div class="text-right">
