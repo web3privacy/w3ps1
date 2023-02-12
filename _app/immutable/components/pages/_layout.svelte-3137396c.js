@@ -1,4 +1,4 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, u as set_data, I as update_slot_base, J as get_all_dirty_from_scope, K as get_slot_changes, f as transition_in, t as transition_out, L as destroy_each, C as noop } from "../../chunks/index-dc145a1c.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, u as set_data, I as update_slot_base, J as get_all_dirty_from_scope, K as get_slot_changes, f as transition_in, t as transition_out, L as destroy_each, C as noop } from "../../chunks/index-a17c58e1.js";
 const app = "";
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
@@ -117,14 +117,17 @@ function create_fragment(ctx) {
   let svg;
   let path;
   let t14;
-  let div16;
-  let t15;
   let a4;
+  let t15;
   let t16;
+  let div16;
   let t17;
   let a5;
   let t18;
   let t19;
+  let a6;
+  let t20;
+  let t21;
   let current;
   let each_value = (
     /*menu*/
@@ -198,14 +201,17 @@ function create_fragment(ctx) {
       svg = svg_element("svg");
       path = svg_element("path");
       t14 = space();
-      div16 = element("div");
-      t15 = text("💛 Collaboration of ");
       a4 = element("a");
-      t16 = text("Web3Privacy Now");
-      t17 = text(" & ");
+      t15 = text("@web3privacy");
+      t16 = space();
+      div16 = element("div");
+      t17 = text("💛 Collaboration of ");
       a5 = element("a");
-      t18 = text("ETHBrno");
-      t19 = text(" team");
+      t18 = text("Web3Privacy Now");
+      t19 = text(" & ");
+      a6 = element("a");
+      t20 = text("ETHBrno");
+      t21 = text(" team");
       this.h();
     },
     l(nodes) {
@@ -302,35 +308,34 @@ function create_fragment(ctx) {
       var div17_nodes = children(div17);
       div15 = claim_element(div17_nodes, "DIV", { class: true });
       var div15_nodes = children(div15);
-      a3 = claim_element(div15_nodes, "A", { href: true });
+      a3 = claim_element(div15_nodes, "A", { class: true, href: true });
       var a3_nodes = children(a3);
-      svg = claim_svg_element(a3_nodes, "svg", {
-        width: true,
-        height: true,
-        viewBox: true,
-        fill: true,
-        xmlns: true
-      });
+      svg = claim_svg_element(a3_nodes, "svg", { viewBox: true, fill: true, xmlns: true });
       var svg_nodes = children(svg);
       path = claim_svg_element(svg_nodes, "path", { d: true, fill: true });
       children(path).forEach(detach);
       svg_nodes.forEach(detach);
       a3_nodes.forEach(detach);
+      t14 = claim_space(div15_nodes);
+      a4 = claim_element(div15_nodes, "A", { href: true, class: true });
+      var a4_nodes = children(a4);
+      t15 = claim_text(a4_nodes, "@web3privacy");
+      a4_nodes.forEach(detach);
       div15_nodes.forEach(detach);
-      t14 = claim_space(div17_nodes);
+      t16 = claim_space(div17_nodes);
       div16 = claim_element(div17_nodes, "DIV", { class: true });
       var div16_nodes = children(div16);
-      t15 = claim_text(div16_nodes, "💛 Collaboration of ");
-      a4 = claim_element(div16_nodes, "A", { href: true });
-      var a4_nodes = children(a4);
-      t16 = claim_text(a4_nodes, "Web3Privacy Now");
-      a4_nodes.forEach(detach);
-      t17 = claim_text(div16_nodes, " & ");
+      t17 = claim_text(div16_nodes, "💛 Collaboration of ");
       a5 = claim_element(div16_nodes, "A", { href: true });
       var a5_nodes = children(a5);
-      t18 = claim_text(a5_nodes, "ETHBrno");
+      t18 = claim_text(a5_nodes, "Web3Privacy Now");
       a5_nodes.forEach(detach);
-      t19 = claim_text(div16_nodes, " team");
+      t19 = claim_text(div16_nodes, " & ");
+      a6 = claim_element(div16_nodes, "A", { href: true });
+      var a6_nodes = children(a6);
+      t20 = claim_text(a6_nodes, "ETHBrno");
+      a6_nodes.forEach(detach);
+      t21 = claim_text(div16_nodes, " team");
       div16_nodes.forEach(detach);
       div17_nodes.forEach(detach);
       div18_nodes.forEach(detach);
@@ -354,7 +359,7 @@ function create_fragment(ctx) {
       attr(div8, "class", "text-5xl");
       attr(a1, "href", "https://prgblockweek.com");
       attr(a1, "class", "underline hover:no-underline");
-      attr(div9, "class", "mt-8 text-lg text-white/50");
+      attr(div9, "class", "mt-8 text-lg text-mild");
       attr(div10, "class", "mx-auto");
       attr(div11, "class", "w-full h-full flex items-center text-center");
       attr(div12, "class", "w-full h-screen");
@@ -365,16 +370,17 @@ function create_fragment(ctx) {
       attr(div14, "class", "grow");
       attr(path, "d", "M28.0266 3.12733C26.9955 3.62938 25.8872 3.96853 24.7242 4.12112C25.9113 3.34005 26.8231 2.10325 27.2524 0.629411C26.1413 1.35279 24.9107 1.87791 23.6009 2.16092C22.5522 0.934264 21.0578 0.167969 19.4039 0.167969C16.2285 0.167969 13.6538 2.99367 13.6538 6.47907C13.6538 6.97373 13.7047 7.45548 13.8028 7.91738C9.02398 7.6542 4.78719 5.14151 1.95117 1.3231C1.45622 2.25521 1.17259 3.33929 1.17259 4.49596C1.17259 6.68564 2.18771 8.61738 3.73058 9.74913C2.78804 9.71637 1.90142 9.43244 1.1262 8.95977C1.12555 8.98607 1.12555 9.01252 1.12555 9.03913C1.12555 12.0969 3.1076 14.6476 5.73804 15.2278C5.25556 15.3721 4.74758 15.4491 4.2232 15.4491C3.85268 15.4491 3.49255 15.4095 3.14137 15.3359C3.87315 17.8432 5.99658 19.6679 8.51282 19.7187C6.54493 21.4115 4.06569 22.4206 1.37163 22.4206C0.907503 22.4206 0.449828 22.3906 0 22.3323C2.54468 24.1231 5.56708 25.168 8.81424 25.168C19.3905 25.168 25.1742 15.5511 25.1742 7.21076C25.1742 6.93712 25.1686 6.66503 25.1576 6.39416C26.2809 5.50451 27.2556 4.39306 28.0265 3.12733H28.0266Z");
       attr(path, "fill", "white");
-      attr(svg, "width", "29");
-      attr(svg, "height", "26");
       attr(svg, "viewBox", "0 0 29 26");
       attr(svg, "fill", "none");
       attr(svg, "xmlns", "http://www.w3.org/2000/svg");
+      attr(a3, "class", "inline-block w-5 mr-1");
       attr(a3, "href", "https://twitter.com/web3privacy");
-      attr(div15, "class", "inline-block");
-      attr(a4, "href", "https://web3privacy.info");
-      attr(a5, "href", "https://ethbrno.cz");
-      attr(div16, "class", "mt-4");
+      attr(a4, "href", "https://twitter.com/web3privacy");
+      attr(a4, "class", "text-2xl no-underline hover:underline");
+      attr(div15, "class", "");
+      attr(a5, "href", "https://web3privacy.info");
+      attr(a6, "href", "https://ethbrno.cz");
+      attr(div16, "class", "mt-4 text-mild");
       attr(div17, "class", "text-right");
       attr(div18, "class", "flex items-center");
       attr(div19, "class", "middle-pane-big pt-6 mx-auto");
@@ -433,15 +439,18 @@ function create_fragment(ctx) {
       append_hydration(div15, a3);
       append_hydration(a3, svg);
       append_hydration(svg, path);
-      append_hydration(div17, t14);
+      append_hydration(div15, t14);
+      append_hydration(div15, a4);
+      append_hydration(a4, t15);
+      append_hydration(div17, t16);
       append_hydration(div17, div16);
-      append_hydration(div16, t15);
-      append_hydration(div16, a4);
-      append_hydration(a4, t16);
       append_hydration(div16, t17);
       append_hydration(div16, a5);
       append_hydration(a5, t18);
       append_hydration(div16, t19);
+      append_hydration(div16, a6);
+      append_hydration(a6, t20);
+      append_hydration(div16, t21);
       current = true;
     },
     p(ctx2, [dirty]) {

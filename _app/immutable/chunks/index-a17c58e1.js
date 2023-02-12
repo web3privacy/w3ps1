@@ -85,6 +85,21 @@ function get_all_dirty_from_scope($$scope) {
   }
   return -1;
 }
+function exclude_internal_props(props) {
+  const result = {};
+  for (const k in props)
+    if (k[0] !== "$")
+      result[k] = props[k];
+  return result;
+}
+function compute_rest_props(props, keys) {
+  const rest = {};
+  keys = new Set(keys);
+  for (const k in props)
+    if (!keys.has(k) && k[0] !== "$")
+      rest[k] = props[k];
+  return rest;
+}
 let is_hydrating = false;
 function start_hydrating() {
   is_hydrating = true;
@@ -172,6 +187,9 @@ function append_hydration(target, node) {
   } else if (node.parentNode !== target || node.nextSibling !== null) {
     target.appendChild(node);
   }
+}
+function insert(target, node, anchor) {
+  target.insertBefore(node, anchor || null);
 }
 function insert_hydration(target, node, anchor) {
   if (is_hydrating && !anchor) {
@@ -302,6 +320,32 @@ function claim_text(nodes, data) {
 function claim_space(nodes) {
   return claim_text(nodes, " ");
 }
+function find_comment(nodes, text2, start) {
+  for (let i = start; i < nodes.length; i += 1) {
+    const node = nodes[i];
+    if (node.nodeType === 8 && node.textContent.trim() === text2) {
+      return i;
+    }
+  }
+  return nodes.length;
+}
+function claim_html_tag(nodes, is_svg) {
+  const start_index = find_comment(nodes, "HTML_TAG_START", 0);
+  const end_index = find_comment(nodes, "HTML_TAG_END", start_index);
+  if (start_index === end_index) {
+    return new HtmlTagHydration(void 0, is_svg);
+  }
+  init_claim_info(nodes);
+  const html_tag_nodes = nodes.splice(start_index, end_index - start_index + 1);
+  detach(html_tag_nodes[0]);
+  detach(html_tag_nodes[html_tag_nodes.length - 1]);
+  const claimed_nodes = html_tag_nodes.slice(1, html_tag_nodes.length - 1);
+  for (const n of claimed_nodes) {
+    n.claim_order = nodes.claim_info.total_claimed;
+    nodes.claim_info.total_claimed += 1;
+  }
+  return new HtmlTagHydration(claimed_nodes, is_svg);
+}
 function set_data(text2, data) {
   data = "" + data;
   if (text2.wholeText !== data)
@@ -313,6 +357,11 @@ function set_style(node, key, value, important) {
   } else {
     node.style.setProperty(key, value, important ? "important" : "");
   }
+}
+function custom_event(type, detail, { bubbles = false, cancelable = false } = {}) {
+  const e = document.createEvent("CustomEvent");
+  e.initCustomEvent(type, bubbles, cancelable, detail);
+  return e;
 }
 function head_selector(nodeId, head) {
   const result = [];
@@ -333,6 +382,63 @@ function head_selector(nodeId, head) {
   }
   return result;
 }
+class HtmlTag {
+  constructor(is_svg = false) {
+    this.is_svg = false;
+    this.is_svg = is_svg;
+    this.e = this.n = null;
+  }
+  c(html) {
+    this.h(html);
+  }
+  m(html, target, anchor = null) {
+    if (!this.e) {
+      if (this.is_svg)
+        this.e = svg_element(target.nodeName);
+      else
+        this.e = element(target.nodeName);
+      this.t = target;
+      this.c(html);
+    }
+    this.i(anchor);
+  }
+  h(html) {
+    this.e.innerHTML = html;
+    this.n = Array.from(this.e.childNodes);
+  }
+  i(anchor) {
+    for (let i = 0; i < this.n.length; i += 1) {
+      insert(this.t, this.n[i], anchor);
+    }
+  }
+  p(html) {
+    this.d();
+    this.h(html);
+    this.i(this.a);
+  }
+  d() {
+    this.n.forEach(detach);
+  }
+}
+class HtmlTagHydration extends HtmlTag {
+  constructor(claimed_nodes, is_svg = false) {
+    super(is_svg);
+    this.e = this.n = null;
+    this.l = claimed_nodes;
+  }
+  c(html) {
+    if (this.l) {
+      this.n = this.l;
+    } else {
+      super.c(html);
+    }
+  }
+  i(anchor) {
+    for (let i = 0; i < this.n.length; i += 1) {
+      insert_hydration(this.t, this.n[i], anchor);
+    }
+  }
+}
 function construct_svelte_component(component, props) {
   return new component(props);
 }
@@ -350,6 +456,27 @@ function onMount(fn) {
 }
 function afterUpdate(fn) {
   get_current_component().$$.after_update.push(fn);
+}
+function createEventDispatcher() {
+  const component = get_current_component();
+  return (type, detail, { cancelable = false } = {}) => {
+    const callbacks = component.$$.callbacks[type];
+    if (callbacks) {
+      const event = custom_event(type, detail, { cancelable });
+      callbacks.slice().forEach((fn) => {
+        fn.call(component, event);
+      });
+      return !event.defaultPrevented;
+    }
+    return true;
+  };
+}
+function setContext(key, context) {
+  get_current_component().$$.context.set(key, context);
+  return context;
+}
+function getContext(key) {
+  return get_current_component().$$.context.get(key);
 }
 const dirty_components = [];
 const binding_callbacks = [];
@@ -460,6 +587,41 @@ function transition_out(block, local, detach2, callback) {
   } else if (callback) {
     callback();
   }
+}
+function get_spread_update(levels, updates) {
+  const update2 = {};
+  const to_null_out = {};
+  const accounted_for = { $$scope: 1 };
+  let i = levels.length;
+  while (i--) {
+    const o = levels[i];
+    const n = updates[i];
+    if (n) {
+      for (const key in o) {
+        if (!(key in n))
+          to_null_out[key] = 1;
+      }
+      for (const key in n) {
+        if (!accounted_for[key]) {
+          update2[key] = n[key];
+          accounted_for[key] = 1;
+        }
+      }
+      levels[i] = n;
+    } else {
+      for (const key in o) {
+        accounted_for[key] = 1;
+      }
+    }
+  }
+  for (const key in to_null_out) {
+    if (!(key in update2))
+      update2[key] = void 0;
+  }
+  return update2;
+}
+function get_spread_object(spread_props) {
+  return typeof spread_props === "object" && spread_props !== null ? spread_props : {};
 }
 function create_component(block) {
   block && block.c();
@@ -596,8 +758,18 @@ export {
   get_slot_changes as K,
   destroy_each as L,
   component_subscribe as M,
-  head_selector as N,
+  compute_rest_props as N,
+  assign as O,
+  exclude_internal_props as P,
+  get_spread_update as Q,
+  get_spread_object as R,
   SvelteComponent as S,
+  getContext as T,
+  HtmlTagHydration as U,
+  claim_html_tag as V,
+  createEventDispatcher as W,
+  setContext as X,
+  head_selector as Y,
   space as a,
   insert_hydration as b,
   claim_space as c,
