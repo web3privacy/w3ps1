@@ -1,16 +1,21 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, u as set_data, I as update_slot_base, J as get_all_dirty_from_scope, K as get_slot_changes, f as transition_in, t as transition_out, L as destroy_each, C as noop } from "../../chunks/index-a17c58e1.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, I as listen, u as set_data, J as update_slot_base, K as get_all_dirty_from_scope, L as get_slot_changes, f as transition_in, t as transition_out, M as destroy_each, C as noop } from "../../chunks/index-744c867d.js";
 const app = "";
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[4] = list[i];
+  child_ctx[7] = list[i];
   return child_ctx;
 }
-function create_each_block(ctx) {
+function get_each_context_1(ctx, list, i) {
+  const child_ctx = ctx.slice();
+  child_ctx[7] = list[i];
+  return child_ctx;
+}
+function create_each_block_1(ctx) {
   let div;
   let a;
   let t_value = (
     /*mi*/
-    ctx[4].title + ""
+    ctx[7].title + ""
   );
   let t;
   return {
@@ -35,13 +40,13 @@ function create_each_block(ctx) {
         a,
         "href",
         /*mi*/
-        ctx[4].url
+        ctx[7].url
       );
       attr(
         div,
         "class",
         /*mi*/
-        ctx[4].class
+        ctx[7].class + " hidden md:block"
       );
     },
     m(target, anchor) {
@@ -53,6 +58,146 @@ function create_each_block(ctx) {
     d(detaching) {
       if (detaching)
         detach(div);
+    }
+  };
+}
+function create_if_block(ctx) {
+  let div;
+  let each_value = (
+    /*menu*/
+    ctx[2]
+  );
+  let each_blocks = [];
+  for (let i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  }
+  return {
+    c() {
+      div = element("div");
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        each_blocks[i].c();
+      }
+      this.h();
+    },
+    l(nodes) {
+      div = claim_element(nodes, "DIV", { class: true });
+      var div_nodes = children(div);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        each_blocks[i].l(div_nodes);
+      }
+      div_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      attr(div, "class", "w-full md:hidden p-4");
+    },
+    m(target, anchor) {
+      insert_hydration(target, div, anchor);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        each_blocks[i].m(div, null);
+      }
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*menu, navbar*/
+      6) {
+        each_value = /*menu*/
+        ctx2[2];
+        let i;
+        for (i = 0; i < each_value.length; i += 1) {
+          const child_ctx = get_each_context(ctx2, each_value, i);
+          if (each_blocks[i]) {
+            each_blocks[i].p(child_ctx, dirty);
+          } else {
+            each_blocks[i] = create_each_block(child_ctx);
+            each_blocks[i].c();
+            each_blocks[i].m(div, null);
+          }
+        }
+        for (; i < each_blocks.length; i += 1) {
+          each_blocks[i].d(1);
+        }
+        each_blocks.length = each_value.length;
+      }
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      destroy_each(each_blocks, detaching);
+    }
+  };
+}
+function create_each_block(ctx) {
+  let div;
+  let a;
+  let button;
+  let t0_value = (
+    /*mi*/
+    ctx[7].title + ""
+  );
+  let t0;
+  let t1;
+  let mounted;
+  let dispose;
+  return {
+    c() {
+      div = element("div");
+      a = element("a");
+      button = element("button");
+      t0 = text(t0_value);
+      t1 = space();
+      this.h();
+    },
+    l(nodes) {
+      div = claim_element(nodes, "DIV", { class: true });
+      var div_nodes = children(div);
+      a = claim_element(div_nodes, "A", { href: true });
+      var a_nodes = children(a);
+      button = claim_element(a_nodes, "BUTTON", { class: true });
+      var button_nodes = children(button);
+      t0 = claim_text(button_nodes, t0_value);
+      button_nodes.forEach(detach);
+      a_nodes.forEach(detach);
+      t1 = claim_space(div_nodes);
+      div_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      attr(
+        button,
+        "class",
+        /*mi*/
+        ctx[7].class + " uppercase text-xl"
+      );
+      attr(
+        a,
+        "href",
+        /*mi*/
+        ctx[7].url
+      );
+      attr(div, "class", "my-3 mx-4");
+    },
+    m(target, anchor) {
+      insert_hydration(target, div, anchor);
+      append_hydration(div, a);
+      append_hydration(a, button);
+      append_hydration(button, t0);
+      append_hydration(div, t1);
+      if (!mounted) {
+        dispose = listen(
+          a,
+          "click",
+          /*click_handler_1*/
+          ctx[6]
+        );
+        mounted = true;
+      }
+    },
+    p: noop,
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      mounted = false;
+      dispose();
     }
   };
 }
@@ -68,40 +213,44 @@ function create_fragment(ctx) {
   let img0_src_value;
   let t0;
   let div2;
+  let button;
   let t1;
+  let t2;
+  let t3;
+  let t4;
   let div12;
   let div11;
   let div10;
   let div6;
-  let t2_value = (
+  let t5_value = (
     /*data*/
     ctx[0].config.shortname + ""
   );
-  let t2;
-  let t3;
+  let t5;
+  let t6;
   let div7;
-  let t4_value = (
+  let t7_value = (
     /*data*/
     ctx[0].config.date + ""
   );
-  let t4;
-  let t5;
+  let t7;
+  let t8;
   let div8;
-  let t6_value = (
+  let t9_value = (
     /*data*/
     ctx[0].config.venue + ""
   );
-  let t6;
-  let t7;
+  let t9;
+  let t10;
   let div9;
   let p0;
-  let t8;
-  let t9;
-  let p1;
-  let a1;
-  let t10;
   let t11;
   let t12;
+  let p1;
+  let a1;
+  let t13;
+  let t14;
+  let t15;
   let footer;
   let div19;
   let div18;
@@ -110,42 +259,48 @@ function create_fragment(ctx) {
   let a2;
   let img1;
   let img1_src_value;
-  let t13;
+  let t16;
   let div17;
   let div15;
   let a3;
   let svg;
   let path;
-  let t14;
-  let a4;
-  let t15;
-  let t16;
-  let div16;
   let t17;
-  let a5;
+  let a4;
   let t18;
   let t19;
-  let a6;
+  let div16;
   let t20;
+  let a5;
   let t21;
+  let t22;
+  let a6;
+  let t23;
+  let t24;
   let current;
-  let each_value = (
+  let mounted;
+  let dispose;
+  let each_value_1 = (
     /*menu*/
-    ctx[1]
+    ctx[2]
   );
   let each_blocks = [];
-  for (let i = 0; i < each_value.length; i += 1) {
-    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  for (let i = 0; i < each_value_1.length; i += 1) {
+    each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
   }
+  let if_block = (
+    /*navbar*/
+    ctx[1] && create_if_block(ctx)
+  );
   const default_slot_template = (
     /*#slots*/
-    ctx[3].default
+    ctx[4].default
   );
   const default_slot = create_slot(
     default_slot_template,
     ctx,
     /*$$scope*/
-    ctx[2],
+    ctx[3],
     null
   );
   return {
@@ -160,33 +315,39 @@ function create_fragment(ctx) {
       img0 = element("img");
       t0 = space();
       div2 = element("div");
+      button = element("button");
+      t1 = text("☰");
+      t2 = space();
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
-      t1 = space();
+      t3 = space();
+      if (if_block)
+        if_block.c();
+      t4 = space();
       div12 = element("div");
       div11 = element("div");
       div10 = element("div");
       div6 = element("div");
-      t2 = text(t2_value);
-      t3 = space();
+      t5 = text(t5_value);
+      t6 = space();
       div7 = element("div");
-      t4 = text(t4_value);
-      t5 = space();
+      t7 = text(t7_value);
+      t8 = space();
       div8 = element("div");
-      t6 = text(t6_value);
-      t7 = space();
+      t9 = text(t9_value);
+      t10 = space();
       div9 = element("div");
       p0 = element("p");
-      t8 = text("Diving into the culture of the Web3 privacy industry");
-      t9 = space();
+      t11 = text("Diving into the culture of the Web3 privacy industry");
+      t12 = space();
       p1 = element("p");
       a1 = element("a");
-      t10 = text("Prague Blockchain Week 2023");
-      t11 = space();
+      t13 = text("Prague Blockchain Week 2023");
+      t14 = space();
       if (default_slot)
         default_slot.c();
-      t12 = space();
+      t15 = space();
       footer = element("footer");
       div19 = element("div");
       div18 = element("div");
@@ -194,24 +355,24 @@ function create_fragment(ctx) {
       div13 = element("div");
       a2 = element("a");
       img1 = element("img");
-      t13 = space();
+      t16 = space();
       div17 = element("div");
       div15 = element("div");
       a3 = element("a");
       svg = svg_element("svg");
       path = svg_element("path");
-      t14 = space();
+      t17 = space();
       a4 = element("a");
-      t15 = text("@web3privacy");
-      t16 = space();
+      t18 = text("@web3privacy");
+      t19 = space();
       div16 = element("div");
-      t17 = text("💛 Collaboration of ");
+      t20 = text("💛 Collaboration of ");
       a5 = element("a");
-      t18 = text("Web3Privacy Now");
-      t19 = text("\n						& ");
+      t21 = text("Web3Privacy Now");
+      t22 = text("\n						& ");
       a6 = element("a");
-      t20 = text("ETHBrno");
-      t21 = text(" team");
+      t23 = text("ETHBrno");
+      t24 = text(" team");
       this.h();
     },
     l(nodes) {
@@ -236,14 +397,22 @@ function create_fragment(ctx) {
       t0 = claim_space(div3_nodes);
       div2 = claim_element(div3_nodes, "DIV", { class: true });
       var div2_nodes = children(div2);
+      button = claim_element(div2_nodes, "BUTTON", { class: true });
+      var button_nodes = children(button);
+      t1 = claim_text(button_nodes, "☰");
+      button_nodes.forEach(detach);
+      t2 = claim_space(div2_nodes);
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].l(div2_nodes);
       }
       div2_nodes.forEach(detach);
       div3_nodes.forEach(detach);
       div4_nodes.forEach(detach);
+      t3 = claim_space(div5_nodes);
+      if (if_block)
+        if_block.l(div5_nodes);
       div5_nodes.forEach(detach);
-      t1 = claim_space(div20_nodes);
+      t4 = claim_space(div20_nodes);
       div12 = claim_element(div20_nodes, "DIV", { class: true });
       var div12_nodes = children(div12);
       div11 = claim_element(div12_nodes, "DIV", { class: true });
@@ -252,41 +421,41 @@ function create_fragment(ctx) {
       var div10_nodes = children(div10);
       div6 = claim_element(div10_nodes, "DIV", { class: true });
       var div6_nodes = children(div6);
-      t2 = claim_text(div6_nodes, t2_value);
+      t5 = claim_text(div6_nodes, t5_value);
       div6_nodes.forEach(detach);
-      t3 = claim_space(div10_nodes);
+      t6 = claim_space(div10_nodes);
       div7 = claim_element(div10_nodes, "DIV", { class: true });
       var div7_nodes = children(div7);
-      t4 = claim_text(div7_nodes, t4_value);
+      t7 = claim_text(div7_nodes, t7_value);
       div7_nodes.forEach(detach);
-      t5 = claim_space(div10_nodes);
+      t8 = claim_space(div10_nodes);
       div8 = claim_element(div10_nodes, "DIV", { class: true });
       var div8_nodes = children(div8);
-      t6 = claim_text(div8_nodes, t6_value);
+      t9 = claim_text(div8_nodes, t9_value);
       div8_nodes.forEach(detach);
-      t7 = claim_space(div10_nodes);
+      t10 = claim_space(div10_nodes);
       div9 = claim_element(div10_nodes, "DIV", { class: true });
       var div9_nodes = children(div9);
       p0 = claim_element(div9_nodes, "P", {});
       var p0_nodes = children(p0);
-      t8 = claim_text(p0_nodes, "Diving into the culture of the Web3 privacy industry");
+      t11 = claim_text(p0_nodes, "Diving into the culture of the Web3 privacy industry");
       p0_nodes.forEach(detach);
-      t9 = claim_space(div9_nodes);
+      t12 = claim_space(div9_nodes);
       p1 = claim_element(div9_nodes, "P", {});
       var p1_nodes = children(p1);
       a1 = claim_element(p1_nodes, "A", { href: true, target: true, class: true });
       var a1_nodes = children(a1);
-      t10 = claim_text(a1_nodes, "Prague Blockchain Week 2023");
+      t13 = claim_text(a1_nodes, "Prague Blockchain Week 2023");
       a1_nodes.forEach(detach);
       p1_nodes.forEach(detach);
       div9_nodes.forEach(detach);
       div10_nodes.forEach(detach);
       div11_nodes.forEach(detach);
       div12_nodes.forEach(detach);
-      t11 = claim_space(div20_nodes);
+      t14 = claim_space(div20_nodes);
       if (default_slot)
         default_slot.l(div20_nodes);
-      t12 = claim_space(div20_nodes);
+      t15 = claim_space(div20_nodes);
       footer = claim_element(div20_nodes, "FOOTER", { class: true });
       var footer_nodes = children(footer);
       div19 = claim_element(footer_nodes, "DIV", { class: true });
@@ -303,7 +472,7 @@ function create_fragment(ctx) {
       a2_nodes.forEach(detach);
       div13_nodes.forEach(detach);
       div14_nodes.forEach(detach);
-      t13 = claim_space(div18_nodes);
+      t16 = claim_space(div18_nodes);
       div17 = claim_element(div18_nodes, "DIV", { class: true });
       var div17_nodes = children(div17);
       div15 = claim_element(div17_nodes, "DIV", { class: true });
@@ -316,26 +485,26 @@ function create_fragment(ctx) {
       children(path).forEach(detach);
       svg_nodes.forEach(detach);
       a3_nodes.forEach(detach);
-      t14 = claim_space(div15_nodes);
+      t17 = claim_space(div15_nodes);
       a4 = claim_element(div15_nodes, "A", { href: true, class: true });
       var a4_nodes = children(a4);
-      t15 = claim_text(a4_nodes, "@web3privacy");
+      t18 = claim_text(a4_nodes, "@web3privacy");
       a4_nodes.forEach(detach);
       div15_nodes.forEach(detach);
-      t16 = claim_space(div17_nodes);
+      t19 = claim_space(div17_nodes);
       div16 = claim_element(div17_nodes, "DIV", { class: true });
       var div16_nodes = children(div16);
-      t17 = claim_text(div16_nodes, "💛 Collaboration of ");
+      t20 = claim_text(div16_nodes, "💛 Collaboration of ");
       a5 = claim_element(div16_nodes, "A", { href: true, class: true });
       var a5_nodes = children(a5);
-      t18 = claim_text(a5_nodes, "Web3Privacy Now");
+      t21 = claim_text(a5_nodes, "Web3Privacy Now");
       a5_nodes.forEach(detach);
-      t19 = claim_text(div16_nodes, "\n						& ");
+      t22 = claim_text(div16_nodes, "\n						& ");
       a6 = claim_element(div16_nodes, "A", { href: true, class: true });
       var a6_nodes = children(a6);
-      t20 = claim_text(a6_nodes, "ETHBrno");
+      t23 = claim_text(a6_nodes, "ETHBrno");
       a6_nodes.forEach(detach);
-      t21 = claim_text(div16_nodes, " team");
+      t24 = claim_text(div16_nodes, " team");
       div16_nodes.forEach(detach);
       div17_nodes.forEach(detach);
       div18_nodes.forEach(detach);
@@ -345,15 +514,16 @@ function create_fragment(ctx) {
       this.h();
     },
     h() {
-      if (!src_url_equal(img0.src, img0_src_value = "/web3privacy.png"))
+      if (!src_url_equal(img0.src, img0_src_value = "/web3privacy-cropped.jpg"))
         attr(img0, "src", img0_src_value);
       attr(a0, "href", "https://web3privacy.info");
-      attr(div0, "class", "w-20");
+      attr(div0, "class", "w-16 py-2");
       attr(div1, "class", "flex items-center gap-4 grow");
+      attr(button, "class", "md:hidden text-3xl");
       attr(div2, "class", "flex items-center gap-6 uppercase text-xl");
       attr(div3, "class", "flex");
       attr(div4, "class", "middle-pane-big bg-black");
-      attr(div5, "class", "fixed w-full h-18 bg-black pt-6 md:pt-2 pb-2 z-40");
+      attr(div5, "class", "fixed w-full h-18 bg-black pt-2 pb-2 z-40");
       attr(div6, "class", "text-5xl md:text-8xl font-bold uppercase mb-4 md:mb-8");
       attr(div7, "class", "text-3xl md:text-5xl md:mb-4");
       attr(div8, "class", "text-3xl md:text-5xl uppercase");
@@ -364,10 +534,10 @@ function create_fragment(ctx) {
       attr(div10, "class", "mx-auto");
       attr(div11, "class", "w-full h-full flex items-center text-center");
       attr(div12, "class", "w-full h-screen");
-      if (!src_url_equal(img1.src, img1_src_value = "/web3privacy.png"))
+      if (!src_url_equal(img1.src, img1_src_value = "/web3privacy-cropped.jpg"))
         attr(img1, "src", img1_src_value);
       attr(a2, "href", "https://web3privacy.info");
-      attr(div13, "class", "w-48");
+      attr(div13, "class", "w-32 sm:w-42");
       attr(div14, "class", "grow");
       attr(path, "d", "M28.0266 3.12733C26.9955 3.62938 25.8872 3.96853 24.7242 4.12112C25.9113 3.34005 26.8231 2.10325 27.2524 0.629411C26.1413 1.35279 24.9107 1.87791 23.6009 2.16092C22.5522 0.934264 21.0578 0.167969 19.4039 0.167969C16.2285 0.167969 13.6538 2.99367 13.6538 6.47907C13.6538 6.97373 13.7047 7.45548 13.8028 7.91738C9.02398 7.6542 4.78719 5.14151 1.95117 1.3231C1.45622 2.25521 1.17259 3.33929 1.17259 4.49596C1.17259 6.68564 2.18771 8.61738 3.73058 9.74913C2.78804 9.71637 1.90142 9.43244 1.1262 8.95977C1.12555 8.98607 1.12555 9.01252 1.12555 9.03913C1.12555 12.0969 3.1076 14.6476 5.73804 15.2278C5.25556 15.3721 4.74758 15.4491 4.2232 15.4491C3.85268 15.4491 3.49255 15.4095 3.14137 15.3359C3.87315 17.8432 5.99658 19.6679 8.51282 19.7187C6.54493 21.4115 4.06569 22.4206 1.37163 22.4206C0.907503 22.4206 0.449828 22.3906 0 22.3323C2.54468 24.1231 5.56708 25.168 8.81424 25.168C19.3905 25.168 25.1742 15.5511 25.1742 7.21076C25.1742 6.93712 25.1686 6.66503 25.1576 6.39416C26.2809 5.50451 27.2556 4.39306 28.0265 3.12733H28.0266Z");
       attr(path, "fill", "white");
@@ -385,8 +555,8 @@ function create_fragment(ctx) {
       attr(a6, "class", "external external-mild");
       attr(div16, "class", "mt-4 text-mild");
       attr(div17, "class", "text-right");
-      attr(div18, "class", "flex items-center");
-      attr(div19, "class", "middle-pane-big pt-6 mx-auto");
+      attr(div18, "class", "flex gap-4");
+      attr(div19, "class", "middle-pane-big pt-10 mx-auto");
       attr(footer, "class", "pb-16 bg-black");
       attr(div20, "class", "relative w-full min-h-screen text-white");
     },
@@ -401,34 +571,40 @@ function create_fragment(ctx) {
       append_hydration(a0, img0);
       append_hydration(div3, t0);
       append_hydration(div3, div2);
+      append_hydration(div2, button);
+      append_hydration(button, t1);
+      append_hydration(div2, t2);
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].m(div2, null);
       }
-      append_hydration(div20, t1);
+      append_hydration(div5, t3);
+      if (if_block)
+        if_block.m(div5, null);
+      append_hydration(div20, t4);
       append_hydration(div20, div12);
       append_hydration(div12, div11);
       append_hydration(div11, div10);
       append_hydration(div10, div6);
-      append_hydration(div6, t2);
-      append_hydration(div10, t3);
+      append_hydration(div6, t5);
+      append_hydration(div10, t6);
       append_hydration(div10, div7);
-      append_hydration(div7, t4);
-      append_hydration(div10, t5);
+      append_hydration(div7, t7);
+      append_hydration(div10, t8);
       append_hydration(div10, div8);
-      append_hydration(div8, t6);
-      append_hydration(div10, t7);
+      append_hydration(div8, t9);
+      append_hydration(div10, t10);
       append_hydration(div10, div9);
       append_hydration(div9, p0);
-      append_hydration(p0, t8);
-      append_hydration(div9, t9);
+      append_hydration(p0, t11);
+      append_hydration(div9, t12);
       append_hydration(div9, p1);
       append_hydration(p1, a1);
-      append_hydration(a1, t10);
-      append_hydration(div20, t11);
+      append_hydration(a1, t13);
+      append_hydration(div20, t14);
       if (default_slot) {
         default_slot.m(div20, null);
       }
-      append_hydration(div20, t12);
+      append_hydration(div20, t15);
       append_hydration(div20, footer);
       append_hydration(footer, div19);
       append_hydration(div19, div18);
@@ -436,38 +612,47 @@ function create_fragment(ctx) {
       append_hydration(div14, div13);
       append_hydration(div13, a2);
       append_hydration(a2, img1);
-      append_hydration(div18, t13);
+      append_hydration(div18, t16);
       append_hydration(div18, div17);
       append_hydration(div17, div15);
       append_hydration(div15, a3);
       append_hydration(a3, svg);
       append_hydration(svg, path);
-      append_hydration(div15, t14);
+      append_hydration(div15, t17);
       append_hydration(div15, a4);
-      append_hydration(a4, t15);
-      append_hydration(div17, t16);
+      append_hydration(a4, t18);
+      append_hydration(div17, t19);
       append_hydration(div17, div16);
-      append_hydration(div16, t17);
+      append_hydration(div16, t20);
       append_hydration(div16, a5);
-      append_hydration(a5, t18);
-      append_hydration(div16, t19);
+      append_hydration(a5, t21);
+      append_hydration(div16, t22);
       append_hydration(div16, a6);
-      append_hydration(a6, t20);
-      append_hydration(div16, t21);
+      append_hydration(a6, t23);
+      append_hydration(div16, t24);
       current = true;
+      if (!mounted) {
+        dispose = listen(
+          button,
+          "click",
+          /*click_handler*/
+          ctx[5]
+        );
+        mounted = true;
+      }
     },
     p(ctx2, [dirty]) {
       if (dirty & /*menu*/
-      2) {
-        each_value = /*menu*/
-        ctx2[1];
+      4) {
+        each_value_1 = /*menu*/
+        ctx2[2];
         let i;
-        for (i = 0; i < each_value.length; i += 1) {
-          const child_ctx = get_each_context(ctx2, each_value, i);
+        for (i = 0; i < each_value_1.length; i += 1) {
+          const child_ctx = get_each_context_1(ctx2, each_value_1, i);
           if (each_blocks[i]) {
             each_blocks[i].p(child_ctx, dirty);
           } else {
-            each_blocks[i] = create_each_block(child_ctx);
+            each_blocks[i] = create_each_block_1(child_ctx);
             each_blocks[i].c();
             each_blocks[i].m(div2, null);
           }
@@ -475,36 +660,51 @@ function create_fragment(ctx) {
         for (; i < each_blocks.length; i += 1) {
           each_blocks[i].d(1);
         }
-        each_blocks.length = each_value.length;
+        each_blocks.length = each_value_1.length;
+      }
+      if (
+        /*navbar*/
+        ctx2[1]
+      ) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+        } else {
+          if_block = create_if_block(ctx2);
+          if_block.c();
+          if_block.m(div5, null);
+        }
+      } else if (if_block) {
+        if_block.d(1);
+        if_block = null;
       }
       if ((!current || dirty & /*data*/
-      1) && t2_value !== (t2_value = /*data*/
+      1) && t5_value !== (t5_value = /*data*/
       ctx2[0].config.shortname + ""))
-        set_data(t2, t2_value);
+        set_data(t5, t5_value);
       if ((!current || dirty & /*data*/
-      1) && t4_value !== (t4_value = /*data*/
+      1) && t7_value !== (t7_value = /*data*/
       ctx2[0].config.date + ""))
-        set_data(t4, t4_value);
+        set_data(t7, t7_value);
       if ((!current || dirty & /*data*/
-      1) && t6_value !== (t6_value = /*data*/
+      1) && t9_value !== (t9_value = /*data*/
       ctx2[0].config.venue + ""))
-        set_data(t6, t6_value);
+        set_data(t9, t9_value);
       if (default_slot) {
         if (default_slot.p && (!current || dirty & /*$$scope*/
-        4)) {
+        8)) {
           update_slot_base(
             default_slot,
             default_slot_template,
             ctx2,
             /*$$scope*/
-            ctx2[2],
+            ctx2[3],
             !current ? get_all_dirty_from_scope(
               /*$$scope*/
-              ctx2[2]
+              ctx2[3]
             ) : get_slot_changes(
               default_slot_template,
               /*$$scope*/
-              ctx2[2],
+              ctx2[3],
               dirty,
               null
             ),
@@ -527,14 +727,19 @@ function create_fragment(ctx) {
       if (detaching)
         detach(div20);
       destroy_each(each_blocks, detaching);
+      if (if_block)
+        if_block.d();
       if (default_slot)
         default_slot.d(detaching);
+      mounted = false;
+      dispose();
     }
   };
 }
 function instance($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { data } = $$props;
+  let navbar = false;
   const menu = [
     { title: "About", url: "#about" },
     { title: "Speakers", url: "#speakers" },
@@ -546,13 +751,15 @@ function instance($$self, $$props, $$invalidate) {
       class: "button"
     }
   ];
+  const click_handler = () => $$invalidate(1, navbar = !navbar);
+  const click_handler_1 = () => $$invalidate(1, navbar = false);
   $$self.$$set = ($$props2) => {
     if ("data" in $$props2)
       $$invalidate(0, data = $$props2.data);
     if ("$$scope" in $$props2)
-      $$invalidate(2, $$scope = $$props2.$$scope);
+      $$invalidate(3, $$scope = $$props2.$$scope);
   };
-  return [data, menu, $$scope, slots];
+  return [data, navbar, menu, $$scope, slots, click_handler, click_handler_1];
 }
 class Layout extends SvelteComponent {
   constructor(options) {

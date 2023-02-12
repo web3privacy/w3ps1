@@ -224,6 +224,10 @@ function space() {
 function empty() {
   return text("");
 }
+function listen(node, event, handler, options) {
+  node.addEventListener(event, handler, options);
+  return () => node.removeEventListener(event, handler, options);
+}
 function attr(node, attribute, value) {
   if (value == null)
     node.removeAttribute(attribute);
@@ -753,23 +757,24 @@ export {
   claim_svg_element as F,
   src_url_equal as G,
   append_hydration as H,
-  update_slot_base as I,
-  get_all_dirty_from_scope as J,
-  get_slot_changes as K,
-  destroy_each as L,
-  component_subscribe as M,
-  compute_rest_props as N,
-  assign as O,
-  exclude_internal_props as P,
-  get_spread_update as Q,
-  get_spread_object as R,
+  listen as I,
+  update_slot_base as J,
+  get_all_dirty_from_scope as K,
+  get_slot_changes as L,
+  destroy_each as M,
+  component_subscribe as N,
+  compute_rest_props as O,
+  assign as P,
+  exclude_internal_props as Q,
+  get_spread_update as R,
   SvelteComponent as S,
-  getContext as T,
-  HtmlTagHydration as U,
-  claim_html_tag as V,
-  createEventDispatcher as W,
-  setContext as X,
-  head_selector as Y,
+  get_spread_object as T,
+  getContext as U,
+  HtmlTagHydration as V,
+  claim_html_tag as W,
+  createEventDispatcher as X,
+  setContext as Y,
+  head_selector as Z,
   space as a,
   insert_hydration as b,
   claim_space as c,
