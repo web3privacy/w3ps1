@@ -12,7 +12,7 @@
 </script>
 
 <div class="relative w-full min-h-screen text-white">
-	<div class="fixed w-full h-18 bg-black pt-6 md:pt-2 pb-2">
+	<div class="fixed w-full h-18 bg-black pt-6 md:pt-2 pb-2 z-40">
 		<div class="middle-pane-big bg-black">
 			<div class="flex">
 				<div class="flex items-center gap-4 grow">

@@ -1,6 +1,7 @@
 <script>
 	export let items;
 	export let people;
+    export let size = 'normal';
 
 	function getPerson(id) {
 		return people.find((p) => p.id === id);
@@ -11,10 +12,10 @@
 </script>
 
 {#each items.map(getPerson) as item}
-	<div>
+	<div class="hover:bg-white hover:text-black p-2 {size === 'small' ? 'w-48' : 'w-64'} person-item">
 		<div>
-			<a href={twitterLink(item.twitter)}
-				><img src="/people/{item.img}" class="grayscale hover:grayscale-0" /></a
+			<a href={twitterLink(item.twitter)} target="_blank"
+				><img src="/people/{item.img}" class="grayscale invert aspect-square object-cover" /></a
 			>
 		</div>
 		<div class="mt-4">{item.name}</div>

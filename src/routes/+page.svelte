@@ -31,16 +31,20 @@
 <div class="" id="speakers">
 	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto">
 		<div class="section-header">Speakers</div>
-		<div class="pb-16 text-mild">To-be-announced</div>
+		<div class="mx-auto">
+			<div class="pb-16 flex justify-center sm:gap-6">
+				<PeopleList items={data.config.speakers} people={data.config.people} />
+			</div>
+		</div>
 	</div>
 </div>
 
-<div class="" id="hosts">
-	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto">
+<div id="hosts">
+	<div class="middle-pane-medium pt-0 text-xl text-center mx-auto">
 		<div class="section-header">Hosts</div>
-		<div class="mx-auto sm:w-1/3">
-			<div class="pb-16 grid grid-cols-2 gap-4 sm:gap-10">
-				<PeopleList items={data.config.hosts} people={data.config.people} />
+		<div class="mx-auto">
+			<div class="pb-16 flex justify-center sm:gap-6">
+				<PeopleList items={data.config.hosts} people={data.config.people} size="small" />
 			</div>
 		</div>
 	</div>

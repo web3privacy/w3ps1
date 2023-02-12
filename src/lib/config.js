@@ -61,6 +61,17 @@ people:
   name: Tree
   twitter: treecz
   img: tree.jpeg
+- id: juraj-bednar
+  name: Juraj Bednar
+  twitter: jurbed
+  img: juraj-bednar.jpeg
+- id: mario-havel
+  name: Mario Havel
+  twitter: TMIYChao
+  img: mario-havel.jpeg
+speakers:
+- juraj-bednar
+- mario-havel
 hosts:
 - mykola
 - tree
