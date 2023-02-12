@@ -11,7 +11,7 @@
 
 <div class="bg-black" id="about">
 	<div class="middle-pane-medium pb-16 text-xl text-center mx-auto">
-		<div class="py-16 md:py-32 md:w-1/2 mx-auto markdown">
+		<div class="py-16 md:py-32 md:w-2/3 mx-auto markdown">
 			<SvelteMarkdown source={data.config.slogan} />
 		</div>
 		<div class="section-header">Key themes</div>

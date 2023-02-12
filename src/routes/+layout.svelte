@@ -44,7 +44,7 @@
 
 	<div class="w-full h-screen">
 		<div class="w-full h-full flex items-center text-center">
-			<div class="mx-auto">
+			<div class="mx-auto px-4">
 				<div class="text-5xl md:text-8xl font-bold uppercase mb-4 md:mb-8">
 					{data.config.shortname}
 				</div>
