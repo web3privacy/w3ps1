@@ -28,7 +28,7 @@ function create_each_block_1(ctx) {
     l(nodes) {
       div = claim_element(nodes, "DIV", { class: true });
       var div_nodes = children(div);
-      a = claim_element(div_nodes, "A", { href: true });
+      a = claim_element(div_nodes, "A", { class: true, href: true });
       var a_nodes = children(a);
       t = claim_text(a_nodes, t_value);
       a_nodes.forEach(detach);
@@ -38,16 +38,20 @@ function create_each_block_1(ctx) {
     h() {
       attr(
         a,
+        "class",
+        /*mi*/
+        ctx[7].class ? (
+          /*mi*/
+          ctx[7].class
+        ) : "hover:underline"
+      );
+      attr(
+        a,
         "href",
         /*mi*/
         ctx[7].url
       );
-      attr(
-        div,
-        "class",
-        /*mi*/
-        ctx[7].class + " hidden md:block"
-      );
+      attr(div, "class", "hidden md:block");
     },
     m(target, anchor) {
       insert_hydration(target, div, anchor);
