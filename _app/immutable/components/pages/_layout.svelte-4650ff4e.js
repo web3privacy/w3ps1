@@ -531,7 +531,7 @@ function create_fragment(ctx) {
       attr(a1, "target", "_blank");
       attr(a1, "class", "underline hover:no-underline external external-mild");
       attr(div9, "class", "mt-8 text-lg text-mild mx-4");
-      attr(div10, "class", "mx-auto");
+      attr(div10, "class", "mx-auto px-4");
       attr(div11, "class", "w-full h-full flex items-center text-center");
       attr(div12, "class", "w-full h-screen");
       if (!src_url_equal(img1.src, img1_src_value = "/web3privacy-cropped.jpg"))

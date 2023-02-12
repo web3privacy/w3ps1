@@ -8742,7 +8742,7 @@ function create_fragment(ctx) {
       this.h();
     },
     h() {
-      attr(div0, "class", "py-16 md:py-32 md:w-1/2 mx-auto markdown");
+      attr(div0, "class", "py-16 md:py-32 md:w-2/3 mx-auto markdown");
       attr(div1, "class", "section-header");
       attr(div2, "class", "grid md:grid-cols-3 gap-4 md:gap-10");
       attr(div3, "class", "middle-pane-medium pb-16 text-xl text-center mx-auto");
