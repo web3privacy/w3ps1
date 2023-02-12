@@ -33,12 +33,12 @@
   <div class="w-full h-screen">
     <div class="w-full h-full flex items-center text-center">
       <div class="mx-auto">
-        <div class="text-8xl font-bold uppercase mb-8">{data.config.shortname}</div>
-        <div class="text-5xl mb-4">{data.config.date}</div>
-        <div class="text-5xl">{data.config.venue}</div>
-        <div class="mt-8 text-lg text-mild">
+        <div class="text-5xl md:text-8xl font-bold uppercase mb-4 md:mb-8">{data.config.shortname}</div>
+        <div class="text-3xl md:text-5xl md:mb-4">{data.config.date}</div>
+        <div class="text-3xl md:text-5xl">{data.config.venue}</div>
+        <div class="mt-8 text-lg text-mild mx-4">
           <p>Diving into the culture of the Web3 privacy industry</p>
-          <p><a href="https://prgblockweek.com" class="underline hover:no-underline">Prague Blockchain Week 2023</a></p>
+          <p><a href="https://prgblockweek.com" class="underline hover:no-underline external external-mild">Prague Blockchain Week 2023</a></p>
         </div>
       </div>
 
@@ -67,7 +67,7 @@
             </a>
           </div>
           <div class="mt-4 text-mild">
-            💛 Collaboration of <a href="https://web3privacy.info">Web3Privacy Now</a> & <a href="https://ethbrno.cz">ETHBrno</a> team
+            💛 Collaboration of <a href="https://web3privacy.info" class="external external-mild">Web3Privacy Now</a> & <a href="https://ethbrno.cz" class="external external-mild">ETHBrno</a> team
           </div>
         </div>
       </div>
