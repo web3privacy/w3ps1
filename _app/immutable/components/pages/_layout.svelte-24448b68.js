@@ -208,7 +208,7 @@ function create_fragment(ctx) {
       t17 = text("💛 Collaboration of ");
       a5 = element("a");
       t18 = text("Web3Privacy Now");
-      t19 = text(" & ");
+      t19 = text("\n						& ");
       a6 = element("a");
       t20 = text("ETHBrno");
       t21 = text(" team");
@@ -274,7 +274,7 @@ function create_fragment(ctx) {
       t9 = claim_space(div9_nodes);
       p1 = claim_element(div9_nodes, "P", {});
       var p1_nodes = children(p1);
-      a1 = claim_element(p1_nodes, "A", { href: true, class: true });
+      a1 = claim_element(p1_nodes, "A", { href: true, target: true, class: true });
       var a1_nodes = children(a1);
       t10 = claim_text(a1_nodes, "Prague Blockchain Week 2023");
       a1_nodes.forEach(detach);
@@ -330,7 +330,7 @@ function create_fragment(ctx) {
       var a5_nodes = children(a5);
       t18 = claim_text(a5_nodes, "Web3Privacy Now");
       a5_nodes.forEach(detach);
-      t19 = claim_text(div16_nodes, " & ");
+      t19 = claim_text(div16_nodes, "\n						& ");
       a6 = claim_element(div16_nodes, "A", { href: true, class: true });
       var a6_nodes = children(a6);
       t20 = claim_text(a6_nodes, "ETHBrno");
@@ -356,8 +356,9 @@ function create_fragment(ctx) {
       attr(div5, "class", "fixed w-full h-18 bg-black pt-6 md:pt-2 pb-2");
       attr(div6, "class", "text-5xl md:text-8xl font-bold uppercase mb-4 md:mb-8");
       attr(div7, "class", "text-3xl md:text-5xl md:mb-4");
-      attr(div8, "class", "text-3xl md:text-5xl");
+      attr(div8, "class", "text-3xl md:text-5xl uppercase");
       attr(a1, "href", "https://prgblockweek.com");
+      attr(a1, "target", "_blank");
       attr(a1, "class", "underline hover:no-underline external external-mild");
       attr(div9, "class", "mt-8 text-lg text-mild mx-4");
       attr(div10, "class", "mx-auto");

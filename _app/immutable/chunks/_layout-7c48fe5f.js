@@ -2689,11 +2689,11 @@ var jsYaml = {
 const CONFIG = jsYaml.load(`
 
 title: Web3Privacy Prague 2023
-shortname: Web3Privacy Summit
+shortname: "Web3Privacy Summit #1"
 date: Monday, 5. June 2023
 venue: X10, Prague
 slogan: |
-  We need to protect our privacy, and that's why we're coming together on June 5 to Prague to sit down and discuss different aspects of privacy in the Web3 industry - how we can help shape it and make it more accessible - building a shared culture. Conference was created to complement the [Web3Privacy Now](http://web3privacy.info/) research project.
+  We need to protect our privacy, and that's why we're coming together on June 5 to Prague to sit down and discuss different aspects of privacy in the Web3 industry - how we can help shape it and make it more accessible - building a shared culture. The conference complements the research project [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).
 themes:
 - title: Human rights DAOs (pro-privacy)
 - title: Identity (ID)
@@ -2738,8 +2738,18 @@ faq:
   text: Yes, we plan do both. Livestream of the whole conference and recordings of the lectures will be publicly available.
 - title: How do I get to the venue?
   text: Venue X10 (full name "[Divadlo X10](https://divadlox10.cz)") is located in the centre of Prague near the metro station *Národní Třída* (Line B) and *Můstek* (Line A,C). The address is [Charvátova 10/39, Prague 1, 110 00](https://goo.gl/maps/Yh8qWagnqB1DvK676) ([Google Maps](https://goo.gl/maps/Yh8qWagnqB1DvK676)).
-- title: Will there be any food or drink?
-  text: We don't know, but we'll do our best. This unfortunately depends on the sponsors.
+people:
+- id: mykola
+  name: Mykola Siusko
+  twitter: nicksvyaznoy
+  img: mykola.png
+- id: tree
+  name: Tree
+  twitter: treecz
+  img: tree.jpeg
+hosts:
+- mykola
+- tree
 program:
 - time: 9:00 - 9:30
   title: Registration & networking
