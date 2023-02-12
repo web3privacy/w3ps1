@@ -29,7 +29,10 @@
 	}
 
 	.button {
-		@apply px-3 py-1.5 text-black bg-white;
+		@apply px-3 py-1.5 text-black bg-white border border-black;
+	}
+	.button:hover {
+		@apply text-white bg-black border border-white;
 	}
 	.section-header {
 		@apply text-3xl md:text-5xl mb-8 md:mb-16 font-bold pt-10;

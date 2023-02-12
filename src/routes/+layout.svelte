@@ -26,7 +26,7 @@
 				<div class="flex items-center gap-6 uppercase text-xl">
           <button class="md:hidden text-3xl" on:click={() => navbar = !navbar}>☰</button>
 					{#each menu as mi}
-						<div class="{mi.class} hidden md:block"><a href={mi.url}>{mi.title}</a></div>
+						<div class="hidden md:block"><a class={mi.class ? mi.class : 'hover:underline'} href={mi.url}>{mi.title}</a></div>
 					{/each}
 				</div>
 			</div>
