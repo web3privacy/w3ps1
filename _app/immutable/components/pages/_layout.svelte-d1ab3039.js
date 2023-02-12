@@ -353,7 +353,7 @@ function create_fragment(ctx) {
       attr(div2, "class", "flex items-center gap-6 uppercase text-xl");
       attr(div3, "class", "flex");
       attr(div4, "class", "middle-pane-big bg-black");
-      attr(div5, "class", "fixed w-full h-18 bg-black pt-6 md:pt-2 pb-2");
+      attr(div5, "class", "fixed w-full h-18 bg-black pt-6 md:pt-2 pb-2 z-40");
       attr(div6, "class", "text-5xl md:text-8xl font-bold uppercase mb-4 md:mb-8");
       attr(div7, "class", "text-3xl md:text-5xl md:mb-4");
       attr(div8, "class", "text-3xl md:text-5xl uppercase");
