@@ -15,7 +15,7 @@
         @apply font-mono;
     }
 
-    footer a {
+    footer a, .markdown a {
         @apply underline hover:no-underline;
     }
 
@@ -30,6 +30,29 @@
         @apply px-3 py-1.5 text-black bg-white;
     }
     .section-header {
-        @apply text-5xl mb-16 font-bold;
+        @apply text-5xl mb-16 font-bold pt-10;
+    }
+
+    .text-mild {
+        @apply text-white/70;
+    }
+
+    table.table-custom {
+        @apply text-base;
+    }
+    .table-custom td, .table-custom th {
+        @apply px-4 py-4 align-top;
+    }
+    .table-custom th {
+        @apply text-mild;
+    }
+    .table-custom tbody tr:hover td {
+        @apply bg-white text-black;
+    }
+    .table-custom tbody tr:hover td .description {
+        @apply text-black;
+    }
+    .table-custom td {
+        @apply border border-b-0 border-l-0 border-r-0 border-gray-600;
     }
 }
