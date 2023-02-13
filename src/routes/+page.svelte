@@ -7,12 +7,18 @@
 
 <svelte:head>
 	<title>{data.config.title} | {data.config.date}</title>
+	<meta name="description" content={data.config.desc} />
+	<meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@{data.config.twitter}" />
+    <meta name="twitter:title" content="{data.config.title} | {data.config.date}" />
+    <meta name="twitter:description" content={data.config.desc} />
+    <meta name="twitter:image" content="https://{data.config.domain}{data.config.image}" />
 </svelte:head>
 
 <div class="bg-black" id="about">
 	<div class="middle-pane-medium pb-16 text-xl text-center mx-auto">
 		<div class="py-16 md:py-32 md:w-2/3 mx-auto markdown">
-			<SvelteMarkdown source={data.config.slogan} />
+			<SvelteMarkdown source={data.config.intro} />
 		</div>
 		<div class="section-header">Key themes</div>
 		<div class="grid md:grid-cols-3 gap-4 md:gap-10">
@@ -88,7 +94,7 @@
 	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto pb-32">
 		<div class="section-header">Sponsors</div>
 		<div>
-			<a href="https://matrix.to/#/@tree:gwei.cz" target="_blank"
+			<a href={data.config.sponsorUrl} target="_blank"
 				><button
 					class="py-2 px-5 bg-white text-black hover:bg-black border border-bg-white hover:text-white"
 					>Become a Sponsor</button
@@ -101,7 +107,7 @@
 <div class="bg-black" id="ticket">
 	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto pb-32">
 		<div class="section-header">Ticket</div>
-		<div class="mb-8 text-lg text-mild">Be a part of the first Web3Privacy Summit experience…</div>
+		<div class="mb-8 text-lg text-mild">{data.config.ticketsIntro}</div>
 		<div class="grid lg:grid-cols-2 gap-10 md:w-2/3 mx-auto">
 			{#each data.config.tickets as tt}
 				<div
@@ -126,7 +132,7 @@
 				</div>
 			{/each}
 		</div>
-		<div class="mt-8 text-xl">Tickets will go on sale in early March 2023.</div>
+		<div class="mt-8 text-xl">{data.config.ticketsNote}</div>
 	</div>
 </div>
 
