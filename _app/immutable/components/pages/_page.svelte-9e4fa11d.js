@@ -1249,7 +1249,7 @@ function create_fragment(ctx) {
       this.h();
     },
     l(nodes) {
-      const head_nodes = head_selector("svelte-1p04wvw", document.head);
+      const head_nodes = head_selector("svelte-1v6y0me", document.head);
       meta0 = claim_element(head_nodes, "META", { name: true, content: true });
       meta1 = claim_element(head_nodes, "META", { name: true, content: true });
       meta2 = claim_element(head_nodes, "META", { name: true, content: true });
@@ -1436,8 +1436,7 @@ function create_fragment(ctx) {
       ctx[0].config.twitter);
       attr(meta3, "name", "twitter:title");
       attr(meta3, "content", meta3_content_value = /*data*/
-      ctx[0].config.title + " | " + /*data*/
-      ctx[0].config.date);
+      ctx[0].config.title);
       attr(meta4, "name", "twitter:description");
       attr(meta4, "content", meta4_content_value = /*data*/
       ctx[0].config.desc);
@@ -1604,8 +1603,7 @@ function create_fragment(ctx) {
       }
       if (!current || dirty & /*data*/
       1 && meta3_content_value !== (meta3_content_value = /*data*/
-      ctx2[0].config.title + " | " + /*data*/
-      ctx2[0].config.date)) {
+      ctx2[0].config.title)) {
         attr(meta3, "content", meta3_content_value);
       }
       if (!current || dirty & /*data*/
