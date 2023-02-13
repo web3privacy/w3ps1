@@ -49,7 +49,7 @@ function create_if_block_1$2(ctx) {
   let if_block;
   let if_block_anchor;
   let current;
-  const if_block_creators = [create_if_block_2$1, create_if_block_3$1, create_else_block_1];
+  const if_block_creators = [create_if_block_2$2, create_if_block_3$1, create_else_block_1];
   const if_blocks = [];
   function select_block_type_1(ctx2, dirty) {
     if (
@@ -370,7 +370,7 @@ function create_if_block_3$1(ctx) {
     }
   };
 }
-function create_if_block_2$1(ctx) {
+function create_if_block_2$2(ctx) {
   let switch_instance;
   let switch_instance_anchor;
   let current;
@@ -4782,7 +4782,7 @@ function create_if_block_3(ctx) {
     }
   };
 }
-function create_if_block_2(ctx) {
+function create_if_block_2$1(ctx) {
   let h3;
   let current;
   const default_slot_template = (
@@ -5078,7 +5078,7 @@ function create_fragment$n(ctx) {
   const if_block_creators = [
     create_if_block$3,
     create_if_block_1$1,
-    create_if_block_2,
+    create_if_block_2$1,
     create_if_block_3,
     create_if_block_4,
     create_if_block_5,
@@ -7812,7 +7812,7 @@ function create_each_block_4(ctx) {
     }
   };
 }
-function create_if_block_1(ctx) {
+function create_if_block_2(ctx) {
   let div;
   let sveltemarkdown;
   let current;
@@ -7894,7 +7894,7 @@ function create_each_block_3(ctx) {
   let current;
   let if_block = (
     /*pi*/
-    ctx[10].desc && create_if_block_1(ctx)
+    ctx[10].desc && create_if_block_2(ctx)
   );
   return {
     c() {
@@ -7983,7 +7983,7 @@ function create_each_block_3(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block_1(ctx2);
+          if_block = create_if_block_2(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(td1, null);
@@ -8048,7 +8048,7 @@ function create_each_block_2(ctx) {
     }
   };
 }
-function create_if_block(ctx) {
+function create_if_block_1(ctx) {
   let div;
   let t_value = (
     /*tt*/
@@ -8087,6 +8087,60 @@ function create_if_block(ctx) {
     }
   };
 }
+function create_if_block(ctx) {
+  let div;
+  let sveltemarkdown;
+  let current;
+  sveltemarkdown = new SvelteMarkdown({ props: { source: (
+    /*tt*/
+    ctx[4].hint
+  ) } });
+  return {
+    c() {
+      div = element("div");
+      create_component(sveltemarkdown.$$.fragment);
+      this.h();
+    },
+    l(nodes) {
+      div = claim_element(nodes, "DIV", { class: true });
+      var div_nodes = children(div);
+      claim_component(sveltemarkdown.$$.fragment, div_nodes);
+      div_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      attr(div, "class", "mt-10 markdown text-base");
+    },
+    m(target, anchor) {
+      insert_hydration(target, div, anchor);
+      mount_component(sveltemarkdown, div, null);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const sveltemarkdown_changes = {};
+      if (dirty & /*data*/
+      1)
+        sveltemarkdown_changes.source = /*tt*/
+        ctx2[4].hint;
+      sveltemarkdown.$set(sveltemarkdown_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(sveltemarkdown.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(sveltemarkdown.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      destroy_component(sveltemarkdown);
+    }
+  };
+}
 function create_each_block_1(ctx) {
   let div2;
   let div0;
@@ -8106,6 +8160,8 @@ function create_each_block_1(ctx) {
   let ul;
   let t4;
   let t5;
+  let t6;
+  let current;
   let each_value_2 = (
     /*tt*/
     ctx[4].includes
@@ -8114,9 +8170,13 @@ function create_each_block_1(ctx) {
   for (let i = 0; i < each_value_2.length; i += 1) {
     each_blocks[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
   }
-  let if_block = (
+  let if_block0 = (
     /*tt*/
-    ctx[4].note && create_if_block(ctx)
+    ctx[4].note && create_if_block_1(ctx)
+  );
+  let if_block1 = (
+    /*tt*/
+    ctx[4].hint && create_if_block(ctx)
   );
   return {
     c() {
@@ -8132,9 +8192,12 @@ function create_each_block_1(ctx) {
         each_blocks[i].c();
       }
       t4 = space();
-      if (if_block)
-        if_block.c();
+      if (if_block0)
+        if_block0.c();
       t5 = space();
+      if (if_block1)
+        if_block1.c();
+      t6 = space();
       this.h();
     },
     l(nodes) {
@@ -8157,17 +8220,20 @@ function create_each_block_1(ctx) {
       }
       ul_nodes.forEach(detach);
       t4 = claim_space(div2_nodes);
-      if (if_block)
-        if_block.l(div2_nodes);
+      if (if_block0)
+        if_block0.l(div2_nodes);
       t5 = claim_space(div2_nodes);
+      if (if_block1)
+        if_block1.l(div2_nodes);
+      t6 = claim_space(div2_nodes);
       div2_nodes.forEach(detach);
       this.h();
     },
     h() {
       attr(div0, "class", "text-3xl uppercase");
-      attr(div1, "class", "text-xl mt-6");
+      attr(div1, "class", "text-xl mt-6 font-bold");
       attr(ul, "class", "mt-6 text-lg text-left list-disc px-6");
-      attr(div2, "class", "bg-[#0d1117] hover:border-0 py-10 px-10 ");
+      attr(div2, "class", "bg-[#0d1117] hover:border-0 py-10 px-10 hover:text-black hover:bg-white");
     },
     m(target, anchor) {
       insert_hydration(target, div2, anchor);
@@ -8182,17 +8248,21 @@ function create_each_block_1(ctx) {
         each_blocks[i].m(ul, null);
       }
       append_hydration(div2, t4);
-      if (if_block)
-        if_block.m(div2, null);
+      if (if_block0)
+        if_block0.m(div2, null);
       append_hydration(div2, t5);
+      if (if_block1)
+        if_block1.m(div2, null);
+      append_hydration(div2, t6);
+      current = true;
     },
     p(ctx2, dirty) {
-      if (dirty & /*data*/
-      1 && t0_value !== (t0_value = /*tt*/
+      if ((!current || dirty & /*data*/
+      1) && t0_value !== (t0_value = /*tt*/
       ctx2[4].title + ""))
         set_data(t0, t0_value);
-      if (dirty & /*data*/
-      1 && t2_value !== (t2_value = /*tt*/
+      if ((!current || dirty & /*data*/
+      1) && t2_value !== (t2_value = /*tt*/
       ctx2[4].price + ""))
         set_data(t2, t2_value);
       if (dirty & /*data*/
@@ -8219,24 +8289,59 @@ function create_each_block_1(ctx) {
         /*tt*/
         ctx2[4].note
       ) {
-        if (if_block) {
-          if_block.p(ctx2, dirty);
+        if (if_block0) {
+          if_block0.p(ctx2, dirty);
         } else {
-          if_block = create_if_block(ctx2);
-          if_block.c();
-          if_block.m(div2, t5);
+          if_block0 = create_if_block_1(ctx2);
+          if_block0.c();
+          if_block0.m(div2, t5);
         }
-      } else if (if_block) {
-        if_block.d(1);
-        if_block = null;
+      } else if (if_block0) {
+        if_block0.d(1);
+        if_block0 = null;
       }
+      if (
+        /*tt*/
+        ctx2[4].hint
+      ) {
+        if (if_block1) {
+          if_block1.p(ctx2, dirty);
+          if (dirty & /*data*/
+          1) {
+            transition_in(if_block1, 1);
+          }
+        } else {
+          if_block1 = create_if_block(ctx2);
+          if_block1.c();
+          transition_in(if_block1, 1);
+          if_block1.m(div2, t6);
+        }
+      } else if (if_block1) {
+        group_outros();
+        transition_out(if_block1, 1, 1, () => {
+          if_block1 = null;
+        });
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block1);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block1);
+      current = false;
     },
     d(detaching) {
       if (detaching)
         detach(div2);
       destroy_each(each_blocks, detaching);
-      if (if_block)
-        if_block.d();
+      if (if_block0)
+        if_block0.d();
+      if (if_block1)
+        if_block1.d();
     }
   };
 }
@@ -8469,6 +8574,9 @@ function create_fragment(ctx) {
   for (let i = 0; i < each_value_1.length; i += 1) {
     each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
   }
+  const out_2 = (i) => transition_out(each_blocks_1[i], 1, 1, () => {
+    each_blocks_1[i] = null;
+  });
   let each_value = (
     /*data*/
     ctx[0].config.faq
@@ -8477,7 +8585,7 @@ function create_fragment(ctx) {
   for (let i = 0; i < each_value.length; i += 1) {
     each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
   }
-  const out_2 = (i) => transition_out(each_blocks[i], 1, 1, () => {
+  const out_3 = (i) => transition_out(each_blocks[i], 1, 1, () => {
     each_blocks[i] = null;
   });
   return {
@@ -8963,16 +9071,19 @@ function create_fragment(ctx) {
           const child_ctx = get_each_context_1(ctx2, each_value_1, i);
           if (each_blocks_1[i]) {
             each_blocks_1[i].p(child_ctx, dirty);
+            transition_in(each_blocks_1[i], 1);
           } else {
             each_blocks_1[i] = create_each_block_1(child_ctx);
             each_blocks_1[i].c();
+            transition_in(each_blocks_1[i], 1);
             each_blocks_1[i].m(div24, null);
           }
         }
-        for (; i < each_blocks_1.length; i += 1) {
-          each_blocks_1[i].d(1);
+        group_outros();
+        for (i = each_value_1.length; i < each_blocks_1.length; i += 1) {
+          out_2(i);
         }
-        each_blocks_1.length = each_value_1.length;
+        check_outros();
       }
       if (dirty & /*data*/
       1) {
@@ -8993,7 +9104,7 @@ function create_fragment(ctx) {
         }
         group_outros();
         for (i = each_value.length; i < each_blocks.length; i += 1) {
-          out_2(i);
+          out_3(i);
         }
         check_outros();
       }
@@ -9009,6 +9120,9 @@ function create_fragment(ctx) {
       transition_in(peoplelist1.$$.fragment, local);
       for (let i = 0; i < each_value_3.length; i += 1) {
         transition_in(each_blocks_2[i]);
+      }
+      for (let i = 0; i < each_value_1.length; i += 1) {
+        transition_in(each_blocks_1[i]);
       }
       for (let i = 0; i < each_value.length; i += 1) {
         transition_in(each_blocks[i]);
@@ -9026,6 +9140,10 @@ function create_fragment(ctx) {
       each_blocks_2 = each_blocks_2.filter(Boolean);
       for (let i = 0; i < each_blocks_2.length; i += 1) {
         transition_out(each_blocks_2[i]);
+      }
+      each_blocks_1 = each_blocks_1.filter(Boolean);
+      for (let i = 0; i < each_blocks_1.length; i += 1) {
+        transition_out(each_blocks_1[i]);
       }
       each_blocks = each_blocks.filter(Boolean);
       for (let i = 0; i < each_blocks.length; i += 1) {
