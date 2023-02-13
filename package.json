@@ -6,6 +6,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"static-data": "node -e \"(async function () { const data=await import('./src/lib/config.js');console.log(JSON.stringify(data.default, null, 2)); })()\" > static/data.json",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write ."
 	},
