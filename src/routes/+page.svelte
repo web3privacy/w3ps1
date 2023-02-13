@@ -105,12 +105,10 @@
 		<div class="grid lg:grid-cols-2 gap-10 md:w-2/3 mx-auto">
 			{#each data.config.tickets as tt}
 				<div
-					class="bg-[#0d1117] hover:border-0 py-10 px-10 {false
-						? 'hover:text-black hover:bg-white cursor-pointer'
-						: ''}"
+					class="bg-[#0d1117] hover:border-0 py-10 px-10 hover:text-black hover:bg-white"
 				>
 					<div class="text-3xl uppercase">{tt.title}</div>
-					<div class="text-xl mt-6">{tt.price}</div>
+					<div class="text-xl mt-6 font-bold">{tt.price}</div>
 					<ul class="mt-6 text-lg text-left list-disc px-6">
 						{#each tt.includes as ti}
 							<li>{ti}</li>
@@ -121,6 +119,9 @@
                     </div-->
 					{#if tt.note}
 						<div class="mt-10 text-base">{tt.note}</div>
+					{/if}
+					{#if tt.hint}
+						<div class="mt-10 markdown text-base"><SvelteMarkdown source={tt.hint} /></div>
 					{/if}
 				</div>
 			{/each}

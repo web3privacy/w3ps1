@@ -39,6 +39,8 @@ tickets:
   - Coffee breaks
   - Buffet lunch
   - Networking drinks with speakers & attendees
+  hint: |
+    [Apply for a discount →](https://tally.so/r/mYPDJW)<br />(as independent developer, student, privacy advocate, open-source contributor..)
 - title: "#Lunarpunk Party"
   price: 350 CZK (~15 EUR)
   includes:
@@ -52,6 +54,10 @@ faq:
   text: Our event is for anyone interested in privacy topics in the Web3 industry. There will be space for about 300 enthusiasts.
 - title: Will the talks be livestreamed and/or recorded?
   text: Yes, we plan do both. Livestream of the whole conference and recordings of the lectures will be publicly available.
+- title: When will tickets go on sale? What will be the payment options?
+  text: Tickets will go on sale in early March 2023. Payment will be possible via credit card, Bitcoin (on-chain), Lightning Network or possibly other cryptocurrencies.
+- title: All-day access ticket is expensive for me. Do you offer any discounts?
+  text: Yes, we do! We offer discounts (up to 75%) for independent developers, students and especially active privacy advocates or open-source contributors to private protocols or tools. If you are interested in a discount, please fill out [this form](https://tally.so/r/mYPDJW).
 - title: How do I get to the venue?
   text: Venue X10 (full name "[Divadlo X10](https://divadlox10.cz)") is located in the centre of Prague near the metro station *Národní Třída* (Line B) and *Můstek* (Line A,C). The address is [Charvátova 10/39, Prague 1, 110 00](https://goo.gl/maps/Yh8qWagnqB1DvK676) ([Google Maps](https://goo.gl/maps/Yh8qWagnqB1DvK676)).
 people:
