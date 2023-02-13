@@ -3,7 +3,19 @@
   "shortname": "Web3Privacy Summit #1",
   "date": "Monday, 5. June 2023",
   "venue": "X10, Prague",
-  "slogan": "We need to protect our privacy, and that's why we're coming together on June 5 to Prague to sit down and discuss different aspects of privacy in the Web3 industry - how we can help shape it and make it more accessible - building a shared culture. The conference complements the research project [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).\n",
+  "domain": "prague.web3privacy.info",
+  "image": "/web3privacy.png",
+  "logo": "/web3privacy-cropped.jpg",
+  "twitter": "web3privacy",
+  "parent": "Web3Privacy Now",
+  "parentUrl": "https://web3privacy.info",
+  "desc": "June 5, 2023 - A lunarpunk conference focused on privacy in the Web3 industry as a complement to the Web3Privacy Now research.",
+  "authors": "💛 Collaboration of [Web3Privacy Now](https://web3privacy.info) & [ETHBrno](https://ethbrno.cz) team",
+  "slogan": "Diving into the culture of the Web3 privacy industry",
+  "aggregator": "Prague Blockchain Week 2023",
+  "aggregatorUrl": "http://prgblockweek.com/",
+  "sponsorUrl": "https://matrix.to/#/@tree:gwei.cz",
+  "intro": "We need to protect our privacy, and that's why we're coming together on June 5 to Prague to sit down and discuss different aspects of privacy in the Web3 industry - how we can help shape it and make it more accessible - building a shared culture. The conference complements the research project [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).\n",
   "themes": [
     {
       "title": "Human rights DAOs (pro-privacy)"
@@ -56,6 +68,8 @@
       "desc": "We need resilient privacy-preserving, p2p communication layers for Web3, that allows free and uncensored human-to-human, machine-to-machine or hybrid communication."
     }
   ],
+  "ticketsIntro": "Be a part of the first Web3Privacy Summit experience…",
+  "ticketsNote": "Tickets will go on sale in early March 2023.",
   "tickets": [
     {
       "title": "All-day Access",

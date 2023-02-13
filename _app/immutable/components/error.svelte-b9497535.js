@@ -1,5 +1,5 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, q as text, a as space, l as claim_element, m as children, r as claim_text, h as detach, c as claim_space, b as insert_hydration, H as append_hydration, u as set_data, C as noop, N as component_subscribe } from "../chunks/index-744c867d.js";
-import { s as stores } from "../chunks/singletons-5ef66a80.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, q as text, a as space, l as claim_element, m as children, r as claim_text, h as detach, c as claim_space, b as insert_hydration, H as append_hydration, u as set_data, C as noop, Y as component_subscribe } from "../chunks/index-858fda85.js";
+import { s as stores } from "../chunks/singletons-1811cedd.js";
 const getStores = () => {
   const stores$1 = stores;
   return {

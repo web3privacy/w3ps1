@@ -1,4 +1,5 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, I as listen, u as set_data, J as update_slot_base, K as get_all_dirty_from_scope, L as get_slot_changes, f as transition_in, t as transition_out, M as destroy_each, C as noop } from "../../chunks/index-744c867d.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, x as create_component, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, y as claim_component, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, z as mount_component, I as listen, u as set_data, J as update_slot_base, K as get_all_dirty_from_scope, L as get_slot_changes, f as transition_in, t as transition_out, M as destroy_each, A as destroy_component, C as noop } from "../../chunks/index-858fda85.js";
+import { S as SvelteMarkdown } from "../../chunks/SvelteMarkdown-6743e4fc.js";
 const app = "";
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
@@ -215,6 +216,8 @@ function create_fragment(ctx) {
   let a0;
   let img0;
   let img0_src_value;
+  let img0_alt_value;
+  let a0_href_value;
   let t0;
   let div2;
   let button;
@@ -248,11 +251,20 @@ function create_fragment(ctx) {
   let t10;
   let div9;
   let p0;
+  let t11_value = (
+    /*data*/
+    ctx[0].config.slogan + ""
+  );
   let t11;
   let t12;
   let p1;
   let a1;
+  let t13_value = (
+    /*data*/
+    ctx[0].config.aggregator + ""
+  );
   let t13;
+  let a1_href_value;
   let t14;
   let t15;
   let footer;
@@ -263,24 +275,27 @@ function create_fragment(ctx) {
   let a2;
   let img1;
   let img1_src_value;
+  let img1_alt_value;
+  let a2_href_value;
   let t16;
   let div17;
   let div15;
   let a3;
   let svg;
   let path;
+  let a3_href_value;
   let t17;
   let a4;
   let t18;
+  let t19_value = (
+    /*data*/
+    ctx[0].config.twitter + ""
+  );
   let t19;
-  let div16;
+  let a4_href_value;
   let t20;
-  let a5;
-  let t21;
-  let t22;
-  let a6;
-  let t23;
-  let t24;
+  let div16;
+  let sveltemarkdown;
   let current;
   let mounted;
   let dispose;
@@ -307,6 +322,12 @@ function create_fragment(ctx) {
     ctx[3],
     null
   );
+  sveltemarkdown = new SvelteMarkdown({
+    props: { source: (
+      /*data*/
+      ctx[0].config.authors
+    ) }
+  });
   return {
     c() {
       div20 = element("div");
@@ -343,11 +364,11 @@ function create_fragment(ctx) {
       t10 = space();
       div9 = element("div");
       p0 = element("p");
-      t11 = text("Diving into the culture of the Web3 privacy industry");
+      t11 = text(t11_value);
       t12 = space();
       p1 = element("p");
       a1 = element("a");
-      t13 = text("Prague Blockchain Week 2023");
+      t13 = text(t13_value);
       t14 = space();
       if (default_slot)
         default_slot.c();
@@ -367,16 +388,11 @@ function create_fragment(ctx) {
       path = svg_element("path");
       t17 = space();
       a4 = element("a");
-      t18 = text("@web3privacy");
-      t19 = space();
+      t18 = text("@");
+      t19 = text(t19_value);
+      t20 = space();
       div16 = element("div");
-      t20 = text("💛 Collaboration of ");
-      a5 = element("a");
-      t21 = text("Web3Privacy Now");
-      t22 = text("\n						& ");
-      a6 = element("a");
-      t23 = text("ETHBrno");
-      t24 = text(" team");
+      create_component(sveltemarkdown.$$.fragment);
       this.h();
     },
     l(nodes) {
@@ -394,7 +410,7 @@ function create_fragment(ctx) {
       var div0_nodes = children(div0);
       a0 = claim_element(div0_nodes, "A", { href: true });
       var a0_nodes = children(a0);
-      img0 = claim_element(a0_nodes, "IMG", { src: true });
+      img0 = claim_element(a0_nodes, "IMG", { src: true, alt: true });
       a0_nodes.forEach(detach);
       div0_nodes.forEach(detach);
       div1_nodes.forEach(detach);
@@ -442,14 +458,14 @@ function create_fragment(ctx) {
       var div9_nodes = children(div9);
       p0 = claim_element(div9_nodes, "P", {});
       var p0_nodes = children(p0);
-      t11 = claim_text(p0_nodes, "Diving into the culture of the Web3 privacy industry");
+      t11 = claim_text(p0_nodes, t11_value);
       p0_nodes.forEach(detach);
       t12 = claim_space(div9_nodes);
       p1 = claim_element(div9_nodes, "P", {});
       var p1_nodes = children(p1);
       a1 = claim_element(p1_nodes, "A", { href: true, target: true, class: true });
       var a1_nodes = children(a1);
-      t13 = claim_text(a1_nodes, "Prague Blockchain Week 2023");
+      t13 = claim_text(a1_nodes, t13_value);
       a1_nodes.forEach(detach);
       p1_nodes.forEach(detach);
       div9_nodes.forEach(detach);
@@ -472,7 +488,7 @@ function create_fragment(ctx) {
       var div13_nodes = children(div13);
       a2 = claim_element(div13_nodes, "A", { href: true });
       var a2_nodes = children(a2);
-      img1 = claim_element(a2_nodes, "IMG", { src: true });
+      img1 = claim_element(a2_nodes, "IMG", { src: true, alt: true });
       a2_nodes.forEach(detach);
       div13_nodes.forEach(detach);
       div14_nodes.forEach(detach);
@@ -492,23 +508,14 @@ function create_fragment(ctx) {
       t17 = claim_space(div15_nodes);
       a4 = claim_element(div15_nodes, "A", { href: true, class: true });
       var a4_nodes = children(a4);
-      t18 = claim_text(a4_nodes, "@web3privacy");
+      t18 = claim_text(a4_nodes, "@");
+      t19 = claim_text(a4_nodes, t19_value);
       a4_nodes.forEach(detach);
       div15_nodes.forEach(detach);
-      t19 = claim_space(div17_nodes);
+      t20 = claim_space(div17_nodes);
       div16 = claim_element(div17_nodes, "DIV", { class: true });
       var div16_nodes = children(div16);
-      t20 = claim_text(div16_nodes, "💛 Collaboration of ");
-      a5 = claim_element(div16_nodes, "A", { href: true, class: true });
-      var a5_nodes = children(a5);
-      t21 = claim_text(a5_nodes, "Web3Privacy Now");
-      a5_nodes.forEach(detach);
-      t22 = claim_text(div16_nodes, "\n						& ");
-      a6 = claim_element(div16_nodes, "A", { href: true, class: true });
-      var a6_nodes = children(a6);
-      t23 = claim_text(a6_nodes, "ETHBrno");
-      a6_nodes.forEach(detach);
-      t24 = claim_text(div16_nodes, " team");
+      claim_component(sveltemarkdown.$$.fragment, div16_nodes);
       div16_nodes.forEach(detach);
       div17_nodes.forEach(detach);
       div18_nodes.forEach(detach);
@@ -518,9 +525,13 @@ function create_fragment(ctx) {
       this.h();
     },
     h() {
-      if (!src_url_equal(img0.src, img0_src_value = "/web3privacy-cropped.jpg"))
+      if (!src_url_equal(img0.src, img0_src_value = /*data*/
+      ctx[0].config.logo))
         attr(img0, "src", img0_src_value);
-      attr(a0, "href", "https://web3privacy.info");
+      attr(img0, "alt", img0_alt_value = /*data*/
+      ctx[0].config.parent);
+      attr(a0, "href", a0_href_value = /*data*/
+      ctx[0].config.parentUrl);
       attr(div0, "class", "w-16 py-2");
       attr(div1, "class", "flex items-center gap-4 grow");
       attr(button, "class", "md:hidden text-3xl");
@@ -531,16 +542,21 @@ function create_fragment(ctx) {
       attr(div6, "class", "text-5xl md:text-8xl font-bold uppercase mb-4 md:mb-8");
       attr(div7, "class", "text-3xl md:text-5xl md:mb-4");
       attr(div8, "class", "text-3xl md:text-5xl uppercase");
-      attr(a1, "href", "https://prgblockweek.com");
+      attr(a1, "href", a1_href_value = /*data*/
+      ctx[0].config.aggregatorUrl);
       attr(a1, "target", "_blank");
       attr(a1, "class", "underline hover:no-underline external external-mild");
       attr(div9, "class", "mt-8 text-lg text-mild mx-4");
       attr(div10, "class", "mx-auto px-4");
       attr(div11, "class", "w-full h-full flex items-center text-center");
       attr(div12, "class", "w-full h-screen");
-      if (!src_url_equal(img1.src, img1_src_value = "/web3privacy-cropped.jpg"))
+      if (!src_url_equal(img1.src, img1_src_value = /*data*/
+      ctx[0].config.logo))
         attr(img1, "src", img1_src_value);
-      attr(a2, "href", "https://web3privacy.info");
+      attr(img1, "alt", img1_alt_value = /*data*/
+      ctx[0].config.parent);
+      attr(a2, "href", a2_href_value = /*data*/
+      ctx[0].config.parentUrl);
       attr(div13, "class", "w-32 sm:w-42");
       attr(div14, "class", "grow");
       attr(path, "d", "M28.0266 3.12733C26.9955 3.62938 25.8872 3.96853 24.7242 4.12112C25.9113 3.34005 26.8231 2.10325 27.2524 0.629411C26.1413 1.35279 24.9107 1.87791 23.6009 2.16092C22.5522 0.934264 21.0578 0.167969 19.4039 0.167969C16.2285 0.167969 13.6538 2.99367 13.6538 6.47907C13.6538 6.97373 13.7047 7.45548 13.8028 7.91738C9.02398 7.6542 4.78719 5.14151 1.95117 1.3231C1.45622 2.25521 1.17259 3.33929 1.17259 4.49596C1.17259 6.68564 2.18771 8.61738 3.73058 9.74913C2.78804 9.71637 1.90142 9.43244 1.1262 8.95977C1.12555 8.98607 1.12555 9.01252 1.12555 9.03913C1.12555 12.0969 3.1076 14.6476 5.73804 15.2278C5.25556 15.3721 4.74758 15.4491 4.2232 15.4491C3.85268 15.4491 3.49255 15.4095 3.14137 15.3359C3.87315 17.8432 5.99658 19.6679 8.51282 19.7187C6.54493 21.4115 4.06569 22.4206 1.37163 22.4206C0.907503 22.4206 0.449828 22.3906 0 22.3323C2.54468 24.1231 5.56708 25.168 8.81424 25.168C19.3905 25.168 25.1742 15.5511 25.1742 7.21076C25.1742 6.93712 25.1686 6.66503 25.1576 6.39416C26.2809 5.50451 27.2556 4.39306 28.0265 3.12733H28.0266Z");
@@ -549,14 +565,12 @@ function create_fragment(ctx) {
       attr(svg, "fill", "none");
       attr(svg, "xmlns", "http://www.w3.org/2000/svg");
       attr(a3, "class", "inline-block w-5 mr-1");
-      attr(a3, "href", "https://twitter.com/web3privacy");
-      attr(a4, "href", "https://twitter.com/web3privacy");
+      attr(a3, "href", a3_href_value = "https://twitter.com/" + /*data*/
+      ctx[0].config.twitter);
+      attr(a4, "href", a4_href_value = "https://twitter.com/" + /*data*/
+      ctx[0].config.twitter);
       attr(a4, "class", "text-2xl no-underline hover:underline");
       attr(div15, "class", "");
-      attr(a5, "href", "https://web3privacy.info");
-      attr(a5, "class", "external external-mild");
-      attr(a6, "href", "https://ethbrno.cz");
-      attr(a6, "class", "external external-mild");
       attr(div16, "class", "mt-4 text-mild");
       attr(div17, "class", "text-right");
       attr(div18, "class", "flex gap-4");
@@ -625,15 +639,10 @@ function create_fragment(ctx) {
       append_hydration(div15, t17);
       append_hydration(div15, a4);
       append_hydration(a4, t18);
-      append_hydration(div17, t19);
+      append_hydration(a4, t19);
+      append_hydration(div17, t20);
       append_hydration(div17, div16);
-      append_hydration(div16, t20);
-      append_hydration(div16, a5);
-      append_hydration(a5, t21);
-      append_hydration(div16, t22);
-      append_hydration(div16, a6);
-      append_hydration(a6, t23);
-      append_hydration(div16, t24);
+      mount_component(sveltemarkdown, div16, null);
       current = true;
       if (!mounted) {
         dispose = listen(
@@ -646,6 +655,21 @@ function create_fragment(ctx) {
       }
     },
     p(ctx2, [dirty]) {
+      if (!current || dirty & /*data*/
+      1 && !src_url_equal(img0.src, img0_src_value = /*data*/
+      ctx2[0].config.logo)) {
+        attr(img0, "src", img0_src_value);
+      }
+      if (!current || dirty & /*data*/
+      1 && img0_alt_value !== (img0_alt_value = /*data*/
+      ctx2[0].config.parent)) {
+        attr(img0, "alt", img0_alt_value);
+      }
+      if (!current || dirty & /*data*/
+      1 && a0_href_value !== (a0_href_value = /*data*/
+      ctx2[0].config.parentUrl)) {
+        attr(a0, "href", a0_href_value);
+      }
       if (dirty & /*menu*/
       4) {
         each_value_1 = /*menu*/
@@ -693,6 +717,19 @@ function create_fragment(ctx) {
       1) && t9_value !== (t9_value = /*data*/
       ctx2[0].config.venue + ""))
         set_data(t9, t9_value);
+      if ((!current || dirty & /*data*/
+      1) && t11_value !== (t11_value = /*data*/
+      ctx2[0].config.slogan + ""))
+        set_data(t11, t11_value);
+      if ((!current || dirty & /*data*/
+      1) && t13_value !== (t13_value = /*data*/
+      ctx2[0].config.aggregator + ""))
+        set_data(t13, t13_value);
+      if (!current || dirty & /*data*/
+      1 && a1_href_value !== (a1_href_value = /*data*/
+      ctx2[0].config.aggregatorUrl)) {
+        attr(a1, "href", a1_href_value);
+      }
       if (default_slot) {
         if (default_slot.p && (!current || dirty & /*$$scope*/
         8)) {
@@ -716,15 +753,52 @@ function create_fragment(ctx) {
           );
         }
       }
+      if (!current || dirty & /*data*/
+      1 && !src_url_equal(img1.src, img1_src_value = /*data*/
+      ctx2[0].config.logo)) {
+        attr(img1, "src", img1_src_value);
+      }
+      if (!current || dirty & /*data*/
+      1 && img1_alt_value !== (img1_alt_value = /*data*/
+      ctx2[0].config.parent)) {
+        attr(img1, "alt", img1_alt_value);
+      }
+      if (!current || dirty & /*data*/
+      1 && a2_href_value !== (a2_href_value = /*data*/
+      ctx2[0].config.parentUrl)) {
+        attr(a2, "href", a2_href_value);
+      }
+      if (!current || dirty & /*data*/
+      1 && a3_href_value !== (a3_href_value = "https://twitter.com/" + /*data*/
+      ctx2[0].config.twitter)) {
+        attr(a3, "href", a3_href_value);
+      }
+      if ((!current || dirty & /*data*/
+      1) && t19_value !== (t19_value = /*data*/
+      ctx2[0].config.twitter + ""))
+        set_data(t19, t19_value);
+      if (!current || dirty & /*data*/
+      1 && a4_href_value !== (a4_href_value = "https://twitter.com/" + /*data*/
+      ctx2[0].config.twitter)) {
+        attr(a4, "href", a4_href_value);
+      }
+      const sveltemarkdown_changes = {};
+      if (dirty & /*data*/
+      1)
+        sveltemarkdown_changes.source = /*data*/
+        ctx2[0].config.authors;
+      sveltemarkdown.$set(sveltemarkdown_changes);
     },
     i(local) {
       if (current)
         return;
       transition_in(default_slot, local);
+      transition_in(sveltemarkdown.$$.fragment, local);
       current = true;
     },
     o(local) {
       transition_out(default_slot, local);
+      transition_out(sveltemarkdown.$$.fragment, local);
       current = false;
     },
     d(detaching) {
@@ -735,6 +809,7 @@ function create_fragment(ctx) {
         if_block.d();
       if (default_slot)
         default_slot.d(detaching);
+      destroy_component(sveltemarkdown);
       mounted = false;
       dispose();
     }
