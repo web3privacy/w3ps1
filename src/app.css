@@ -41,6 +41,9 @@
 	.text-mild {
 		@apply text-white/70;
 	}
+	.text-supermild {
+		@apply text-white/40;
+	}
 
 	table.table-custom {
 		@apply text-base;

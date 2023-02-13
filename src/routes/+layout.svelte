@@ -73,7 +73,7 @@
 		<div class="middle-pane-big pt-10 mx-auto">
 			<div class="flex gap-4">
 				<div class="grow">
-					<div class="w-32 sm:w-42">
+					<div class="w-32 sm:w-40">
 						<a href={data.config.parentUrl}><img src={data.config.logo} alt={data.config.parent} /></a>
 					</div>
 				</div>
@@ -94,6 +94,11 @@
 					<div class="mt-4 text-mild">
 						<SvelteMarkdown source={data.config.authors} />
 					</div>
+					{#if data.config.license}
+						<div class="mt-4 text-supermild">
+							<SvelteMarkdown source={data.config.license} />
+						</div>
+					{/if}
 				</div>
 			</div>
 		</div>
