@@ -10,7 +10,7 @@
 	<meta name="description" content={data.config.desc} />
 	<meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@{data.config.twitter}" />
-    <meta name="twitter:title" content="{data.config.title} | {data.config.date}" />
+    <meta name="twitter:title" content={data.config.title} />
     <meta name="twitter:description" content={data.config.desc} />
     <meta name="twitter:image" content="https://{data.config.domain}{data.config.image}" />
 </svelte:head>
