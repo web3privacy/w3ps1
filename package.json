@@ -6,9 +6,11 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"static-data": "node -e \"(async function () { const data=await import('./src/lib/config.js');console.log(JSON.stringify(data.default, null, 2)); })()\" > static/data.json",
+		"build-config": "js-yaml data/config.yaml > src/lib/config.json",
+		"static-config": "cp src/lib/config.json static/config.json",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"postinstall": "npm run build-config && npm run static-config"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",

@@ -25,9 +25,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate static JSON file with data
-        run: npm run static-data
-
       - name: Build
         run: npm run build
 
