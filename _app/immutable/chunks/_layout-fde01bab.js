@@ -2700,6 +2700,7 @@ parent: Web3Privacy Now
 parentUrl: https://web3privacy.info
 desc: June 5, 2023 - A lunarpunk conference focused on privacy in the Web3 industry as a complement to the Web3Privacy Now research.
 authors: "💛 Collaboration of [Web3Privacy Now](https://web3privacy.info) & [ETHBrno](https://ethbrno.cz) team"
+license: This web is built with [SvelteKit](https://kit.svelte.dev/) and is [open-source](https://github.com/web3privacy/w3ps1) under CC0 license
 slogan: Diving into the culture of the Web3 privacy industry
 aggregator: Prague Blockchain Week 2023
 aggregatorUrl: http://prgblockweek.com/

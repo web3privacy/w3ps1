@@ -1,4 +1,4 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, x as create_component, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, y as claim_component, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, z as mount_component, I as listen, u as set_data, J as update_slot_base, K as get_all_dirty_from_scope, L as get_slot_changes, f as transition_in, t as transition_out, M as destroy_each, A as destroy_component, C as noop } from "../../chunks/index-858fda85.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, x as create_component, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, y as claim_component, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, z as mount_component, I as listen, u as set_data, J as update_slot_base, K as get_all_dirty_from_scope, L as get_slot_changes, f as transition_in, t as transition_out, d as check_outros, M as destroy_each, A as destroy_component, C as noop, g as group_outros } from "../../chunks/index-858fda85.js";
 import { S as SvelteMarkdown } from "../../chunks/SvelteMarkdown-6743e4fc.js";
 const app = "";
 function get_each_context(ctx, list, i) {
@@ -66,7 +66,7 @@ function create_each_block_1(ctx) {
     }
   };
 }
-function create_if_block(ctx) {
+function create_if_block_1(ctx) {
   let div;
   let each_value = (
     /*menu*/
@@ -206,6 +206,62 @@ function create_each_block(ctx) {
     }
   };
 }
+function create_if_block(ctx) {
+  let div;
+  let sveltemarkdown;
+  let current;
+  sveltemarkdown = new SvelteMarkdown({
+    props: { source: (
+      /*data*/
+      ctx[0].config.license
+    ) }
+  });
+  return {
+    c() {
+      div = element("div");
+      create_component(sveltemarkdown.$$.fragment);
+      this.h();
+    },
+    l(nodes) {
+      div = claim_element(nodes, "DIV", { class: true });
+      var div_nodes = children(div);
+      claim_component(sveltemarkdown.$$.fragment, div_nodes);
+      div_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      attr(div, "class", "mt-4 text-supermild");
+    },
+    m(target, anchor) {
+      insert_hydration(target, div, anchor);
+      mount_component(sveltemarkdown, div, null);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const sveltemarkdown_changes = {};
+      if (dirty & /*data*/
+      1)
+        sveltemarkdown_changes.source = /*data*/
+        ctx2[0].config.license;
+      sveltemarkdown.$set(sveltemarkdown_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(sveltemarkdown.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(sveltemarkdown.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      destroy_component(sveltemarkdown);
+    }
+  };
+}
 function create_fragment(ctx) {
   let div20;
   let div5;
@@ -296,6 +352,7 @@ function create_fragment(ctx) {
   let t20;
   let div16;
   let sveltemarkdown;
+  let t21;
   let current;
   let mounted;
   let dispose;
@@ -307,9 +364,9 @@ function create_fragment(ctx) {
   for (let i = 0; i < each_value_1.length; i += 1) {
     each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
   }
-  let if_block = (
+  let if_block0 = (
     /*navbar*/
-    ctx[1] && create_if_block(ctx)
+    ctx[1] && create_if_block_1(ctx)
   );
   const default_slot_template = (
     /*#slots*/
@@ -328,6 +385,10 @@ function create_fragment(ctx) {
       ctx[0].config.authors
     ) }
   });
+  let if_block1 = (
+    /*data*/
+    ctx[0].config.license && create_if_block(ctx)
+  );
   return {
     c() {
       div20 = element("div");
@@ -347,8 +408,8 @@ function create_fragment(ctx) {
         each_blocks[i].c();
       }
       t3 = space();
-      if (if_block)
-        if_block.c();
+      if (if_block0)
+        if_block0.c();
       t4 = space();
       div12 = element("div");
       div11 = element("div");
@@ -393,6 +454,9 @@ function create_fragment(ctx) {
       t20 = space();
       div16 = element("div");
       create_component(sveltemarkdown.$$.fragment);
+      t21 = space();
+      if (if_block1)
+        if_block1.c();
       this.h();
     },
     l(nodes) {
@@ -429,8 +493,8 @@ function create_fragment(ctx) {
       div3_nodes.forEach(detach);
       div4_nodes.forEach(detach);
       t3 = claim_space(div5_nodes);
-      if (if_block)
-        if_block.l(div5_nodes);
+      if (if_block0)
+        if_block0.l(div5_nodes);
       div5_nodes.forEach(detach);
       t4 = claim_space(div20_nodes);
       div12 = claim_element(div20_nodes, "DIV", { class: true });
@@ -517,6 +581,9 @@ function create_fragment(ctx) {
       var div16_nodes = children(div16);
       claim_component(sveltemarkdown.$$.fragment, div16_nodes);
       div16_nodes.forEach(detach);
+      t21 = claim_space(div17_nodes);
+      if (if_block1)
+        if_block1.l(div17_nodes);
       div17_nodes.forEach(detach);
       div18_nodes.forEach(detach);
       div19_nodes.forEach(detach);
@@ -557,7 +624,7 @@ function create_fragment(ctx) {
       ctx[0].config.parent);
       attr(a2, "href", a2_href_value = /*data*/
       ctx[0].config.parentUrl);
-      attr(div13, "class", "w-32 sm:w-42");
+      attr(div13, "class", "w-32 sm:w-40");
       attr(div14, "class", "grow");
       attr(path, "d", "M28.0266 3.12733C26.9955 3.62938 25.8872 3.96853 24.7242 4.12112C25.9113 3.34005 26.8231 2.10325 27.2524 0.629411C26.1413 1.35279 24.9107 1.87791 23.6009 2.16092C22.5522 0.934264 21.0578 0.167969 19.4039 0.167969C16.2285 0.167969 13.6538 2.99367 13.6538 6.47907C13.6538 6.97373 13.7047 7.45548 13.8028 7.91738C9.02398 7.6542 4.78719 5.14151 1.95117 1.3231C1.45622 2.25521 1.17259 3.33929 1.17259 4.49596C1.17259 6.68564 2.18771 8.61738 3.73058 9.74913C2.78804 9.71637 1.90142 9.43244 1.1262 8.95977C1.12555 8.98607 1.12555 9.01252 1.12555 9.03913C1.12555 12.0969 3.1076 14.6476 5.73804 15.2278C5.25556 15.3721 4.74758 15.4491 4.2232 15.4491C3.85268 15.4491 3.49255 15.4095 3.14137 15.3359C3.87315 17.8432 5.99658 19.6679 8.51282 19.7187C6.54493 21.4115 4.06569 22.4206 1.37163 22.4206C0.907503 22.4206 0.449828 22.3906 0 22.3323C2.54468 24.1231 5.56708 25.168 8.81424 25.168C19.3905 25.168 25.1742 15.5511 25.1742 7.21076C25.1742 6.93712 25.1686 6.66503 25.1576 6.39416C26.2809 5.50451 27.2556 4.39306 28.0265 3.12733H28.0266Z");
       attr(path, "fill", "white");
@@ -596,8 +663,8 @@ function create_fragment(ctx) {
         each_blocks[i].m(div2, null);
       }
       append_hydration(div5, t3);
-      if (if_block)
-        if_block.m(div5, null);
+      if (if_block0)
+        if_block0.m(div5, null);
       append_hydration(div20, t4);
       append_hydration(div20, div12);
       append_hydration(div12, div11);
@@ -643,6 +710,9 @@ function create_fragment(ctx) {
       append_hydration(div17, t20);
       append_hydration(div17, div16);
       mount_component(sveltemarkdown, div16, null);
+      append_hydration(div17, t21);
+      if (if_block1)
+        if_block1.m(div17, null);
       current = true;
       if (!mounted) {
         dispose = listen(
@@ -694,16 +764,16 @@ function create_fragment(ctx) {
         /*navbar*/
         ctx2[1]
       ) {
-        if (if_block) {
-          if_block.p(ctx2, dirty);
+        if (if_block0) {
+          if_block0.p(ctx2, dirty);
         } else {
-          if_block = create_if_block(ctx2);
-          if_block.c();
-          if_block.m(div5, null);
+          if_block0 = create_if_block_1(ctx2);
+          if_block0.c();
+          if_block0.m(div5, null);
         }
-      } else if (if_block) {
-        if_block.d(1);
-        if_block = null;
+      } else if (if_block0) {
+        if_block0.d(1);
+        if_block0 = null;
       }
       if ((!current || dirty & /*data*/
       1) && t5_value !== (t5_value = /*data*/
@@ -788,28 +858,55 @@ function create_fragment(ctx) {
         sveltemarkdown_changes.source = /*data*/
         ctx2[0].config.authors;
       sveltemarkdown.$set(sveltemarkdown_changes);
+      if (
+        /*data*/
+        ctx2[0].config.license
+      ) {
+        if (if_block1) {
+          if_block1.p(ctx2, dirty);
+          if (dirty & /*data*/
+          1) {
+            transition_in(if_block1, 1);
+          }
+        } else {
+          if_block1 = create_if_block(ctx2);
+          if_block1.c();
+          transition_in(if_block1, 1);
+          if_block1.m(div17, null);
+        }
+      } else if (if_block1) {
+        group_outros();
+        transition_out(if_block1, 1, 1, () => {
+          if_block1 = null;
+        });
+        check_outros();
+      }
     },
     i(local) {
       if (current)
         return;
       transition_in(default_slot, local);
       transition_in(sveltemarkdown.$$.fragment, local);
+      transition_in(if_block1);
       current = true;
     },
     o(local) {
       transition_out(default_slot, local);
       transition_out(sveltemarkdown.$$.fragment, local);
+      transition_out(if_block1);
       current = false;
     },
     d(detaching) {
       if (detaching)
         detach(div20);
       destroy_each(each_blocks, detaching);
-      if (if_block)
-        if_block.d();
+      if (if_block0)
+        if_block0.d();
       if (default_slot)
         default_slot.d(detaching);
       destroy_component(sveltemarkdown);
+      if (if_block1)
+        if_block1.d();
       mounted = false;
       dispose();
     }

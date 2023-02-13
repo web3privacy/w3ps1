@@ -574,6 +574,10 @@ footer a:hover,
   color: rgb(255 255 255 / 0.7);
 }
 
+.text-supermild{
+  color: rgb(255 255 255 / 0.4);
+}
+
 table.table-custom{
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1050,6 +1054,10 @@ table.table-custom{
 
   .sm\:w-16{
     width: 4rem;
+  }
+
+  .sm\:w-40{
+    width: 10rem;
   }
 
   .sm\:gap-6{
