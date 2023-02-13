@@ -28,7 +28,9 @@ themes:
 - title: Solarpunk vs Lunarpunk
   desc: For solarpunk to succeed it must integrate the lunarpunk unconscious. The only hope for solarpunk is to [go dark](https://www.egirlcapital.com/writings/107533289). Do you agree?
 - title: Veksl
-  desc: Easy onboarding to cryptocurrencies without KYC/AML using P2P tools is crucial for privacy. What options do we have today?
+  desc: Easy onboarding to cryptocurrencies without KYC/AML using peer-to-peer tools is crucial for privacy. What options do we have today?
+- title: Private messaging protocols
+  desc: We need resilient privacy-preserving, p2p communication layers for Web3, that allows free and uncensored human-to-human, machine-to-machine or hybrid communication.
 tickets:
 - title: All-day Access
   price: 2350 CZK (~99 EUR)
