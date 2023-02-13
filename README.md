@@ -2,8 +2,12 @@
 
 Website and data repository for the Web3Privacy Summit #1 that will take place in Prague on June 5, 2023.
 
-- Website: [prague.web3privacy.info](https://prague.web3privacy.info)
+- Event website: [prague.web3privacy.info](https://prague.web3privacy.info)
+- Research & Community: [web3privacy.info](https://web3privacy.info)
 - Twitter: [@web3privacy](http://twitter.com/web3privacy)
+
+JSON data about `w3ps1`:
+- https://prague.web3privacy.info/config.json
 
 ## Team
 
