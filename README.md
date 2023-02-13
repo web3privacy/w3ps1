@@ -1,38 +1,21 @@
-# create-svelte
+# Web3Privacy Prague 2023 (w3ps1)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Website and data repository for the Web3Privacy Summit #1 that will take place in Prague on June 5, 2023.
 
-## Creating a project
+- Website: [prague.web3privacy.info](https://prague.web3privacy.info)
+- Twitter: [@web3privacy](http://twitter.com/web3privacy)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Team
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+- Tree ([@treecz](https://twitter.com/treecz))
+- Mykola Siusko ([@nicksvyaznoy](https://twitter.com/nicksvyaznoy))
+- Roman Mazur ([@romanmazur](https://twitter.com/romanmazur))
+- Hedvika ([@HedvikaPa](https://twitter.com/HedvikaPa))
+- Adam Sobotka ([@vorcigernix](https://twitter.com/vorcigernix))
+- Coinmandeer ([@KeenOfCoin](https://twitter.com/KeenOfCoin))
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## License
 
-## Developing
+[Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+![CC0](https://upload.wikimedia.org/wikipedia/commons/6/69/CC0_button.svg)
