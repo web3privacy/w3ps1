@@ -6,13 +6,13 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"build-config": "js-yaml data/config.yaml > src/lib/config.json",
-		"static-config": "cp src/lib/config.json static/config.json",
+		"build-config": "js-yaml src/lib/config.yaml > static/config.json",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"postinstall": "npm run build-config && npm run static-config"
+		"postinstall": "npm run build-config"
 	},
 	"devDependencies": {
+		"@modyfi/vite-plugin-yaml": "^1.0.4",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-static": "^2.0.1",
 		"@sveltejs/kit": "^1.5.0",
