@@ -50,8 +50,7 @@
 				<div class="text-5xl md:text-8xl font-bold uppercase mb-4 md:mb-8">
 					{data.config.shortname}
 				</div>
-				<div class="text-3xl md:text-5xl md:mb-4">{data.config.date}</div>
-				<div class="text-3xl md:text-5xl uppercase">{data.config.venue}</div>
+				<div class="text-3xl md:text-5xl md:mb-4 uppercase">{data.config.date} @ <a href={data.config.venueMapUrl} target="_blank" class="underline hover:no-underline">{data.config.venue}</a></div>
 				<div class="mt-8 text-lg text-mild mx-4">
 					<p>{data.config.slogan}</p>
 					<p>
