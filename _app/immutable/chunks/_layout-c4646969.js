@@ -1,13 +1,14 @@
 const data = {
   title: "Web3Privacy Prague 2023",
   shortname: "Web3Privacy Summit #1",
-  date: "Monday, 5. June 2023",
+  date: "5. June 2023",
   venue: "X10, Prague",
   domain: "prague.web3privacy.info",
   image: "/web3privacy.png",
   logo: "/web3privacy-cropped.jpg",
   twitter: "web3privacy",
   parent: "Web3Privacy Now",
+  venueMapUrl: "https://goo.gl/maps/VCSC7wcNueEKgt996",
   parentUrl: "https://web3privacy.info",
   desc: "June 5, 2023 - A lunarpunk conference focused on privacy in the Web3 industry as a complement to the Web3Privacy Now research.",
   authors: "💛 Collaboration of [Web3Privacy Now](https://web3privacy.info) & [ETHBrno](https://ethbrno.cz) team",
@@ -105,8 +106,16 @@ const data = {
       text: 'Venue X10 (full name "[Divadlo X10](https://divadlox10.cz)") is located in the centre of Prague near the metro station *Národní Třída* (Line B) and *Můstek* (Line A,C). The address is [Charvátova 10/39, Prague 1, 110 00](https://goo.gl/maps/Yh8qWagnqB1DvK676) ([Google Maps](https://goo.gl/maps/Yh8qWagnqB1DvK676)).'
     },
     {
-      title: "Why isn't admission free?",
+      title: "Why event isn't admission free?",
       text: 'We would like to have most of the cost of the event covered by admission fees directly from visitors. We want to be independent of sponsors and reduce the pressure to make it a "sales" or marketing event.'
+    },
+    {
+      title: "What is Web3Privacy Now?",
+      text: "[Web3privacy now](http://web3privacy.info/) is a research project aimed at building a culture of privacy industry in web3: the most extensive database of privacy-enhancing solutions, the framework for PEDApps ideation, use-cases database & many more.\n"
+    },
+    {
+      title: "What is Prague Blockchain Week?",
+      text: "[Prague Blockchain Week 2023](http://prgblockweek.com/) (#PBW23) is a decentralized gathering of all people interested in cryptocurrencies and related topics. It consists of many independent events across Jun 2 - 11, including conferences, hackathons, workshops, community meetups, as well as various parties and happy hours.\n"
     }
   ],
   people: [
