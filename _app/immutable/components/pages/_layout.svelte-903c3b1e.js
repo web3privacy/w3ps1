@@ -1,39 +1,6 @@
 import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, x as create_component, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, y as claim_component, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, z as mount_component, I as listen, u as set_data, J as update_slot_base, K as get_all_dirty_from_scope, L as get_slot_changes, f as transition_in, t as transition_out, d as check_outros, M as destroy_each, A as destroy_component, o as onMount, C as noop, g as group_outros } from "../../chunks/index-858fda85.js";
-import { S as SvelteMarkdown } from "../../chunks/SvelteMarkdown-6743e4fc.js";
+import { S as SvelteMarkdown, a as animateText } from "../../chunks/helpers-3c288985.js";
 const app = "";
-function rand(length) {
-  let result = "";
-  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  const charactersLength = characters.length;
-  let counter = 0;
-  while (counter < length) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    counter += 1;
-  }
-  return result;
-}
-function animateText(ev) {
-  if (!ev.target.getAttribute("data-text")) {
-    ev.target.setAttribute("data-text", ev.target.innerHTML);
-  }
-  if (ev.target.getAttribute("data-animate") === "1") {
-    return;
-  }
-  ev.target.setAttribute("data-animate", "1");
-  const orig = ev.target.getAttribute("data-text");
-  const steps = orig.length;
-  const genRand = (pos = 0, len = null) => orig.substring(pos, len).split(" ").map((x) => rand(x.length)).join(" ");
-  const random = genRand(0, orig.length);
-  ev.target.innerHTML = random;
-  for (let i = 0; i <= steps; i++) {
-    setTimeout(() => {
-      ev.target.innerHTML = orig.substring(0, i) + genRand(i, orig.length);
-      if (i === steps) {
-        ev.target.setAttribute("data-animate", "0");
-      }
-    }, 50 * i);
-  }
-}
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
   child_ctx[7] = list[i];

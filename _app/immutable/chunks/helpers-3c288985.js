@@ -7456,6 +7456,80 @@ class SvelteMarkdown extends SvelteComponent {
     });
   }
 }
+var removeMarkdown = function(md, options) {
+  options = options || {};
+  options.listUnicodeChar = options.hasOwnProperty("listUnicodeChar") ? options.listUnicodeChar : false;
+  options.stripListLeaders = options.hasOwnProperty("stripListLeaders") ? options.stripListLeaders : true;
+  options.gfm = options.hasOwnProperty("gfm") ? options.gfm : true;
+  options.useImgAltText = options.hasOwnProperty("useImgAltText") ? options.useImgAltText : true;
+  options.abbr = options.hasOwnProperty("abbr") ? options.abbr : false;
+  options.replaceLinksWithURL = options.hasOwnProperty("replaceLinksWithURL") ? options.replaceLinksWithURL : false;
+  options.htmlTagsToSkip = options.hasOwnProperty("htmlTagsToSkip") ? options.htmlTagsToSkip : [];
+  var output = md || "";
+  output = output.replace(/^(-\s*?|\*\s*?|_\s*?){3,}\s*/gm, "");
+  try {
+    if (options.stripListLeaders) {
+      if (options.listUnicodeChar)
+        output = output.replace(/^([\s\t]*)([\*\-\+]|\d+\.)\s+/gm, options.listUnicodeChar + " $1");
+      else
+        output = output.replace(/^([\s\t]*)([\*\-\+]|\d+\.)\s+/gm, "$1");
+    }
+    if (options.gfm) {
+      output = output.replace(/\n={2,}/g, "\n").replace(/~{3}.*\n/g, "").replace(/~~/g, "").replace(/`{3}.*\n/g, "");
+    }
+    if (options.abbr) {
+      output = output.replace(/\*\[.*\]:.*\n/, "");
+    }
+    output = output.replace(/<[^>]*>/g, "");
+    var htmlReplaceRegex = new RegExp("<[^>]*>", "g");
+    if (options.htmlTagsToSkip.length > 0) {
+      var joinedHtmlTagsToSkip = "(?!" + options.htmlTagsToSkip.join("|") + ")";
+      htmlReplaceRegex = new RegExp(
+        "<" + joinedHtmlTagsToSkip + "[^>]*>",
+        "ig"
+      );
+    }
+    output = output.replace(htmlReplaceRegex, "").replace(/^[=\-]{2,}\s*$/g, "").replace(/\[\^.+?\](\: .*?$)?/g, "").replace(/\s{0,2}\[.*?\]: .*?$/g, "").replace(/\!\[(.*?)\][\[\(].*?[\]\)]/g, options.useImgAltText ? "$1" : "").replace(/\[([^\]]*?)\][\[\(].*?[\]\)]/g, options.replaceLinksWithURL ? "$2" : "$1").replace(/^\s{0,3}>\s?/gm, "").replace(/^\s{1,2}\[(.*?)\]: (\S+)( ".*?")?\s*$/g, "").replace(/^(\n)?\s{0,}#{1,6}\s+| {0,}(\n)?\s{0,}#{0,} #{0,}(\n)?\s{0,}$/gm, "$1$2$3").replace(/([\*]+)(\S)(.*?\S)??\1/g, "$2$3").replace(/(^|\W)([_]+)(\S)(.*?\S)??\2($|\W)/g, "$1$3$4$5").replace(/(`{3,})(.*?)\1/gm, "$2").replace(/`(.+?)`/g, "$1").replace(/~(.*?)~/g, "$1");
+  } catch (e) {
+    console.error(e);
+    return md;
+  }
+  return output;
+};
+function rand(length) {
+  let result = "";
+  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const charactersLength = characters.length;
+  let counter = 0;
+  while (counter < length) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    counter += 1;
+  }
+  return result;
+}
+function animateText(ev) {
+  if (!ev.target.getAttribute("data-text")) {
+    ev.target.setAttribute("data-text", ev.target.innerHTML);
+  }
+  if (ev.target.getAttribute("data-animate") === "1") {
+    return;
+  }
+  ev.target.setAttribute("data-animate", "1");
+  const orig = removeMarkdown(ev.target.getAttribute("data-text"));
+  const steps = orig.length;
+  const genRand = (pos = 0, len = null) => orig.substring(pos, len).split(" ").map((x) => rand(x.length)).join(" ");
+  const random = genRand(0, orig.length);
+  ev.target.innerHTML = random;
+  for (let i = 0; i <= steps; i++) {
+    setTimeout(() => {
+      ev.target.innerHTML = orig.substring(0, i) + genRand(i, orig.length);
+      if (i === steps) {
+        ev.target.setAttribute("data-animate", "0");
+      }
+    }, 50 * i);
+  }
+}
 export {
-  SvelteMarkdown as S
+  SvelteMarkdown as S,
+  animateText as a
 };

@@ -1,8 +1,8 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, e as empty, b as insert_hydration, f as transition_in, g as group_outros, d as check_outros, t as transition_out, M as destroy_each, h as detach, k as element, a as space, q as text, l as claim_element, m as children, c as claim_space, r as claim_text, G as src_url_equal, n as attr, H as append_hydration, u as set_data, x as create_component, y as claim_component, z as mount_component, A as destroy_component, Z as head_selector } from "../../chunks/index-858fda85.js";
-import { S as SvelteMarkdown } from "../../chunks/SvelteMarkdown-6743e4fc.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, e as empty, b as insert_hydration, f as transition_in, g as group_outros, d as check_outros, t as transition_out, M as destroy_each, h as detach, k as element, a as space, q as text, l as claim_element, m as children, c as claim_space, r as claim_text, G as src_url_equal, n as attr, H as append_hydration, I as listen, u as set_data, x as create_component, y as claim_component, z as mount_component, A as destroy_component, Z as head_selector } from "../../chunks/index-858fda85.js";
+import { a as animateText, S as SvelteMarkdown } from "../../chunks/helpers-3c288985.js";
 function get_each_context$1(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[4] = list[i];
+  child_ctx[5] = list[i];
   return child_ctx;
 }
 function create_if_block$1(ctx) {
@@ -12,7 +12,7 @@ function create_if_block$1(ctx) {
   sveltemarkdown = new SvelteMarkdown({
     props: { source: (
       /*item*/
-      ctx[4].caption
+      ctx[5].caption
     ) }
   });
   return {
@@ -41,7 +41,7 @@ function create_if_block$1(ctx) {
       if (dirty & /*items*/
       1)
         sveltemarkdown_changes.source = /*item*/
-        ctx2[4].caption;
+        ctx2[5].caption;
       sveltemarkdown.$set(sveltemarkdown_changes);
     },
     i(local) {
@@ -72,7 +72,7 @@ function create_each_block$1(ctx) {
   let div1;
   let t1_value = (
     /*item*/
-    ctx[4].name + ""
+    ctx[5].name + ""
   );
   let t1;
   let t2;
@@ -81,7 +81,7 @@ function create_each_block$1(ctx) {
   let t3;
   let t4_value = (
     /*item*/
-    ctx[4].twitter + ""
+    ctx[5].twitter + ""
   );
   let t4;
   let a1_href_value;
@@ -89,9 +89,11 @@ function create_each_block$1(ctx) {
   let t6;
   let div3_class_value;
   let current;
+  let mounted;
+  let dispose;
   let if_block = (
     /*item*/
-    ctx[4].caption && create_if_block$1(ctx)
+    ctx[5].caption && create_if_block$1(ctx)
   );
   return {
     c() {
@@ -146,20 +148,20 @@ function create_each_block$1(ctx) {
     },
     h() {
       if (!src_url_equal(img.src, img_src_value = "/people/" + /*item*/
-      ctx[4].img))
+      ctx[5].img))
         attr(img, "src", img_src_value);
       attr(img, "class", "grayscale invert aspect-square object-cover w-full");
       attr(a0, "href", a0_href_value = twitterLink(
         /*item*/
-        ctx[4].twitter
+        ctx[5].twitter
       ));
       attr(a0, "target", "_blank");
-      attr(div1, "class", "mt-4");
+      attr(div1, "class", "mt-4 speaker-name animate-speaker");
       attr(a1, "href", a1_href_value = twitterLink(
         /*item*/
-        ctx[4].twitter
+        ctx[5].twitter
       ));
-      attr(a1, "class", "hover:underline");
+      attr(a1, "class", "hover:underline animate-speaker");
       attr(div2, "class", "text-base text-mild");
       attr(div3, "class", div3_class_value = "hover:bg-white hover:text-black p-2 " + /*size*/
       (ctx[1] === "small" ? "w-2/3 sm:w-48" : "w-2/3 sm:w-64") + " person-item");
@@ -182,38 +184,47 @@ function create_each_block$1(ctx) {
         if_block.m(div3, null);
       append_hydration(div3, t6);
       current = true;
+      if (!mounted) {
+        dispose = listen(
+          div3,
+          "mouseenter",
+          /*animateSpeaker*/
+          ctx[3]
+        );
+        mounted = true;
+      }
     },
     p(ctx2, dirty) {
       if (!current || dirty & /*items*/
       1 && !src_url_equal(img.src, img_src_value = "/people/" + /*item*/
-      ctx2[4].img)) {
+      ctx2[5].img)) {
         attr(img, "src", img_src_value);
       }
       if (!current || dirty & /*items*/
       1 && a0_href_value !== (a0_href_value = twitterLink(
         /*item*/
-        ctx2[4].twitter
+        ctx2[5].twitter
       ))) {
         attr(a0, "href", a0_href_value);
       }
       if ((!current || dirty & /*items*/
       1) && t1_value !== (t1_value = /*item*/
-      ctx2[4].name + ""))
+      ctx2[5].name + ""))
         set_data(t1, t1_value);
       if ((!current || dirty & /*items*/
       1) && t4_value !== (t4_value = /*item*/
-      ctx2[4].twitter + ""))
+      ctx2[5].twitter + ""))
         set_data(t4, t4_value);
       if (!current || dirty & /*items*/
       1 && a1_href_value !== (a1_href_value = twitterLink(
         /*item*/
-        ctx2[4].twitter
+        ctx2[5].twitter
       ))) {
         attr(a1, "href", a1_href_value);
       }
       if (
         /*item*/
-        ctx2[4].caption
+        ctx2[5].caption
       ) {
         if (if_block) {
           if_block.p(ctx2, dirty);
@@ -255,6 +266,8 @@ function create_each_block$1(ctx) {
         detach(div3);
       if (if_block)
         if_block.d();
+      mounted = false;
+      dispose();
     }
   };
 }
@@ -296,8 +309,8 @@ function create_fragment$1(ctx) {
       current = true;
     },
     p(ctx2, [dirty]) {
-      if (dirty & /*size, items, getPerson, twitterLink*/
-      7) {
+      if (dirty & /*size, animateSpeaker, items, getPerson, twitterLink*/
+      15) {
         each_value = /*items*/
         ctx2[0].map(
           /*getPerson*/
@@ -355,20 +368,25 @@ function instance$1($$self, $$props, $$invalidate) {
   function getPerson(id) {
     return people.find((p) => p.id === id);
   }
+  function animateSpeaker(el) {
+    for (const e of el.target.getElementsByClassName("animate-speaker")) {
+      animateText({ target: e });
+    }
+  }
   $$self.$$set = ($$props2) => {
     if ("items" in $$props2)
       $$invalidate(0, items = $$props2.items);
     if ("people" in $$props2)
-      $$invalidate(3, people = $$props2.people);
+      $$invalidate(4, people = $$props2.people);
     if ("size" in $$props2)
       $$invalidate(1, size = $$props2.size);
   };
-  return [items, size, getPerson, people];
+  return [items, size, getPerson, animateSpeaker, people];
 }
 class PeopleList extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance$1, create_fragment$1, safe_not_equal, { items: 0, people: 3, size: 1 });
+    init(this, options, instance$1, create_fragment$1, safe_not_equal, { items: 0, people: 4, size: 1 });
   }
 }
 function get_each_context(ctx, list, i) {
