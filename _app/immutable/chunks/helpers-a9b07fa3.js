@@ -7507,7 +7507,7 @@ function rand(length) {
   }
   return result;
 }
-function animateText(ev) {
+function animateText(ev, interval = 50) {
   if (!ev.target.getAttribute("data-text")) {
     ev.target.setAttribute("data-text", ev.target.innerHTML);
   }
@@ -7515,7 +7515,7 @@ function animateText(ev) {
     return;
   }
   ev.target.setAttribute("data-animate", "1");
-  const orig = removeMarkdown(ev.target.getAttribute("data-text"));
+  const orig = removeMarkdown(ev.target.getAttribute("data-text")).replace("&amp;", "&");
   const steps = orig.length;
   const genRand = (pos = 0, len = null) => orig.substring(pos, len).split(" ").map((x) => rand(x.length)).join(" ");
   const random = genRand(0, orig.length);
@@ -7526,7 +7526,7 @@ function animateText(ev) {
       if (i === steps) {
         ev.target.setAttribute("data-animate", "0");
       }
-    }, 50 * i);
+    }, interval * i);
   }
 }
 export {

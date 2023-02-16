@@ -1,5 +1,5 @@
 import { S as SvelteComponent, i as init, s as safe_not_equal, e as empty, b as insert_hydration, f as transition_in, g as group_outros, d as check_outros, t as transition_out, M as destroy_each, h as detach, k as element, a as space, q as text, l as claim_element, m as children, c as claim_space, r as claim_text, G as src_url_equal, n as attr, H as append_hydration, I as listen, u as set_data, x as create_component, y as claim_component, z as mount_component, A as destroy_component, Z as head_selector } from "../../chunks/index-858fda85.js";
-import { a as animateText, S as SvelteMarkdown } from "../../chunks/helpers-3c288985.js";
+import { a as animateText, S as SvelteMarkdown } from "../../chunks/helpers-a9b07fa3.js";
 function get_each_context$1(ctx, list, i) {
   const child_ctx = ctx.slice();
   child_ctx[5] = list[i];
@@ -72,7 +72,7 @@ function create_each_block$1(ctx) {
   let div1;
   let t1_value = (
     /*item*/
-    ctx[5].name + ""
+    ctx[5].name.toUpperCase() + ""
   );
   let t1;
   let t2;
@@ -209,7 +209,7 @@ function create_each_block$1(ctx) {
       }
       if ((!current || dirty & /*items*/
       1) && t1_value !== (t1_value = /*item*/
-      ctx2[5].name + ""))
+      ctx2[5].name.toUpperCase() + ""))
         set_data(t1, t1_value);
       if ((!current || dirty & /*items*/
       1) && t4_value !== (t4_value = /*item*/
@@ -391,27 +391,27 @@ class PeopleList extends SvelteComponent {
 }
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[1] = list[i];
+  child_ctx[2] = list[i];
   return child_ctx;
 }
 function get_each_context_1(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[4] = list[i];
+  child_ctx[5] = list[i];
   return child_ctx;
 }
 function get_each_context_2(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[7] = list[i];
+  child_ctx[8] = list[i];
   return child_ctx;
 }
 function get_each_context_3(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[10] = list[i];
+  child_ctx[11] = list[i];
   return child_ctx;
 }
 function get_each_context_4(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[7] = list[i];
+  child_ctx[8] = list[i];
   return child_ctx;
 }
 function create_each_block_4(ctx) {
@@ -419,7 +419,7 @@ function create_each_block_4(ctx) {
   let div0;
   let t0_value = (
     /*ti*/
-    ctx[7].title + ""
+    ctx[8].title.toUpperCase() + ""
   );
   let t0;
   let t1;
@@ -427,9 +427,11 @@ function create_each_block_4(ctx) {
   let sveltemarkdown;
   let t2;
   let current;
+  let mounted;
+  let dispose;
   sveltemarkdown = new SvelteMarkdown({ props: { source: (
     /*ti*/
-    ctx[7].desc
+    ctx[8].desc
   ) } });
   return {
     c() {
@@ -459,7 +461,7 @@ function create_each_block_4(ctx) {
       this.h();
     },
     h() {
-      attr(div0, "class", "text-2xl uppercase");
+      attr(div0, "class", "text-2xl animate-topic");
       attr(div1, "class", "mt-4 text-lg markdown");
       attr(div2, "class", "bg-[#0d1117] hover:text-black hover:bg-white px-4 py-6");
     },
@@ -472,17 +474,26 @@ function create_each_block_4(ctx) {
       mount_component(sveltemarkdown, div1, null);
       append_hydration(div2, t2);
       current = true;
+      if (!mounted) {
+        dispose = listen(
+          div2,
+          "mouseenter",
+          /*animateTopic*/
+          ctx[1]
+        );
+        mounted = true;
+      }
     },
     p(ctx2, dirty) {
       if ((!current || dirty & /*data*/
       1) && t0_value !== (t0_value = /*ti*/
-      ctx2[7].title + ""))
+      ctx2[8].title.toUpperCase() + ""))
         set_data(t0, t0_value);
       const sveltemarkdown_changes = {};
       if (dirty & /*data*/
       1)
         sveltemarkdown_changes.source = /*ti*/
-        ctx2[7].desc;
+        ctx2[8].desc;
       sveltemarkdown.$set(sveltemarkdown_changes);
     },
     i(local) {
@@ -499,6 +510,8 @@ function create_each_block_4(ctx) {
       if (detaching)
         detach(div2);
       destroy_component(sveltemarkdown);
+      mounted = false;
+      dispose();
     }
   };
 }
@@ -508,7 +521,7 @@ function create_if_block_2(ctx) {
   let current;
   sveltemarkdown = new SvelteMarkdown({ props: { source: (
     /*pi*/
-    ctx[10].desc
+    ctx[11].desc
   ) } });
   return {
     c() {
@@ -536,7 +549,7 @@ function create_if_block_2(ctx) {
       if (dirty & /*data*/
       1)
         sveltemarkdown_changes.source = /*pi*/
-        ctx2[10].desc;
+        ctx2[11].desc;
       sveltemarkdown.$set(sveltemarkdown_changes);
     },
     i(local) {
@@ -562,21 +575,21 @@ function create_each_block_3(ctx) {
   let td0;
   let raw_value = (
     /*pi*/
-    ctx[10].time.split("-").map(func).join('<div class="xl:inline-block hidden mx-1">-</div>') + ""
+    ctx[11].time.split("-").map(func).join('<div class="xl:inline-block hidden mx-1">-</div>') + ""
   );
   let t0;
   let td1;
   let div;
   let t1_value = (
     /*pi*/
-    ctx[10].title + ""
+    ctx[11].title + ""
   );
   let t1;
   let t2;
   let t3_value = (
     /*pi*/
-    ctx[10].speakers ? "― " + /*pi*/
-    ((_a = ctx[10].speakers[0]) == null ? void 0 : _a.name) : ""
+    ctx[11].speakers ? "― " + /*pi*/
+    ((_a = ctx[11].speakers[0]) == null ? void 0 : _a.name) : ""
   );
   let t3;
   let t4;
@@ -584,7 +597,7 @@ function create_each_block_3(ctx) {
   let current;
   let if_block = (
     /*pi*/
-    ctx[10].desc && create_if_block_2(ctx)
+    ctx[11].desc && create_if_block_2(ctx)
   );
   return {
     c() {
@@ -651,20 +664,20 @@ function create_each_block_3(ctx) {
       var _a2;
       if ((!current || dirty & /*data*/
       1) && raw_value !== (raw_value = /*pi*/
-      ctx2[10].time.split("-").map(func).join('<div class="xl:inline-block hidden mx-1">-</div>') + ""))
+      ctx2[11].time.split("-").map(func).join('<div class="xl:inline-block hidden mx-1">-</div>') + ""))
         td0.innerHTML = raw_value;
       if ((!current || dirty & /*data*/
       1) && t1_value !== (t1_value = /*pi*/
-      ctx2[10].title + ""))
+      ctx2[11].title + ""))
         set_data(t1, t1_value);
       if ((!current || dirty & /*data*/
       1) && t3_value !== (t3_value = /*pi*/
-      ctx2[10].speakers ? "― " + /*pi*/
-      ((_a2 = ctx2[10].speakers[0]) == null ? void 0 : _a2.name) : ""))
+      ctx2[11].speakers ? "― " + /*pi*/
+      ((_a2 = ctx2[11].speakers[0]) == null ? void 0 : _a2.name) : ""))
         set_data(t3, t3_value);
       if (
         /*pi*/
-        ctx2[10].desc
+        ctx2[11].desc
       ) {
         if (if_block) {
           if_block.p(ctx2, dirty);
@@ -708,7 +721,7 @@ function create_each_block_2(ctx) {
   let li;
   let t_value = (
     /*ti*/
-    ctx[7] + ""
+    ctx[8] + ""
   );
   let t;
   return {
@@ -729,7 +742,7 @@ function create_each_block_2(ctx) {
     p(ctx2, dirty) {
       if (dirty & /*data*/
       1 && t_value !== (t_value = /*ti*/
-      ctx2[7] + ""))
+      ctx2[8] + ""))
         set_data(t, t_value);
     },
     d(detaching) {
@@ -742,7 +755,7 @@ function create_if_block_1(ctx) {
   let div;
   let t_value = (
     /*tt*/
-    ctx[4].note + ""
+    ctx[5].note + ""
   );
   let t;
   return {
@@ -768,7 +781,7 @@ function create_if_block_1(ctx) {
     p(ctx2, dirty) {
       if (dirty & /*data*/
       1 && t_value !== (t_value = /*tt*/
-      ctx2[4].note + ""))
+      ctx2[5].note + ""))
         set_data(t, t_value);
     },
     d(detaching) {
@@ -783,7 +796,7 @@ function create_if_block(ctx) {
   let current;
   sveltemarkdown = new SvelteMarkdown({ props: { source: (
     /*tt*/
-    ctx[4].hint
+    ctx[5].hint
   ) } });
   return {
     c() {
@@ -811,7 +824,7 @@ function create_if_block(ctx) {
       if (dirty & /*data*/
       1)
         sveltemarkdown_changes.source = /*tt*/
-        ctx2[4].hint;
+        ctx2[5].hint;
       sveltemarkdown.$set(sveltemarkdown_changes);
     },
     i(local) {
@@ -836,14 +849,14 @@ function create_each_block_1(ctx) {
   let div0;
   let t0_value = (
     /*tt*/
-    ctx[4].title + ""
+    ctx[5].title + ""
   );
   let t0;
   let t1;
   let div1;
   let t2_value = (
     /*tt*/
-    ctx[4].price + ""
+    ctx[5].price + ""
   );
   let t2;
   let t3;
@@ -854,7 +867,7 @@ function create_each_block_1(ctx) {
   let current;
   let each_value_2 = (
     /*tt*/
-    ctx[4].includes
+    ctx[5].includes
   );
   let each_blocks = [];
   for (let i = 0; i < each_value_2.length; i += 1) {
@@ -862,11 +875,11 @@ function create_each_block_1(ctx) {
   }
   let if_block0 = (
     /*tt*/
-    ctx[4].note && create_if_block_1(ctx)
+    ctx[5].note && create_if_block_1(ctx)
   );
   let if_block1 = (
     /*tt*/
-    ctx[4].hint && create_if_block(ctx)
+    ctx[5].hint && create_if_block(ctx)
   );
   return {
     c() {
@@ -949,16 +962,16 @@ function create_each_block_1(ctx) {
     p(ctx2, dirty) {
       if ((!current || dirty & /*data*/
       1) && t0_value !== (t0_value = /*tt*/
-      ctx2[4].title + ""))
+      ctx2[5].title + ""))
         set_data(t0, t0_value);
       if ((!current || dirty & /*data*/
       1) && t2_value !== (t2_value = /*tt*/
-      ctx2[4].price + ""))
+      ctx2[5].price + ""))
         set_data(t2, t2_value);
       if (dirty & /*data*/
       1) {
         each_value_2 = /*tt*/
-        ctx2[4].includes;
+        ctx2[5].includes;
         let i;
         for (i = 0; i < each_value_2.length; i += 1) {
           const child_ctx = get_each_context_2(ctx2, each_value_2, i);
@@ -977,7 +990,7 @@ function create_each_block_1(ctx) {
       }
       if (
         /*tt*/
-        ctx2[4].note
+        ctx2[5].note
       ) {
         if (if_block0) {
           if_block0.p(ctx2, dirty);
@@ -992,7 +1005,7 @@ function create_each_block_1(ctx) {
       }
       if (
         /*tt*/
-        ctx2[4].hint
+        ctx2[5].hint
       ) {
         if (if_block1) {
           if_block1.p(ctx2, dirty);
@@ -1040,7 +1053,7 @@ function create_each_block(ctx) {
   let div0;
   let t0_value = (
     /*fi*/
-    ctx[1].title + ""
+    ctx[2].title + ""
   );
   let t0;
   let t1;
@@ -1050,7 +1063,7 @@ function create_each_block(ctx) {
   let current;
   sveltemarkdown = new SvelteMarkdown({ props: { source: (
     /*fi*/
-    ctx[1].text
+    ctx[2].text
   ) } });
   return {
     c() {
@@ -1097,13 +1110,13 @@ function create_each_block(ctx) {
     p(ctx2, dirty) {
       if ((!current || dirty & /*data*/
       1) && t0_value !== (t0_value = /*fi*/
-      ctx2[1].title + ""))
+      ctx2[2].title + ""))
         set_data(t0, t0_value);
       const sveltemarkdown_changes = {};
       if (dirty & /*data*/
       1)
         sveltemarkdown_changes.source = /*fi*/
-        ctx2[1].text;
+        ctx2[2].text;
       sveltemarkdown.$set(sveltemarkdown_changes);
     },
     i(local) {
@@ -1769,8 +1782,8 @@ function create_fragment(ctx) {
         sveltemarkdown_changes.source = /*data*/
         ctx2[0].config.intro;
       sveltemarkdown.$set(sveltemarkdown_changes);
-      if (dirty & /*data*/
-      1) {
+      if (dirty & /*animateTopic, data*/
+      3) {
         each_value_4 = /*data*/
         ctx2[0].config.themes;
         let i;
@@ -1985,11 +1998,16 @@ function create_fragment(ctx) {
 const func = (x) => x;
 function instance($$self, $$props, $$invalidate) {
   let { data } = $$props;
+  function animateTopic(el) {
+    for (const e of el.target.getElementsByClassName("animate-topic")) {
+      animateText({ target: e });
+    }
+  }
   $$self.$$set = ($$props2) => {
     if ("data" in $$props2)
       $$invalidate(0, data = $$props2.data);
   };
-  return [data];
+  return [data, animateTopic];
 }
 class Page extends SvelteComponent {
   constructor(options) {

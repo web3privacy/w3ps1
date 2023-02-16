@@ -1,5 +1,5 @@
 import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, x as create_component, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, y as claim_component, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, z as mount_component, I as listen, u as set_data, J as update_slot_base, K as get_all_dirty_from_scope, L as get_slot_changes, f as transition_in, t as transition_out, d as check_outros, M as destroy_each, A as destroy_component, o as onMount, C as noop, g as group_outros } from "../../chunks/index-858fda85.js";
-import { S as SvelteMarkdown, a as animateText } from "../../chunks/helpers-3c288985.js";
+import { S as SvelteMarkdown, a as animateText } from "../../chunks/helpers-a9b07fa3.js";
 const app = "";
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
@@ -368,7 +368,7 @@ function create_fragment(ctx) {
   let dispose;
   let each_value_1 = (
     /*menu*/
-    ctx[2]
+    ctx[2].filter(func)
   );
   let each_blocks = [];
   for (let i = 0; i < each_value_1.length; i += 1) {
@@ -508,7 +508,7 @@ function create_fragment(ctx) {
         if_block0.l(div5_nodes);
       div5_nodes.forEach(detach);
       t4 = claim_space(div19_nodes);
-      div11 = claim_element(div19_nodes, "DIV", { class: true });
+      div11 = claim_element(div19_nodes, "DIV", { class: true, id: true });
       var div11_nodes = children(div11);
       div10 = claim_element(div11_nodes, "DIV", { class: true });
       var div10_nodes = children(div10);
@@ -636,6 +636,7 @@ function create_fragment(ctx) {
       attr(div9, "class", "mx-auto px-4");
       attr(div10, "class", "w-full h-full flex items-center text-center");
       attr(div11, "class", "w-full h-screen");
+      attr(div11, "id", "homepage");
       if (!src_url_equal(img1.src, img1_src_value = /*data*/
       ctx[0].config.logo))
         attr(img1, "src", img1_src_value);
@@ -763,7 +764,7 @@ function create_fragment(ctx) {
       if (dirty & /*menu, animateText*/
       4) {
         each_value_1 = /*menu*/
-        ctx2[2];
+        ctx2[2].filter(func);
         let i;
         for (i = 0; i < each_value_1.length; i += 1) {
           const child_ctx = get_each_context_1(ctx2, each_value_1, i);
@@ -937,11 +938,13 @@ function create_fragment(ctx) {
     }
   };
 }
+const func = (i) => !i.hidden;
 function instance($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { data } = $$props;
   let navbar = false;
   const menu = [
+    { title: "Homepage", url: "", hidden: true },
     { title: "About", url: "#about" },
     { title: "Speakers", url: "#speakers" },
     { title: "Program", url: "#program" },
@@ -950,7 +953,8 @@ function instance($$self, $$props, $$invalidate) {
       title: "Ticket",
       url: "#ticket",
       class: "button"
-    }
+    },
+    { title: "FAQ", url: "#faq", hidden: true }
   ];
   onMount(async () => {
     setTimeout(
@@ -961,6 +965,39 @@ function instance($$self, $$props, $$invalidate) {
         }
       },
       0
+    );
+    let lastScrollTop = null;
+    setInterval(
+      () => {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (lastScrollTop === scrollTop) {
+          return null;
+        } else {
+          lastScrollTop = scrollTop;
+        }
+        console.log("x");
+        const arr = [];
+        for (const mi of menu) {
+          const el = document.getElementById(mi.title.toLowerCase());
+          const pos = el.getBoundingClientRect();
+          if (pos.top <= 100 && pos.bottom > 100) {
+            arr.push([mi, pos.top, pos.bottom]);
+          }
+        }
+        const choosed = arr[arr.length - 1];
+        if (choosed) {
+          const currentHash = window.location.hash;
+          const hash = choosed[0].url;
+          if (hash !== currentHash) {
+            if (hash === "") {
+              history.replaceState(null, null, " ");
+            } else {
+              history.replaceState(null, null, hash);
+            }
+          }
+        }
+      },
+      1e3
     );
   });
   const click_handler = () => $$invalidate(1, navbar = !navbar);
