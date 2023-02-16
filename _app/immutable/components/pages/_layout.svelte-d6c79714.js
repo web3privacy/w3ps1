@@ -22,11 +22,13 @@ function animateText(ev) {
   ev.target.setAttribute("data-animate", "1");
   const orig = ev.target.getAttribute("data-text");
   const steps = orig.length;
-  const random = rand(orig.length);
+  const genRand = (pos = 0, len = null) => orig.substring(pos, len).split(" ").map((x) => rand(x.length)).join(" ");
+  const random = genRand(0, orig.length);
   ev.target.innerHTML = random;
   for (let i = 0; i <= steps; i++) {
     setTimeout(() => {
-      ev.target.innerHTML = orig.substring(0, i) + rand(orig.length - i);
+      ev.target.innerHTML = orig.substring(0, i) + genRand(i, orig.length);
+      console.log(ev.target.innerHTML);
       if (i === steps) {
         ev.target.setAttribute("data-animate", "0");
       }
