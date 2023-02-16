@@ -18,13 +18,16 @@
 		{ title: 'FAQ', url: '#faq', hidden: true }
 	];
 
+	const homepageAnimation = () => {
+		const collection = document.getElementsByClassName('animation-crypt')
+		for (const el of collection) {
+			animateText({ target: el })
+		}
+	}
+
 	onMount(async () => {
-		setTimeout(() => {
-			const collection = document.getElementsByClassName('animation-crypt')
-			for (const el of collection) {
-				animateText({ target: el })
-			}
-		}, 0)
+		setTimeout(homepageAnimation, 0)
+		//setInterval(homepageAnimation, 5000)
 
 		let lastScrollTop = null
 
@@ -83,7 +86,7 @@
 		</div>
 		{#if navbar}
 		<div class="w-full md:hidden p-4">
-			{#each menu as mi}
+			{#each menu.filter(i => !i.hidden) as mi}
 			<div class="my-3 mx-4">
 				<a href={mi.url} on:click={() => navbar = false}><button class="{mi.class} uppercase text-xl">{mi.title}</button></a>
 			</div>
@@ -95,7 +98,7 @@
 	<div class="w-full h-screen" id="homepage">
 		<div class="w-full h-full flex items-center text-center">
 			<div class="mx-auto px-4">
-				<div class="text-5xl md:text-8xl font-bold mb-4 md:mb-8 animation-crypt">
+				<div class="text-5xl md:text-8xl font-bold mb-4 md:mb-8 animation-crypt" on:mouseenter={animateText}>
 					{data.config.shortname.toUpperCase()}
 				</div>
 				<div class="text-3xl md:text-5xl md:mb-4 uppercase">

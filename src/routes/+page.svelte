@@ -29,7 +29,7 @@
 		<div class="py-16 md:py-32 md:w-2/3 mx-auto markdown">
 			<SvelteMarkdown source={data.config.intro} />
 		</div>
-		<div class="section-header">Key themes</div>
+		<div class="section-header" on:mouseenter={animateText}>Key themes</div>
 		<div class="grid md:grid-cols-3 gap-4 md:gap-10">
 			{#each data.config.themes as ti}
 				<div class="bg-[#0d1117] hover:text-black hover:bg-white px-4 py-6 topic-item" on:mouseenter={animateSection(35)}>
@@ -45,7 +45,7 @@
 
 <div class="" id="speakers">
 	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto">
-		<div class="section-header">Speakers</div>
+		<div class="section-header" on:mouseenter={animateText}>Speakers</div>
 		<div class="mx-auto">
 			<div class="pb-16 flex flex-wrap justify-center gap-6">
 				<PeopleList items={data.config.speakers} people={data.config.people} />
@@ -56,7 +56,7 @@
 
 <div id="hosts">
 	<div class="middle-pane-medium pt-0 text-xl text-center mx-auto">
-		<div class="section-header">Hosts</div>
+		<div class="section-header" on:mouseenter={animateText}>Hosts</div>
 		<div class="mx-auto">
 			<div class="pb-16 flex flex-wrap justify-center gap-6">
 				<PeopleList items={data.config.hosts} people={data.config.people} size="small" />
@@ -67,7 +67,7 @@
 
 <div class="bg-black" id="program">
 	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto pb-32">
-		<div class="section-header">Program</div>
+		<div class="section-header" on:mouseenter={animateText}>Program</div>
 		<table class="table-auto table-custom w-full mx-0 lg:mx-8">
 			<thead>
 				<tr>
@@ -101,7 +101,7 @@
 
 <div class="" id="sponsors">
 	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto pb-32">
-		<div class="section-header">Sponsors</div>
+		<div class="section-header" on:mouseenter={animateText}>Sponsors</div>
 		<div>
 			<a href={data.config.sponsorUrl} target="_blank"
 				><button
@@ -115,7 +115,7 @@
 
 <div class="bg-black" id="ticket">
 	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto pb-32">
-		<div class="section-header">Ticket</div>
+		<div class="section-header" on:mouseenter={animateText}>Ticket</div>
 		<div class="mb-8 text-lg text-mild">{data.config.ticketsIntro}</div>
 		<div class="grid lg:grid-cols-2 gap-10 md:w-2/3 mx-auto">
 			{#each data.config.tickets as tt}
@@ -147,7 +147,7 @@
 
 <div class="mb-36" id="faq">
 	<div class="middle-pane-medium pt-20 text-xl text-center mx-auto">
-		<div class="section-header">FAQ</div>
+		<div class="section-header" on:mouseenter={animateText}>FAQ</div>
 		<div class="grid md:grid-cols-2 gap-2 md:gap-10">
 			{#each data.config.faq as fi}
 				<div class="py-10 px-4 hover:bg-white hover:text-black" on:mouseenter={animateSection(15)}>
