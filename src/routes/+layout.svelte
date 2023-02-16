@@ -9,11 +9,13 @@
   	let navbar = false;
 
 	const menu = [
+		{ title: 'Homepage', url: '', hidden: true },
 		{ title: 'About', url: '#about' },
 		{ title: 'Speakers', url: '#speakers' },
 		{ title: 'Program', url: '#program' },
 		{ title: 'Sponsors', url: '#sponsors' },
-		{ title: 'Ticket', url: '#ticket', class: 'button' }
+		{ title: 'Ticket', url: '#ticket', class: 'button' },
+		{ title: 'FAQ', url: '#faq', hidden: true }
 	];
 
 	onMount(async () => {
@@ -23,6 +25,40 @@
 				animateText({ target: el })
 			}
 		}, 0)
+
+		let lastScrollTop = null
+
+		setInterval(() => {
+			const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+			if (lastScrollTop === scrollTop) {
+				return null;
+			} else {
+				lastScrollTop = scrollTop
+			}
+			console.log('x')
+			const arr = []
+			for (const mi of menu) {
+				const el = document.getElementById(mi.title.toLowerCase())
+				const pos = el.getBoundingClientRect()
+				//console.log(mi.title, pos.top, pos.bottom)
+				if (pos.top <= 100 && pos.bottom > 100) {
+					arr.push([ mi, pos.top, pos.bottom ])
+				}
+			}
+			const choosed = arr[arr.length-1]
+			if (choosed) {
+				//console.log('choosed = ', choosed[0].title)
+				const currentHash = window.location.hash
+				const hash = choosed[0].url
+				if (hash !== currentHash) {
+					if (hash === '') {
+						history.replaceState(null, null, ' ');
+					} else {
+						history.replaceState(null, null, hash);
+					}
+				}
+			}
+		}, 1000)
 	});
 
 </script>
@@ -39,7 +75,7 @@
 				</div>
 				<div class="flex items-center gap-6 text-xl">
           			<button class="md:hidden text-3xl" on:click={() => navbar = !navbar}>☰</button>
-					{#each menu as mi}
+					{#each menu.filter(i => !i.hidden) as mi}
 						<div class="hidden md:block"><a class="{mi.class ? mi.class : 'hover:underline'}" href={mi.url} on:mouseenter={animateText}>{mi.title.toUpperCase()}</a></div>
 					{/each}
 				</div>
@@ -56,7 +92,7 @@
 		{/if}
 	</div>
 
-	<div class="w-full h-screen">
+	<div class="w-full h-screen" id="homepage">
 		<div class="w-full h-full flex items-center text-center">
 			<div class="mx-auto px-4">
 				<div class="text-5xl md:text-8xl font-bold mb-4 md:mb-8 animation-crypt">

@@ -4,6 +4,12 @@
 	import { animateText } from '$lib/helpers';
 
 	export let data;
+
+	function animateTopic (el) {
+		for(const e of el.target.getElementsByClassName('animate-topic')) {
+			animateText({ target: e })
+		}
+	}
 </script>
 
 <svelte:head>
@@ -24,8 +30,8 @@
 		<div class="section-header">Key themes</div>
 		<div class="grid md:grid-cols-3 gap-4 md:gap-10">
 			{#each data.config.themes as ti}
-				<div class="bg-[#0d1117] hover:text-black hover:bg-white px-4 py-6">
-					<div class="text-2xl uppercase">{ti.title}</div>
+				<div class="bg-[#0d1117] hover:text-black hover:bg-white px-4 py-6" on:mouseenter={animateTopic}>
+					<div class="text-2xl animate-topic">{ti.title.toUpperCase()}</div>
 					<div class="mt-4 text-lg markdown">
 						<SvelteMarkdown source={ti.desc} />
 					</div>

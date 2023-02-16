@@ -13,7 +13,7 @@ export function rand(length) {
     return result;
 }
 
-export function animateText (ev) {
+export function animateText (ev, interval = 50) {
     if (!ev.target.getAttribute('data-text')) {
         ev.target.setAttribute('data-text', ev.target.innerHTML)
     }
@@ -21,7 +21,7 @@ export function animateText (ev) {
         return;
     }
     ev.target.setAttribute('data-animate', "1")
-    const orig = removeMd(ev.target.getAttribute('data-text'))
+    const orig = removeMd(ev.target.getAttribute('data-text')).replace('&amp;', '&')
     const steps = orig.length
 
     const genRand = (pos = 0, len = null) => orig.substring(pos, len).split(' ').map(x => rand(x.length)).join(' ')
@@ -37,6 +37,6 @@ export function animateText (ev) {
             if (i === steps) {
                 ev.target.setAttribute('data-animate', "0")
             }
-        }, 50*i)
+        }, interval * i)
     }
 }
