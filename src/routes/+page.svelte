@@ -38,7 +38,7 @@
 	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto">
 		<div class="section-header">Speakers</div>
 		<div class="mx-auto">
-			<div class="pb-16 flex justify-center sm:gap-6">
+			<div class="pb-16 flex flex-wrap justify-center gap-6">
 				<PeopleList items={data.config.speakers} people={data.config.people} />
 			</div>
 		</div>
@@ -49,7 +49,7 @@
 	<div class="middle-pane-medium pt-0 text-xl text-center mx-auto">
 		<div class="section-header">Hosts</div>
 		<div class="mx-auto">
-			<div class="pb-16 flex justify-center sm:gap-6">
+			<div class="pb-16 flex flex-wrap justify-center gap-6">
 				<PeopleList items={data.config.hosts} people={data.config.people} size="small" />
 			</div>
 		</div>

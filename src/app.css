@@ -78,7 +78,7 @@
 	.person-item:hover img {
 		@apply grayscale-0 invert-0 blur-none;
 	}
-	.person-item:hover .text-mild {
+	.person-item:hover .text-mild, .person-item:hover .text-supermild {
 		@apply text-black;
 	}
 }
