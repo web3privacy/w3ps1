@@ -1,6 +1,38 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, x as create_component, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, y as claim_component, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, z as mount_component, I as listen, u as set_data, J as update_slot_base, K as get_all_dirty_from_scope, L as get_slot_changes, f as transition_in, t as transition_out, d as check_outros, M as destroy_each, A as destroy_component, C as noop, g as group_outros } from "../../chunks/index-858fda85.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, x as create_component, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, y as claim_component, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, z as mount_component, I as listen, u as set_data, J as update_slot_base, K as get_all_dirty_from_scope, L as get_slot_changes, f as transition_in, t as transition_out, d as check_outros, M as destroy_each, A as destroy_component, o as onMount, C as noop, g as group_outros } from "../../chunks/index-858fda85.js";
 import { S as SvelteMarkdown } from "../../chunks/SvelteMarkdown-6743e4fc.js";
 const app = "";
+function rand(length) {
+  let result = "";
+  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const charactersLength = characters.length;
+  let counter = 0;
+  while (counter < length) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    counter += 1;
+  }
+  return result;
+}
+function animateText(ev) {
+  if (!ev.target.getAttribute("data-text")) {
+    ev.target.setAttribute("data-text", ev.target.innerHTML);
+  }
+  if (ev.target.getAttribute("data-animate") === "1") {
+    return;
+  }
+  ev.target.setAttribute("data-animate", "1");
+  const orig = ev.target.getAttribute("data-text");
+  const steps = orig.length;
+  const random = rand(orig.length);
+  ev.target.innerHTML = random;
+  for (let i = 0; i <= steps; i++) {
+    setTimeout(() => {
+      ev.target.innerHTML = orig.substring(0, i) + rand(orig.length - i);
+      if (i === steps) {
+        ev.target.setAttribute("data-animate", "0");
+      }
+    }, 50 * i);
+  }
+}
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
   child_ctx[7] = list[i];
@@ -16,9 +48,11 @@ function create_each_block_1(ctx) {
   let a;
   let t_value = (
     /*mi*/
-    ctx[7].title + ""
+    ctx[7].title.toUpperCase() + ""
   );
   let t;
+  let mounted;
+  let dispose;
   return {
     c() {
       div = element("div");
@@ -58,11 +92,17 @@ function create_each_block_1(ctx) {
       insert_hydration(target, div, anchor);
       append_hydration(div, a);
       append_hydration(a, t);
+      if (!mounted) {
+        dispose = listen(a, "mouseenter", animateText);
+        mounted = true;
+      }
     },
     p: noop,
     d(detaching) {
       if (detaching)
         detach(div);
+      mounted = false;
+      dispose();
     }
   };
 }
@@ -287,7 +327,7 @@ function create_fragment(ctx) {
   let div6;
   let t5_value = (
     /*data*/
-    ctx[0].config.shortname + ""
+    ctx[0].config.shortname.toUpperCase() + ""
   );
   let t5;
   let t6;
@@ -504,7 +544,7 @@ function create_fragment(ctx) {
       var div10_nodes = children(div10);
       div9 = claim_element(div10_nodes, "DIV", { class: true });
       var div9_nodes = children(div9);
-      div6 = claim_element(div9_nodes, "DIV", { class: true });
+      div6 = claim_element(div9_nodes, "DIV", { id: true, class: true });
       var div6_nodes = children(div6);
       t5 = claim_text(div6_nodes, t5_value);
       div6_nodes.forEach(detach);
@@ -603,11 +643,12 @@ function create_fragment(ctx) {
       attr(div0, "class", "w-16 py-2");
       attr(div1, "class", "flex items-center gap-4 grow");
       attr(button, "class", "md:hidden text-3xl");
-      attr(div2, "class", "flex items-center gap-6 uppercase text-xl");
+      attr(div2, "class", "flex items-center gap-6 text-xl");
       attr(div3, "class", "flex");
       attr(div4, "class", "middle-pane-big bg-black");
       attr(div5, "class", "fixed w-full h-18 bg-black pt-2 pb-2 z-40");
-      attr(div6, "class", "text-5xl md:text-8xl font-bold uppercase mb-4 md:mb-8");
+      attr(div6, "id", "master-title");
+      attr(div6, "class", "text-5xl md:text-8xl font-bold mb-4 md:mb-8");
       attr(a1, "href", a1_href_value = /*data*/
       ctx[0].config.venueMapUrl);
       attr(a1, "target", "_blank");
@@ -744,7 +785,7 @@ function create_fragment(ctx) {
       ctx2[0].config.parentUrl)) {
         attr(a0, "href", a0_href_value);
       }
-      if (dirty & /*menu*/
+      if (dirty & /*menu, animateText*/
       4) {
         each_value_1 = /*menu*/
         ctx2[2];
@@ -781,7 +822,7 @@ function create_fragment(ctx) {
       }
       if ((!current || dirty & /*data*/
       1) && t5_value !== (t5_value = /*data*/
-      ctx2[0].config.shortname + ""))
+      ctx2[0].config.shortname.toUpperCase() + ""))
         set_data(t5, t5_value);
       if ((!current || dirty & /*data*/
       1) && t7_value !== (t7_value = /*data*/
@@ -936,6 +977,14 @@ function instance($$self, $$props, $$invalidate) {
       class: "button"
     }
   ];
+  onMount(async () => {
+    setTimeout(
+      () => animateText({
+        target: document.getElementById("master-title")
+      }),
+      0
+    );
+  });
   const click_handler = () => $$invalidate(1, navbar = !navbar);
   const click_handler_1 = () => $$invalidate(1, navbar = false);
   $$self.$$set = ($$props2) => {
