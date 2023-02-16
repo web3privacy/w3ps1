@@ -4,6 +4,7 @@
     export let size = 'normal';
 
 	import SvelteMarkdown from 'svelte-markdown';
+	import { animateText } from '$lib/helpers';
 
 	function getPerson(id) {
 		return people.find((p) => p.id === id);

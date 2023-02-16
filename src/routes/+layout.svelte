@@ -3,6 +3,8 @@
 	export let data;
 
 	import SvelteMarkdown from 'svelte-markdown';
+	import { animateText } from '$lib/helpers';
+	import { onMount } from 'svelte';
 
   	let navbar = false;
 
@@ -13,6 +15,11 @@
 		{ title: 'Sponsors', url: '#sponsors' },
 		{ title: 'Ticket', url: '#ticket', class: 'button' }
 	];
+
+	onMount(async () => {
+		setTimeout(() => animateText({ target: document.getElementById('master-title') }), 0)
+	});
+
 </script>
 
 <div class="relative w-full min-h-screen text-white">
@@ -25,10 +32,10 @@
 					</div>
 					<!--h1 class="text-2xl uppercase">{data.config.title}</h1-->
 				</div>
-				<div class="flex items-center gap-6 uppercase text-xl">
+				<div class="flex items-center gap-6 text-xl">
           			<button class="md:hidden text-3xl" on:click={() => navbar = !navbar}>☰</button>
 					{#each menu as mi}
-						<div class="hidden md:block"><a class={mi.class ? mi.class : 'hover:underline'} href={mi.url}>{mi.title}</a></div>
+						<div class="hidden md:block"><a class={mi.class ? mi.class : 'hover:underline'} href={mi.url} on:mouseenter={animateText}>{mi.title.toUpperCase()}</a></div>
 					{/each}
 				</div>
 			</div>
@@ -47,8 +54,8 @@
 	<div class="w-full h-screen">
 		<div class="w-full h-full flex items-center text-center">
 			<div class="mx-auto px-4">
-				<div class="text-5xl md:text-8xl font-bold uppercase mb-4 md:mb-8">
-					{data.config.shortname}
+				<div id="master-title" class="text-5xl md:text-8xl font-bold mb-4 md:mb-8">
+					{data.config.shortname.toUpperCase()}
 				</div>
 				<div class="text-3xl md:text-5xl md:mb-4 uppercase">{data.config.date} @ <a href={data.config.venueMapUrl} target="_blank" class="underline hover:no-underline">{data.config.venue}</a></div>
 				<div class="mt-8 text-lg text-mild mx-4">

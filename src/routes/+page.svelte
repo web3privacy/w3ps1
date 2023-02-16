@@ -1,6 +1,7 @@
 <script>
 	import SvelteMarkdown from 'svelte-markdown';
 	import PeopleList from '$lib/components/PeopleList.svelte';
+	import { animateText } from '$lib/helpers';
 
 	export let data;
 </script>
