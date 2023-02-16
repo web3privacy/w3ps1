@@ -64,10 +64,8 @@ function create_if_block$1(ctx) {
 function create_each_block$1(ctx) {
   let div3;
   let div0;
-  let a0;
   let img;
   let img_src_value;
-  let a0_href_value;
   let t0;
   let div1;
   let t1_value = (
@@ -77,14 +75,14 @@ function create_each_block$1(ctx) {
   let t1;
   let t2;
   let div2;
-  let a1;
+  let a;
   let t3;
   let t4_value = (
     /*item*/
     ctx[5].twitter + ""
   );
   let t4;
-  let a1_href_value;
+  let a_href_value;
   let t5;
   let t6;
   let div3_class_value;
@@ -99,14 +97,13 @@ function create_each_block$1(ctx) {
     c() {
       div3 = element("div");
       div0 = element("div");
-      a0 = element("a");
       img = element("img");
       t0 = space();
       div1 = element("div");
       t1 = text(t1_value);
       t2 = space();
       div2 = element("div");
-      a1 = element("a");
+      a = element("a");
       t3 = text("@");
       t4 = text(t4_value);
       t5 = space();
@@ -120,10 +117,7 @@ function create_each_block$1(ctx) {
       var div3_nodes = children(div3);
       div0 = claim_element(div3_nodes, "DIV", {});
       var div0_nodes = children(div0);
-      a0 = claim_element(div0_nodes, "A", { href: true, target: true });
-      var a0_nodes = children(a0);
-      img = claim_element(a0_nodes, "IMG", { src: true, class: true });
-      a0_nodes.forEach(detach);
+      img = claim_element(div0_nodes, "IMG", { src: true, class: true });
       div0_nodes.forEach(detach);
       t0 = claim_space(div3_nodes);
       div1 = claim_element(div3_nodes, "DIV", { class: true });
@@ -133,11 +127,11 @@ function create_each_block$1(ctx) {
       t2 = claim_space(div3_nodes);
       div2 = claim_element(div3_nodes, "DIV", { class: true });
       var div2_nodes = children(div2);
-      a1 = claim_element(div2_nodes, "A", { href: true, class: true });
-      var a1_nodes = children(a1);
-      t3 = claim_text(a1_nodes, "@");
-      t4 = claim_text(a1_nodes, t4_value);
-      a1_nodes.forEach(detach);
+      a = claim_element(div2_nodes, "A", { href: true, class: true });
+      var a_nodes = children(a);
+      t3 = claim_text(a_nodes, "@");
+      t4 = claim_text(a_nodes, t4_value);
+      a_nodes.forEach(detach);
       div2_nodes.forEach(detach);
       t5 = claim_space(div3_nodes);
       if (if_block)
@@ -151,17 +145,12 @@ function create_each_block$1(ctx) {
       ctx[5].img))
         attr(img, "src", img_src_value);
       attr(img, "class", "grayscale invert aspect-square object-cover w-full");
-      attr(a0, "href", a0_href_value = twitterLink(
-        /*item*/
-        ctx[5].twitter
-      ));
-      attr(a0, "target", "_blank");
       attr(div1, "class", "mt-4 speaker-name animate-speaker text-xl");
-      attr(a1, "href", a1_href_value = twitterLink(
+      attr(a, "href", a_href_value = twitterLink(
         /*item*/
         ctx[5].twitter
       ));
-      attr(a1, "class", "hover:underline animate-speaker");
+      attr(a, "class", "hover:underline animate-speaker");
       attr(div2, "class", "text-lg text-mild");
       attr(div3, "class", div3_class_value = "hover:bg-white hover:text-black p-2 " + /*size*/
       (ctx[1] === "small" ? "w-2/3 sm:w-48" : "w-2/3 sm:w-64") + " person-item");
@@ -169,16 +158,15 @@ function create_each_block$1(ctx) {
     m(target, anchor) {
       insert_hydration(target, div3, anchor);
       append_hydration(div3, div0);
-      append_hydration(div0, a0);
-      append_hydration(a0, img);
+      append_hydration(div0, img);
       append_hydration(div3, t0);
       append_hydration(div3, div1);
       append_hydration(div1, t1);
       append_hydration(div3, t2);
       append_hydration(div3, div2);
-      append_hydration(div2, a1);
-      append_hydration(a1, t3);
-      append_hydration(a1, t4);
+      append_hydration(div2, a);
+      append_hydration(a, t3);
+      append_hydration(a, t4);
       append_hydration(div3, t5);
       if (if_block)
         if_block.m(div3, null);
@@ -200,13 +188,6 @@ function create_each_block$1(ctx) {
       ctx2[5].img)) {
         attr(img, "src", img_src_value);
       }
-      if (!current || dirty & /*items*/
-      1 && a0_href_value !== (a0_href_value = twitterLink(
-        /*item*/
-        ctx2[5].twitter
-      ))) {
-        attr(a0, "href", a0_href_value);
-      }
       if ((!current || dirty & /*items*/
       1) && t1_value !== (t1_value = /*item*/
       ctx2[5].name.toUpperCase() + ""))
@@ -216,11 +197,11 @@ function create_each_block$1(ctx) {
       ctx2[5].twitter + ""))
         set_data(t4, t4_value);
       if (!current || dirty & /*items*/
-      1 && a1_href_value !== (a1_href_value = twitterLink(
+      1 && a_href_value !== (a_href_value = twitterLink(
         /*item*/
         ctx2[5].twitter
       ))) {
-        attr(a1, "href", a1_href_value);
+        attr(a, "href", a_href_value);
       }
       if (
         /*item*/
