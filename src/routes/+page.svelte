@@ -5,9 +5,11 @@
 
 	export let data;
 
-	function animateTopic (el) {
-		for(const e of el.target.getElementsByClassName('animate-topic')) {
-			animateText({ target: e })
+	function animateSection (interval = 50) {
+		return (el) => {
+			for(const e of el.target.getElementsByClassName('animate-section')) {
+				animateText({ target: e }, interval)
+			}
 		}
 	}
 </script>
@@ -30,9 +32,9 @@
 		<div class="section-header">Key themes</div>
 		<div class="grid md:grid-cols-3 gap-4 md:gap-10">
 			{#each data.config.themes as ti}
-				<div class="bg-[#0d1117] hover:text-black hover:bg-white px-4 py-6" on:mouseenter={animateTopic}>
-					<div class="text-2xl animate-topic">{ti.title.toUpperCase()}</div>
-					<div class="mt-4 text-lg markdown">
+				<div class="bg-[#0d1117] hover:text-black hover:bg-white px-4 py-6 topic-item" on:mouseenter={animateSection(35)}>
+					<div class="text-2xl animate-section">{ti.title.toUpperCase()}</div>
+					<div class="mt-4 text-lg text-mild markdown">
 						<SvelteMarkdown source={ti.desc} />
 					</div>
 				</div>
@@ -75,7 +77,7 @@
 			</thead>
 			<tbody>
 				{#each data.config.program as pi}
-					<tr class="">
+					<tr class="" on:mouseenter={animateSection(35)}>
 						<td class="text-right time xl:whitespace-nowrap sm:w-16 xl:w-36"
 							>{@html pi.time
 								.split('-')
@@ -83,7 +85,7 @@
 								.join('<div class="xl:inline-block hidden mx-1">-</div>')}
 						</td>
 						<td class="text-left">
-							<div class="text-xl">{pi.title} {pi.speakers ? '― ' + pi.speakers[0]?.name : ''}</div>
+							<div class="text-xl"><span class="animate-section">{pi.title}</span> {pi.speakers ? '― ' + pi.speakers[0]?.name : ''}</div>
 							{#if pi.desc}
 								<div class="mt-2 text-base description text-mild markdown">
 									<SvelteMarkdown source={pi.desc} />
@@ -103,7 +105,7 @@
 		<div>
 			<a href={data.config.sponsorUrl} target="_blank"
 				><button
-					class="py-2 px-5 bg-white text-black hover:bg-black border border-bg-white hover:text-white"
+					class="py-2 px-5 bg-white text-black hover:bg-black border border-bg-white hover:text-white" on:mouseenter={animateText}
 					>Become a Sponsor</button
 				></a
 			>
@@ -118,10 +120,10 @@
 		<div class="grid lg:grid-cols-2 gap-10 md:w-2/3 mx-auto">
 			{#each data.config.tickets as tt}
 				<div
-					class="bg-[#0d1117] hover:border-0 py-10 px-10 hover:text-black hover:bg-white"
+					class="bg-[#0d1117] hover:border-0 py-10 px-10 hover:text-black hover:bg-white" on:mouseenter={animateSection(40)}
 				>
-					<div class="text-3xl uppercase">{tt.title}</div>
-					<div class="text-xl mt-6 font-bold">{tt.price}</div>
+					<div class="text-3xl uppercase animate-section">{tt.title}</div>
+					<div class="text-xl mt-6 font-bold animate-section">{tt.price}</div>
 					<ul class="mt-6 text-lg text-left list-disc px-6">
 						{#each tt.includes as ti}
 							<li>{ti}</li>
@@ -148,8 +150,8 @@
 		<div class="section-header">FAQ</div>
 		<div class="grid md:grid-cols-2 gap-2 md:gap-10">
 			{#each data.config.faq as fi}
-				<div class="py-10 px-4 hover:bg-white hover:text-black">
-					<div class="text-2xl font-bold mb-6">{fi.title}</div>
+				<div class="py-10 px-4 hover:bg-white hover:text-black" on:mouseenter={animateSection(15)}>
+					<div class="text-2xl font-bold mb-6 animate-section">{fi.title}</div>
 					<div class="text-lg markdown"><SvelteMarkdown source={fi.text} /></div>
 				</div>
 			{/each}

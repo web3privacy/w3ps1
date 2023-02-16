@@ -27,8 +27,8 @@
 				><img src="/people/{item.img}" class="grayscale invert aspect-square object-cover w-full" /></a
 			>
 		</div>
-		<div class="mt-4 speaker-name animate-speaker">{item.name.toUpperCase()}</div>
-		<div class="text-base text-mild">
+		<div class="mt-4 speaker-name animate-speaker text-xl">{item.name.toUpperCase()}</div>
+		<div class="text-lg text-mild">
 			<a href={twitterLink(item.twitter)} class="hover:underline animate-speaker">@{item.twitter}</a>
 		</div>
 		{#if item.caption}
