@@ -25,14 +25,18 @@ const data = {
       title: "Mixnets → Full-Stack Privacy",
       desc: "Imagine a Full-Stack Privacy -> how would it even look alike!"
     },
+    {
+      title: "Private messaging protocols",
+      desc: "We need resilient privacy-preserving, p2p communication layers for Web3, that allows free and uncensored human-to-human, machine-to-machine or hybrid communication."
+    },
+    {
+      title: "Solarpunk vs Lunarpunk",
+      desc: "For solarpunk to succeed it must integrate the lunarpunk unconscious. The only hope for solarpunk is to [go dark](https://www.egirlcapital.com/writings/107533289). Do you agree?"
+    },
     { title: "Cryptography" },
     {
       title: "Tech journalists",
       desc: "Ethical crypto vs global cyberwars agenda"
-    },
-    {
-      title: "Asian community",
-      desc: "It's rare to see asians in Europe, but there are so many of them doing privacy solutions"
     },
     {
       title: "Privacy wars",
@@ -46,16 +50,8 @@ const data = {
       desc: "The network state-as-a-grassroots movement"
     },
     {
-      title: "Solarpunk vs Lunarpunk",
-      desc: "For solarpunk to succeed it must integrate the lunarpunk unconscious. The only hope for solarpunk is to [go dark](https://www.egirlcapital.com/writings/107533289). Do you agree?"
-    },
-    {
       title: "Veksl",
       desc: "Easy onboarding to cryptocurrencies without KYC/AML using peer-to-peer tools is crucial for privacy. What options do we have today?"
-    },
-    {
-      title: "Private messaging protocols",
-      desc: "We need resilient privacy-preserving, p2p communication layers for Web3, that allows free and uncensored human-to-human, machine-to-machine or hybrid communication."
     }
   ],
   ticketsIntro: "Be a part of the first Web3Privacy Summit experience…",
@@ -123,31 +119,36 @@ const data = {
       id: "mykola",
       name: "Mykola Siusko",
       twitter: "nicksvyaznoy",
-      img: "mykola.png"
+      img: "mykola.png",
+      caption: "Web3 privacy advocate"
     },
     {
       id: "tree",
       name: "Tree",
       twitter: "treecz",
-      img: "tree.jpeg"
+      img: "tree.jpeg",
+      caption: "Creator of lunarpunk hackathons & events"
     },
     {
       id: "juraj-bednar",
       name: "Juraj Bednar",
       twitter: "jurbed",
-      img: "juraj-bednar.jpeg"
+      img: "juraj-bednar.jpeg",
+      caption: "Educator, writer, cryptoanarchist & biohacker"
     },
     {
       id: "mario-havel",
       name: "Mario Havel",
       twitter: "TMIYChao",
-      img: "mario-havel.jpeg"
+      img: "mario-havel.jpeg",
+      caption: "Hacker, Co-Founder of [Bordel Hackerspace](https://bordel.paralelnipolis.cz/#/)"
     },
     {
       id: "guy-zyskind",
       name: "Guy Zyskind",
       twitter: "GuyZys",
-      img: "guy-zyskind.jpeg"
+      img: "guy-zyskind.jpeg",
+      caption: "Founder of [Secret Network](https://scrt.network/), CEO SCRT Labs"
     }
   ],
   speakers: [

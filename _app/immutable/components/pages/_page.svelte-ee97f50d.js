@@ -1,9 +1,65 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, e as empty, b as insert_hydration, C as noop, M as destroy_each, h as detach, k as element, a as space, q as text, l as claim_element, m as children, c as claim_space, r as claim_text, G as src_url_equal, n as attr, H as append_hydration, u as set_data, x as create_component, Z as head_selector, y as claim_component, z as mount_component, f as transition_in, d as check_outros, t as transition_out, A as destroy_component, g as group_outros } from "../../chunks/index-858fda85.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, e as empty, b as insert_hydration, f as transition_in, g as group_outros, d as check_outros, t as transition_out, M as destroy_each, h as detach, k as element, a as space, q as text, l as claim_element, m as children, c as claim_space, r as claim_text, G as src_url_equal, n as attr, H as append_hydration, u as set_data, x as create_component, y as claim_component, z as mount_component, A as destroy_component, Z as head_selector } from "../../chunks/index-858fda85.js";
 import { S as SvelteMarkdown } from "../../chunks/SvelteMarkdown-6743e4fc.js";
 function get_each_context$1(ctx, list, i) {
   const child_ctx = ctx.slice();
   child_ctx[4] = list[i];
   return child_ctx;
+}
+function create_if_block$1(ctx) {
+  let div;
+  let sveltemarkdown;
+  let current;
+  sveltemarkdown = new SvelteMarkdown({
+    props: { source: (
+      /*item*/
+      ctx[4].caption
+    ) }
+  });
+  return {
+    c() {
+      div = element("div");
+      create_component(sveltemarkdown.$$.fragment);
+      this.h();
+    },
+    l(nodes) {
+      div = claim_element(nodes, "DIV", { class: true });
+      var div_nodes = children(div);
+      claim_component(sveltemarkdown.$$.fragment, div_nodes);
+      div_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      attr(div, "class", "mt-2 text-base text-supermild");
+    },
+    m(target, anchor) {
+      insert_hydration(target, div, anchor);
+      mount_component(sveltemarkdown, div, null);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const sveltemarkdown_changes = {};
+      if (dirty & /*items*/
+      1)
+        sveltemarkdown_changes.source = /*item*/
+        ctx2[4].caption;
+      sveltemarkdown.$set(sveltemarkdown_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(sveltemarkdown.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(sveltemarkdown.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      destroy_component(sveltemarkdown);
+    }
+  };
 }
 function create_each_block$1(ctx) {
   let div3;
@@ -30,7 +86,13 @@ function create_each_block$1(ctx) {
   let t4;
   let a1_href_value;
   let t5;
+  let t6;
   let div3_class_value;
+  let current;
+  let if_block = (
+    /*item*/
+    ctx[4].caption && create_if_block$1(ctx)
+  );
   return {
     c() {
       div3 = element("div");
@@ -46,6 +108,9 @@ function create_each_block$1(ctx) {
       t3 = text("@");
       t4 = text(t4_value);
       t5 = space();
+      if (if_block)
+        if_block.c();
+      t6 = space();
       this.h();
     },
     l(nodes) {
@@ -73,6 +138,9 @@ function create_each_block$1(ctx) {
       a1_nodes.forEach(detach);
       div2_nodes.forEach(detach);
       t5 = claim_space(div3_nodes);
+      if (if_block)
+        if_block.l(div3_nodes);
+      t6 = claim_space(div3_nodes);
       div3_nodes.forEach(detach);
       this.h();
     },
@@ -80,7 +148,7 @@ function create_each_block$1(ctx) {
       if (!src_url_equal(img.src, img_src_value = "/people/" + /*item*/
       ctx[4].img))
         attr(img, "src", img_src_value);
-      attr(img, "class", "grayscale invert aspect-square object-cover");
+      attr(img, "class", "grayscale invert aspect-square object-cover w-full");
       attr(a0, "href", a0_href_value = twitterLink(
         /*item*/
         ctx[4].twitter
@@ -94,7 +162,7 @@ function create_each_block$1(ctx) {
       attr(a1, "class", "hover:underline");
       attr(div2, "class", "text-base text-mild");
       attr(div3, "class", div3_class_value = "hover:bg-white hover:text-black p-2 " + /*size*/
-      (ctx[1] === "small" ? "w-48" : "w-64") + " person-item");
+      (ctx[1] === "small" ? "w-2/3 sm:w-48" : "w-2/3 sm:w-64") + " person-item");
     },
     m(target, anchor) {
       insert_hydration(target, div3, anchor);
@@ -110,49 +178,89 @@ function create_each_block$1(ctx) {
       append_hydration(a1, t3);
       append_hydration(a1, t4);
       append_hydration(div3, t5);
+      if (if_block)
+        if_block.m(div3, null);
+      append_hydration(div3, t6);
+      current = true;
     },
     p(ctx2, dirty) {
-      if (dirty & /*items*/
+      if (!current || dirty & /*items*/
       1 && !src_url_equal(img.src, img_src_value = "/people/" + /*item*/
       ctx2[4].img)) {
         attr(img, "src", img_src_value);
       }
-      if (dirty & /*items*/
+      if (!current || dirty & /*items*/
       1 && a0_href_value !== (a0_href_value = twitterLink(
         /*item*/
         ctx2[4].twitter
       ))) {
         attr(a0, "href", a0_href_value);
       }
-      if (dirty & /*items*/
-      1 && t1_value !== (t1_value = /*item*/
+      if ((!current || dirty & /*items*/
+      1) && t1_value !== (t1_value = /*item*/
       ctx2[4].name + ""))
         set_data(t1, t1_value);
-      if (dirty & /*items*/
-      1 && t4_value !== (t4_value = /*item*/
+      if ((!current || dirty & /*items*/
+      1) && t4_value !== (t4_value = /*item*/
       ctx2[4].twitter + ""))
         set_data(t4, t4_value);
-      if (dirty & /*items*/
+      if (!current || dirty & /*items*/
       1 && a1_href_value !== (a1_href_value = twitterLink(
         /*item*/
         ctx2[4].twitter
       ))) {
         attr(a1, "href", a1_href_value);
       }
-      if (dirty & /*size*/
+      if (
+        /*item*/
+        ctx2[4].caption
+      ) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+          if (dirty & /*items*/
+          1) {
+            transition_in(if_block, 1);
+          }
+        } else {
+          if_block = create_if_block$1(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(div3, t6);
+        }
+      } else if (if_block) {
+        group_outros();
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
+        });
+        check_outros();
+      }
+      if (!current || dirty & /*size*/
       2 && div3_class_value !== (div3_class_value = "hover:bg-white hover:text-black p-2 " + /*size*/
-      (ctx2[1] === "small" ? "w-48" : "w-64") + " person-item")) {
+      (ctx2[1] === "small" ? "w-2/3 sm:w-48" : "w-2/3 sm:w-64") + " person-item")) {
         attr(div3, "class", div3_class_value);
       }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
     },
     d(detaching) {
       if (detaching)
         detach(div3);
+      if (if_block)
+        if_block.d();
     }
   };
 }
 function create_fragment$1(ctx) {
   let each_1_anchor;
+  let current;
   let each_value = (
     /*items*/
     ctx[0].map(
@@ -164,6 +272,9 @@ function create_fragment$1(ctx) {
   for (let i = 0; i < each_value.length; i += 1) {
     each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
   }
+  const out = (i) => transition_out(each_blocks[i], 1, 1, () => {
+    each_blocks[i] = null;
+  });
   return {
     c() {
       for (let i = 0; i < each_blocks.length; i += 1) {
@@ -182,9 +293,10 @@ function create_fragment$1(ctx) {
         each_blocks[i].m(target, anchor);
       }
       insert_hydration(target, each_1_anchor, anchor);
+      current = true;
     },
     p(ctx2, [dirty]) {
-      if (dirty & /*size, twitterLink, items, getPerson*/
+      if (dirty & /*size, items, getPerson, twitterLink*/
       7) {
         each_value = /*items*/
         ctx2[0].map(
@@ -196,20 +308,36 @@ function create_fragment$1(ctx) {
           const child_ctx = get_each_context$1(ctx2, each_value, i);
           if (each_blocks[i]) {
             each_blocks[i].p(child_ctx, dirty);
+            transition_in(each_blocks[i], 1);
           } else {
             each_blocks[i] = create_each_block$1(child_ctx);
             each_blocks[i].c();
+            transition_in(each_blocks[i], 1);
             each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
           }
         }
-        for (; i < each_blocks.length; i += 1) {
-          each_blocks[i].d(1);
+        group_outros();
+        for (i = each_value.length; i < each_blocks.length; i += 1) {
+          out(i);
         }
-        each_blocks.length = each_value.length;
+        check_outros();
       }
     },
-    i: noop,
-    o: noop,
+    i(local) {
+      if (current)
+        return;
+      for (let i = 0; i < each_value.length; i += 1) {
+        transition_in(each_blocks[i]);
+      }
+      current = true;
+    },
+    o(local) {
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        transition_out(each_blocks[i]);
+      }
+      current = false;
+    },
     d(detaching) {
       destroy_each(each_blocks, detaching);
       if (detaching)
@@ -1451,13 +1579,13 @@ function create_fragment(ctx) {
       attr(div4, "class", "bg-black");
       attr(div4, "id", "about");
       attr(div5, "class", "section-header");
-      attr(div6, "class", "pb-16 flex justify-center sm:gap-6");
+      attr(div6, "class", "pb-16 flex flex-wrap justify-center gap-6");
       attr(div7, "class", "mx-auto");
       attr(div8, "class", "middle-pane-medium pt-16 text-xl text-center mx-auto");
       attr(div9, "class", "");
       attr(div9, "id", "speakers");
       attr(div10, "class", "section-header");
-      attr(div11, "class", "pb-16 flex justify-center sm:gap-6");
+      attr(div11, "class", "pb-16 flex flex-wrap justify-center gap-6");
       attr(div12, "class", "mx-auto");
       attr(div13, "class", "middle-pane-medium pt-0 text-xl text-center mx-auto");
       attr(div14, "id", "hosts");
