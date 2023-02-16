@@ -1,14 +1,14 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, x as create_component, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, y as claim_component, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, z as mount_component, I as listen, u as set_data, J as update_slot_base, K as get_all_dirty_from_scope, L as get_slot_changes, f as transition_in, t as transition_out, d as check_outros, M as destroy_each, A as destroy_component, o as onMount, C as noop, g as group_outros } from "../../chunks/index-858fda85.js";
-import { S as SvelteMarkdown, a as animateText } from "../../chunks/helpers-a9b07fa3.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, x as create_component, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, y as claim_component, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, z as mount_component, I as listen, u as set_data, J as update_slot_base, K as get_all_dirty_from_scope, L as get_slot_changes, f as transition_in, t as transition_out, d as check_outros, M as destroy_each, A as destroy_component, N as run_all, o as onMount, C as noop, g as group_outros } from "../../chunks/index-a23f1e07.js";
+import { S as SvelteMarkdown, a as animateText } from "../../chunks/helpers-bfd3e6c9.js";
 const app = "";
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[7] = list[i];
+  child_ctx[8] = list[i];
   return child_ctx;
 }
 function get_each_context_1(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[7] = list[i];
+  child_ctx[8] = list[i];
   return child_ctx;
 }
 function create_each_block_1(ctx) {
@@ -16,7 +16,7 @@ function create_each_block_1(ctx) {
   let a;
   let t_value = (
     /*mi*/
-    ctx[7].title.toUpperCase() + ""
+    ctx[8].title.toUpperCase() + ""
   );
   let t;
   let mounted;
@@ -43,16 +43,16 @@ function create_each_block_1(ctx) {
         a,
         "class",
         /*mi*/
-        ctx[7].class ? (
+        ctx[8].class ? (
           /*mi*/
-          ctx[7].class
+          ctx[8].class
         ) : "hover:underline"
       );
       attr(
         a,
         "href",
         /*mi*/
-        ctx[7].url
+        ctx[8].url
       );
       attr(div, "class", "hidden md:block");
     },
@@ -78,7 +78,7 @@ function create_if_block_1(ctx) {
   let div;
   let each_value = (
     /*menu*/
-    ctx[2]
+    ctx[2].filter(func_1)
   );
   let each_blocks = [];
   for (let i = 0; i < each_value.length; i += 1) {
@@ -114,7 +114,7 @@ function create_if_block_1(ctx) {
       if (dirty & /*menu, navbar*/
       6) {
         each_value = /*menu*/
-        ctx2[2];
+        ctx2[2].filter(func_1);
         let i;
         for (i = 0; i < each_value.length; i += 1) {
           const child_ctx = get_each_context(ctx2, each_value, i);
@@ -145,7 +145,7 @@ function create_each_block(ctx) {
   let button;
   let t0_value = (
     /*mi*/
-    ctx[7].title + ""
+    ctx[8].title + ""
   );
   let t0;
   let t1;
@@ -179,13 +179,13 @@ function create_each_block(ctx) {
         button,
         "class",
         /*mi*/
-        ctx[7].class + " uppercase text-xl"
+        ctx[8].class + " uppercase text-xl"
       );
       attr(
         a,
         "href",
         /*mi*/
-        ctx[7].url
+        ctx[8].url
       );
       attr(div, "class", "my-3 mx-4");
     },
@@ -736,12 +736,15 @@ function create_fragment(ctx) {
         if_block1.m(div16, null);
       current = true;
       if (!mounted) {
-        dispose = listen(
-          button,
-          "click",
-          /*click_handler*/
-          ctx[5]
-        );
+        dispose = [
+          listen(
+            button,
+            "click",
+            /*click_handler*/
+            ctx[5]
+          ),
+          listen(div6, "mouseenter", animateText)
+        ];
         mounted = true;
       }
     },
@@ -934,11 +937,12 @@ function create_fragment(ctx) {
       if (if_block1)
         if_block1.d();
       mounted = false;
-      dispose();
+      run_all(dispose);
     }
   };
 }
 const func = (i) => !i.hidden;
+const func_1 = (i) => !i.hidden;
 function instance($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { data } = $$props;
@@ -956,16 +960,14 @@ function instance($$self, $$props, $$invalidate) {
     },
     { title: "FAQ", url: "#faq", hidden: true }
   ];
+  const homepageAnimation = () => {
+    const collection = document.getElementsByClassName("animation-crypt");
+    for (const el of collection) {
+      animateText({ target: el });
+    }
+  };
   onMount(async () => {
-    setTimeout(
-      () => {
-        const collection = document.getElementsByClassName("animation-crypt");
-        for (const el of collection) {
-          animateText({ target: el });
-        }
-      },
-      0
-    );
+    setTimeout(homepageAnimation, 0);
     let lastScrollTop = null;
     setInterval(
       () => {

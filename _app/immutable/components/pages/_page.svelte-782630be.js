@@ -1,5 +1,5 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, e as empty, b as insert_hydration, f as transition_in, g as group_outros, d as check_outros, t as transition_out, M as destroy_each, h as detach, k as element, a as space, q as text, l as claim_element, m as children, c as claim_space, r as claim_text, G as src_url_equal, n as attr, H as append_hydration, I as listen, u as set_data, x as create_component, y as claim_component, z as mount_component, A as destroy_component, Z as head_selector } from "../../chunks/index-858fda85.js";
-import { a as animateText, S as SvelteMarkdown } from "../../chunks/helpers-a9b07fa3.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, e as empty, b as insert_hydration, f as transition_in, g as group_outros, d as check_outros, t as transition_out, M as destroy_each, h as detach, k as element, a as space, q as text, l as claim_element, m as children, c as claim_space, r as claim_text, G as src_url_equal, n as attr, H as append_hydration, I as listen, u as set_data, x as create_component, y as claim_component, z as mount_component, A as destroy_component, _ as head_selector, N as run_all } from "../../chunks/index-a23f1e07.js";
+import { a as animateText, S as SvelteMarkdown } from "../../chunks/helpers-bfd3e6c9.js";
 function get_each_context$1(ctx, list, i) {
   const child_ctx = ctx.slice();
   child_ctx[5] = list[i];
@@ -1772,7 +1772,16 @@ function create_fragment(ctx) {
       }
       current = true;
       if (!mounted) {
-        dispose = listen(button, "mouseenter", animateText);
+        dispose = [
+          listen(div1, "mouseenter", animateText),
+          listen(div5, "mouseenter", animateText),
+          listen(div10, "mouseenter", animateText),
+          listen(div15, "mouseenter", animateText),
+          listen(div18, "mouseenter", animateText),
+          listen(button, "mouseenter", animateText),
+          listen(div22, "mouseenter", animateText),
+          listen(div28, "mouseenter", animateText)
+        ];
         mounted = true;
       }
     },
@@ -2026,7 +2035,7 @@ function create_fragment(ctx) {
         detach(div31);
       destroy_each(each_blocks, detaching);
       mounted = false;
-      dispose();
+      run_all(dispose);
     }
   };
 }
