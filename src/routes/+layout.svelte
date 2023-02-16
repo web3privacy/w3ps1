@@ -17,7 +17,12 @@
 	];
 
 	onMount(async () => {
-		setTimeout(() => animateText({ target: document.getElementById('master-title') }), 0)
+		setTimeout(() => {
+			const collection = document.getElementsByClassName('animation-crypt')
+			for (const el of collection) {
+				animateText({ target: el })
+			}
+		}, 0)
 	});
 
 </script>
@@ -35,7 +40,7 @@
 				<div class="flex items-center gap-6 text-xl">
           			<button class="md:hidden text-3xl" on:click={() => navbar = !navbar}>☰</button>
 					{#each menu as mi}
-						<div class="hidden md:block"><a class={mi.class ? mi.class : 'hover:underline'} href={mi.url} on:mouseenter={animateText}>{mi.title.toUpperCase()}</a></div>
+						<div class="hidden md:block"><a class="{mi.class ? mi.class : 'hover:underline'}" href={mi.url} on:mouseenter={animateText}>{mi.title.toUpperCase()}</a></div>
 					{/each}
 				</div>
 			</div>
@@ -54,12 +59,13 @@
 	<div class="w-full h-screen">
 		<div class="w-full h-full flex items-center text-center">
 			<div class="mx-auto px-4">
-				<div id="master-title" class="text-5xl md:text-8xl font-bold mb-4 md:mb-8">
+				<div class="text-5xl md:text-8xl font-bold mb-4 md:mb-8 animation-crypt">
 					{data.config.shortname.toUpperCase()}
 				</div>
-				<div class="text-3xl md:text-5xl md:mb-4 uppercase">{data.config.date} @ <a href={data.config.venueMapUrl} target="_blank" class="underline hover:no-underline">{data.config.venue}</a></div>
+				<div class="text-3xl md:text-5xl md:mb-4 uppercase">
+					<span class="">{data.config.date}</span> @ <a href={data.config.venueMapUrl} target="_blank" class="underline hover:no-underline">{data.config.venue}</a></div>
 				<div class="mt-8 text-lg text-mild mx-4">
-					<p>{data.config.slogan}</p>
+					<p class="">{data.config.slogan}</p>
 					<p>
 						<a
 							href={data.config.aggregatorUrl}

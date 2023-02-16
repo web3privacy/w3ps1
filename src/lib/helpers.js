@@ -29,7 +29,7 @@ export function animateText (ev) {
     for (let i = 0; i <= steps; i++) {
         setTimeout(() => {
             ev.target.innerHTML = orig.substring(0, i) + genRand(i, orig.length)
-            console.log(ev.target.innerHTML)
+            //console.log(ev.target.innerHTML)
 
             if (i === steps) {
                 ev.target.setAttribute('data-animate', "0")
