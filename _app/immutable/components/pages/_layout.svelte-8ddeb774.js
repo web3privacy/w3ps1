@@ -28,7 +28,6 @@ function animateText(ev) {
   for (let i = 0; i <= steps; i++) {
     setTimeout(() => {
       ev.target.innerHTML = orig.substring(0, i) + genRand(i, orig.length);
-      console.log(ev.target.innerHTML);
       if (i === steps) {
         ev.target.setAttribute("data-animate", "0");
       }
@@ -334,6 +333,7 @@ function create_fragment(ctx) {
   let t5;
   let t6;
   let div7;
+  let span;
   let t7_value = (
     /*data*/
     ctx[0].config.date + ""
@@ -461,6 +461,7 @@ function create_fragment(ctx) {
       t5 = text(t5_value);
       t6 = space();
       div7 = element("div");
+      span = element("span");
       t7 = text(t7_value);
       t8 = text(" @ ");
       a1 = element("a");
@@ -546,14 +547,17 @@ function create_fragment(ctx) {
       var div10_nodes = children(div10);
       div9 = claim_element(div10_nodes, "DIV", { class: true });
       var div9_nodes = children(div9);
-      div6 = claim_element(div9_nodes, "DIV", { id: true, class: true });
+      div6 = claim_element(div9_nodes, "DIV", { class: true });
       var div6_nodes = children(div6);
       t5 = claim_text(div6_nodes, t5_value);
       div6_nodes.forEach(detach);
       t6 = claim_space(div9_nodes);
       div7 = claim_element(div9_nodes, "DIV", { class: true });
       var div7_nodes = children(div7);
-      t7 = claim_text(div7_nodes, t7_value);
+      span = claim_element(div7_nodes, "SPAN", { class: true });
+      var span_nodes = children(span);
+      t7 = claim_text(span_nodes, t7_value);
+      span_nodes.forEach(detach);
       t8 = claim_text(div7_nodes, " @ ");
       a1 = claim_element(div7_nodes, "A", { href: true, target: true, class: true });
       var a1_nodes = children(a1);
@@ -563,7 +567,7 @@ function create_fragment(ctx) {
       t10 = claim_space(div9_nodes);
       div8 = claim_element(div9_nodes, "DIV", { class: true });
       var div8_nodes = children(div8);
-      p0 = claim_element(div8_nodes, "P", {});
+      p0 = claim_element(div8_nodes, "P", { class: true });
       var p0_nodes = children(p0);
       t11 = claim_text(p0_nodes, t11_value);
       p0_nodes.forEach(detach);
@@ -649,13 +653,14 @@ function create_fragment(ctx) {
       attr(div3, "class", "flex");
       attr(div4, "class", "middle-pane-big bg-black");
       attr(div5, "class", "fixed w-full h-18 bg-black pt-2 pb-2 z-40");
-      attr(div6, "id", "master-title");
-      attr(div6, "class", "text-5xl md:text-8xl font-bold mb-4 md:mb-8");
+      attr(div6, "class", "text-5xl md:text-8xl font-bold mb-4 md:mb-8 animation-crypt");
+      attr(span, "class", "");
       attr(a1, "href", a1_href_value = /*data*/
       ctx[0].config.venueMapUrl);
       attr(a1, "target", "_blank");
       attr(a1, "class", "underline hover:no-underline");
       attr(div7, "class", "text-3xl md:text-5xl md:mb-4 uppercase");
+      attr(p0, "class", "");
       attr(a2, "href", a2_href_value = /*data*/
       ctx[0].config.aggregatorUrl);
       attr(a2, "target", "_blank");
@@ -720,7 +725,8 @@ function create_fragment(ctx) {
       append_hydration(div6, t5);
       append_hydration(div9, t6);
       append_hydration(div9, div7);
-      append_hydration(div7, t7);
+      append_hydration(div7, span);
+      append_hydration(span, t7);
       append_hydration(div7, t8);
       append_hydration(div7, a1);
       append_hydration(a1, t9);
@@ -981,9 +987,12 @@ function instance($$self, $$props, $$invalidate) {
   ];
   onMount(async () => {
     setTimeout(
-      () => animateText({
-        target: document.getElementById("master-title")
-      }),
+      () => {
+        const collection = document.getElementsByClassName("animation-crypt");
+        for (const el of collection) {
+          animateText({ target: el });
+        }
+      },
       0
     );
   });
