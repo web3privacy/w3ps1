@@ -142,9 +142,16 @@ const data = {
       name: "Mario Havel",
       twitter: "TMIYChao",
       img: "mario-havel.jpeg"
+    },
+    {
+      id: "guy-zyskind",
+      name: "Guy Zyskind",
+      twitter: "GuyZys",
+      img: "guy-zyskind.jpeg"
     }
   ],
   speakers: [
+    "guy-zyskind",
     "juraj-bednar",
     "mario-havel"
   ],
