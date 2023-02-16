@@ -156,13 +156,13 @@ function create_each_block$1(ctx) {
         ctx[5].twitter
       ));
       attr(a0, "target", "_blank");
-      attr(div1, "class", "mt-4 speaker-name animate-speaker");
+      attr(div1, "class", "mt-4 speaker-name animate-speaker text-xl");
       attr(a1, "href", a1_href_value = twitterLink(
         /*item*/
         ctx[5].twitter
       ));
       attr(a1, "class", "hover:underline animate-speaker");
-      attr(div2, "class", "text-base text-mild");
+      attr(div2, "class", "text-lg text-mild");
       attr(div3, "class", div3_class_value = "hover:bg-white hover:text-black p-2 " + /*size*/
       (ctx[1] === "small" ? "w-2/3 sm:w-48" : "w-2/3 sm:w-64") + " person-item");
     },
@@ -461,9 +461,9 @@ function create_each_block_4(ctx) {
       this.h();
     },
     h() {
-      attr(div0, "class", "text-2xl animate-topic");
-      attr(div1, "class", "mt-4 text-lg markdown");
-      attr(div2, "class", "bg-[#0d1117] hover:text-black hover:bg-white px-4 py-6");
+      attr(div0, "class", "text-2xl animate-section");
+      attr(div1, "class", "mt-4 text-lg text-mild markdown");
+      attr(div2, "class", "bg-[#0d1117] hover:text-black hover:bg-white px-4 py-6 topic-item");
     },
     m(target, anchor) {
       insert_hydration(target, div2, anchor);
@@ -478,8 +478,8 @@ function create_each_block_4(ctx) {
         dispose = listen(
           div2,
           "mouseenter",
-          /*animateTopic*/
-          ctx[1]
+          /*animateSection*/
+          ctx[1](35)
         );
         mounted = true;
       }
@@ -580,6 +580,7 @@ function create_each_block_3(ctx) {
   let t0;
   let td1;
   let div;
+  let span;
   let t1_value = (
     /*pi*/
     ctx[11].title + ""
@@ -595,6 +596,8 @@ function create_each_block_3(ctx) {
   let t4;
   let t5;
   let current;
+  let mounted;
+  let dispose;
   let if_block = (
     /*pi*/
     ctx[11].desc && create_if_block_2(ctx)
@@ -606,6 +609,7 @@ function create_each_block_3(ctx) {
       t0 = space();
       td1 = element("td");
       div = element("div");
+      span = element("span");
       t1 = text(t1_value);
       t2 = space();
       t3 = text(t3_value);
@@ -626,7 +630,10 @@ function create_each_block_3(ctx) {
       var td1_nodes = children(td1);
       div = claim_element(td1_nodes, "DIV", { class: true });
       var div_nodes = children(div);
-      t1 = claim_text(div_nodes, t1_value);
+      span = claim_element(div_nodes, "SPAN", { class: true });
+      var span_nodes = children(span);
+      t1 = claim_text(span_nodes, t1_value);
+      span_nodes.forEach(detach);
       t2 = claim_space(div_nodes);
       t3 = claim_text(div_nodes, t3_value);
       div_nodes.forEach(detach);
@@ -640,6 +647,7 @@ function create_each_block_3(ctx) {
     },
     h() {
       attr(td0, "class", "text-right time xl:whitespace-nowrap sm:w-16 xl:w-36");
+      attr(span, "class", "animate-section");
       attr(div, "class", "text-xl");
       attr(td1, "class", "text-left");
       attr(tr, "class", "");
@@ -651,7 +659,8 @@ function create_each_block_3(ctx) {
       append_hydration(tr, t0);
       append_hydration(tr, td1);
       append_hydration(td1, div);
-      append_hydration(div, t1);
+      append_hydration(div, span);
+      append_hydration(span, t1);
       append_hydration(div, t2);
       append_hydration(div, t3);
       append_hydration(td1, t4);
@@ -659,6 +668,15 @@ function create_each_block_3(ctx) {
         if_block.m(td1, null);
       append_hydration(tr, t5);
       current = true;
+      if (!mounted) {
+        dispose = listen(
+          tr,
+          "mouseenter",
+          /*animateSection*/
+          ctx[1](35)
+        );
+        mounted = true;
+      }
     },
     p(ctx2, dirty) {
       var _a2;
@@ -714,6 +732,8 @@ function create_each_block_3(ctx) {
         detach(tr);
       if (if_block)
         if_block.d();
+      mounted = false;
+      dispose();
     }
   };
 }
@@ -865,6 +885,8 @@ function create_each_block_1(ctx) {
   let t5;
   let t6;
   let current;
+  let mounted;
+  let dispose;
   let each_value_2 = (
     /*tt*/
     ctx[5].includes
@@ -933,8 +955,8 @@ function create_each_block_1(ctx) {
       this.h();
     },
     h() {
-      attr(div0, "class", "text-3xl uppercase");
-      attr(div1, "class", "text-xl mt-6 font-bold");
+      attr(div0, "class", "text-3xl uppercase animate-section");
+      attr(div1, "class", "text-xl mt-6 font-bold animate-section");
       attr(ul, "class", "mt-6 text-lg text-left list-disc px-6");
       attr(div2, "class", "bg-[#0d1117] hover:border-0 py-10 px-10 hover:text-black hover:bg-white");
     },
@@ -958,6 +980,15 @@ function create_each_block_1(ctx) {
         if_block1.m(div2, null);
       append_hydration(div2, t6);
       current = true;
+      if (!mounted) {
+        dispose = listen(
+          div2,
+          "mouseenter",
+          /*animateSection*/
+          ctx[1](40)
+        );
+        mounted = true;
+      }
     },
     p(ctx2, dirty) {
       if ((!current || dirty & /*data*/
@@ -1045,6 +1076,8 @@ function create_each_block_1(ctx) {
         if_block0.d();
       if (if_block1)
         if_block1.d();
+      mounted = false;
+      dispose();
     }
   };
 }
@@ -1061,6 +1094,8 @@ function create_each_block(ctx) {
   let sveltemarkdown;
   let t2;
   let current;
+  let mounted;
+  let dispose;
   sveltemarkdown = new SvelteMarkdown({ props: { source: (
     /*fi*/
     ctx[2].text
@@ -1093,7 +1128,7 @@ function create_each_block(ctx) {
       this.h();
     },
     h() {
-      attr(div0, "class", "text-2xl font-bold mb-6");
+      attr(div0, "class", "text-2xl font-bold mb-6 animate-section");
       attr(div1, "class", "text-lg markdown");
       attr(div2, "class", "py-10 px-4 hover:bg-white hover:text-black");
     },
@@ -1106,6 +1141,15 @@ function create_each_block(ctx) {
       mount_component(sveltemarkdown, div1, null);
       append_hydration(div2, t2);
       current = true;
+      if (!mounted) {
+        dispose = listen(
+          div2,
+          "mouseenter",
+          /*animateSection*/
+          ctx[1](15)
+        );
+        mounted = true;
+      }
     },
     p(ctx2, dirty) {
       if ((!current || dirty & /*data*/
@@ -1133,6 +1177,8 @@ function create_each_block(ctx) {
       if (detaching)
         detach(div2);
       destroy_component(sveltemarkdown);
+      mounted = false;
+      dispose();
     }
   };
 }
@@ -1233,6 +1279,8 @@ function create_fragment(ctx) {
   let t30;
   let div29;
   let current;
+  let mounted;
+  let dispose;
   document.title = title_value = /*data*/
   ctx[0].config.title + " | " + /*data*/
   ctx[0].config.date;
@@ -1742,6 +1790,10 @@ function create_fragment(ctx) {
         each_blocks[i].m(div29, null);
       }
       current = true;
+      if (!mounted) {
+        dispose = listen(button, "mouseenter", animateText);
+        mounted = true;
+      }
     },
     p(ctx2, [dirty]) {
       if ((!current || dirty & /*data*/
@@ -1782,7 +1834,7 @@ function create_fragment(ctx) {
         sveltemarkdown_changes.source = /*data*/
         ctx2[0].config.intro;
       sveltemarkdown.$set(sveltemarkdown_changes);
-      if (dirty & /*animateTopic, data*/
+      if (dirty & /*animateSection, data*/
       3) {
         each_value_4 = /*data*/
         ctx2[0].config.themes;
@@ -1825,8 +1877,8 @@ function create_fragment(ctx) {
         peoplelist1_changes.people = /*data*/
         ctx2[0].config.people;
       peoplelist1.$set(peoplelist1_changes);
-      if (dirty & /*data*/
-      1) {
+      if (dirty & /*animateSection, data*/
+      3) {
         each_value_3 = /*data*/
         ctx2[0].config.program;
         let i;
@@ -1857,8 +1909,8 @@ function create_fragment(ctx) {
       1) && t24_value !== (t24_value = /*data*/
       ctx2[0].config.ticketsIntro + ""))
         set_data(t24, t24_value);
-      if (dirty & /*data*/
-      1) {
+      if (dirty & /*animateSection, data*/
+      3) {
         each_value_1 = /*data*/
         ctx2[0].config.tickets;
         let i;
@@ -1884,8 +1936,8 @@ function create_fragment(ctx) {
       1) && t27_value !== (t27_value = /*data*/
       ctx2[0].config.ticketsNote + ""))
         set_data(t27, t27_value);
-      if (dirty & /*data*/
-      1) {
+      if (dirty & /*animateSection, data*/
+      3) {
         each_value = /*data*/
         ctx2[0].config.faq;
         let i;
@@ -1992,22 +2044,26 @@ function create_fragment(ctx) {
       if (detaching)
         detach(div31);
       destroy_each(each_blocks, detaching);
+      mounted = false;
+      dispose();
     }
   };
 }
 const func = (x) => x;
 function instance($$self, $$props, $$invalidate) {
   let { data } = $$props;
-  function animateTopic(el) {
-    for (const e of el.target.getElementsByClassName("animate-topic")) {
-      animateText({ target: e });
-    }
+  function animateSection(interval = 50) {
+    return (el) => {
+      for (const e of el.target.getElementsByClassName("animate-section")) {
+        animateText({ target: e }, interval);
+      }
+    };
   }
   $$self.$$set = ($$props2) => {
     if ("data" in $$props2)
       $$invalidate(0, data = $$props2.data);
   };
-  return [data, animateTopic];
+  return [data, animateSection];
 }
 class Page extends SvelteComponent {
   constructor(options) {
