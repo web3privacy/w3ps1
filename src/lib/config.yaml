@@ -24,13 +24,14 @@ themes:
 - title: MAINSTREAM ON-CHAIN PRIVACY
   desc: Majority of privacy services are tech oriented. It's hard to use them among non-technical people. What should industry do help people onboard into privacy with ease? 
 - title: Human rights DAOs (pro-privacy)
+  desc: How privacy-enhancing tools could protect DAOs working within non-democratic countries.
 - title: Identity (ID)
   desc: Decentralised identity is the key to Web3, but at the same time to KYC & AML. Ethical way of building DID without embedded surveillence logic.
 - title: Full-Stack Privacy
   desc: Full-Stack Privacy is achievable if we ensivion one. Combining both on-chain & off-chain privacy.
 - title: Private messaging protocols
   desc: We need resilient privacy-preserving, p2p communication layers for Web3, that allows free and uncensored human-to-human, machine-to-machine or hybrid communication.
-- title: Solarpunk vs Lunarpunk
+- title: Lunarpunk vs Solarpunk
   desc: For solarpunk to succeed it must integrate the lunarpunk unconscious. The only hope for solarpunk is to [go dark](https://www.egirlcapital.com/writings/107533289). Do you agree?
 - title: R&D: ZK, MPC, THE
   desc: There are many different cryptography technics for privacy preservation. How to balance them all & avoid 1-tool chokepoint?
@@ -41,7 +42,7 @@ themes:
 - title: Privacy workforce
 - title: "Privacy activist's"
 - title: Network states (with a privacy focus)
-  desc: The network state-as-a-grassroots movement
+  desc: Time ot imagine the network state-as-a-grassroots movement for privacy, freedom & better future.
 - title: Veksl
   desc: Easy onboarding to cryptocurrencies without KYC/AML using peer-to-peer tools is crucial for privacy. What options do we have today?
 ticketsIntro: Be a part of the first Web3Privacy Summit experience…
