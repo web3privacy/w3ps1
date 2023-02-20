@@ -19,8 +19,10 @@ sponsorUrl: https://matrix.to/#/@tree:gwei.cz
 intro: |
   We need to protect our privacy, and that's why we're coming together on June 5 to Prague to sit down and discuss different aspects of privacy in the Web3 industry - how we can help shape it and make it more accessible - building a shared culture. The conference complements the research project [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).
 themes:
-- title: Regulations on privacy
+- title: Regulations vs Privacy
+  desc: 2023 will be a year of privacy regulations. Privacy coins will be banned, mixer's team become anon etc. How do we defend our rights for privacy?
 - title: MAINSTREAM ON-CHAIN PRIVACY
+  desc: Majority of privacy services are tech oriented. It's hard to use them among non-technical people. What should industry do help people onboard into privacy with ease? 
 - title: Human rights DAOs (pro-privacy)
 - title: Identity (ID)
 - title: Mixnets → Full-Stack Privacy
