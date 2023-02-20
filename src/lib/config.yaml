@@ -26,14 +26,16 @@ themes:
 - title: Human rights DAOs (pro-privacy)
 - title: Identity (ID)
   desc: Decentralised identity is the key to Web3, but at the same time to KYC & AML. Ethical way of building DID without embedded surveillence logic.
-- title: Mixnets → Full-Stack Privacy
-  desc: Imagine a Full-Stack Privacy -> how would it even look alike!
+- title: Full-Stack Privacy
+  desc: Full-Stack Privacy is achievable if we ensivion one. Combining both on-chain & off-chain privacy.
 - title: Private messaging protocols
   desc: We need resilient privacy-preserving, p2p communication layers for Web3, that allows free and uncensored human-to-human, machine-to-machine or hybrid communication.
 - title: Solarpunk vs Lunarpunk
   desc: For solarpunk to succeed it must integrate the lunarpunk unconscious. The only hope for solarpunk is to [go dark](https://www.egirlcapital.com/writings/107533289). Do you agree?
 - title: R&D: ZK, MPC, THE
   desc: There are many different cryptography technics for privacy preservation. How to balance them all & avoid 1-tool chokepoint?
+- title: Privacy readiness levels
+  desc: Introduction of the privacy scoring mechanism to help non-tech people understand security level of the solution
 - title: Privacy wars
   desc: Why are privacy-blockchain socials so toxic? How could we stop hating each other & work together
 - title: Privacy workforce
