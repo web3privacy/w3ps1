@@ -40,7 +40,8 @@ themes:
 - title: Privacy wars
   desc: Why are privacy-blockchain socials so toxic? How could we stop hating each other & work together
 - title: Privacy workforce
-- title: "Privacy activist's"
+- title: "Privacy activism"
+  desc: Mapping down tools to protect privacy industry: from builders like Alexey Pertsev to projects. 
 - title: Network states (with a privacy focus)
   desc: Time ot imagine the network state-as-a-grassroots movement for privacy, freedom & better future.
 - title: Veksl
