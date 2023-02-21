@@ -1,31 +1,36 @@
 import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, x as create_component, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, y as claim_component, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, z as mount_component, I as listen, u as set_data, J as update_slot_base, K as get_all_dirty_from_scope, L as get_slot_changes, f as transition_in, t as transition_out, d as check_outros, M as destroy_each, A as destroy_component, N as run_all, o as onMount, C as noop, g as group_outros } from "../../chunks/index-a23f1e07.js";
-import { S as SvelteMarkdown, a as animateText } from "../../chunks/helpers-bfd3e6c9.js";
+import { S as SvelteMarkdown, a as animateText, h as handleAnchorClick } from "../../chunks/helpers-52e0076b.js";
 const app = "";
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[8] = list[i];
+  child_ctx[11] = list[i];
   return child_ctx;
 }
 function get_each_context_1(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[8] = list[i];
+  child_ctx[11] = list[i];
   return child_ctx;
 }
 function create_each_block_1(ctx) {
+  var _a;
   let div;
   let a;
-  let t_value = (
+  let t0_value = (
     /*mi*/
-    ctx[8].title.toUpperCase() + ""
+    (((_a = ctx[11].name) == null ? void 0 : _a.toUpperCase()) || /*mi*/
+    ctx[11].title.toUpperCase()) + ""
   );
-  let t;
+  let t0;
+  let a_class_value;
+  let t1;
   let mounted;
   let dispose;
   return {
     c() {
       div = element("div");
       a = element("a");
-      t = text(t_value);
+      t0 = text(t0_value);
+      t1 = space();
       this.h();
     },
     l(nodes) {
@@ -33,44 +38,60 @@ function create_each_block_1(ctx) {
       var div_nodes = children(div);
       a = claim_element(div_nodes, "A", { class: true, href: true });
       var a_nodes = children(a);
-      t = claim_text(a_nodes, t_value);
+      t0 = claim_text(a_nodes, t0_value);
       a_nodes.forEach(detach);
+      t1 = claim_space(div_nodes);
       div_nodes.forEach(detach);
       this.h();
     },
     h() {
-      attr(
-        a,
-        "class",
+      attr(a, "class", a_class_value = /*mi*/
+      (ctx[11].class ? (
         /*mi*/
-        ctx[8].class ? (
-          /*mi*/
-          ctx[8].class
-        ) : "hover:underline"
-      );
+        ctx[11].class
+      ) : "hover:underline") + " " + /*choosed*/
+      (ctx[2] && /*mi*/
+      ctx[11].url === /*choosed*/
+      ctx[2][0].url ? "font-bold underline" : null));
       attr(
         a,
         "href",
         /*mi*/
-        ctx[8].url
+        ctx[11].url
       );
       attr(div, "class", "hidden md:block");
     },
     m(target, anchor) {
       insert_hydration(target, div, anchor);
       append_hydration(div, a);
-      append_hydration(a, t);
+      append_hydration(a, t0);
+      append_hydration(div, t1);
       if (!mounted) {
-        dispose = listen(a, "mouseenter", animateText);
+        dispose = [
+          listen(a, "mouseenter", animateText),
+          listen(a, "click", handleAnchorClick)
+        ];
         mounted = true;
       }
     },
-    p: noop,
+    p(ctx2, dirty) {
+      if (dirty & /*choosed*/
+      4 && a_class_value !== (a_class_value = /*mi*/
+      (ctx2[11].class ? (
+        /*mi*/
+        ctx2[11].class
+      ) : "hover:underline") + " " + /*choosed*/
+      (ctx2[2] && /*mi*/
+      ctx2[11].url === /*choosed*/
+      ctx2[2][0].url ? "font-bold underline" : null))) {
+        attr(a, "class", a_class_value);
+      }
+    },
     d(detaching) {
       if (detaching)
         detach(div);
       mounted = false;
-      dispose();
+      run_all(dispose);
     }
   };
 }
@@ -78,7 +99,7 @@ function create_if_block_1(ctx) {
   let div;
   let each_value = (
     /*menu*/
-    ctx[2].filter(func_1)
+    ctx[3].filter(func_1)
   );
   let each_blocks = [];
   for (let i = 0; i < each_value.length; i += 1) {
@@ -112,9 +133,9 @@ function create_if_block_1(ctx) {
     },
     p(ctx2, dirty) {
       if (dirty & /*menu, navbar*/
-      6) {
+      10) {
         each_value = /*menu*/
-        ctx2[2].filter(func_1);
+        ctx2[3].filter(func_1);
         let i;
         for (i = 0; i < each_value.length; i += 1) {
           const child_ctx = get_each_context(ctx2, each_value, i);
@@ -145,7 +166,7 @@ function create_each_block(ctx) {
   let button;
   let t0_value = (
     /*mi*/
-    ctx[8].title + ""
+    ctx[11].title + ""
   );
   let t0;
   let t1;
@@ -179,13 +200,13 @@ function create_each_block(ctx) {
         button,
         "class",
         /*mi*/
-        ctx[8].class + " uppercase text-xl"
+        ctx[11].class + " uppercase text-xl"
       );
       attr(
         a,
         "href",
         /*mi*/
-        ctx[8].url
+        ctx[11].url
       );
       attr(div, "class", "my-3 mx-4");
     },
@@ -200,7 +221,7 @@ function create_each_block(ctx) {
           a,
           "click",
           /*click_handler_1*/
-          ctx[6]
+          ctx[7]
         );
         mounted = true;
       }
@@ -368,7 +389,7 @@ function create_fragment(ctx) {
   let dispose;
   let each_value_1 = (
     /*menu*/
-    ctx[2].filter(func)
+    ctx[3].filter(func)
   );
   let each_blocks = [];
   for (let i = 0; i < each_value_1.length; i += 1) {
@@ -380,13 +401,13 @@ function create_fragment(ctx) {
   );
   const default_slot_template = (
     /*#slots*/
-    ctx[4].default
+    ctx[5].default
   );
   const default_slot = create_slot(
     default_slot_template,
     ctx,
     /*$$scope*/
-    ctx[3],
+    ctx[4],
     null
   );
   sveltemarkdown = new SvelteMarkdown({
@@ -636,7 +657,7 @@ function create_fragment(ctx) {
       attr(div9, "class", "mx-auto px-4");
       attr(div10, "class", "w-full h-full flex items-center text-center");
       attr(div11, "class", "w-full h-screen");
-      attr(div11, "id", "homepage");
+      attr(div11, "id", "intro");
       if (!src_url_equal(img1.src, img1_src_value = /*data*/
       ctx[0].config.logo))
         attr(img1, "src", img1_src_value);
@@ -741,7 +762,7 @@ function create_fragment(ctx) {
             button,
             "click",
             /*click_handler*/
-            ctx[5]
+            ctx[6]
           ),
           listen(div6, "mouseenter", animateText)
         ];
@@ -764,10 +785,10 @@ function create_fragment(ctx) {
       ctx2[0].config.parentUrl)) {
         attr(a0, "href", a0_href_value);
       }
-      if (dirty & /*menu, animateText*/
-      4) {
+      if (dirty & /*menu, choosed, animateText, handleAnchorClick*/
+      12) {
         each_value_1 = /*menu*/
-        ctx2[2].filter(func);
+        ctx2[3].filter(func);
         let i;
         for (i = 0; i < each_value_1.length; i += 1) {
           const child_ctx = get_each_context_1(ctx2, each_value_1, i);
@@ -831,20 +852,20 @@ function create_fragment(ctx) {
       }
       if (default_slot) {
         if (default_slot.p && (!current || dirty & /*$$scope*/
-        8)) {
+        16)) {
           update_slot_base(
             default_slot,
             default_slot_template,
             ctx2,
             /*$$scope*/
-            ctx2[3],
+            ctx2[4],
             !current ? get_all_dirty_from_scope(
               /*$$scope*/
-              ctx2[3]
+              ctx2[4]
             ) : get_slot_changes(
               default_slot_template,
               /*$$scope*/
-              ctx2[3],
+              ctx2[4],
               dirty,
               null
             ),
@@ -947,18 +968,20 @@ function instance($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { data } = $$props;
   let navbar = false;
+  let choosed = null;
+  let lastScrollTop = null;
   const menu = [
-    { title: "Homepage", url: "", hidden: true },
+    { title: "intro", name: "#", url: "" },
     { title: "About", url: "#about" },
     { title: "Speakers", url: "#speakers" },
     { title: "Program", url: "#program" },
     { title: "Sponsors", url: "#sponsors" },
+    { title: "FAQ", url: "#faq" },
     {
       title: "Ticket",
       url: "#ticket",
       class: "button"
-    },
-    { title: "FAQ", url: "#faq", hidden: true }
+    }
   ];
   const homepageAnimation = () => {
     const collection = document.getElementsByClassName("animation-crypt");
@@ -966,52 +989,48 @@ function instance($$self, $$props, $$invalidate) {
       animateText({ target: el });
     }
   };
+  function locationHashUpdateTick() {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    if (lastScrollTop === scrollTop) {
+      return null;
+    } else {
+      lastScrollTop = scrollTop;
+    }
+    const arr = [];
+    for (const mi of menu) {
+      const el = document.getElementById(mi.title.toLowerCase());
+      const pos = el.getBoundingClientRect();
+      if (pos.top <= 100 && pos.bottom > 100) {
+        arr.push([mi, pos.top, pos.bottom]);
+      }
+    }
+    $$invalidate(2, choosed = arr[arr.length - 1]);
+    if (choosed) {
+      const currentHash = window.location.hash;
+      const hash = choosed[0].url;
+      if (hash !== currentHash) {
+        if (hash === "") {
+          history.replaceState(null, null, " ");
+        } else {
+          history.replaceState(null, null, hash);
+        }
+      }
+    }
+  }
   onMount(async () => {
     setTimeout(homepageAnimation, 0);
     setInterval(homepageAnimation, 1e4);
-    let lastScrollTop = null;
-    setInterval(
-      () => {
-        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        if (lastScrollTop === scrollTop) {
-          return null;
-        } else {
-          lastScrollTop = scrollTop;
-        }
-        console.log("x");
-        const arr = [];
-        for (const mi of menu) {
-          const el = document.getElementById(mi.title.toLowerCase());
-          const pos = el.getBoundingClientRect();
-          if (pos.top <= 100 && pos.bottom > 100) {
-            arr.push([mi, pos.top, pos.bottom]);
-          }
-        }
-        const choosed = arr[arr.length - 1];
-        if (choosed) {
-          const currentHash = window.location.hash;
-          const hash = choosed[0].url;
-          if (hash !== currentHash) {
-            if (hash === "") {
-              history.replaceState(null, null, " ");
-            } else {
-              history.replaceState(null, null, hash);
-            }
-          }
-        }
-      },
-      1e3
-    );
+    setInterval(locationHashUpdateTick, 1e3);
   });
-  const click_handler = () => $$invalidate(1, navbar = !navbar);
+  const click_handler = (ev) => $$invalidate(1, navbar = !navbar);
   const click_handler_1 = () => $$invalidate(1, navbar = false);
   $$self.$$set = ($$props2) => {
     if ("data" in $$props2)
       $$invalidate(0, data = $$props2.data);
     if ("$$scope" in $$props2)
-      $$invalidate(3, $$scope = $$props2.$$scope);
+      $$invalidate(4, $$scope = $$props2.$$scope);
   };
-  return [data, navbar, menu, $$scope, slots, click_handler, click_handler_1];
+  return [data, navbar, choosed, menu, $$scope, slots, click_handler, click_handler_1];
 }
 class Layout extends SvelteComponent {
   constructor(options) {
