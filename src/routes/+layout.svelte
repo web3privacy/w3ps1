@@ -3,19 +3,21 @@
 	export let data;
 
 	import SvelteMarkdown from 'svelte-markdown';
-	import { animateText } from '$lib/helpers';
+	import { animateText, handleAnchorClick } from '$lib/helpers';
 	import { onMount } from 'svelte';
 
   	let navbar = false;
+	let choosed = null;
+	let lastScrollTop = null;
 
 	const menu = [
-		{ title: 'Homepage', url: '', hidden: true },
+		{ title: 'intro', name: '#', url: '' },
 		{ title: 'About', url: '#about' },
 		{ title: 'Speakers', url: '#speakers' },
 		{ title: 'Program', url: '#program' },
 		{ title: 'Sponsors', url: '#sponsors' },
+		{ title: 'FAQ', url: '#faq' },
 		{ title: 'Ticket', url: '#ticket', class: 'button' },
-		{ title: 'FAQ', url: '#faq', hidden: true }
 	];
 
 	const homepageAnimation = () => {
@@ -25,43 +27,41 @@
 		}
 	}
 
+	function locationHashUpdateTick () {
+		const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+		if (lastScrollTop === scrollTop) {
+			return null;
+		} else {
+			lastScrollTop = scrollTop
+		}
+		const arr = []
+		for (const mi of menu) {
+			const el = document.getElementById(mi.title.toLowerCase())
+			const pos = el.getBoundingClientRect()
+			//console.log(mi.title, pos.top, pos.bottom)
+			if (pos.top <= 100 && pos.bottom > 100) {
+				arr.push([ mi, pos.top, pos.bottom ])
+			}
+		}
+		choosed = arr[arr.length-1]
+		if (choosed) {
+			//console.log('choosed = ', choosed[0].title)
+			const currentHash = window.location.hash
+			const hash = choosed[0].url
+			if (hash !== currentHash) {
+				if (hash === '') {
+					history.replaceState(null, null, ' ');
+				} else {
+					history.replaceState(null, null, hash);
+				}
+			}
+		}
+	}
+
 	onMount(async () => {
 		setTimeout(homepageAnimation, 0) // initial animation
 		setInterval(homepageAnimation, 10000) // every 10 seconds
-
-		let lastScrollTop = null
-
-		setInterval(() => {
-			const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-			if (lastScrollTop === scrollTop) {
-				return null;
-			} else {
-				lastScrollTop = scrollTop
-			}
-			console.log('x')
-			const arr = []
-			for (const mi of menu) {
-				const el = document.getElementById(mi.title.toLowerCase())
-				const pos = el.getBoundingClientRect()
-				//console.log(mi.title, pos.top, pos.bottom)
-				if (pos.top <= 100 && pos.bottom > 100) {
-					arr.push([ mi, pos.top, pos.bottom ])
-				}
-			}
-			const choosed = arr[arr.length-1]
-			if (choosed) {
-				//console.log('choosed = ', choosed[0].title)
-				const currentHash = window.location.hash
-				const hash = choosed[0].url
-				if (hash !== currentHash) {
-					if (hash === '') {
-						history.replaceState(null, null, ' ');
-					} else {
-						history.replaceState(null, null, hash);
-					}
-				}
-			}
-		}, 1000)
+		setInterval(locationHashUpdateTick, 1000) // every 1 seconds
 	});
 
 </script>
@@ -77,9 +77,13 @@
 					<!--h1 class="text-2xl uppercase">{data.config.title}</h1-->
 				</div>
 				<div class="flex items-center gap-6 text-xl">
-          			<button class="md:hidden text-3xl" on:click={() => navbar = !navbar}>☰</button>
+          			<button class="md:hidden text-3xl" on:click={(ev) => (navbar = !navbar)}>☰</button>
 					{#each menu.filter(i => !i.hidden) as mi}
-						<div class="hidden md:block"><a class="{mi.class ? mi.class : 'hover:underline'}" href={mi.url} on:mouseenter={animateText}>{mi.title.toUpperCase()}</a></div>
+						<div class="hidden md:block">
+							<a class="{mi.class ? mi.class : 'hover:underline'} {choosed && mi.url === choosed[0].url ? 'font-bold underline' : null}" href={mi.url} on:mouseenter={animateText} on:click={handleAnchorClick}>
+								{mi.name?.toUpperCase() || mi.title.toUpperCase()}
+							</a>
+						</div>
 					{/each}
 				</div>
 			</div>
@@ -95,7 +99,7 @@
 		{/if}
 	</div>
 
-	<div class="w-full h-screen" id="homepage">
+	<div class="w-full h-screen" id="intro">
 		<div class="w-full h-full flex items-center text-center">
 			<div class="mx-auto px-4">
 				<div class="text-5xl md:text-8xl font-bold mb-4 md:mb-8 animation-crypt" on:mouseenter={animateText}>

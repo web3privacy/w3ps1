@@ -40,3 +40,14 @@ export function animateText (ev, interval = 50) {
         }, interval * i)
     }
 }
+
+export async function handleAnchorClick (event) {
+    event.preventDefault()
+    const link = event.currentTarget
+    const anchorId = new URL(link.href).hash.replace('#', '')
+    const anchor = document.getElementById(anchorId || 'intro')
+    return window.scrollTo({
+        top: anchor.offsetTop,
+        behavior: 'smooth'
+    })
+}
