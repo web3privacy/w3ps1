@@ -18,9 +18,10 @@ aggregatorUrl: http://prgblockweek.com/
 sponsorUrl: https://matrix.to/#/@tree:gwei.cz
 intro: |
   If privacy is a human right, then we need to protect it.
-Privacy advocates worldwide are coming together to discuss how to mainstream privacy within the Web3 industry. So it will become a cultural phenomenon embodying both decentralisation & anti-surveillance capitalism practices.    
-
-The conference complements the research project [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).
+  
+  Privacy advocates worldwide are coming together to discuss how to mainstream privacy within the Web3 industry. So it will become a cultural phenomenon embodying both decentralisation & anti-surveillance capitalism practices.
+  
+  The conference complements the research project [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).
 themes:
 - title: Regulations vs Privacy
   desc: 2023 will be a year of privacy regulations. Privacy coins will be banned, mixer's team become anon etc. How do we defend our rights for privacy?
@@ -36,7 +37,7 @@ themes:
   desc: We need resilient privacy-preserving, p2p communication layers for Web3, that allows free and uncensored human-to-human, machine-to-machine or hybrid communication.
 - title: Lunarpunk vs Solarpunk
   desc: For solarpunk to succeed it must integrate the lunarpunk unconscious. The only hope for solarpunk is to [go dark](https://www.egirlcapital.com/writings/107533289). Do you agree?
-- title: R&D: ZK, MPC, THE
+- title: "R&D: ZK, MPC, THE"
   desc: There are many different cryptography technics for privacy preservation. How to balance them all & avoid 1-tool chokepoint?
 - title: Privacy readiness levels
   desc: Introduction of the privacy scoring mechanism to help non-tech people understand security level of the solution
@@ -44,7 +45,7 @@ themes:
   desc: Why are privacy-blockchain socials so toxic? How could we stop hating each other & work together
 - title: Privacy workforce
 - title: "Privacy activism"
-  desc: Mapping down tools to protect privacy industry: from builders like Alexey Pertsev to projects. 
+  desc: "Mapping down tools to protect privacy industry: from builders like Alexey Pertsev to projects."
 - title: Network states (with a privacy focus)
   desc: Time ot imagine the network state-as-a-grassroots movement for privacy, freedom & better future.
 - title: Veksl

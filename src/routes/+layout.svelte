@@ -26,8 +26,8 @@
 	}
 
 	onMount(async () => {
-		setTimeout(homepageAnimation, 0)
-		//setInterval(homepageAnimation, 5000)
+		setTimeout(homepageAnimation, 0) // initial animation
+		setInterval(homepageAnimation, 10000) // every 10 seconds
 
 		let lastScrollTop = null
 

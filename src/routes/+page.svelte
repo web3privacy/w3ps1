@@ -26,7 +26,7 @@
 
 <div class="bg-black" id="about">
 	<div class="middle-pane-medium pb-16 text-xl text-center mx-auto">
-		<div class="py-16 md:py-32 md:w-2/3 mx-auto markdown">
+		<div class="py-16 md:py-32 md:w-2/3 mx-auto markdown multiline">
 			<SvelteMarkdown source={data.config.intro} />
 		</div>
 		<div class="section-header" on:mouseenter={animateText}>Key themes</div>

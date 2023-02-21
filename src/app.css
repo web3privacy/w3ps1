@@ -21,6 +21,10 @@
 	.markdown p {
 	}
 
+	.markdown.multiline > p:not(:last-child) {
+		@apply mb-10;
+	}
+
 	.middle-pane-medium {
 		@apply max-w-7xl mx-auto px-4 xl:px-0;
 	}
