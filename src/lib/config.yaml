@@ -59,9 +59,10 @@ tickets:
   price: €99
   includes:
   - All talks & panels
-  - Coffee breaks
-  - Buffet lunch
+  - Food and drinks included
+  - Web3Privacy t-shirt
   - Networking drinks with speakers & attendees
+  - "#Lunarpunk party"
   hint: |
     [Apply for a discount →](https://attend.web3privacy.info)<br />(as independent developer, student, privacy advocate, open-source contributor..)
 - title: "#Lunarpunk Party"
@@ -70,6 +71,7 @@ tickets:
   - 8pm - morning
   - Prague rave from top DJs
   - VJs and projections
+  - "\"Privacy experience\""
   - Networking with attendees, speakers & sponsors
   note: "*Party access is included in the All-day Pass"
 faq:
@@ -80,17 +82,20 @@ faq:
   text: |
     [Prague Blockchain Week 2023](http://prgblockweek.com/) (#PBW23) is a decentralized gathering of all people interested in cryptocurrencies and related topics. It consists of many independent events across Jun 2 - 11, including conferences, hackathons, workshops, community meetups, as well as various parties and happy hours.
 - title: Who is the event for?
-  text: Our event is for anyone interested in privacy topics in the Web3 industry. There will be space for about 300 enthusiasts.
-- title: Will the talks be livestreamed and/or recorded?
-  text: Yes, we plan do both. Livestream of the whole conference and recordings of the lectures will be publicly available.
+  text: Our event is for 300 people interested in privacy topics in the Web3 industry. We aim to make our content accessible to everyone - rather than going into deep technical detail, we'll discuss privacy topics in their broader context.
 - title: When will tickets go on sale? What will be the payment options?
-  text: Tickets will go on sale in early March 2023. Payment will be possible via credit card, Bitcoin (on-chain), Lightning Network or possibly other cryptocurrencies.
-- title: All-day access ticket is expensive for me. Do you offer any discounts?
-  text: Yes, we do! We offer discounts (up to 75%) for independent developers, students and especially active privacy advocates or open-source contributors to private protocols or tools. If you are interested in a discount, please fill out [this form](https://attend.web3privacy.info).
-- title: Why event isn't admission free?
-  text: We would like to have most of the cost of the event covered by admission fees directly from visitors. We want to be independent of sponsors and reduce the pressure to make it a "sales" or marketing event.
+  text: Tickets will go on sale in late February 2023. Payment will be possible via credit card, Bitcoin (on-chain), Lightning Network or possibly other cryptocurrencies.
+- title: Do you offer any discounts?
+  text: Yes, we do! We offer discounted tickets (up to 100%!) for independent developers, students and especially active privacy advocates or open-source contributors to private protocols or tools. If you are interested in a discount, please fill out [this form](https://attend.web3privacy.info).
+#- title: Why event isn't admission free?
+#  text: We would like to have most of the cost of the event covered by admission fees directly from visitors. We want to be independent of sponsors and reduce the pressure to make it a "sales" or marketing event.
 - title: How do I get to the venue?
   text: Venue X10 (full name "[Divadlo X10](https://divadlox10.cz)") is located in the centre of Prague near the metro station *Národní Třída* (Line B) and *Můstek* (Line A,C). The address is [Charvátova 10/39, Prague 1, 110 00](https://goo.gl/maps/Yh8qWagnqB1DvK676) ([Google Maps](https://goo.gl/maps/Yh8qWagnqB1DvK676)).
+- title: Will the talks be livestreamed and/or recorded?
+  text: Yes, we're planning both. A livestream of the conference and recordings of the talks and panels will be publicly available after the conference.
+- title: I have another question, where can I contact you?
+  text: "You can contact the organizing team or the community around the event in our public Signal group: [chat.web3privacy.info](https://chat.web3privacy.info/)"
+
 people:
 - id: mykola
   name: Mykola Siusko

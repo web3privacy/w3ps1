@@ -19,6 +19,7 @@
 		{ title: 'Ticket', url: '#ticket', class: 'button' },
 		{ title: 'FAQ', url: '#faq' },
 		{ title: 'Chat', url: 'https://chat.web3privacy.info', external: true },
+		{ title: 'Twitter', url: 'https://twitter.com/web3privacy', external: true }
 	];
 
 	const homepageAnimation = () => {
@@ -94,7 +95,7 @@
 		<div class="w-full md:hidden p-4">
 			{#each menu.filter(i => !i.hidden) as mi}
 			<div class="my-3 mx-4">
-				<a href={mi.url} on:click={() => navbar = false}><button class="{mi.class} uppercase text-xl">{mi.title}</button></a>
+				<a href={mi.url} on:click={() => navbar = false}><button class="{mi.class} uppercase text-xl {mi.external ? 'external' : ''}">{mi.title}</button></a>
 			</div>
 			{/each}
 		</div>
