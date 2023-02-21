@@ -2,6 +2,7 @@
 	import SvelteMarkdown from 'svelte-markdown';
 	import PeopleList from '$lib/components/PeopleList.svelte';
 	import { animateText } from '$lib/helpers';
+	import { goto } from '$app/navigation';
 
 	export let data;
 
@@ -103,7 +104,7 @@
 	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto pb-32">
 		<div class="section-header" on:mouseenter={animateText}>Sponsors</div>
 		<div>
-			<a href={data.config.sponsorUrl} target="_blank"
+			<a href={data.config.sponsorUrl}
 				><button
 					class="py-2 px-5 bg-white text-black hover:bg-black border border-bg-white hover:text-white" on:mouseenter={animateText}
 					>Become a Sponsor</button
@@ -120,18 +121,17 @@
 		<div class="grid lg:grid-cols-2 gap-10 md:w-2/3 mx-auto">
 			{#each data.config.tickets as tt}
 				<div
-					class="bg-[#0d1117] hover:border-0 py-10 px-10 hover:text-black hover:bg-white" on:mouseenter={animateSection(40)}
+					class="bg-[#0d1117] hover:border-0 py-10 px-10 hover:text-black hover:bg-white {data.config.ticketing ? "cursor-pointer" : ""}"
+					on:mouseenter={animateSection(40)}
+					on:click={() => data.config.ticketing ? goto(data.config.ticketingUrl) : false}
 				>
-					<div class="text-3xl uppercase animate-section">{tt.title}</div>
-					<div class="text-xl mt-6 font-bold animate-section">{tt.price}</div>
+					<div class="text-3xl uppercase"><a href={data.config.ticketingUrl} class="animate-section">{tt.title}</a></div>
+					<div class="text-xl mt-6 font-bold"><a href={data.config.ticketingUrl}>{tt.price}</a></div>
 					<ul class="mt-6 text-lg text-left list-disc px-6">
 						{#each tt.includes as ti}
 							<li>{ti}</li>
 						{/each}
 					</ul>
-					<!--div class="mt-6">
-                        <a href="/"><button class="py-2 px-5 bg-white text-black">Buy {tt.title} ticket</button></a>
-                    </div-->
 					{#if tt.note}
 						<div class="mt-10 text-base">{tt.note}</div>
 					{/if}
@@ -141,7 +141,16 @@
 				</div>
 			{/each}
 		</div>
-		<div class="mt-8 text-xl">{data.config.ticketsNote}</div>
+		{#if data.config.ticketing}
+			<div class="mt-10">
+				<a href={data.config.ticketingUrl}><button
+					class="py-2 px-5 bg-white text-black hover:bg-black border border-bg-white hover:text-white" on:mouseenter={animateText}
+					>Buy a ticket</button></a>
+			</div>
+		{/if}
+		{#if data.config.ticketsNote}
+			<div class="mt-8 text-xl">{data.config.ticketsNote}</div>
+		{/if}
 	</div>
 </div>
 

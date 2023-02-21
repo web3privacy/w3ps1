@@ -16,8 +16,9 @@
 		{ title: 'Speakers', url: '#speakers' },
 		{ title: 'Program', url: '#program' },
 		{ title: 'Sponsors', url: '#sponsors' },
-		{ title: 'FAQ', url: '#faq' },
 		{ title: 'Ticket', url: '#ticket', class: 'button' },
+		{ title: 'FAQ', url: '#faq' },
+		{ title: 'Chat', url: 'https://chat.web3privacy.info', external: true },
 	];
 
 	const homepageAnimation = () => {
@@ -36,6 +37,7 @@
 		}
 		const arr = []
 		for (const mi of menu) {
+			if (mi.external) continue;
 			const el = document.getElementById(mi.title.toLowerCase())
 			const pos = el.getBoundingClientRect()
 			//console.log(mi.title, pos.top, pos.bottom)
@@ -66,13 +68,13 @@
 
 </script>
 
-<div class="relative w-full min-h-screen text-white">
+<div class="relative w-full min-h-screen text-white">	
 	<div class="fixed w-full h-18 bg-black pt-2 pb-2 z-40">
 		<div class="middle-pane-big bg-black">
 			<div class="flex">
 				<div class="flex items-center gap-4 grow">
 					<div class="w-16 py-2">
-						<a href={data.config.parentUrl}><img src={data.config.logo} alt={data.config.parent} /></a>
+						<a href={data.config.parentUrl} target="_blank"><img src={data.config.logo} alt={data.config.parent} /></a>
 					</div>
 					<!--h1 class="text-2xl uppercase">{data.config.title}</h1-->
 				</div>
@@ -80,7 +82,7 @@
           			<button class="md:hidden text-3xl" on:click={(ev) => (navbar = !navbar)}>☰</button>
 					{#each menu.filter(i => !i.hidden) as mi}
 						<div class="hidden md:block">
-							<a class="{mi.class ? mi.class : 'hover:underline'} {choosed && mi.url === choosed[0].url ? 'font-bold underline' : null}" href={mi.url} on:mouseenter={animateText} on:click={handleAnchorClick}>
+							<a class="{mi.class ? mi.class : 'hover:underline'} {choosed && mi.url === choosed[0].url ? 'font-bold underline' : null} {mi.external ? 'external' : ''}" href={mi.url} on:mouseenter={animateText} on:click={!mi.external ? handleAnchorClick : null} target={mi.external ? '_blank' : ''}>
 								{mi.name?.toUpperCase() || mi.title.toUpperCase()}
 							</a>
 						</div>
@@ -142,7 +144,7 @@
 								/>
 							</svg>
 						</a>
-						<a href="https://twitter.com/{data.config.twitter}" class="text-2xl no-underline hover:underline">
+						<a href="https://twitter.com/{data.config.twitter}" class="text-2xl no-underline hover:underline external" target="_blank">
 							@{data.config.twitter}
 						</a>
 					</div>
