@@ -17,7 +17,7 @@ const data = {
   aggregator: "Prague Blockchain Week 2023",
   aggregatorUrl: "http://prgblockweek.com/",
   sponsorUrl: "https://matrix.to/#/@tree:gwei.cz",
-  intro: "We need to protect our privacy, and that's why we're coming together on June 5 to Prague to sit down and discuss different aspects of privacy in the Web3 industry - how we can help shape it and make it more accessible - building a shared culture. The conference complements the research project [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).\n",
+  intro: "If privacy is a human right, then we need to protect it.\n\nPrivacy advocates worldwide are coming together to discuss how to mainstream privacy within the Web3 industry. So it will become a cultural phenomenon embodying both decentralisation & anti-surveillance capitalism practices.\n\nThe conference complements the research project [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).\n",
   themes: [
     {
       title: "Regulations vs Privacy",
@@ -27,35 +27,46 @@ const data = {
       title: "MAINSTREAM ON-CHAIN PRIVACY",
       desc: "Majority of privacy services are tech oriented. It's hard to use them among non-technical people. What should industry do help people onboard into privacy with ease?"
     },
-    { title: "Human rights DAOs (pro-privacy)" },
-    { title: "Identity (ID)" },
     {
-      title: "Mixnets → Full-Stack Privacy",
-      desc: "Imagine a Full-Stack Privacy -> how would it even look alike!"
+      title: "Human rights DAOs (pro-privacy)",
+      desc: "How privacy-enhancing tools could protect DAOs working within non-democratic countries."
+    },
+    {
+      title: "Identity (ID)",
+      desc: "Decentralised identity is the key to Web3, but at the same time to KYC & AML. Ethical way of building DID without embedded surveillence logic."
+    },
+    {
+      title: "Full-Stack Privacy",
+      desc: "Full-Stack Privacy is achievable if we ensivion one. Combining both on-chain & off-chain privacy."
     },
     {
       title: "Private messaging protocols",
       desc: "We need resilient privacy-preserving, p2p communication layers for Web3, that allows free and uncensored human-to-human, machine-to-machine or hybrid communication."
     },
     {
-      title: "Solarpunk vs Lunarpunk",
+      title: "Lunarpunk vs Solarpunk",
       desc: "For solarpunk to succeed it must integrate the lunarpunk unconscious. The only hope for solarpunk is to [go dark](https://www.egirlcapital.com/writings/107533289). Do you agree?"
     },
-    { title: "Cryptography" },
     {
-      title: "Tech journalists",
-      desc: "Ethical crypto vs global cyberwars agenda"
+      title: "R&D: ZK, MPC, THE",
+      desc: "There are many different cryptography technics for privacy preservation. How to balance them all & avoid 1-tool chokepoint?"
+    },
+    {
+      title: "Privacy readiness levels",
+      desc: "Introduction of the privacy scoring mechanism to help non-tech people understand security level of the solution"
     },
     {
       title: "Privacy wars",
-      desc: "Why are privacy-blockchain socials so toxic? We should stop hating each other & work together"
+      desc: "Why are privacy-blockchain socials so toxic? How could we stop hating each other & work together"
     },
     { title: "Privacy workforce" },
-    { title: "Privacy activist's" },
-    { title: "R&D (ZK, MPC)" },
+    {
+      title: "Privacy activism",
+      desc: "Mapping down tools to protect privacy industry: from builders like Alexey Pertsev to projects."
+    },
     {
       title: "Network states (with a privacy focus)",
-      desc: "The network state-as-a-grassroots movement"
+      desc: "Time ot imagine the network state-as-a-grassroots movement for privacy, freedom & better future."
     },
     {
       title: "Veksl",

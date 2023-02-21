@@ -968,6 +968,7 @@ function instance($$self, $$props, $$invalidate) {
   };
   onMount(async () => {
     setTimeout(homepageAnimation, 0);
+    setInterval(homepageAnimation, 1e4);
     let lastScrollTop = null;
     setInterval(
       () => {

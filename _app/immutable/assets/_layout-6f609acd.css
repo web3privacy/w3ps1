@@ -497,6 +497,10 @@ footer a:hover,
 .markdown p {
 	}
 
+.markdown.multiline > p:not(:last-child){
+  margin-bottom: 2.5rem;
+}
+
 .middle-pane-medium{
   margin-left: auto;
   margin-right: auto;
