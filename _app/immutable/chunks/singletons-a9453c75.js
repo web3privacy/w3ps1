@@ -196,8 +196,9 @@ function create_updated_store() {
 function is_external_url(url, base2) {
   return url.origin !== location.origin || !url.pathname.startsWith(base2);
 }
+let client;
 function init(opts) {
-  opts.client;
+  client = opts.client;
 }
 const stores = {
   url: notifiable_store({}),
@@ -223,5 +224,6 @@ export {
   is_external_url as i,
   set_assets as j,
   set_version as k,
+  client as l,
   stores as s
 };

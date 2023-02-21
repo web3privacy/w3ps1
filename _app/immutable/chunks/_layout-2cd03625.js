@@ -74,22 +74,24 @@ const data = {
     }
   ],
   ticketsIntro: "Be a part of the first Web3Privacy Summit experience…",
-  ticketsNote: "Tickets will go on sale in early March 2023.",
+  ticketsNote: "Tickets will go on sale in late February 2023.",
+  ticketing: false,
+  ticketingUrl: "https://tickets.web3privacy.info/w3ps1/",
   tickets: [
     {
       title: "All-day Access",
-      price: "2350 CZK (~99 EUR)",
+      price: "€99",
       includes: [
         "All talks & panels",
         "Coffee breaks",
         "Buffet lunch",
         "Networking drinks with speakers & attendees"
       ],
-      hint: "[Apply for a discount →](https://tally.so/r/mYPDJW)<br />(as independent developer, student, privacy advocate, open-source contributor..)\n"
+      hint: "[Apply for a discount →](https://attend.web3privacy.info)<br />(as independent developer, student, privacy advocate, open-source contributor..)\n"
     },
     {
       title: "#Lunarpunk Party",
-      price: "350 CZK (~15 EUR)",
+      price: "€15",
       includes: [
         "8pm - morning",
         "Prague rave from top DJs",
@@ -122,7 +124,7 @@ const data = {
     },
     {
       title: "All-day access ticket is expensive for me. Do you offer any discounts?",
-      text: "Yes, we do! We offer discounts (up to 75%) for independent developers, students and especially active privacy advocates or open-source contributors to private protocols or tools. If you are interested in a discount, please fill out [this form](https://tally.so/r/mYPDJW)."
+      text: "Yes, we do! We offer discounts (up to 75%) for independent developers, students and especially active privacy advocates or open-source contributors to private protocols or tools. If you are interested in a discount, please fill out [this form](https://attend.web3privacy.info)."
     },
     {
       title: "Why event isn't admission free?",

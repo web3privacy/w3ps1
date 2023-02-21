@@ -808,6 +808,10 @@ table.table-custom{
   table-layout: auto;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 .list-disc{
   list-style-type: disc;
 }

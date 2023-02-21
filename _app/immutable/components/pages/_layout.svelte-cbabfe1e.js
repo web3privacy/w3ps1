@@ -36,7 +36,7 @@ function create_each_block_1(ctx) {
     l(nodes) {
       div = claim_element(nodes, "DIV", { class: true });
       var div_nodes = children(div);
-      a = claim_element(div_nodes, "A", { class: true, href: true });
+      a = claim_element(div_nodes, "A", { class: true, href: true, target: true });
       var a_nodes = children(a);
       t0 = claim_text(a_nodes, t0_value);
       a_nodes.forEach(detach);
@@ -52,12 +52,19 @@ function create_each_block_1(ctx) {
       ) : "hover:underline") + " " + /*choosed*/
       (ctx[2] && /*mi*/
       ctx[11].url === /*choosed*/
-      ctx[2][0].url ? "font-bold underline" : null));
+      ctx[2][0].url ? "font-bold underline" : null) + " " + /*mi*/
+      (ctx[11].external ? "external" : ""));
       attr(
         a,
         "href",
         /*mi*/
         ctx[11].url
+      );
+      attr(
+        a,
+        "target",
+        /*mi*/
+        ctx[11].external ? "_blank" : ""
       );
       attr(div, "class", "hidden md:block");
     },
@@ -69,21 +76,24 @@ function create_each_block_1(ctx) {
       if (!mounted) {
         dispose = [
           listen(a, "mouseenter", animateText),
-          listen(a, "click", handleAnchorClick)
+          listen(a, "click", !/*mi*/
+          ctx[11].external ? handleAnchorClick : null)
         ];
         mounted = true;
       }
     },
-    p(ctx2, dirty) {
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
       if (dirty & /*choosed*/
       4 && a_class_value !== (a_class_value = /*mi*/
-      (ctx2[11].class ? (
+      (ctx[11].class ? (
         /*mi*/
-        ctx2[11].class
+        ctx[11].class
       ) : "hover:underline") + " " + /*choosed*/
-      (ctx2[2] && /*mi*/
-      ctx2[11].url === /*choosed*/
-      ctx2[2][0].url ? "font-bold underline" : null))) {
+      (ctx[2] && /*mi*/
+      ctx[11].url === /*choosed*/
+      ctx[2][0].url ? "font-bold underline" : null) + " " + /*mi*/
+      (ctx[11].external ? "external" : ""))) {
         attr(a, "class", a_class_value);
       }
     },
@@ -504,7 +514,7 @@ function create_fragment(ctx) {
       var div1_nodes = children(div1);
       div0 = claim_element(div1_nodes, "DIV", { class: true });
       var div0_nodes = children(div0);
-      a0 = claim_element(div0_nodes, "A", { href: true });
+      a0 = claim_element(div0_nodes, "A", { href: true, target: true });
       var a0_nodes = children(a0);
       img0 = claim_element(a0_nodes, "IMG", { src: true, alt: true });
       a0_nodes.forEach(detach);
@@ -605,7 +615,7 @@ function create_fragment(ctx) {
       svg_nodes.forEach(detach);
       a4_nodes.forEach(detach);
       t17 = claim_space(div14_nodes);
-      a5 = claim_element(div14_nodes, "A", { href: true, class: true });
+      a5 = claim_element(div14_nodes, "A", { href: true, class: true, target: true });
       var a5_nodes = children(a5);
       t18 = claim_text(a5_nodes, "@");
       t19 = claim_text(a5_nodes, t19_value);
@@ -634,6 +644,7 @@ function create_fragment(ctx) {
       ctx[0].config.parent);
       attr(a0, "href", a0_href_value = /*data*/
       ctx[0].config.parentUrl);
+      attr(a0, "target", "_blank");
       attr(div0, "class", "w-16 py-2");
       attr(div1, "class", "flex items-center gap-4 grow");
       attr(button, "class", "md:hidden text-3xl");
@@ -677,7 +688,8 @@ function create_fragment(ctx) {
       ctx[0].config.twitter);
       attr(a5, "href", a5_href_value = "https://twitter.com/" + /*data*/
       ctx[0].config.twitter);
-      attr(a5, "class", "text-2xl no-underline hover:underline");
+      attr(a5, "class", "text-2xl no-underline hover:underline external");
+      attr(a5, "target", "_blank");
       attr(div14, "class", "");
       attr(div15, "class", "mt-4 text-mild");
       attr(div16, "class", "text-right");
@@ -976,11 +988,16 @@ function instance($$self, $$props, $$invalidate) {
     { title: "Speakers", url: "#speakers" },
     { title: "Program", url: "#program" },
     { title: "Sponsors", url: "#sponsors" },
-    { title: "FAQ", url: "#faq" },
     {
       title: "Ticket",
       url: "#ticket",
       class: "button"
+    },
+    { title: "FAQ", url: "#faq" },
+    {
+      title: "Chat",
+      url: "https://chat.web3privacy.info",
+      external: true
     }
   ];
   const homepageAnimation = () => {
@@ -998,6 +1015,8 @@ function instance($$self, $$props, $$invalidate) {
     }
     const arr = [];
     for (const mi of menu) {
+      if (mi.external)
+        continue;
       const el = document.getElementById(mi.title.toLowerCase());
       const pos = el.getBoundingClientRect();
       if (pos.top <= 100 && pos.bottom > 100) {
