@@ -210,7 +210,8 @@ function create_each_block(ctx) {
         button,
         "class",
         /*mi*/
-        ctx[11].class + " uppercase text-xl"
+        ctx[11].class + " uppercase text-xl " + /*mi*/
+        (ctx[11].external ? "external" : "")
       );
       attr(
         a,
@@ -997,6 +998,11 @@ function instance($$self, $$props, $$invalidate) {
     {
       title: "Chat",
       url: "https://chat.web3privacy.info",
+      external: true
+    },
+    {
+      title: "Twitter",
+      url: "https://twitter.com/web3privacy",
       external: true
     }
   ];
