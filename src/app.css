@@ -59,7 +59,7 @@
 	.table-custom th {
 		@apply text-mild;
 	}
-	.table-custom tbody tr:hover td {
+	.table-custom tbody tr:hover td, .table-custom tbody tr:hover td span {
 		@apply bg-white text-black;
 	}
 	.table-custom tbody tr:hover td .description {
