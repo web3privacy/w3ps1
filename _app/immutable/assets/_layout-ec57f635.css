@@ -611,12 +611,14 @@ table.table-custom{
   color: rgb(255 255 255 / 0.7);
 }
 
-.person-item:hover .table-custom th, .topic-item:hover .table-custom th{
+.person-item:hover .table-custom th,
+	.topic-item:hover .table-custom th{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.table-custom tbody tr:hover td, .table-custom tbody tr:hover td span{
+.table-custom tbody tr:hover td,
+	.table-custom tbody tr:hover td span{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -658,7 +660,10 @@ table.table-custom{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.person-item:hover .text-mild, .person-item:hover .text-supermild, .topic-item:hover .text-mild, .topic-item:hover .text-supermild{
+.person-item:hover .text-mild,
+	.person-item:hover .text-supermild,
+	.topic-item:hover .text-mild,
+	.topic-item:hover .text-supermild{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }

@@ -1,5 +1,5 @@
 import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, x as create_component, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, y as claim_component, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, z as mount_component, I as listen, u as set_data, J as update_slot_base, K as get_all_dirty_from_scope, L as get_slot_changes, f as transition_in, t as transition_out, d as check_outros, M as destroy_each, A as destroy_component, N as run_all, o as onMount, C as noop, g as group_outros } from "../../chunks/index-a23f1e07.js";
-import { S as SvelteMarkdown, a as animateText, h as handleAnchorClick } from "../../chunks/helpers-52e0076b.js";
+import { S as SvelteMarkdown, a as animateText, h as handleAnchorClick, b as animateSection } from "../../chunks/helpers-27ee569e.js";
 const app = "";
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
@@ -462,7 +462,7 @@ function create_fragment(ctx) {
       div7 = element("div");
       span = element("span");
       t7 = text(t7_value);
-      t8 = text(" @ ");
+      t8 = text(" @\n					");
       a1 = element("a");
       t9 = text(t9_value);
       t10 = space();
@@ -557,7 +557,7 @@ function create_fragment(ctx) {
       var span_nodes = children(span);
       t7 = claim_text(span_nodes, t7_value);
       span_nodes.forEach(detach);
-      t8 = claim_text(div7_nodes, " @ ");
+      t8 = claim_text(div7_nodes, " @\n					");
       a1 = claim_element(div7_nodes, "A", { href: true, target: true, class: true });
       var a1_nodes = children(a1);
       t9 = claim_text(a1_nodes, t9_value);
@@ -689,7 +689,7 @@ function create_fragment(ctx) {
       ctx[0].config.twitter);
       attr(a5, "href", a5_href_value = "https://twitter.com/" + /*data*/
       ctx[0].config.twitter);
-      attr(a5, "class", "text-2xl no-underline hover:underline external");
+      attr(a5, "class", "text-2xl no-underline hover:underline external animate-section");
       attr(a5, "target", "_blank");
       attr(div14, "class", "");
       attr(div15, "class", "mt-4 text-mild");
@@ -777,7 +777,8 @@ function create_fragment(ctx) {
             /*click_handler*/
             ctx[6]
           ),
-          listen(div6, "mouseenter", animateText)
+          listen(div6, "mouseenter", animateText),
+          listen(div14, "mouseenter", animateSection())
         ];
         mounted = true;
       }

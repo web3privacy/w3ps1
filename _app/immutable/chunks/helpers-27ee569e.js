@@ -7539,8 +7539,16 @@ async function handleAnchorClick(event) {
     behavior: "smooth"
   });
 }
+function animateSection(interval = 50) {
+  return (el) => {
+    for (const e of el.target.getElementsByClassName("animate-section")) {
+      animateText({ target: e }, interval);
+    }
+  };
+}
 export {
   SvelteMarkdown as S,
   animateText as a,
+  animateSection as b,
   handleAnchorClick as h
 };
