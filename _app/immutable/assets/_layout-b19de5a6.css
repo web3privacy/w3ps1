@@ -658,7 +658,7 @@ table.table-custom{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.person-item:hover .text-mild, .person-item:hover .text-supermild, .topic-item:hover .text-mild{
+.person-item:hover .text-mild, .person-item:hover .text-supermild, .topic-item:hover .text-mild, .topic-item:hover .text-supermild{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
@@ -698,6 +698,10 @@ table.table-custom{
 .my-3{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
 }
 
 .mb-36{
@@ -794,6 +798,10 @@ table.table-custom{
 
 .w-5{
   width: 1.25rem;
+}
+
+.w-auto{
+  width: auto;
 }
 
 .w-full{
@@ -1145,12 +1153,28 @@ table.table-custom{
 
 @media (min-width: 1280px){
 
+  .xl\:mb-0{
+    margin-bottom: 0px;
+  }
+
   .xl\:inline-block{
     display: inline-block;
   }
 
+  .xl\:flex{
+    display: flex;
+  }
+
+  .xl\:w-1\/2{
+    width: 50%;
+  }
+
   .xl\:w-36{
     width: 9rem;
+  }
+
+  .xl\:gap-4{
+    gap: 1rem;
   }
 
   .xl\:whitespace-nowrap{

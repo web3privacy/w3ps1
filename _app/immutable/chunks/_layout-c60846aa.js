@@ -197,60 +197,109 @@ const data = {
     "mykola",
     "tree"
   ],
-  program: [
+  stages: [
     {
-      time: "9:00 - 9:30",
-      title: "Registration & networking"
+      id: "main",
+      name: "Main stage"
     },
     {
-      time: "9:30 - 9:35",
-      title: "Welcome to Web3Privacy",
-      speakers: [{ name: "TBA" }],
-      desc: "Welcoming visitors to our private-centric research, community and conference"
-    },
-    {
-      time: "9:35 - 10:55",
-      title: "Talks I."
-    },
-    {
-      time: "10:55 - 11:20",
-      title: "25min Coffee Break"
-    },
-    {
-      time: "11:25 - 12:40",
-      title: "Talks II."
-    },
-    {
-      time: "12:40 - 14:00",
-      title: "Lunch & Networking"
-    },
-    {
-      time: "14:00 - 15:40",
-      title: "Talks III."
-    },
-    {
-      time: "15:40 - 16:05",
-      title: "25min Coffee Break"
-    },
-    {
-      time: "16:10 - 18:30",
-      title: "Talks IV."
-    },
-    {
-      time: "18:30 - 18:35",
-      title: "Closing Remarks",
-      speakers: [{ name: "TBA" }]
-    },
-    {
-      time: "18:30 - 20:00",
-      title: "Networking & Drinks"
-    },
-    {
-      time: "20:00 - 4:00",
-      title: "#Lunarpunk party",
-      desc: "Enjoy our afterparty in Lunarpunk style with quality Prague rave DJs, which will take place in the same venue until the morning (4am)."
+      id: "second",
+      name: "Workshop stage"
     }
-  ]
+  ],
+  program: {
+    main: [
+      {
+        time: "9:00 - 9:30",
+        title: "Registration & networking"
+      },
+      {
+        time: "9:30 - 9:35",
+        title: "Welcome to Web3Privacy",
+        speakers: [{ name: "TBA" }],
+        desc: "Welcoming visitors to our private-centric research, community and conference"
+      },
+      {
+        time: "9:35 - 10:55",
+        title: "Talks I. - TBA"
+      },
+      {
+        time: "10:55 - 11:20",
+        title: "25min Coffee Break",
+        type: "other"
+      },
+      {
+        time: "11:25 - 12:40",
+        title: "Talks II. - TBA"
+      },
+      {
+        time: "12:40 - 14:00",
+        title: "Lunch & Networking",
+        type: "other"
+      },
+      {
+        time: "14:00 - 15:40",
+        title: "Talks III. - TBA"
+      },
+      {
+        time: "15:40 - 16:05",
+        title: "25min Coffee Break",
+        type: "other"
+      },
+      {
+        time: "16:10 - 18:30",
+        title: "Talks IV. - TBA"
+      },
+      {
+        time: "18:30 - 18:35",
+        title: "Closing Remarks",
+        speakers: [{ name: "TBA" }]
+      },
+      {
+        time: "18:30 - 20:00",
+        title: "Networking & Drinks",
+        type: "other"
+      },
+      {
+        time: "20:00 - 4:00",
+        title: "#Lunarpunk party",
+        desc: "Enjoy our afterparty in Lunarpunk style with quality Prague rave DJs, which will take place in the same venue until the morning (4am)."
+      }
+    ],
+    second: [
+      {
+        time: "09:35 - 10:55",
+        title: "Workshops I. - TBA"
+      },
+      {
+        time: "10:55 - 11:20",
+        title: "25min Coffee Break",
+        type: "other"
+      },
+      {
+        time: "11:25 - 12:40",
+        title: "Workshops II. - TBA"
+      },
+      {
+        time: "12:40 - 14:00",
+        title: "Lunch & Networking",
+        type: "other"
+      },
+      {
+        time: "14:00 - 15:40",
+        title: "Workshops III. - TBA"
+      },
+      {
+        time: "15:40 - 16:05",
+        title: "25min Coffee Break",
+        type: "other"
+      },
+      {
+        time: "16:10 - 18:30",
+        title: "Workshops IV."
+      }
+    ]
+  }
 };
 async function load({ params, url, fetch }) {
   return {
