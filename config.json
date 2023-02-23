@@ -145,49 +145,55 @@
       "name": "Mykola Siusko",
       "twitter": "nicksvyaznoy",
       "img": "mykola.png",
-      "caption": "Web3 privacy advocate"
+      "caption": "Web3 privacy advocate",
+      "country": "es"
     },
     {
       "id": "tree",
       "name": "Tree",
       "twitter": "treecz",
       "img": "tree.jpeg",
-      "caption": "Creator of lunarpunk hackathons & events"
+      "caption": "Creator of lunarpunk hackathons & events",
+      "country": "cz"
     },
     {
       "id": "juraj-bednar",
       "name": "Juraj Bednar",
       "twitter": "jurbed",
       "img": "juraj-bednar.jpeg",
-      "caption": "Educator, writer, cryptoanarchist & biohacker"
+      "caption": "Educator, writer, cryptoanarchist & biohacker",
+      "country": "sk"
     },
     {
       "id": "mario-havel",
       "name": "Mario Havel",
       "twitter": "TMIYChao",
       "img": "mario-havel.jpeg",
-      "caption": "Hacker, Co-Founder of [Bordel Hackerspace](https://bordel.paralelnipolis.cz/#/)"
+      "caption": "Hacker, Co-Founder of [Bordel Hackerspace](https://bordel.paralelnipolis.cz/#/)",
+      "country": "cz"
     },
     {
       "id": "guy-zyskind",
       "name": "Guy Zyskind",
       "twitter": "GuyZys",
       "img": "guy-zyskind.jpeg",
-      "caption": "Founder of [Secret Network](https://scrt.network/), CEO [SCRT Labs](https://www.scrtlabs.com/)"
+      "caption": "Founder of [Secret Network](https://scrt.network/), CEO [SCRT Labs](https://www.scrtlabs.com/)",
+      "country": "is"
     },
     {
       "id": "manu-alzuru",
       "name": "Manu Alzuru",
       "twitter": "ManuAlzuru",
       "img": "manu-alzuru.jpeg",
-      "caption": "Humanist,  solarpunk, Founder of [DoinGud](https://doingud.com/) & [ETH Barcelona](https://ethbarcelona.com/)"
+      "caption": "Humanist,  solarpunk, Founder of [DoinGud](https://doingud.com/) & [ETH Barcelona](https://ethbarcelona.com/)",
+      "country": "es"
     }
   ],
   "speakers": [
     "guy-zyskind",
+    "manu-alzuru",
     "juraj-bednar",
-    "mario-havel",
-    "manu-alzuru"
+    "mario-havel"
   ],
   "hosts": [
     "mykola",
