@@ -132,6 +132,7 @@ people:
   img: manu-alzuru.jpeg
   caption: Humanist,  solarpunk, Founder of [DoinGud](https://doingud.com/) & [ETH Barcelona](https://ethbarcelona.com/)
   country: es
+speakersNote: We keep adding more and more speakers, stay tuned ...
 speakers:
   - guy-zyskind
   - manu-alzuru
@@ -145,6 +146,7 @@ stages:
     name: Main stage
   - id: second
     name: Workshop stage
+programNote: WIP. The final schedule will be published a few weeks before the conference in May 2023.
 program:
   main:
     - time: 9:00 - 9:30

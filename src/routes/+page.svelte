@@ -45,13 +45,16 @@
 </div>
 
 <div class="" id="speakers">
-	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto">
+	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto mb-8">
 		<div class="section-header" on:mouseenter={animateText}>Speakers</div>
 		<div class="mx-auto">
-			<div class="pb-16 flex flex-wrap justify-center gap-6">
+			<div class="pb-12 flex flex-wrap justify-center gap-6">
 				<PeopleList items={data.config.speakers} people={data.config.people} />
 			</div>
 		</div>
+		{#if data.config.speakersNote}
+			<div class="text-xl text-supermild">{data.config.speakersNote}</div>
+		{/if}
 	</div>
 </div>
 
@@ -69,6 +72,9 @@
 <div class="bg-black" id="program">
 	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto pb-32">
 		<div class="section-header" on:mouseenter={animateText}>Program</div>
+		{#if data.config.programNote}
+			<div class="text-lg text-supermild mb-16">{data.config.programNote}</div>
+		{/if}
 		<div class="program xl:flex gap-10 xl:gap-4">
 			{#each data.config.stages.map(s => ({ ...s, program: data.config.program[s.id]})).filter(s => s.program) as stage}
 				<div class="w-auto xl:w-1/2 mb-10 xl:mb-0">
