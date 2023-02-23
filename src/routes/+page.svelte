@@ -69,34 +69,42 @@
 <div class="bg-black" id="program">
 	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto pb-32">
 		<div class="section-header" on:mouseenter={animateText}>Program</div>
-		<table class="table-auto table-custom w-full mx-0 lg:mx-8">
-			<thead>
-				<tr>
-					<th class="text-right">time</th>
-					<th class="text-left">topic</th>
-				</tr>
-			</thead>
-			<tbody>
-				{#each data.config.program as pi}
-					<tr class="" on:mouseenter={animateSection(35)}>
-						<td class="text-right time xl:whitespace-nowrap sm:w-16 xl:w-36"
-							>{@html pi.time
-								.split('-')
-								.map((x) => x)
-								.join('<div class="xl:inline-block hidden mx-1">-</div>')}
-						</td>
-						<td class="text-left">
-							<div class="text-xl"><span class="animate-section">{pi.title}</span> {pi.speakers ? '― ' + pi.speakers[0]?.name : ''}</div>
-							{#if pi.desc}
-								<div class="mt-2 text-base description text-mild markdown">
-									<SvelteMarkdown source={pi.desc} />
-								</div>
-							{/if}
-						</td>
-					</tr>
-				{/each}
-			</tbody>
-		</table>
+		<div class="program xl:flex gap-10 xl:gap-4">
+			{#each data.config.stages.map(s => ({ ...s, program: data.config.program[s.id]})).filter(s => s.program) as stage}
+				<div class="w-auto xl:w-1/2 mb-10 xl:mb-0">
+					<div class="text-3xl font-bold mb-4">{stage.name}</div>
+					<table class="table-auto table-custom w-full mx-0 lg:mx-8">
+						<thead>
+							<tr>
+								<th class="text-right">time</th>
+								<th class="text-left">topic</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							{#each stage.program as pi}
+								<tr class="" on:mouseenter={animateSection(35)}>
+									<td class="text-right time xl:whitespace-nowrap sm:w-16 xl:w-36 {pi.type==="other" ? 'text-mild' : ''}"
+										>{@html pi.time
+											.split('-')
+											.map((x) => x)
+											.join('<div class="xl:inline-block hidden mx-1">-</div>')}
+									</td>
+									<td class="text-left">
+										<div class="text-xl"><span class="animate-section {pi.type==="other" ? 'text-mild' : ''}">{pi.title}</span> {pi.speakers ? '― ' + pi.speakers[0]?.name : ''}</div>
+										{#if pi.desc}
+											<div class="mt-2 text-base description text-mild markdown">
+												<SvelteMarkdown source={pi.desc} />
+											</div>
+										{/if}
+									</td>
+								</tr>
+							{/each}
+						</tbody>
+					</table>
+				</div>
+			{/each}
+		</div>
 	</div>
 </div>
 

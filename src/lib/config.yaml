@@ -23,79 +23,78 @@ intro: |
   
   The conference complements the research project [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).
 themes:
-- title: Regulations vs Privacy
-  desc: 2023 will be a year of privacy regulations. Privacy coins will be banned, mixer's team become anon etc. How do we defend our rights for privacy?
-- title: MAINSTREAM ON-CHAIN PRIVACY
-  desc: Majority of privacy services are tech oriented. It's hard to use them among non-technical people. What should industry do help people onboard into privacy with ease? 
-- title: Human rights DAOs (pro-privacy)
-  desc: How privacy-enhancing tools could protect DAOs working within non-democratic countries.
-- title: Identity (ID)
-  desc: Decentralised identity is the key to Web3, but at the same time to KYC & AML. Ethical way of building DID without embedded surveillence logic.
-- title: Full-Stack Privacy
-  desc: Full-Stack Privacy is achievable if we ensivion one. Combining both on-chain & off-chain privacy.
-- title: Private messaging protocols
-  desc: We need resilient privacy-preserving, p2p communication layers for Web3, that allows free and uncensored human-to-human, machine-to-machine or hybrid communication.
-- title: Lunarpunk vs Solarpunk
-  desc: For solarpunk to succeed it must integrate the lunarpunk unconscious. The only hope for solarpunk is to [go dark](https://www.egirlcapital.com/writings/107533289). Do you agree?
-- title: "R&D: ZK, MPC, THE"
-  desc: There are many different cryptography technics for privacy preservation. How to balance them all & avoid 1-tool chokepoint?
-- title: Privacy readiness levels
-  desc: Introduction of the privacy scoring mechanism to help non-tech people understand security level of the solution
-- title: Privacy wars
-  desc: Why are privacy-blockchain socials so toxic? How could we stop hating each other & work together
-- title: Privacy workforce
-- title: "Privacy activism"
-  desc: "Mapping down tools to protect privacy industry: from builders like Alexey Pertsev to projects."
-- title: Network states (with a privacy focus)
-  desc: Time ot imagine the network state-as-a-grassroots movement for privacy, freedom & better future.
-- title: Veksl
-  desc: Easy onboarding to cryptocurrencies without KYC/AML using peer-to-peer tools is crucial for privacy. What options do we have today?
+  - title: Regulations vs Privacy
+    desc: 2023 will be a year of privacy regulations. Privacy coins will be banned, mixer's team become anon etc. How do we defend our rights for privacy?
+  - title: MAINSTREAM ON-CHAIN PRIVACY
+    desc: Majority of privacy services are tech oriented. It's hard to use them among non-technical people. What should industry do help people onboard into privacy with ease? 
+  - title: Human rights DAOs (pro-privacy)
+    desc: How privacy-enhancing tools could protect DAOs working within non-democratic countries.
+  - title: Identity (ID)
+    desc: Decentralised identity is the key to Web3, but at the same time to KYC & AML. Ethical way of building DID without embedded surveillence logic.
+  - title: Full-Stack Privacy
+    desc: Full-Stack Privacy is achievable if we ensivion one. Combining both on-chain & off-chain privacy.
+  - title: Private messaging protocols
+    desc: We need resilient privacy-preserving, p2p communication layers for Web3, that allows free and uncensored human-to-human, machine-to-machine or hybrid communication.
+  - title: Lunarpunk vs Solarpunk
+    desc: For solarpunk to succeed it must integrate the lunarpunk unconscious. The only hope for solarpunk is to [go dark](https://www.egirlcapital.com/writings/107533289). Do you agree?
+  - title: "R&D: ZK, MPC, THE"
+    desc: There are many different cryptography technics for privacy preservation. How to balance them all & avoid 1-tool chokepoint?
+  - title: Privacy readiness levels
+    desc: Introduction of the privacy scoring mechanism to help non-tech people understand security level of the solution
+  - title: Privacy wars
+    desc: Why are privacy-blockchain socials so toxic? How could we stop hating each other & work together
+  - title: Privacy workforce
+  - title: "Privacy activism"
+    desc: "Mapping down tools to protect privacy industry: from builders like Alexey Pertsev to projects."
+  - title: Network states (with a privacy focus)
+    desc: Time ot imagine the network state-as-a-grassroots movement for privacy, freedom & better future.
+  - title: Veksl
+    desc: Easy onboarding to cryptocurrencies without KYC/AML using peer-to-peer tools is crucial for privacy. What options do we have today?
 ticketsIntro: Be a part of the first Web3Privacy Summit experience…
 ticketsNote: Tickets will go on sale in late February 2023.
 ticketing: false
 ticketingUrl: https://tickets.web3privacy.info/w3ps1/
 tickets:
-- title: All-day Access
-  price: €99
-  includes:
-  - All talks & panels
-  - Food and drinks included
-  - Web3Privacy t-shirt
-  - Networking drinks with speakers & attendees
-  - "#Lunarpunk party"
-  hint: |
-    [Apply for a discount →](https://attend.web3privacy.info)<br />(as independent developer, student, privacy advocate, open-source contributor..)
-- title: "#Lunarpunk Party"
-  price: €15
-  includes:
-  - 8pm - morning
-  - Prague rave from top DJs
-  - VJs and projections
-  - "\"Privacy experience\""
-  - Networking with attendees, speakers & sponsors
-  note: "*Party access is included in the All-day Pass"
+  - title: All-day Access
+    price: €99
+    includes:
+    - All talks & panels
+    - Food and drinks included
+    - Web3Privacy t-shirt
+    - Networking drinks with speakers & attendees
+    - "#Lunarpunk party"
+    hint: |
+      [Apply for a discount →](https://attend.web3privacy.info)<br />(as independent developer, student, privacy advocate, open-source contributor..)
+  - title: "#Lunarpunk Party"
+    price: €15
+    includes:
+    - 8pm - morning
+    - Prague rave from top DJs
+    - VJs and projections
+    - "\"Privacy experience\""
+    - Networking with attendees, speakers & sponsors
+    note: "*Party access is included in the All-day Pass"
 faq:
-- title: What is Web3Privacy Now?
-  text: |
-    [Web3privacy now](http://web3privacy.info/) is a research project aimed at building a culture of privacy industry in web3: the most extensive database of privacy-enhancing solutions, the framework for PEDApps ideation, use-cases database & many more.
-- title: What is Prague Blockchain Week?
-  text: |
-    [Prague Blockchain Week 2023](http://prgblockweek.com/) (#PBW23) is a decentralized gathering of all people interested in cryptocurrencies and related topics. It consists of many independent events across Jun 2 - 11, including conferences, hackathons, workshops, community meetups, as well as various parties and happy hours.
-- title: Who is the event for?
-  text: Our event is for 300 people interested in privacy topics in the Web3 industry. We aim to make our content accessible to everyone - rather than going into deep technical detail, we'll discuss privacy topics in their broader context.
-- title: When will tickets go on sale? What will be the payment options?
-  text: Tickets will go on sale in late February 2023. Payment will be possible via credit card, Bitcoin (on-chain), Lightning Network or possibly other cryptocurrencies.
-- title: Do you offer any discounts?
-  text: Yes, we do! We offer discounted tickets (up to 100%!) for independent developers, students and especially active privacy advocates or open-source contributors to private protocols or tools. If you are interested in a discount, please fill out [this form](https://attend.web3privacy.info).
-#- title: Why event isn't admission free?
-#  text: We would like to have most of the cost of the event covered by admission fees directly from visitors. We want to be independent of sponsors and reduce the pressure to make it a "sales" or marketing event.
-- title: How do I get to the venue?
-  text: Venue X10 (full name "[Divadlo X10](https://divadlox10.cz)") is located in the centre of Prague near the metro station *Národní Třída* (Line B) and *Můstek* (Line A,C). The address is [Charvátova 10/39, Prague 1, 110 00](https://goo.gl/maps/Yh8qWagnqB1DvK676) ([Google Maps](https://goo.gl/maps/Yh8qWagnqB1DvK676), [OpenStreetMap](https://www.openstreetmap.org/node/10308561358)).
-- title: Will the talks be livestreamed and/or recorded?
-  text: Yes, we're planning both. A livestream of the conference and recordings of the talks and panels will be publicly available after the conference.
-- title: I have another question, where can I contact you?
-  text: "You can contact the organizing team or the community around the event in our public Signal group: [chat.web3privacy.info](https://chat.web3privacy.info/)"
-
+  - title: What is Web3Privacy Now?
+    text: |
+      [Web3privacy now](http://web3privacy.info/) is a research project aimed at building a culture of privacy industry in web3: the most extensive database of privacy-enhancing solutions, the framework for PEDApps ideation, use-cases database & many more.
+  - title: What is Prague Blockchain Week?
+    text: |
+      [Prague Blockchain Week 2023](http://prgblockweek.com/) (#PBW23) is a decentralized gathering of all people interested in cryptocurrencies and related topics. It consists of many independent events across Jun 2 - 11, including conferences, hackathons, workshops, community meetups, as well as various parties and happy hours.
+  - title: Who is the event for?
+    text: Our event is for 300 people interested in privacy topics in the Web3 industry. We aim to make our content accessible to everyone - rather than going into deep technical detail, we'll discuss privacy topics in their broader context.
+  - title: When will tickets go on sale? What will be the payment options?
+    text: Tickets will go on sale in late February 2023. Payment will be possible via credit card, Bitcoin (on-chain), Lightning Network or possibly other cryptocurrencies.
+  - title: Do you offer any discounts?
+    text: Yes, we do! We offer discounted tickets (up to 100%!) for independent developers, students and especially active privacy advocates or open-source contributors to private protocols or tools. If you are interested in a discount, please fill out [this form](https://attend.web3privacy.info).
+  #- title: Why event isn't admission free?
+  #  text: We would like to have most of the cost of the event covered by admission fees directly from visitors. We want to be independent of sponsors and reduce the pressure to make it a "sales" or marketing event.
+  - title: How do I get to the venue?
+    text: Venue X10 (full name "[Divadlo X10](https://divadlox10.cz)") is located in the centre of Prague near the metro station *Národní Třída* (Line B) and *Můstek* (Line A,C). The address is [Charvátova 10/39, Prague 1, 110 00](https://goo.gl/maps/Yh8qWagnqB1DvK676) ([Google Maps](https://goo.gl/maps/Yh8qWagnqB1DvK676), [OpenStreetMap](https://www.openstreetmap.org/node/10308561358)).
+  - title: Will the talks be livestreamed and/or recorded?
+    text: Yes, we're planning both. A livestream of the conference and recordings of the talks and panels will be publicly available after the conference.
+  - title: I have another question, where can I contact you?
+    text: "You can contact the organizing team or the community around the event in our public Signal group: [chat.web3privacy.info](https://chat.web3privacy.info/)"
 people:
 - id: mykola
   name: Mykola Siusko
@@ -133,43 +132,70 @@ people:
   img: manu-alzuru.jpeg
   caption: Humanist,  solarpunk, Founder of [DoinGud](https://doingud.com/) & [ETH Barcelona](https://ethbarcelona.com/)
   country: es
-
 speakers:
-- guy-zyskind
-- manu-alzuru
-- juraj-bednar
-- mario-havel
+  - guy-zyskind
+  - manu-alzuru
+  - juraj-bednar
+  - mario-havel
 hosts:
-- mykola
-- tree
+  - mykola
+  - tree
+stages:
+  - id: main
+    name: Main stage
+  - id: second
+    name: Workshop stage
 program:
-- time: 9:00 - 9:30
-  title: Registration & networking
-- time: 9:30 - 9:35
-  title: Welcome to Web3Privacy
-  speakers:
-  - name: TBA
-  desc: Welcoming visitors to our private-centric research, community and conference
-- time: 9:35 - 10:55
-  title: Talks I.
-- time: 10:55 - 11:20
-  title: 25min Coffee Break
-- time: 11:25 - 12:40
-  title: Talks II.
-- time: 12:40 - 14:00
-  title: Lunch & Networking
-- time: 14:00 - 15:40
-  title: Talks III.
-- time: 15:40 - 16:05
-  title: 25min Coffee Break
-- time: 16:10 - 18:30
-  title: Talks IV.
-- time: 18:30 - 18:35
-  title: Closing Remarks
-  speakers:
-  - name: TBA
-- time: 18:30 - 20:00
-  title: Networking & Drinks
-- time: 20:00 - 4:00
-  title: "#Lunarpunk party"
-  desc: Enjoy our afterparty in Lunarpunk style with quality Prague rave DJs, which will take place in the same venue until the morning (4am).
+  main:
+    - time: 9:00 - 9:30
+      title: Registration & networking
+    - time: 9:30 - 9:35
+      title: Welcome to Web3Privacy
+      speakers:
+      - name: TBA
+      desc: Welcoming visitors to our private-centric research, community and conference
+    - time: 9:35 - 10:55
+      title: Talks I. - TBA
+    - time: 10:55 - 11:20
+      title: 25min Coffee Break
+      type: other
+    - time: 11:25 - 12:40
+      title: Talks II. - TBA
+    - time: 12:40 - 14:00
+      title: Lunch & Networking
+      type: other
+    - time: 14:00 - 15:40
+      title: Talks III. - TBA
+    - time: 15:40 - 16:05
+      title: 25min Coffee Break
+      type: other
+    - time: 16:10 - 18:30
+      title: Talks IV. - TBA
+    - time: 18:30 - 18:35
+      title: Closing Remarks
+      speakers:
+        - name: TBA
+    - time: 18:30 - 20:00
+      title: Networking & Drinks
+      type: other
+    - time: 20:00 - 4:00
+      title: "#Lunarpunk party"
+      desc: Enjoy our afterparty in Lunarpunk style with quality Prague rave DJs, which will take place in the same venue until the morning (4am).
+  second:
+    - time: 09:35 - 10:55
+      title: Workshops I. - TBA
+    - time: 10:55 - 11:20
+      title: 25min Coffee Break
+      type: other
+    - time: 11:25 - 12:40
+      title: Workshops II. - TBA
+    - time: 12:40 - 14:00
+      title: Lunch & Networking
+      type: other
+    - time: 14:00 - 15:40
+      title: Workshops III. - TBA
+    - time: 15:40 - 16:05
+      title: 25min Coffee Break
+      type: other
+    - time: 16:10 - 18:30
+      title: Workshops IV.
