@@ -510,6 +510,84 @@ function create_each_block_5(ctx) {
     }
   };
 }
+function create_if_block_6(ctx) {
+  let div;
+  let t_value = (
+    /*data*/
+    ctx[0].config.speakersNote + ""
+  );
+  let t;
+  return {
+    c() {
+      div = element("div");
+      t = text(t_value);
+      this.h();
+    },
+    l(nodes) {
+      div = claim_element(nodes, "DIV", { class: true });
+      var div_nodes = children(div);
+      t = claim_text(div_nodes, t_value);
+      div_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      attr(div, "class", "text-xl text-supermild");
+    },
+    m(target, anchor) {
+      insert_hydration(target, div, anchor);
+      append_hydration(div, t);
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*data*/
+      1 && t_value !== (t_value = /*data*/
+      ctx2[0].config.speakersNote + ""))
+        set_data(t, t_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+    }
+  };
+}
+function create_if_block_5(ctx) {
+  let div;
+  let t_value = (
+    /*data*/
+    ctx[0].config.programNote + ""
+  );
+  let t;
+  return {
+    c() {
+      div = element("div");
+      t = text(t_value);
+      this.h();
+    },
+    l(nodes) {
+      div = claim_element(nodes, "DIV", { class: true });
+      var div_nodes = children(div);
+      t = claim_text(div_nodes, t_value);
+      div_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      attr(div, "class", "text-lg text-supermild mb-16");
+    },
+    m(target, anchor) {
+      insert_hydration(target, div, anchor);
+      append_hydration(div, t);
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*data*/
+      1 && t_value !== (t_value = /*data*/
+      ctx2[0].config.programNote + ""))
+        set_data(t, t_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+    }
+  };
+}
 function create_if_block_4(ctx) {
   let div;
   let sveltemarkdown;
@@ -1537,54 +1615,56 @@ function create_fragment(ctx) {
   let div6;
   let peoplelist0;
   let t7;
+  let t8;
   let div14;
   let div13;
   let div10;
-  let t8;
   let t9;
+  let t10;
   let div12;
   let div11;
   let peoplelist1;
-  let t10;
+  let t11;
   let div18;
   let div17;
   let div15;
-  let t11;
   let t12;
-  let div16;
   let t13;
+  let t14;
+  let div16;
+  let t15;
   let div22;
   let div21;
   let div19;
-  let t14;
-  let t15;
+  let t16;
+  let t17;
   let div20;
   let a;
   let button;
-  let t16;
+  let t18;
   let a_href_value;
-  let t17;
+  let t19;
   let div27;
   let div26;
   let div23;
-  let t18;
-  let t19;
+  let t20;
+  let t21;
   let div24;
-  let t20_value = (
+  let t22_value = (
     /*data*/
     ctx[0].config.ticketsIntro + ""
   );
-  let t20;
-  let t21;
-  let div25;
   let t22;
   let t23;
+  let div25;
   let t24;
+  let t25;
+  let t26;
   let div31;
   let div30;
   let div28;
-  let t25;
-  let t26;
+  let t27;
+  let t28;
   let div29;
   let current;
   let mounted;
@@ -1621,6 +1701,10 @@ function create_fragment(ctx) {
       )
     }
   });
+  let if_block0 = (
+    /*data*/
+    ctx[0].config.speakersNote && create_if_block_6(ctx)
+  );
   peoplelist1 = new PeopleList({
     props: {
       items: (
@@ -1634,6 +1718,10 @@ function create_fragment(ctx) {
       size: "small"
     }
   });
+  let if_block1 = (
+    /*data*/
+    ctx[0].config.programNote && create_if_block_5(ctx)
+  );
   let each_value_3 = (
     /*data*/
     ctx[0].config.stages.map(
@@ -1659,11 +1747,11 @@ function create_fragment(ctx) {
   const out_2 = (i) => transition_out(each_blocks_1[i], 1, 1, () => {
     each_blocks_1[i] = null;
   });
-  let if_block0 = (
+  let if_block2 = (
     /*data*/
     ctx[0].config.ticketing && create_if_block_1(ctx)
   );
-  let if_block1 = (
+  let if_block3 = (
     /*data*/
     ctx[0].config.ticketsNote && create_if_block(ctx)
   );
@@ -1709,59 +1797,65 @@ function create_fragment(ctx) {
       div6 = element("div");
       create_component(peoplelist0.$$.fragment);
       t7 = space();
+      if (if_block0)
+        if_block0.c();
+      t8 = space();
       div14 = element("div");
       div13 = element("div");
       div10 = element("div");
-      t8 = text("Hosts");
-      t9 = space();
+      t9 = text("Hosts");
+      t10 = space();
       div12 = element("div");
       div11 = element("div");
       create_component(peoplelist1.$$.fragment);
-      t10 = space();
+      t11 = space();
       div18 = element("div");
       div17 = element("div");
       div15 = element("div");
-      t11 = text("Program");
-      t12 = space();
+      t12 = text("Program");
+      t13 = space();
+      if (if_block1)
+        if_block1.c();
+      t14 = space();
       div16 = element("div");
       for (let i = 0; i < each_blocks_2.length; i += 1) {
         each_blocks_2[i].c();
       }
-      t13 = space();
+      t15 = space();
       div22 = element("div");
       div21 = element("div");
       div19 = element("div");
-      t14 = text("Sponsors");
-      t15 = space();
+      t16 = text("Sponsors");
+      t17 = space();
       div20 = element("div");
       a = element("a");
       button = element("button");
-      t16 = text("Become a Sponsor");
-      t17 = space();
+      t18 = text("Become a Sponsor");
+      t19 = space();
       div27 = element("div");
       div26 = element("div");
       div23 = element("div");
-      t18 = text("Ticket");
-      t19 = space();
-      div24 = element("div");
-      t20 = text(t20_value);
+      t20 = text("Ticket");
       t21 = space();
+      div24 = element("div");
+      t22 = text(t22_value);
+      t23 = space();
       div25 = element("div");
       for (let i = 0; i < each_blocks_1.length; i += 1) {
         each_blocks_1[i].c();
       }
-      t22 = space();
-      if (if_block0)
-        if_block0.c();
-      t23 = space();
-      if (if_block1)
-        if_block1.c();
       t24 = space();
+      if (if_block2)
+        if_block2.c();
+      t25 = space();
+      if (if_block3)
+        if_block3.c();
+      t26 = space();
       div31 = element("div");
       div30 = element("div");
       div28 = element("div");
-      t25 = text("FAQ");
-      t26 = space();
+      t27 = text("FAQ");
+      t28 = space();
       div29 = element("div");
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
@@ -1817,18 +1911,21 @@ function create_fragment(ctx) {
       claim_component(peoplelist0.$$.fragment, div6_nodes);
       div6_nodes.forEach(detach);
       div7_nodes.forEach(detach);
+      t7 = claim_space(div8_nodes);
+      if (if_block0)
+        if_block0.l(div8_nodes);
       div8_nodes.forEach(detach);
       div9_nodes.forEach(detach);
-      t7 = claim_space(nodes);
+      t8 = claim_space(nodes);
       div14 = claim_element(nodes, "DIV", { id: true });
       var div14_nodes = children(div14);
       div13 = claim_element(div14_nodes, "DIV", { class: true });
       var div13_nodes = children(div13);
       div10 = claim_element(div13_nodes, "DIV", { class: true });
       var div10_nodes = children(div10);
-      t8 = claim_text(div10_nodes, "Hosts");
+      t9 = claim_text(div10_nodes, "Hosts");
       div10_nodes.forEach(detach);
-      t9 = claim_space(div13_nodes);
+      t10 = claim_space(div13_nodes);
       div12 = claim_element(div13_nodes, "DIV", { class: true });
       var div12_nodes = children(div12);
       div11 = claim_element(div12_nodes, "DIV", { class: true });
@@ -1838,16 +1935,19 @@ function create_fragment(ctx) {
       div12_nodes.forEach(detach);
       div13_nodes.forEach(detach);
       div14_nodes.forEach(detach);
-      t10 = claim_space(nodes);
+      t11 = claim_space(nodes);
       div18 = claim_element(nodes, "DIV", { class: true, id: true });
       var div18_nodes = children(div18);
       div17 = claim_element(div18_nodes, "DIV", { class: true });
       var div17_nodes = children(div17);
       div15 = claim_element(div17_nodes, "DIV", { class: true });
       var div15_nodes = children(div15);
-      t11 = claim_text(div15_nodes, "Program");
+      t12 = claim_text(div15_nodes, "Program");
       div15_nodes.forEach(detach);
-      t12 = claim_space(div17_nodes);
+      t13 = claim_space(div17_nodes);
+      if (if_block1)
+        if_block1.l(div17_nodes);
+      t14 = claim_space(div17_nodes);
       div16 = claim_element(div17_nodes, "DIV", { class: true });
       var div16_nodes = children(div16);
       for (let i = 0; i < each_blocks_2.length; i += 1) {
@@ -1856,67 +1956,67 @@ function create_fragment(ctx) {
       div16_nodes.forEach(detach);
       div17_nodes.forEach(detach);
       div18_nodes.forEach(detach);
-      t13 = claim_space(nodes);
+      t15 = claim_space(nodes);
       div22 = claim_element(nodes, "DIV", { class: true, id: true });
       var div22_nodes = children(div22);
       div21 = claim_element(div22_nodes, "DIV", { class: true });
       var div21_nodes = children(div21);
       div19 = claim_element(div21_nodes, "DIV", { class: true });
       var div19_nodes = children(div19);
-      t14 = claim_text(div19_nodes, "Sponsors");
+      t16 = claim_text(div19_nodes, "Sponsors");
       div19_nodes.forEach(detach);
-      t15 = claim_space(div21_nodes);
+      t17 = claim_space(div21_nodes);
       div20 = claim_element(div21_nodes, "DIV", {});
       var div20_nodes = children(div20);
       a = claim_element(div20_nodes, "A", { href: true });
       var a_nodes = children(a);
       button = claim_element(a_nodes, "BUTTON", { class: true });
       var button_nodes = children(button);
-      t16 = claim_text(button_nodes, "Become a Sponsor");
+      t18 = claim_text(button_nodes, "Become a Sponsor");
       button_nodes.forEach(detach);
       a_nodes.forEach(detach);
       div20_nodes.forEach(detach);
       div21_nodes.forEach(detach);
       div22_nodes.forEach(detach);
-      t17 = claim_space(nodes);
+      t19 = claim_space(nodes);
       div27 = claim_element(nodes, "DIV", { class: true, id: true });
       var div27_nodes = children(div27);
       div26 = claim_element(div27_nodes, "DIV", { class: true });
       var div26_nodes = children(div26);
       div23 = claim_element(div26_nodes, "DIV", { class: true });
       var div23_nodes = children(div23);
-      t18 = claim_text(div23_nodes, "Ticket");
+      t20 = claim_text(div23_nodes, "Ticket");
       div23_nodes.forEach(detach);
-      t19 = claim_space(div26_nodes);
+      t21 = claim_space(div26_nodes);
       div24 = claim_element(div26_nodes, "DIV", { class: true });
       var div24_nodes = children(div24);
-      t20 = claim_text(div24_nodes, t20_value);
+      t22 = claim_text(div24_nodes, t22_value);
       div24_nodes.forEach(detach);
-      t21 = claim_space(div26_nodes);
+      t23 = claim_space(div26_nodes);
       div25 = claim_element(div26_nodes, "DIV", { class: true });
       var div25_nodes = children(div25);
       for (let i = 0; i < each_blocks_1.length; i += 1) {
         each_blocks_1[i].l(div25_nodes);
       }
       div25_nodes.forEach(detach);
-      t22 = claim_space(div26_nodes);
-      if (if_block0)
-        if_block0.l(div26_nodes);
-      t23 = claim_space(div26_nodes);
-      if (if_block1)
-        if_block1.l(div26_nodes);
+      t24 = claim_space(div26_nodes);
+      if (if_block2)
+        if_block2.l(div26_nodes);
+      t25 = claim_space(div26_nodes);
+      if (if_block3)
+        if_block3.l(div26_nodes);
       div26_nodes.forEach(detach);
       div27_nodes.forEach(detach);
-      t24 = claim_space(nodes);
+      t26 = claim_space(nodes);
       div31 = claim_element(nodes, "DIV", { class: true, id: true });
       var div31_nodes = children(div31);
       div30 = claim_element(div31_nodes, "DIV", { class: true });
       var div30_nodes = children(div30);
       div28 = claim_element(div30_nodes, "DIV", { class: true });
       var div28_nodes = children(div28);
-      t25 = claim_text(div28_nodes, "FAQ");
+      t27 = claim_text(div28_nodes, "FAQ");
       div28_nodes.forEach(detach);
-      t26 = claim_space(div30_nodes);
+      t28 = claim_space(div30_nodes);
       div29 = claim_element(div30_nodes, "DIV", { class: true });
       var div29_nodes = children(div29);
       for (let i = 0; i < each_blocks.length; i += 1) {
@@ -1953,9 +2053,9 @@ function create_fragment(ctx) {
       attr(div4, "class", "bg-black");
       attr(div4, "id", "about");
       attr(div5, "class", "section-header");
-      attr(div6, "class", "pb-16 flex flex-wrap justify-center gap-6");
+      attr(div6, "class", "pb-12 flex flex-wrap justify-center gap-6");
       attr(div7, "class", "mx-auto");
-      attr(div8, "class", "middle-pane-medium pt-16 text-xl text-center mx-auto");
+      attr(div8, "class", "middle-pane-medium pt-16 text-xl text-center mx-auto mb-8");
       attr(div9, "class", "");
       attr(div9, "id", "speakers");
       attr(div10, "class", "section-header");
@@ -2016,60 +2116,66 @@ function create_fragment(ctx) {
       append_hydration(div8, div7);
       append_hydration(div7, div6);
       mount_component(peoplelist0, div6, null);
-      insert_hydration(target, t7, anchor);
+      append_hydration(div8, t7);
+      if (if_block0)
+        if_block0.m(div8, null);
+      insert_hydration(target, t8, anchor);
       insert_hydration(target, div14, anchor);
       append_hydration(div14, div13);
       append_hydration(div13, div10);
-      append_hydration(div10, t8);
-      append_hydration(div13, t9);
+      append_hydration(div10, t9);
+      append_hydration(div13, t10);
       append_hydration(div13, div12);
       append_hydration(div12, div11);
       mount_component(peoplelist1, div11, null);
-      insert_hydration(target, t10, anchor);
+      insert_hydration(target, t11, anchor);
       insert_hydration(target, div18, anchor);
       append_hydration(div18, div17);
       append_hydration(div17, div15);
-      append_hydration(div15, t11);
-      append_hydration(div17, t12);
+      append_hydration(div15, t12);
+      append_hydration(div17, t13);
+      if (if_block1)
+        if_block1.m(div17, null);
+      append_hydration(div17, t14);
       append_hydration(div17, div16);
       for (let i = 0; i < each_blocks_2.length; i += 1) {
         each_blocks_2[i].m(div16, null);
       }
-      insert_hydration(target, t13, anchor);
+      insert_hydration(target, t15, anchor);
       insert_hydration(target, div22, anchor);
       append_hydration(div22, div21);
       append_hydration(div21, div19);
-      append_hydration(div19, t14);
-      append_hydration(div21, t15);
+      append_hydration(div19, t16);
+      append_hydration(div21, t17);
       append_hydration(div21, div20);
       append_hydration(div20, a);
       append_hydration(a, button);
-      append_hydration(button, t16);
-      insert_hydration(target, t17, anchor);
+      append_hydration(button, t18);
+      insert_hydration(target, t19, anchor);
       insert_hydration(target, div27, anchor);
       append_hydration(div27, div26);
       append_hydration(div26, div23);
-      append_hydration(div23, t18);
-      append_hydration(div26, t19);
-      append_hydration(div26, div24);
-      append_hydration(div24, t20);
+      append_hydration(div23, t20);
       append_hydration(div26, t21);
+      append_hydration(div26, div24);
+      append_hydration(div24, t22);
+      append_hydration(div26, t23);
       append_hydration(div26, div25);
       for (let i = 0; i < each_blocks_1.length; i += 1) {
         each_blocks_1[i].m(div25, null);
       }
-      append_hydration(div26, t22);
-      if (if_block0)
-        if_block0.m(div26, null);
-      append_hydration(div26, t23);
-      if (if_block1)
-        if_block1.m(div26, null);
-      insert_hydration(target, t24, anchor);
+      append_hydration(div26, t24);
+      if (if_block2)
+        if_block2.m(div26, null);
+      append_hydration(div26, t25);
+      if (if_block3)
+        if_block3.m(div26, null);
+      insert_hydration(target, t26, anchor);
       insert_hydration(target, div31, anchor);
       append_hydration(div31, div30);
       append_hydration(div30, div28);
-      append_hydration(div28, t25);
-      append_hydration(div30, t26);
+      append_hydration(div28, t27);
+      append_hydration(div30, t28);
       append_hydration(div30, div29);
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].m(div29, null);
@@ -2161,6 +2267,21 @@ function create_fragment(ctx) {
         peoplelist0_changes.people = /*data*/
         ctx2[0].config.people;
       peoplelist0.$set(peoplelist0_changes);
+      if (
+        /*data*/
+        ctx2[0].config.speakersNote
+      ) {
+        if (if_block0) {
+          if_block0.p(ctx2, dirty);
+        } else {
+          if_block0 = create_if_block_6(ctx2);
+          if_block0.c();
+          if_block0.m(div8, null);
+        }
+      } else if (if_block0) {
+        if_block0.d(1);
+        if_block0 = null;
+      }
       const peoplelist1_changes = {};
       if (dirty & /*data*/
       1)
@@ -2171,6 +2292,21 @@ function create_fragment(ctx) {
         peoplelist1_changes.people = /*data*/
         ctx2[0].config.people;
       peoplelist1.$set(peoplelist1_changes);
+      if (
+        /*data*/
+        ctx2[0].config.programNote
+      ) {
+        if (if_block1) {
+          if_block1.p(ctx2, dirty);
+        } else {
+          if_block1 = create_if_block_5(ctx2);
+          if_block1.c();
+          if_block1.m(div17, t14);
+        }
+      } else if (if_block1) {
+        if_block1.d(1);
+        if_block1 = null;
+      }
       if (dirty & /*data, animateSection*/
       3) {
         each_value_3 = /*data*/
@@ -2203,9 +2339,9 @@ function create_fragment(ctx) {
         attr(a, "href", a_href_value);
       }
       if ((!current || dirty & /*data*/
-      1) && t20_value !== (t20_value = /*data*/
+      1) && t22_value !== (t22_value = /*data*/
       ctx2[0].config.ticketsIntro + ""))
-        set_data(t20, t20_value);
+        set_data(t22, t22_value);
       if (dirty & /*data, animateSection, goto*/
       3) {
         each_value_1 = /*data*/
@@ -2233,31 +2369,31 @@ function create_fragment(ctx) {
         /*data*/
         ctx2[0].config.ticketing
       ) {
-        if (if_block0) {
-          if_block0.p(ctx2, dirty);
+        if (if_block2) {
+          if_block2.p(ctx2, dirty);
         } else {
-          if_block0 = create_if_block_1(ctx2);
-          if_block0.c();
-          if_block0.m(div26, t23);
+          if_block2 = create_if_block_1(ctx2);
+          if_block2.c();
+          if_block2.m(div26, t25);
         }
-      } else if (if_block0) {
-        if_block0.d(1);
-        if_block0 = null;
+      } else if (if_block2) {
+        if_block2.d(1);
+        if_block2 = null;
       }
       if (
         /*data*/
         ctx2[0].config.ticketsNote
       ) {
-        if (if_block1) {
-          if_block1.p(ctx2, dirty);
+        if (if_block3) {
+          if_block3.p(ctx2, dirty);
         } else {
-          if_block1 = create_if_block(ctx2);
-          if_block1.c();
-          if_block1.m(div26, null);
+          if_block3 = create_if_block(ctx2);
+          if_block3.c();
+          if_block3.m(div26, null);
         }
-      } else if (if_block1) {
-        if_block1.d(1);
-        if_block1 = null;
+      } else if (if_block3) {
+        if_block3.d(1);
+        if_block3 = null;
       }
       if (dirty & /*animateSection, data*/
       3) {
@@ -2343,31 +2479,35 @@ function create_fragment(ctx) {
       if (detaching)
         detach(div9);
       destroy_component(peoplelist0);
+      if (if_block0)
+        if_block0.d();
       if (detaching)
-        detach(t7);
+        detach(t8);
       if (detaching)
         detach(div14);
       destroy_component(peoplelist1);
       if (detaching)
-        detach(t10);
+        detach(t11);
       if (detaching)
         detach(div18);
+      if (if_block1)
+        if_block1.d();
       destroy_each(each_blocks_2, detaching);
       if (detaching)
-        detach(t13);
+        detach(t15);
       if (detaching)
         detach(div22);
       if (detaching)
-        detach(t17);
+        detach(t19);
       if (detaching)
         detach(div27);
       destroy_each(each_blocks_1, detaching);
-      if (if_block0)
-        if_block0.d();
-      if (if_block1)
-        if_block1.d();
+      if (if_block2)
+        if_block2.d();
+      if (if_block3)
+        if_block3.d();
       if (detaching)
-        detach(t24);
+        detach(t26);
       if (detaching)
         detach(div31);
       destroy_each(each_blocks, detaching);

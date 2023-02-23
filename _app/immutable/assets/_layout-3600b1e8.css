@@ -704,6 +704,10 @@ table.table-custom{
   margin-bottom: 2.5rem;
 }
 
+.mb-16{
+  margin-bottom: 4rem;
+}
+
 .mb-36{
   margin-bottom: 9rem;
 }
@@ -922,6 +926,10 @@ table.table-custom{
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.pb-12{
+  padding-bottom: 3rem;
 }
 
 .pb-16{

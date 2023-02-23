@@ -187,6 +187,7 @@ const data = {
       country: "es"
     }
   ],
+  speakersNote: "We keep adding more and more speakers, stay tuned ...",
   speakers: [
     "guy-zyskind",
     "manu-alzuru",
@@ -207,6 +208,7 @@ const data = {
       name: "Workshop stage"
     }
   ],
+  programNote: "WIP. The final schedule will be published a few weeks before the conference in May 2023.",
   program: {
     main: [
       {
