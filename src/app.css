@@ -59,7 +59,8 @@
 	.table-custom th {
 		@apply text-mild;
 	}
-	.table-custom tbody tr:hover td, .table-custom tbody tr:hover td span {
+	.table-custom tbody tr:hover td,
+	.table-custom tbody tr:hover td span {
 		@apply bg-white text-black;
 	}
 	.table-custom tbody tr:hover td .description {
@@ -82,7 +83,10 @@
 	.person-item:hover img {
 		@apply grayscale-0 invert-0 blur-none;
 	}
-	.person-item:hover .text-mild, .person-item:hover .text-supermild, .topic-item:hover .text-mild, .topic-item:hover .text-supermild {
+	.person-item:hover .text-mild,
+	.person-item:hover .text-supermild,
+	.topic-item:hover .text-mild,
+	.topic-item:hover .text-supermild {
 		@apply text-black;
 	}
 }

@@ -7,6 +7,7 @@ Website and data repository for the Web3Privacy Summit #1 that will take place i
 - Twitter: [@web3privacy](http://twitter.com/web3privacy)
 
 JSON data about `w3ps1`:
+
 - source: ([src/lib/config.yaml](src/lib/config.yaml))
 - build: [prague.web3privacy.info/config.json](https://prague.web3privacy.info/config.json)
 

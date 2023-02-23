@@ -3,10 +3,10 @@
 	export let data;
 
 	import SvelteMarkdown from 'svelte-markdown';
-	import { animateText, handleAnchorClick } from '$lib/helpers';
+	import { animateText, animateSection, handleAnchorClick } from '$lib/helpers';
 	import { onMount } from 'svelte';
 
-  	let navbar = false;
+	let navbar = false;
 	let choosed = null;
 	let lastScrollTop = null;
 
@@ -23,34 +23,34 @@
 	];
 
 	const homepageAnimation = () => {
-		const collection = document.getElementsByClassName('animation-crypt')
+		const collection = document.getElementsByClassName('animation-crypt');
 		for (const el of collection) {
-			animateText({ target: el })
+			animateText({ target: el });
 		}
-	}
+	};
 
-	function locationHashUpdateTick () {
-		const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+	function locationHashUpdateTick() {
+		const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 		if (lastScrollTop === scrollTop) {
 			return null;
 		} else {
-			lastScrollTop = scrollTop
+			lastScrollTop = scrollTop;
 		}
-		const arr = []
+		const arr = [];
 		for (const mi of menu) {
 			if (mi.external) continue;
-			const el = document.getElementById(mi.title.toLowerCase())
-			const pos = el.getBoundingClientRect()
+			const el = document.getElementById(mi.title.toLowerCase());
+			const pos = el.getBoundingClientRect();
 			//console.log(mi.title, pos.top, pos.bottom)
 			if (pos.top <= 100 && pos.bottom > 100) {
-				arr.push([ mi, pos.top, pos.bottom ])
+				arr.push([mi, pos.top, pos.bottom]);
 			}
 		}
-		choosed = arr[arr.length-1]
+		choosed = arr[arr.length - 1];
 		if (choosed) {
 			//console.log('choosed = ', choosed[0].title)
-			const currentHash = window.location.hash
-			const hash = choosed[0].url
+			const currentHash = window.location.hash;
+			const hash = choosed[0].url;
 			if (hash !== currentHash) {
 				if (hash === '') {
 					history.replaceState(null, null, ' ');
@@ -62,28 +62,38 @@
 	}
 
 	onMount(async () => {
-		setTimeout(homepageAnimation, 0) // initial animation
-		setInterval(homepageAnimation, 10000) // every 10 seconds
-		setInterval(locationHashUpdateTick, 1000) // every 1 seconds
+		setTimeout(homepageAnimation, 0); // initial animation
+		setInterval(homepageAnimation, 10000); // every 10 seconds
+		setInterval(locationHashUpdateTick, 1000); // every 1 seconds
 	});
-
 </script>
 
-<div class="relative w-full min-h-screen text-white">	
+<div class="relative w-full min-h-screen text-white">
 	<div class="fixed w-full h-18 bg-black pt-2 pb-2 z-40">
 		<div class="middle-pane-big bg-black">
 			<div class="flex">
 				<div class="flex items-center gap-4 grow">
 					<div class="w-16 py-2">
-						<a href={data.config.parentUrl} target="_blank"><img src={data.config.logo} alt={data.config.parent} /></a>
+						<a href={data.config.parentUrl} target="_blank"
+							><img src={data.config.logo} alt={data.config.parent} /></a
+						>
 					</div>
 					<!--h1 class="text-2xl uppercase">{data.config.title}</h1-->
 				</div>
 				<div class="flex items-center gap-6 text-xl">
-          			<button class="md:hidden text-3xl" on:click={(ev) => (navbar = !navbar)}>☰</button>
-					{#each menu.filter(i => !i.hidden) as mi}
+					<button class="md:hidden text-3xl" on:click={(ev) => (navbar = !navbar)}>☰</button>
+					{#each menu.filter((i) => !i.hidden) as mi}
 						<div class="hidden md:block">
-							<a class="{mi.class ? mi.class : 'hover:underline'} {choosed && mi.url === choosed[0].url ? 'font-bold underline' : null} {mi.external ? 'external' : ''}" href={mi.url} on:mouseenter={animateText} on:click={!mi.external ? handleAnchorClick : null} target={mi.external ? '_blank' : ''}>
+							<a
+								class="{mi.class ? mi.class : 'hover:underline'} {choosed &&
+								mi.url === choosed[0].url
+									? 'font-bold underline'
+									: null} {mi.external ? 'external' : ''}"
+								href={mi.url}
+								on:mouseenter={animateText}
+								on:click={!mi.external ? handleAnchorClick : null}
+								target={mi.external ? '_blank' : ''}
+							>
 								{mi.name?.toUpperCase() || mi.title.toUpperCase()}
 							</a>
 						</div>
@@ -92,24 +102,35 @@
 			</div>
 		</div>
 		{#if navbar}
-		<div class="w-full md:hidden p-4">
-			{#each menu.filter(i => !i.hidden) as mi}
-			<div class="my-3 mx-4">
-				<a href={mi.url} on:click={() => navbar = false}><button class="{mi.class} uppercase text-xl {mi.external ? 'external' : ''}">{mi.title}</button></a>
+			<div class="w-full md:hidden p-4">
+				{#each menu.filter((i) => !i.hidden) as mi}
+					<div class="my-3 mx-4">
+						<a href={mi.url} on:click={() => (navbar = false)}
+							><button class="{mi.class} uppercase text-xl {mi.external ? 'external' : ''}"
+								>{mi.title}</button
+							></a
+						>
+					</div>
+				{/each}
 			</div>
-			{/each}
-		</div>
 		{/if}
 	</div>
 
 	<div class="w-full h-screen" id="intro">
 		<div class="w-full h-full flex items-center text-center">
 			<div class="mx-auto px-4">
-				<div class="text-5xl md:text-8xl font-bold mb-4 md:mb-8 animation-crypt" on:mouseenter={animateText}>
+				<div
+					class="text-5xl md:text-8xl font-bold mb-4 md:mb-8 animation-crypt"
+					on:mouseenter={animateText}
+				>
 					{data.config.shortname.toUpperCase()}
 				</div>
 				<div class="text-3xl md:text-5xl md:mb-4 uppercase">
-					<span class="">{data.config.date}</span> @ <a href={data.config.venueMapUrl} target="_blank" class="underline hover:no-underline">{data.config.venue}</a></div>
+					<span class="">{data.config.date}</span> @
+					<a href={data.config.venueMapUrl} target="_blank" class="underline hover:no-underline"
+						>{data.config.venue}</a
+					>
+				</div>
 				<div class="mt-8 text-lg text-mild mx-4">
 					<p class="">{data.config.slogan}</p>
 					<p>
@@ -132,11 +153,13 @@
 			<div class="flex gap-4">
 				<div class="grow">
 					<div class="w-32 sm:w-40">
-						<a href={data.config.parentUrl}><img src={data.config.logo} alt={data.config.parent} /></a>
+						<a href={data.config.parentUrl}
+							><img src={data.config.logo} alt={data.config.parent} /></a
+						>
 					</div>
 				</div>
 				<div class="text-right">
-					<div class="">
+					<div class="" on:mouseenter={animateSection()}>
 						<a class="inline-block w-5 mr-1" href="https://twitter.com/{data.config.twitter}">
 							<svg viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
@@ -145,7 +168,11 @@
 								/>
 							</svg>
 						</a>
-						<a href="https://twitter.com/{data.config.twitter}" class="text-2xl no-underline hover:underline external" target="_blank">
+						<a
+							href="https://twitter.com/{data.config.twitter}"
+							class="text-2xl no-underline hover:underline external animate-section"
+							target="_blank"
+						>
 							@{data.config.twitter}
 						</a>
 					</div>
