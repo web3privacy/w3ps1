@@ -3,6 +3,7 @@
 	import PeopleList from '$lib/components/PeopleList.svelte';
 	import { animateText, animateSection } from '$lib/helpers';
 	import { goto } from '$app/navigation';
+	import Web3Dialog from '$lib/components/Web3Dialog.svelte';
 
 	export let data;
 </script>
@@ -134,7 +135,7 @@
 </div>
 
 <div class="bg-black" id="ticket">
-	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto pb-32">
+	<div class="middle-pane-medium pt-16 text-xl text-center mx-auto">
 		<div class="section-header" on:mouseenter={animateText}>Ticket</div>
 		<div class="mb-8 text-lg text-mild">{data.config.ticketsIntro}</div>
 		<div class="grid lg:grid-cols-2 gap-10 md:w-2/3 mx-auto">
@@ -181,7 +182,14 @@
 			<div class="mt-8 text-xl">{data.config.ticketsNote}</div>
 		{/if}
 	</div>
+	<div class="middle-pane-medium text-xl text-center mx-auto pt-10 pb-32">
+		<div class="section-subheader" on:mouseenter={animateText}>Get your discount</div>
+		<div>
+			<Web3Dialog {data} />
+		</div>
+	</div>
 </div>
+
 
 <div class="mb-36" id="faq">
 	<div class="middle-pane-medium pt-20 text-xl text-center mx-auto">
