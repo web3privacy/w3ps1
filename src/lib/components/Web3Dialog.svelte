@@ -134,8 +134,8 @@
                     <div class="w-28 lg:w-40 mr-6 inline-block xl:block"><img src={badge.img} class="w-full {connected && userBadges && userBadges.badges[badge.id]?.eligible ? '' : 'grayscale'} badge-image" /></div>
                     <div class="lg:text-left w-full">
                         {#if badge.shortname}<div class="uppercase font-bold">{badge.shortname}</div>{/if}
-                        <div class="{badge.shortname ? '' : 'font-bold'} animate-section">
-                            <a href={badge.url} target="_blank" class="external">{badge.name}</a>
+                        <div class="{badge.shortname ? '' : 'font-bold'}">
+                            <a href={badge.url} target="_blank" class="external animate-section">{badge.name}</a>
                         </div>  
                         <div class="text-xl">Price: <span class="font-bold">€{data.config.ticketBasePrice - data.config.ticketBasePrice*(badge.discount/100)}</span> ({badge.discount}% discount)</div>
                         {#if connected && userBadges}
