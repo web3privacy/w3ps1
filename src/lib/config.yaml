@@ -22,6 +22,8 @@ intro: |
   Privacy advocates worldwide are coming together to discuss how to mainstream privacy within the Web3 industry. So it will become a cultural phenomenon embodying both decentralisation & anti-surveillance capitalism practices.
 
   The conference complements the research project [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).
+image: '/Knowledge.png'
+
 themes:
   - title: Regulations vs Privacy
     desc: 2023 will be a year of privacy regulations. Privacy coins will be banned, mixer's team become anon etc. How do we defend our rights for privacy?
