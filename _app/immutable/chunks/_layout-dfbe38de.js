@@ -77,6 +77,9 @@ const data = {
   ticketsNote: "Tickets will go on sale in late February 2023.",
   ticketing: false,
   ticketingUrl: "https://tickets.web3privacy.info/w3ps1/",
+  ticketBasePrice: 99,
+  ticketsDiscountForm: "https://attend.web3privacy.info",
+  ticketsDiscounts: "We also offer discounts for other groups such as active open-source contributors to privacy protocols, privacy (lunarpunk) advocates, full-time students, attendees from OECD low income countries, independent developers, etc. Feel free to request your special discount using the form:\n",
   tickets: [
     {
       title: "All-day Access",
@@ -88,7 +91,7 @@ const data = {
         "Networking drinks with speakers & attendees",
         "#Lunarpunk party"
       ],
-      hint: "[Apply for a discount →](https://attend.web3privacy.info)<br />(as independent developer, student, privacy advocate, open-source contributor..)\n"
+      hint: "Discounts: We offer various discounts up to 100%, see below\n"
     },
     {
       title: "#Lunarpunk Party",
@@ -301,11 +304,15 @@ const data = {
         title: "Workshops IV."
       }
     ]
-  }
+  },
+  badgesApiUrl: "https://badges-pretix-voucher-api.web3privacy.info"
 };
 async function load({ params, url, fetch }) {
+  const resp = await fetch(data.badgesApiUrl + "/badges");
+  const badges = await resp.json();
   return {
-    config: data
+    config: data,
+    badges
   };
 }
 const _layout = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({

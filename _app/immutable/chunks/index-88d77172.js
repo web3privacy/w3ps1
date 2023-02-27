@@ -749,6 +749,7 @@ class SvelteComponent {
   }
 }
 export {
+  head_selector as $,
   destroy_component as A,
   tick as B,
   noop as C,
@@ -775,7 +776,7 @@ export {
   createEventDispatcher as X,
   setContext as Y,
   component_subscribe as Z,
-  head_selector as _,
+  is_function as _,
   space as a,
   insert_hydration as b,
   claim_space as c,
