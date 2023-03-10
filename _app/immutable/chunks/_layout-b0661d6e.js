@@ -17,7 +17,7 @@ const data = {
   aggregator: "Prague Blockchain Week 2023",
   aggregatorUrl: "http://prgblockweek.com/",
   sponsorUrl: "https://matrix.to/#/@tree:gwei.cz",
-  intro: "If privacy is a human right, then we need to protect it.\n\nPrivacy advocates worldwide are coming together to discuss how to mainstream privacy within the Web3 industry. So it will become a cultural phenomenon embodying both decentralisation & anti-surveillance capitalism practices.\n\nThe conference complements the research project [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).\n",
+  intro: "If privacy is a human right, then we need to protect it.\n\nPrivacy advocates worldwide are coming together to discuss how to mainstream privacy within the Web3 industry. So it will become a cultural phenomenon embodying both decentralisation & anti-surveillance capitalism practices.\n\nThe conference complements the research projects [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).\n",
   themes: [
     {
       title: "Regulations vs Privacy",
