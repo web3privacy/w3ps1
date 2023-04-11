@@ -74,7 +74,7 @@ const data = {
     }
   ],
   ticketsIntro: "Be a part of the first Web3Privacy Summit experience…",
-  ticketsNote: "Tickets will go on sale in late February 2023.",
+  ticketsNote: "Tickets will go on sale in April.",
   ticketing: false,
   ticketingUrl: "https://tickets.web3privacy.info/w3ps1/",
   ticketBasePrice: 99,
@@ -83,7 +83,7 @@ const data = {
   tickets: [
     {
       title: "All-day Access",
-      price: "€99",
+      price: "€49",
       includes: [
         "All talks & panels",
         "Food and drinks included",
@@ -95,7 +95,7 @@ const data = {
     },
     {
       title: "#Lunarpunk Party",
-      price: "€15",
+      price: "€10",
       includes: [
         "8pm - morning",
         "Prague rave from top DJs",
