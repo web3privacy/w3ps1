@@ -52,7 +52,7 @@ themes:
   - title: Veksl
     desc: Easy onboarding to cryptocurrencies without KYC/AML using peer-to-peer tools is crucial for privacy. What options do we have today?
 ticketsIntro: Be a part of the first Web3Privacy Summit experience…
-ticketsNote: Tickets will go on sale in late February 2023.
+ticketsNote: Tickets will go on sale in April.
 ticketing: false
 ticketingUrl: https://tickets.web3privacy.info/w3ps1/
 ticketBasePrice: 99
@@ -61,7 +61,7 @@ ticketsDiscounts: |
   We also offer discounts for other groups such as active open-source contributors to privacy protocols, privacy (lunarpunk) advocates, full-time students, attendees from OECD low income countries, independent developers, etc. Feel free to request your special discount using the form:
 tickets:
   - title: All-day Access
-    price: €99
+    price: €49
     includes:
       - All talks & panels
       - Food and drinks included
@@ -71,7 +71,7 @@ tickets:
     hint: |
       Discounts: We offer various discounts up to 100%, see below
   - title: '#Lunarpunk Party'
-    price: €15
+    price: €10
     includes:
       - 8pm - morning
       - Prague rave from top DJs
