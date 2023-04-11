@@ -24318,7 +24318,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-c62feeda.js").then((n2) => n2.i), true ? ["./index-c62feeda.js","./tslib-06876cf5.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-0cea8e0a.js").then((n2) => n2.i), true ? ["./index-0cea8e0a.js","./tslib-170533ff.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24646,7 +24646,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-8d5b9c8b.js"), true ? ["./index-8d5b9c8b.js","./index-28e20bb4.js","./tslib-06876cf5.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-2a9c6043.js"), true ? ["./index-2a9c6043.js","./index-2a2c1cff.js","./tslib-170533ff.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24693,7 +24693,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-2d5fc1cb.js"), true ? ["./index-2d5fc1cb.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-425e4f20.js"), true ? ["./index-425e4f20.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24703,7 +24703,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-06a637b8.js"), true ? ["./index.es-06a637b8.js","./tslib-06876cf5.js","./index-28e20bb4.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-3d687c98.js"), true ? ["./index.es-3d687c98.js","./tslib-170533ff.js","./index-2a2c1cff.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27183,7 +27183,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-f99b0831.js"), true ? ["./index-f99b0831.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-898a3f6c.js"), true ? ["./index-898a3f6c.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
@@ -27194,7 +27194,7 @@ function get_each_context$1(ctx, list, i2) {
   child_ctx[18] = list[i2];
   return child_ctx;
 }
-function create_if_block_7(ctx) {
+function create_if_block_8(ctx) {
   let div0;
   let button;
   let t0;
@@ -27274,7 +27274,7 @@ function create_if_block_7(ctx) {
     }
   };
 }
-function create_if_block_6$1(ctx) {
+function create_if_block_7(ctx) {
   let div;
   let t0;
   let span;
@@ -27362,7 +27362,102 @@ function create_if_block_6$1(ctx) {
     }
   };
 }
-function create_if_block_5$1(ctx) {
+function create_else_block(ctx) {
+  let each_1_anchor;
+  let each_value = (
+    /*badges*/
+    ctx[7]
+  );
+  let each_blocks = [];
+  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+    each_blocks[i2] = create_each_block$1(get_each_context$1(ctx, each_value, i2));
+  }
+  return {
+    c() {
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].c();
+      }
+      each_1_anchor = empty();
+    },
+    l(nodes) {
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].l(nodes);
+      }
+      each_1_anchor = empty();
+    },
+    m(target, anchor) {
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].m(target, anchor);
+      }
+      insert_hydration(target, each_1_anchor, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*userBadges, badges, animateSection, redeemUrl, claimed, animateText, claimHandler, connected, data*/
+      729) {
+        each_value = /*badges*/
+        ctx2[7];
+        let i2;
+        for (i2 = 0; i2 < each_value.length; i2 += 1) {
+          const child_ctx = get_each_context$1(ctx2, each_value, i2);
+          if (each_blocks[i2]) {
+            each_blocks[i2].p(child_ctx, dirty);
+          } else {
+            each_blocks[i2] = create_each_block$1(child_ctx);
+            each_blocks[i2].c();
+            each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
+          }
+        }
+        for (; i2 < each_blocks.length; i2 += 1) {
+          each_blocks[i2].d(1);
+        }
+        each_blocks.length = each_value.length;
+      }
+    },
+    d(detaching) {
+      destroy_each(each_blocks, detaching);
+      if (detaching)
+        detach(each_1_anchor);
+    }
+  };
+}
+function create_if_block$1(ctx) {
+  let div;
+  let t0;
+  let br0;
+  let br1;
+  let t1;
+  return {
+    c() {
+      div = element("div");
+      t0 = text("Loading ...");
+      br0 = element("br");
+      br1 = element("br");
+      t1 = text("If you have any problems, please contact us in the public Signal group");
+    },
+    l(nodes) {
+      div = claim_element(nodes, "DIV", {});
+      var div_nodes = children(div);
+      t0 = claim_text(div_nodes, "Loading ...");
+      br0 = claim_element(div_nodes, "BR", {});
+      br1 = claim_element(div_nodes, "BR", {});
+      t1 = claim_text(div_nodes, "If you have any problems, please contact us in the public Signal group");
+      div_nodes.forEach(detach);
+    },
+    m(target, anchor) {
+      insert_hydration(target, div, anchor);
+      append_hydration(div, t0);
+      append_hydration(div, br0);
+      append_hydration(div, br1);
+      append_hydration(div, t1);
+    },
+    p: noop,
+    d(detaching) {
+      if (detaching)
+        detach(div);
+    }
+  };
+}
+function create_if_block_6$1(ctx) {
   let div;
   let t_value = (
     /*badge*/
@@ -27396,9 +27491,9 @@ function create_if_block_5$1(ctx) {
     }
   };
 }
-function create_if_block_1$1(ctx) {
+function create_if_block_2$1(ctx) {
   let div;
-  function select_block_type(ctx2, dirty) {
+  function select_block_type_1(ctx2, dirty) {
     var _a;
     if (
       /*claimed*/
@@ -27407,7 +27502,7 @@ function create_if_block_1$1(ctx) {
         ctx2[18].id
       ]
     )
-      return create_if_block_2$1;
+      return create_if_block_3$1;
     if (
       /*userBadges*/
       (_a = ctx2[3].badges[
@@ -27415,10 +27510,10 @@ function create_if_block_1$1(ctx) {
         ctx2[18].id
       ]) == null ? void 0 : _a.eligible
     )
-      return create_if_block_4$1;
-    return create_else_block_1;
+      return create_if_block_5$1;
+    return create_else_block_2;
   }
-  let current_block_type = select_block_type(ctx);
+  let current_block_type = select_block_type_1(ctx);
   let if_block = current_block_type(ctx);
   return {
     c() {
@@ -27441,7 +27536,7 @@ function create_if_block_1$1(ctx) {
       if_block.m(div, null);
     },
     p(ctx2, dirty) {
-      if (current_block_type === (current_block_type = select_block_type(ctx2)) && if_block) {
+      if (current_block_type === (current_block_type = select_block_type_1(ctx2)) && if_block) {
         if_block.p(ctx2, dirty);
       } else {
         if_block.d(1);
@@ -27459,7 +27554,7 @@ function create_if_block_1$1(ctx) {
     }
   };
 }
-function create_else_block_1(ctx) {
+function create_else_block_2(ctx) {
   let button;
   let t2;
   return {
@@ -27489,7 +27584,7 @@ function create_else_block_1(ctx) {
     }
   };
 }
-function create_if_block_4$1(ctx) {
+function create_if_block_5$1(ctx) {
   let button;
   let t2;
   let mounted;
@@ -27545,9 +27640,9 @@ function create_if_block_4$1(ctx) {
     }
   };
 }
-function create_if_block_2$1(ctx) {
+function create_if_block_3$1(ctx) {
   let if_block_anchor;
-  function select_block_type_1(ctx2, dirty) {
+  function select_block_type_2(ctx2, dirty) {
     if (
       /*claimed*/
       ctx2[4][
@@ -27555,10 +27650,10 @@ function create_if_block_2$1(ctx) {
         ctx2[18].id
       ].voucher
     )
-      return create_if_block_3$1;
-    return create_else_block;
+      return create_if_block_4$1;
+    return create_else_block_1;
   }
-  let current_block_type = select_block_type_1(ctx);
+  let current_block_type = select_block_type_2(ctx);
   let if_block = current_block_type(ctx);
   return {
     c() {
@@ -27574,7 +27669,7 @@ function create_if_block_2$1(ctx) {
       insert_hydration(target, if_block_anchor, anchor);
     },
     p(ctx2, dirty) {
-      if (current_block_type === (current_block_type = select_block_type_1(ctx2)) && if_block) {
+      if (current_block_type === (current_block_type = select_block_type_2(ctx2)) && if_block) {
         if_block.p(ctx2, dirty);
       } else {
         if_block.d(1);
@@ -27592,7 +27687,7 @@ function create_if_block_2$1(ctx) {
     }
   };
 }
-function create_else_block(ctx) {
+function create_else_block_1(ctx) {
   let t_value = (
     /*claimed*/
     (ctx[4][
@@ -27626,7 +27721,7 @@ function create_else_block(ctx) {
     }
   };
 }
-function create_if_block_3$1(ctx) {
+function create_if_block_4$1(ctx) {
   let t0;
   let a0;
   let t1_value = (
@@ -27752,7 +27847,7 @@ function create_if_block_3$1(ctx) {
     }
   };
 }
-function create_if_block$1(ctx) {
+function create_if_block_1$1(ctx) {
   let div;
   let t_value = (
     /*badge*/
@@ -27829,16 +27924,16 @@ function create_each_block$1(ctx) {
   let dispose;
   let if_block0 = (
     /*badge*/
-    ctx[18].shortname && create_if_block_5$1(ctx)
+    ctx[18].shortname && create_if_block_6$1(ctx)
   );
   let if_block1 = (
     /*connected*/
     ctx[6] && /*userBadges*/
-    ctx[3] && create_if_block_1$1(ctx)
+    ctx[3] && create_if_block_2$1(ctx)
   );
   let if_block2 = (
     /*badge*/
-    ctx[18].text && create_if_block$1(ctx)
+    ctx[18].text && create_if_block_1$1(ctx)
   );
   return {
     c() {
@@ -28016,7 +28111,7 @@ function create_each_block$1(ctx) {
         if (if_block1) {
           if_block1.p(ctx2, dirty);
         } else {
-          if_block1 = create_if_block_1$1(ctx2);
+          if_block1 = create_if_block_2$1(ctx2);
           if_block1.c();
           if_block1.m(div3, t11);
         }
@@ -28078,19 +28173,22 @@ function create_fragment$1(ctx) {
   let mounted;
   let dispose;
   let if_block0 = !/*connected*/
-  ctx[6] && create_if_block_7(ctx);
+  ctx[6] && create_if_block_8(ctx);
   let if_block1 = (
     /*connected*/
-    ctx[6] && create_if_block_6$1(ctx)
+    ctx[6] && create_if_block_7(ctx)
   );
-  let each_value = (
-    /*badges*/
-    ctx[7]
-  );
-  let each_blocks = [];
-  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block$1(get_each_context$1(ctx, each_value, i2));
+  function select_block_type(ctx2, dirty) {
+    if (
+      /*connected*/
+      ctx2[6] && /*userBadges*/
+      ctx2[3] === null
+    )
+      return create_if_block$1;
+    return create_else_block;
   }
+  let current_block_type = select_block_type(ctx);
+  let if_block2 = current_block_type(ctx);
   sveltemarkdown = new SvelteMarkdown({
     props: {
       source: (
@@ -28113,9 +28211,7 @@ function create_fragment$1(ctx) {
       t2 = text("Eligible ZK Badges / SBTs");
       t3 = space();
       div1 = element("div");
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].c();
-      }
+      if_block2.c();
       t4 = space();
       div2 = element("div");
       t5 = text("Other discounts (via form)");
@@ -28147,9 +28243,7 @@ function create_fragment$1(ctx) {
       t3 = claim_space(div5_nodes);
       div1 = claim_element(div5_nodes, "DIV", { class: true });
       var div1_nodes = children(div1);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].l(div1_nodes);
-      }
+      if_block2.l(div1_nodes);
       div1_nodes.forEach(detach);
       t4 = claim_space(div5_nodes);
       div2 = claim_element(div5_nodes, "DIV", { class: true });
@@ -28201,9 +28295,7 @@ function create_fragment$1(ctx) {
       append_hydration(div0, t2);
       append_hydration(div5, t3);
       append_hydration(div5, div1);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].m(div1, null);
-      }
+      if_block2.m(div1, null);
       append_hydration(div5, t4);
       append_hydration(div5, div2);
       append_hydration(div2, t5);
@@ -28231,7 +28323,7 @@ function create_fragment$1(ctx) {
         if (if_block0) {
           if_block0.p(ctx2, dirty);
         } else {
-          if_block0 = create_if_block_7(ctx2);
+          if_block0 = create_if_block_8(ctx2);
           if_block0.c();
           if_block0.m(t0.parentNode, t0);
         }
@@ -28246,7 +28338,7 @@ function create_fragment$1(ctx) {
         if (if_block1) {
           if_block1.p(ctx2, dirty);
         } else {
-          if_block1 = create_if_block_6$1(ctx2);
+          if_block1 = create_if_block_7(ctx2);
           if_block1.c();
           if_block1.m(t1.parentNode, t1);
         }
@@ -28254,25 +28346,15 @@ function create_fragment$1(ctx) {
         if_block1.d(1);
         if_block1 = null;
       }
-      if (dirty & /*userBadges, badges, animateSection, redeemUrl, claimed, animateText, claimHandler, connected, data*/
-      729) {
-        each_value = /*badges*/
-        ctx2[7];
-        let i2;
-        for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context$1(ctx2, each_value, i2);
-          if (each_blocks[i2]) {
-            each_blocks[i2].p(child_ctx, dirty);
-          } else {
-            each_blocks[i2] = create_each_block$1(child_ctx);
-            each_blocks[i2].c();
-            each_blocks[i2].m(div1, null);
-          }
+      if (current_block_type === (current_block_type = select_block_type(ctx2)) && if_block2) {
+        if_block2.p(ctx2, dirty);
+      } else {
+        if_block2.d(1);
+        if_block2 = current_block_type(ctx2);
+        if (if_block2) {
+          if_block2.c();
+          if_block2.m(div1, null);
         }
-        for (; i2 < each_blocks.length; i2 += 1) {
-          each_blocks[i2].d(1);
-        }
-        each_blocks.length = each_value.length;
       }
       const sveltemarkdown_changes = {};
       if (dirty & /*data*/
@@ -28307,7 +28389,7 @@ function create_fragment$1(ctx) {
         detach(t1);
       if (detaching)
         detach(div6);
-      destroy_each(each_blocks, detaching);
+      if_block2.d();
       destroy_component(sveltemarkdown);
       mounted = false;
       run_all(dispose);
@@ -30145,7 +30227,7 @@ function create_fragment(ctx) {
       attr(div25, "class", "grid lg:grid-cols-2 gap-10 md:w-2/3 mx-auto");
       attr(div26, "class", "middle-pane-medium pt-16 text-xl text-center mx-auto");
       attr(div27, "class", "section-subheader");
-      attr(div29, "class", "middle-pane-medium text-xl text-center mx-auto pt-10 pb-32");
+      attr(div29, "class", "middle-pane-medium text-xl text-center mx-auto pt-20 pb-32");
       attr(div30, "class", "bg-black");
       attr(div30, "id", "ticket");
       attr(div31, "class", "section-header");

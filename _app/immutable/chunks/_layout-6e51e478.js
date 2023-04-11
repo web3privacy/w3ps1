@@ -16,7 +16,7 @@ const data = {
   slogan: "Diving into the culture of the Web3 privacy industry",
   aggregator: "Prague Blockchain Week 2023",
   aggregatorUrl: "http://prgblockweek.com/",
-  sponsorUrl: "https://matrix.to/#/@tree:gwei.cz",
+  sponsorUrl: "https://prague.web3privacy.info/sponsors.pdf",
   intro: "If privacy is a human right, then we need to protect it.\n\nPrivacy advocates worldwide are coming together to discuss how to mainstream privacy within the Web3 industry. So it will become a cultural phenomenon embodying both decentralisation & anti-surveillance capitalism practices.\n\nThe conference complements the research projects [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).\n",
   themes: [
     {
@@ -74,8 +74,7 @@ const data = {
     }
   ],
   ticketsIntro: "Be a part of the first Web3Privacy Summit experience…",
-  ticketsNote: "Tickets will go on sale in April.",
-  ticketing: false,
+  ticketing: true,
   ticketingUrl: "https://tickets.web3privacy.info/w3ps1/",
   ticketBasePrice: 49,
   ticketsDiscountForm: "https://attend.web3privacy.info",
@@ -121,7 +120,7 @@ const data = {
     },
     {
       title: "When will tickets go on sale? What will be the payment options?",
-      text: "Tickets will go on sale in late February 2023. Payment will be possible via credit card, Bitcoin (on-chain), Lightning Network or possibly other cryptocurrencies."
+      text: "Tickets will go on sale in April 2023. Payment will be possible via credit card, Bitcoin (on-chain), Lightning Network or possibly other cryptocurrencies."
     },
     {
       title: "Do you offer any discounts?",
