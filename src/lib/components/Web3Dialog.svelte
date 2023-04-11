@@ -129,6 +129,9 @@
     <div class="m-auto">
         <div class="text-2xl font-bold mb-10" on:mouseenter={animateText}>Eligible ZK Badges / SBTs</div>
         <div class="pb-8 lg:w-2/3 xl:w-2/3 mx-auto">
+            {#if connected && userBadges === null}
+                <div>Loading ...<br><br>If you have any problems, please contact us in the public Signal group</div>
+            {:else}
             {#each badges as badge}
                 <div class="lg:flex justify-center mb-10 badge {userBadges?.badges && userBadges?.badges[badge?.id]?.eligible ? 'bg-white text-black eligible' : 'bg-[#0d1117]'} p-4" on:mouseenter={animateSection(30)}>
                     <div class="w-28 lg:w-40 mr-6 inline-block xl:block"><img src={badge.img} class="w-full {connected && userBadges && userBadges.badges[badge.id]?.eligible ? '' : 'grayscale'} badge-image" /></div>
@@ -164,6 +167,7 @@
                     </div>
                 </div>
             {/each}
+            {/if}
         </div>
         <div class="text-2xl font-bold mb-8" on:mouseenter={animateText}>Other discounts (via form)</div>
         <div class="text-lg md:w-4/5 mx-auto">

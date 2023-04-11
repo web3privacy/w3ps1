@@ -15,7 +15,7 @@ license: This web is built with [SvelteKit](https://kit.svelte.dev/) and is [ope
 slogan: Diving into the culture of the Web3 privacy industry
 aggregator: Prague Blockchain Week 2023
 aggregatorUrl: http://prgblockweek.com/
-sponsorUrl: https://matrix.to/#/@tree:gwei.cz
+sponsorUrl: https://prague.web3privacy.info/sponsors.pdf
 intro: |
   If privacy is a human right, then we need to protect it.
 
@@ -52,8 +52,8 @@ themes:
   - title: Veksl
     desc: Easy onboarding to cryptocurrencies without KYC/AML using peer-to-peer tools is crucial for privacy. What options do we have today?
 ticketsIntro: Be a part of the first Web3Privacy Summit experience…
-ticketsNote: Tickets will go on sale in April.
-ticketing: false
+#ticketsNote: Tickets will go on sale in April.
+ticketing: true
 ticketingUrl: https://tickets.web3privacy.info/w3ps1/
 ticketBasePrice: 49
 ticketsDiscountForm: https://attend.web3privacy.info
@@ -89,7 +89,7 @@ faq:
   - title: Who is the event for?
     text: Our event is for 300 people interested in privacy topics in the Web3 industry. We aim to make our content accessible to everyone - rather than going into deep technical detail, we'll discuss privacy topics in their broader context.
   - title: When will tickets go on sale? What will be the payment options?
-    text: Tickets will go on sale in late February 2023. Payment will be possible via credit card, Bitcoin (on-chain), Lightning Network or possibly other cryptocurrencies.
+    text: Tickets will go on sale in April 2023. Payment will be possible via credit card, Bitcoin (on-chain), Lightning Network or possibly other cryptocurrencies.
   - title: Do you offer any discounts?
     text: Yes, we do! We offer discounted tickets (up to 100%!) for independent developers, students and especially active privacy advocates or open-source contributors to private protocols or tools. If you are interested in a discount, please fill out [this form](https://attend.web3privacy.info).
   #- title: Why event isn't admission free?

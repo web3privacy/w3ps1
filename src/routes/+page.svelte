@@ -182,7 +182,7 @@
 			<div class="mt-8 text-xl">{data.config.ticketsNote}</div>
 		{/if}
 	</div>
-	<div class="middle-pane-medium text-xl text-center mx-auto pt-10 pb-32">
+	<div class="middle-pane-medium text-xl text-center mx-auto pt-20 pb-32">
 		<div class="section-subheader" on:mouseenter={animateText}>Get your discount</div>
 		<div>
 			<Web3Dialog {data} />
