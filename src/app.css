@@ -132,7 +132,7 @@
 	}
 	.topic-item,
 	.topic-item .topic-header {
-		@apply cursor-help transition-all duration-300;
+		@apply cursor-help transition-all duration-500;
 	}
 	.topic-item:hover .topic-header {
 		@apply bg-white text-black;
@@ -184,7 +184,7 @@
 		@apply lowercase;
 	}
 	.topic-item:hover .topic-img {
-		@apply invert;
+		@apply invert transition-all duration-500;
 	}
 	.person-item:hover .speaker-name {
 		@apply lowercase;
