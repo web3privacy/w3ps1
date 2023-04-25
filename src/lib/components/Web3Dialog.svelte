@@ -148,81 +148,86 @@
 					group
 				</div>
 			{:else}
-				{#each badges as badge}
-					<div
-						class="lg:flex justify-center mb-4 badge {userBadges?.badges &&
-						userBadges?.badges[badge?.id]?.eligible
-							? 'bg-white text-black eligible'
-							: ' border-gray-800'} p-6"
-						on:mouseenter={animateSection(30)}
-					>
-						<div class="w-24 lg:w-32 mr-6 inline-block xl:block">
-							<img
-								src={badge.img}
-								class="w-full {connected && userBadges && userBadges.badges[badge.id]?.eligible
-									? ''
-									: 'grayscale'} badge-image"
-							/>
-						</div>
-						<div class="lg:text-left w-full">
-							{#if badge.shortname}<div class="uppercase font-bold">{badge.shortname}</div>{/if}
-							<div class={badge.shortname ? '' : 'font-bold'}>
-								<a
-									href={badge.url}
-									target="_blank"
-									class="external animate-section font-mono2 lowercase">{badge.name}</a
-								>
+				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-12">
+					{#each badges as badge}
+						<div
+							class="justify-center text-center badge {userBadges?.badges &&
+							userBadges?.badges[badge?.id]?.eligible
+								? 'bg-white text-black eligible'
+								: ' border-gray-800'}"
+							on:mouseenter={animateSection(30)}
+						>
+							<div class="mb-6 text-center">
+								<img
+									src={badge.img}
+									class="w-20 h-28 lg:w-32 lg:h-32 {connected &&
+									userBadges &&
+									userBadges.badges[badge.id]?.eligible
+										? ''
+										: 'grayscale'} badge-image inline-block object-contain"
+								/>
 							</div>
-							<div class="mt-2">
-								Price: <span class="font-bold"
-									>€{data.config.ticketBasePrice -
-										data.config.ticketBasePrice * (badge.discount / 100)}</span
-								>
-								({badge.discount}% discount)
-							</div>
-							{#if connected && userBadges}
-								<div class="pt-2">
-									{#if claimed[badge.id]}
-										{#if claimed[badge.id].voucher}
-											Your personal voucher: <a
-												href={redeemUrl + claimed[badge.id].voucher}
-												target="_blank"
-												class="underline hover:no-underline external">{claimed[badge.id].voucher}</a
-											>
-											<div class="pt-2">
-												<a href={redeemUrl + claimed[badge.id].voucher} target="_blank"
-													><button
-														class="button-inverse"
-														on:mouseenter={(ev) => animateText(ev, 15)}
-														>Buy ticket using voucher</button
-													></a
-												>
-											</div>
-										{:else}
-											{claimed[badge.id].text || 'Please sign message in your wallet ..'}
-										{/if}
-									{:else if userBadges.badges[badge.id]?.eligible}
-										<button
-											class="button-inverse"
-											on:click={claimHandler(badge.id)}
-											on:mouseenter={(ev) => animateText(ev, 15)}>Eligible! Get discount!</button
-										>
-									{:else}
-										<button class="button button-inactive text-gray-600 border-gray-600"
-											>Not eligible</button
-										>
-									{/if}
+							<div class="w-full">
+								{#if badge.shortname}<div class="uppercase font-bold">{badge.shortname}</div>{/if}
+								<div class={badge.shortname ? '' : 'font-bold'}>
+									<a
+										href={badge.url}
+										target="_blank"
+										class="external animate-section font-mono2 lowercase">{badge.name}</a
+									>
 								</div>
-							{/if}
-							{#if badge.text}
-								<div class="text-sm leading-6 pt-2 text-mild">{badge.text}</div>
-							{/if}
+								<div class="mt-4">
+									Ticket: <span class="font-bold"
+										>€{data.config.ticketBasePrice -
+											data.config.ticketBasePrice * (badge.discount / 100)}</span
+									>
+									({badge.discount}% discount)
+								</div>
+								{#if connected && userBadges}
+									<div class="pt-2">
+										{#if claimed[badge.id]}
+											{#if claimed[badge.id].voucher}
+												Your personal voucher: <a
+													href={redeemUrl + claimed[badge.id].voucher}
+													target="_blank"
+													class="underline hover:no-underline external"
+													>{claimed[badge.id].voucher}</a
+												>
+												<div class="pt-2">
+													<a href={redeemUrl + claimed[badge.id].voucher} target="_blank"
+														><button
+															class="button-inverse"
+															on:mouseenter={(ev) => animateText(ev, 15)}
+															>Buy ticket using voucher</button
+														></a
+													>
+												</div>
+											{:else}
+												{claimed[badge.id].text || 'Please sign message in your wallet ..'}
+											{/if}
+										{:else if userBadges.badges[badge.id]?.eligible}
+											<button
+												class="button-inverse"
+												on:click={claimHandler(badge.id)}
+												on:mouseenter={(ev) => animateText(ev, 15)}>Eligible! Get discount!</button
+											>
+										{:else}
+											<button class="button button-inactive text-gray-600 border-gray-600"
+												>Not eligible</button
+											>
+										{/if}
+									</div>
+								{/if}
+								{#if badge.text}
+									<div class="text-sm leading-6 pt-4 text-mild">{badge.text}</div>
+								{/if}
+							</div>
 						</div>
-					</div>
-				{/each}
+					{/each}
+				</div>
 			{/if}
 		</div>
-		<div class="text-xl font-mono2 lowercase mb-8" on:mouseenter={animateText}>
+		<div class="text-xl font-mono2 lowercase mt-12 mb-8" on:mouseenter={animateText}>
 			Other discounts (via form)
 		</div>
 		<div class="text-mild">
