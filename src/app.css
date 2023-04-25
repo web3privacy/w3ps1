@@ -15,7 +15,7 @@
 	}
 
 	#header-shade {
-		@apply h-16 bg-gradient-to-b from-black to-transparent;
+		@apply h-10 bg-gradient-to-b from-black to-transparent;
 	}
 
 	footer a,
