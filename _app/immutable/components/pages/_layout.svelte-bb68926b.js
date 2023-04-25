@@ -270,7 +270,7 @@ function create_if_block(ctx) {
       this.h();
     },
     h() {
-      attr(div, "class", "mt-4 text-supermild");
+      attr(div, "class", "mt-4 text-sm text-supermild");
     },
     m(target, anchor) {
       insert_hydration(target, div, anchor);
@@ -725,7 +725,7 @@ function create_fragment(ctx) {
       ctx[0].config.twitter);
       attr(a5, "href", a5_href_value = "https://twitter.com/" + /*data*/
       ctx[0].config.twitter);
-      attr(a5, "class", "text-2xl no-underline hover:underline external animate-section");
+      attr(a5, "class", "text-xl no-underline hover:underline external animate-section");
       attr(a5, "target", "_blank");
       attr(div20, "class", "");
       attr(div21, "class", "mt-4 text-mild");
