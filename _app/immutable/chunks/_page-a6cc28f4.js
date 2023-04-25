@@ -24325,7 +24325,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-5f67507c.js").then((n2) => n2.i), true ? ["./index-5f67507c.js","./tslib-48359c00.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-12238855.js").then((n2) => n2.i), true ? ["./index-12238855.js","./tslib-0483d0ed.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24653,7 +24653,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-6a460f88.js"), true ? ["./index-6a460f88.js","./index-de467ff7.js","./tslib-48359c00.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-57591068.js"), true ? ["./index-57591068.js","./index-720189d2.js","./tslib-0483d0ed.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24700,7 +24700,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-952c4631.js"), true ? ["./index-952c4631.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-314b4321.js"), true ? ["./index-314b4321.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24710,7 +24710,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-8c69346f.js"), true ? ["./index.es-8c69346f.js","./tslib-48359c00.js","./index-de467ff7.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-3ea44aaa.js"), true ? ["./index.es-3ea44aaa.js","./tslib-0483d0ed.js","./index-720189d2.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27190,7 +27190,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-2a696668.js"), true ? ["./index-2a696668.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-8da73ccb.js"), true ? ["./index-8da73ccb.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
@@ -28611,8 +28611,8 @@ function create_each_block_5(ctx) {
       ctx[9].img + ".webp"))
         attr(img, "src", img_src_value);
       attr(div0, "class", "topic-header inline-block px-3 py-1.5 text-lg");
-      attr(div1, "class", "mt-6 text-mild markdown animate-section text-sm leading-7");
-      attr(div2, "class", "px-2 py-4 topic-item text-center");
+      attr(div1, "class", "mt-6 text-mild markdown animate-section text-sm leading-6");
+      attr(div2, "class", "topic-item text-center mb-6");
     },
     m(target, anchor) {
       insert_hydration(target, div2, anchor);
@@ -30224,7 +30224,7 @@ function create_fragment(ctx) {
       attr(div0, "class", "markdown multiline pt-10");
       attr(div1, "class", "py-16 md:py-32 md:w-5/6 mx-auto text-mild");
       attr(div2, "class", "section-header");
-      attr(div3, "class", "grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-10");
+      attr(div3, "class", "grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6");
       attr(div4, "class", "middle-pane-medium pb-16 mx-auto");
       attr(div5, "class", "bg-black");
       attr(div5, "id", "about");

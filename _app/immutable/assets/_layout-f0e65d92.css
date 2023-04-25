@@ -903,10 +903,6 @@ person-item:hover .text-mild,
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
-.px-2{
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -946,10 +942,6 @@ person-item:hover .text-mild,
 .py-2\.5{
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
-}
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 .pb-16{
   padding-bottom: 4rem;
@@ -1051,9 +1043,6 @@ person-item:hover .text-mild,
 .leading-6{
   line-height: 1.5rem;
 }
-.leading-7{
-  line-height: 1.75rem;
-}
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1118,11 +1107,11 @@ person-item:hover .text-mild,
   .md\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .md\:gap-10{
-    gap: 2.5rem;
-  }
   .md\:gap-16{
     gap: 4rem;
+  }
+  .md\:gap-6{
+    gap: 1.5rem;
   }
   .md\:py-32{
     padding-top: 8rem;
