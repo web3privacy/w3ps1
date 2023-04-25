@@ -1,4 +1,4 @@
-import { e as commonjsGlobal } from "./_page-a6cc28f4.js";
+import { e as commonjsGlobal } from "./_page-31477f49.js";
 var eventsExports = {};
 var events = {
   get exports() {
