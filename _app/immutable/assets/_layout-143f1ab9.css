@@ -943,11 +943,14 @@ person-item:hover .text-mild,
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
 }
+.pb-0{
+  padding-bottom: 0px;
+}
+.pb-0\.5{
+  padding-bottom: 0.125rem;
+}
 .pb-16{
   padding-bottom: 4rem;
-}
-.pb-2{
-  padding-bottom: 0.5rem;
 }
 .pb-3{
   padding-bottom: 0.75rem;

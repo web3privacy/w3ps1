@@ -683,7 +683,7 @@ function create_fragment(ctx) {
       attr(div2, "class", "flex items-center lg:gap-8 xl:gap-14 text-base darker");
       attr(div3, "class", "flex my-1");
       attr(div4, "class", "middle-pane-big");
-      attr(div5, "class", "bg-black pb-2 pt-2");
+      attr(div5, "class", "bg-black pb-0.5 pt-2");
       attr(div6, "id", "header-shade");
       attr(div7, "class", "fixed w-full h-18 z-40 ");
       attr(div7, "id", "header");
