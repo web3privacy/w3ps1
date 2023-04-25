@@ -153,7 +153,7 @@
 						class="lg:flex justify-center mb-4 badge {userBadges?.badges &&
 						userBadges?.badges[badge?.id]?.eligible
 							? 'bg-white text-black eligible'
-							: 'border border-gray-800'} p-6"
+							: ' border-gray-800'} p-6"
 						on:mouseenter={animateSection(30)}
 					>
 						<div class="w-24 lg:w-32 mr-6 inline-block xl:block">

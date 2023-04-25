@@ -22,7 +22,7 @@
 
 <div class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
 	{#each items.map(getPerson) as item}
-		<div class="border hover:bg-white hover:text-black person-item" on:mouseenter={animateSpeaker}>
+		<div class=" hover:bg-white hover:text-black person-item" on:mouseenter={animateSpeaker}>
 			<div>
 				<img src="/people/{item.img}" class="grayscale invert aspect-square object-cover w-full" />
 			</div>
