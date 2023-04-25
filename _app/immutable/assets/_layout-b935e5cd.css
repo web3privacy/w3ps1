@@ -782,6 +782,9 @@ person-item:hover .text-mild,
 .mt-8{
   margin-top: 2rem;
 }
+.block{
+  display: block;
+}
 .inline-block{
   display: inline-block;
 }
@@ -1090,6 +1093,9 @@ person-item:hover .text-mild,
   text-decoration-line: none;
 }
 @media (min-width: 640px){
+  .sm\:inline-block{
+    display: inline-block;
+  }
   .sm\:w-16{
     width: 4rem;
   }

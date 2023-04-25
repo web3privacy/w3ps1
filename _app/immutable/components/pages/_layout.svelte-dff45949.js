@@ -690,11 +690,11 @@ function create_fragment(ctx) {
       attr(div8, "class", "text-4xl md:text-6xl font-bold mb-4 md:mb-8 animation-crypt font-mono2 font-thin lowercase");
       attr(p0, "class", "italic");
       attr(div9, "class", "mt-12 text-xl mx-4");
-      attr(span, "class", "font-medium");
+      attr(span, "class", "font-medium block sm:inline-block");
       attr(a1, "href", a1_href_value = /*data*/
       ctx[0].config.venueMapUrl);
       attr(a1, "target", "_blank");
-      attr(a1, "class", "underline hover:underline font-medium");
+      attr(a1, "class", "underline hover:no-underline font-medium");
       attr(div10, "class", "px-6 py-2.5 inline-block font-medium");
       attr(div11, "class", "m-1 button-inverse");
       attr(button1, "class", "uppercase text-lg w-full");
