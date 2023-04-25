@@ -187,7 +187,7 @@
 						</a>
 						<a
 							href="https://twitter.com/{data.config.twitter}"
-							class="text-2xl no-underline hover:underline external animate-section"
+							class="text-xl no-underline hover:underline external animate-section"
 							target="_blank"
 						>
 							@{data.config.twitter}
@@ -197,7 +197,7 @@
 						<SvelteMarkdown source={data.config.authors} />
 					</div>
 					{#if data.config.license}
-						<div class="mt-4 text-supermild">
+						<div class="mt-4 text-sm text-supermild">
 							<SvelteMarkdown source={data.config.license} />
 						</div>
 					{/if}

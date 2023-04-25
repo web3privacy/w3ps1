@@ -15,10 +15,8 @@ JSON data about `w3ps1`:
 
 - Tree ([@treecz](https://twitter.com/treecz))
 - Mykola Siusko ([@nicksvyaznoy](https://twitter.com/nicksvyaznoy))
-- Roman Mazur ([@romanmazur](https://twitter.com/romanmazur))
-- Hedvika ([@HedvikaPa](https://twitter.com/HedvikaPa))
-- Adam Sobotka ([@vorcigernix](https://twitter.com/vorcigernix))
 - Coinmandeer ([@KeenOfCoin](https://twitter.com/KeenOfCoin))
+- Roman Mazur ([@romanmazur](https://twitter.com/romanmazur))
 
 ## License
 
