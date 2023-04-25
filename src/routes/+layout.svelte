@@ -141,11 +141,11 @@
 				<div class="mt-14 text-lg md:text-xl uppercase">
 					<div class="inline-block bg-white text-black font-medium md:w-auto w-3/4">
 						<div class="px-6 py-2.5 inline-block font-medium">
-							<span class="font-medium">{data.config.date}</span> AT
+							<span class="font-medium block sm:inline-block">{data.config.date}</span> AT
 							<a
 								href={data.config.venueMapUrl}
 								target="_blank"
-								class="underline hover:underline font-medium">{data.config.venue}</a
+								class="underline hover:no-underline font-medium">{data.config.venue}</a
 							>
 						</div>
 						<div class="inline-block w-full md:w-auto">
