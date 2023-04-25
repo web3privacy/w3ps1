@@ -27,12 +27,12 @@
 			</div>
 		</div>
 		<div class="section-header" on:mouseenter={animateText}>Main topics</div>
-		<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-10">
+		<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
 			{#each data.config.themes as ti}
-				<div class="px-2 py-4 topic-item text-center" on:mouseenter={animateSection(5)}>
+				<div class="topic-item text-center mb-6" on:mouseenter={animateSection(5)}>
 					<img class="topic-img" src="/topics/{ti.img}.webp" />
 					<div class="topic-header inline-block px-3 py-1.5 text-lg">{ti.title.toUpperCase()}</div>
-					<div class="mt-6 text-mild markdown animate-section text-sm leading-7">
+					<div class="mt-6 text-mild markdown animate-section text-sm leading-6">
 						<SvelteMarkdown source={ti.desc} />
 					</div>
 				</div>
