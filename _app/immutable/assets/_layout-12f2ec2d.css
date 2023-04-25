@@ -656,7 +656,7 @@ person-item:hover .text-mild,
   cursor: help;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
+  transition-duration: 500ms;
 }
 .topic-item:hover .topic-header{
   --tw-bg-opacity: 1;
@@ -716,6 +716,9 @@ person-item:hover .text-mild,
 .topic-item:hover .topic-img{
   --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
 }
 .person-item:hover .speaker-name{
   text-transform: lowercase;
