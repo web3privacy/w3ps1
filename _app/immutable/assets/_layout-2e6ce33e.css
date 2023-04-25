@@ -683,6 +683,19 @@ person-item:hover .text-mild,
 .ticket-item:hover .ticket-img {
 		filter: invert(100%);
 	}
+.ticket-item:hover .ticket-bg{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.ticket-item .ticket-bg {
+		z-index: -2;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #010101;
+	}
 .fixed{
   position: fixed;
 }

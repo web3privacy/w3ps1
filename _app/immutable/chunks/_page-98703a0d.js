@@ -1,4 +1,4 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, l as claim_element, m as children, h as detach, n as attr, b as insert_hydration, f as transition_in, g as group_outros, d as check_outros, t as transition_out, M as destroy_each, a as space, q as text, c as claim_space, r as claim_text, G as src_url_equal, H as append_hydration, I as listen, u as set_data, x as create_component, y as claim_component, z as mount_component, A as destroy_component, N as run_all, Z as component_subscribe, _ as is_function, e as empty, C as noop, $ as head_selector } from "./index-88d77172.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, l as claim_element, m as children, h as detach, n as attr, b as insert_hydration, f as transition_in, g as group_outros, d as check_outros, t as transition_out, M as destroy_each, a as space, q as text, c as claim_space, r as claim_text, G as src_url_equal, H as append_hydration, I as listen, u as set_data, x as create_component, y as claim_component, z as mount_component, A as destroy_component, N as run_all, Z as component_subscribe, _ as is_function, e as empty, C as noop, $ as head_selector, p as set_style } from "./index-88d77172.js";
 import { a as animateText, S as SvelteMarkdown, b as animateSection } from "./helpers-c3e656fe.js";
 import { l as client$1, w as writable } from "./singletons-0b808b86.js";
 import { _ as __vitePreload } from "./preload-helper-f8376bb0.js";
@@ -24325,7 +24325,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-00e4ec39.js").then((n2) => n2.i), true ? ["./index-00e4ec39.js","./tslib-e37f6339.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-5f67507c.js").then((n2) => n2.i), true ? ["./index-5f67507c.js","./tslib-48359c00.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24653,7 +24653,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-cdba1e76.js"), true ? ["./index-cdba1e76.js","./index-19f7bbcb.js","./tslib-e37f6339.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-6a460f88.js"), true ? ["./index-6a460f88.js","./index-de467ff7.js","./tslib-48359c00.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24700,7 +24700,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-20f1ac86.js"), true ? ["./index-20f1ac86.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-952c4631.js"), true ? ["./index-952c4631.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24710,7 +24710,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-add2eb2d.js"), true ? ["./index.es-add2eb2d.js","./tslib-e37f6339.js","./index-19f7bbcb.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-8c69346f.js"), true ? ["./index.es-8c69346f.js","./tslib-48359c00.js","./index-de467ff7.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27190,7 +27190,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-f7642ca1.js"), true ? ["./index-f7642ca1.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-2a696668.js"), true ? ["./index-2a696668.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
@@ -29236,32 +29236,35 @@ function create_if_block_2(ctx) {
   };
 }
 function create_each_block_1(ctx) {
-  let div3;
+  let div5;
   let div0;
   let t0;
   let div1;
+  let t1;
+  let div4;
+  let div2;
   let a0;
-  let t1_value = (
+  let t2_value = (
     /*tt*/
     ctx[6].title + ""
   );
-  let t1;
-  let a0_href_value;
   let t2;
-  let div2;
+  let a0_href_value;
+  let t3;
+  let div3;
   let a1;
-  let t3_value = (
+  let t4_value = (
     /*tt*/
     ctx[6].price + ""
   );
-  let t3;
-  let a1_href_value;
   let t4;
-  let ul;
+  let a1_href_value;
   let t5;
+  let ul;
   let t6;
   let t7;
-  let div3_class_value;
+  let t8;
+  let div5_class_value;
   let current;
   let mounted;
   let dispose;
@@ -29283,111 +29286,125 @@ function create_each_block_1(ctx) {
   );
   return {
     c() {
-      div3 = element("div");
+      div5 = element("div");
       div0 = element("div");
       t0 = space();
       div1 = element("div");
-      a0 = element("a");
-      t1 = text(t1_value);
-      t2 = space();
+      t1 = space();
+      div4 = element("div");
       div2 = element("div");
+      a0 = element("a");
+      t2 = text(t2_value);
+      t3 = space();
+      div3 = element("div");
       a1 = element("a");
-      t3 = text(t3_value);
-      t4 = space();
+      t4 = text(t4_value);
+      t5 = space();
       ul = element("ul");
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
         each_blocks[i2].c();
       }
-      t5 = space();
+      t6 = space();
       if (if_block0)
         if_block0.c();
-      t6 = space();
+      t7 = space();
       if (if_block1)
         if_block1.c();
-      t7 = space();
+      t8 = space();
       this.h();
     },
     l(nodes) {
-      div3 = claim_element(nodes, "DIV", { class: true });
-      var div3_nodes = children(div3);
-      div0 = claim_element(div3_nodes, "DIV", { class: true });
+      div5 = claim_element(nodes, "DIV", { class: true });
+      var div5_nodes = children(div5);
+      div0 = claim_element(div5_nodes, "DIV", { class: true });
       children(div0).forEach(detach);
-      t0 = claim_space(div3_nodes);
-      div1 = claim_element(div3_nodes, "DIV", { class: true });
-      var div1_nodes = children(div1);
-      a0 = claim_element(div1_nodes, "A", { href: true, class: true });
-      var a0_nodes = children(a0);
-      t1 = claim_text(a0_nodes, t1_value);
-      a0_nodes.forEach(detach);
-      div1_nodes.forEach(detach);
-      t2 = claim_space(div3_nodes);
-      div2 = claim_element(div3_nodes, "DIV", { class: true });
+      t0 = claim_space(div5_nodes);
+      div1 = claim_element(div5_nodes, "DIV", { class: true });
+      children(div1).forEach(detach);
+      t1 = claim_space(div5_nodes);
+      div4 = claim_element(div5_nodes, "DIV", { style: true });
+      var div4_nodes = children(div4);
+      div2 = claim_element(div4_nodes, "DIV", { class: true });
       var div2_nodes = children(div2);
-      a1 = claim_element(div2_nodes, "A", { href: true });
-      var a1_nodes = children(a1);
-      t3 = claim_text(a1_nodes, t3_value);
-      a1_nodes.forEach(detach);
+      a0 = claim_element(div2_nodes, "A", { href: true, class: true });
+      var a0_nodes = children(a0);
+      t2 = claim_text(a0_nodes, t2_value);
+      a0_nodes.forEach(detach);
       div2_nodes.forEach(detach);
-      t4 = claim_space(div3_nodes);
-      ul = claim_element(div3_nodes, "UL", { class: true });
+      t3 = claim_space(div4_nodes);
+      div3 = claim_element(div4_nodes, "DIV", { class: true });
+      var div3_nodes = children(div3);
+      a1 = claim_element(div3_nodes, "A", { href: true });
+      var a1_nodes = children(a1);
+      t4 = claim_text(a1_nodes, t4_value);
+      a1_nodes.forEach(detach);
+      div3_nodes.forEach(detach);
+      t5 = claim_space(div4_nodes);
+      ul = claim_element(div4_nodes, "UL", { class: true });
       var ul_nodes = children(ul);
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
         each_blocks[i2].l(ul_nodes);
       }
       ul_nodes.forEach(detach);
-      t5 = claim_space(div3_nodes);
+      t6 = claim_space(div4_nodes);
       if (if_block0)
-        if_block0.l(div3_nodes);
-      t6 = claim_space(div3_nodes);
+        if_block0.l(div4_nodes);
+      t7 = claim_space(div4_nodes);
       if (if_block1)
-        if_block1.l(div3_nodes);
-      t7 = claim_space(div3_nodes);
-      div3_nodes.forEach(detach);
+        if_block1.l(div4_nodes);
+      div4_nodes.forEach(detach);
+      t8 = claim_space(div5_nodes);
+      div5_nodes.forEach(detach);
       this.h();
     },
     h() {
-      attr(div0, "class", "ticket-img");
+      attr(div0, "class", "ticket-bg");
+      attr(div1, "class", "ticket-img");
       attr(a0, "href", a0_href_value = /*data*/
       ctx[0].config.ticketingUrl);
       attr(a0, "class", "animate-section");
-      attr(div1, "class", "text-2xl uppercase");
+      attr(div2, "class", "text-2xl uppercase");
       attr(a1, "href", a1_href_value = /*data*/
       ctx[0].config.ticketingUrl);
-      attr(div2, "class", "text-2xl mt-5 font-bold");
+      attr(div3, "class", "text-2xl mt-5 font-bold");
       attr(ul, "class", "mt-8 text-left list-disc px-6");
-      attr(div3, "class", div3_class_value = "ticket-item " + /*tt*/
-      ctx[6].ticketTypeClass + " border py-10 px-10 hover:text-black hover:bg-white " + /*data*/
+      set_style(div4, "z-index", "1");
+      attr(div5, "class", div5_class_value = "ticket-item " + /*tt*/
+      ctx[6].ticketTypeClass + " border py-10 px-10 hover:text-black " + /*data*/
       (ctx[0].config.ticketing ? "cursor-pointer" : ""));
     },
     m(target, anchor) {
-      insert_hydration(target, div3, anchor);
-      append_hydration(div3, div0);
-      append_hydration(div3, t0);
-      append_hydration(div3, div1);
-      append_hydration(div1, a0);
-      append_hydration(a0, t1);
-      append_hydration(div3, t2);
-      append_hydration(div3, div2);
-      append_hydration(div2, a1);
-      append_hydration(a1, t3);
-      append_hydration(div3, t4);
-      append_hydration(div3, ul);
+      insert_hydration(target, div5, anchor);
+      append_hydration(div5, div0);
+      append_hydration(div5, t0);
+      append_hydration(div5, div1);
+      append_hydration(div5, t1);
+      append_hydration(div5, div4);
+      append_hydration(div4, div2);
+      append_hydration(div2, a0);
+      append_hydration(a0, t2);
+      append_hydration(div4, t3);
+      append_hydration(div4, div3);
+      append_hydration(div3, a1);
+      append_hydration(a1, t4);
+      append_hydration(div4, t5);
+      append_hydration(div4, ul);
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
         each_blocks[i2].m(ul, null);
       }
-      append_hydration(div3, t5);
+      append_hydration(div4, t6);
       if (if_block0)
-        if_block0.m(div3, null);
-      append_hydration(div3, t6);
+        if_block0.m(div4, null);
+      append_hydration(div4, t7);
       if (if_block1)
-        if_block1.m(div3, null);
-      append_hydration(div3, t7);
+        if_block1.m(div4, null);
+      append_hydration(div5, t8);
       current = true;
       if (!mounted) {
         dispose = [
-          listen(div3, "mouseenter", animateSection(40)),
+          listen(div5, "mouseenter", animateSection(40)),
           listen(
-            div3,
+            div5,
             "click",
             /*click_handler*/
             ctx[2]
@@ -29398,18 +29415,18 @@ function create_each_block_1(ctx) {
     },
     p(ctx2, dirty) {
       if ((!current || dirty & /*data*/
-      1) && t1_value !== (t1_value = /*tt*/
+      1) && t2_value !== (t2_value = /*tt*/
       ctx2[6].title + ""))
-        set_data(t1, t1_value);
+        set_data(t2, t2_value);
       if (!current || dirty & /*data*/
       1 && a0_href_value !== (a0_href_value = /*data*/
       ctx2[0].config.ticketingUrl)) {
         attr(a0, "href", a0_href_value);
       }
       if ((!current || dirty & /*data*/
-      1) && t3_value !== (t3_value = /*tt*/
+      1) && t4_value !== (t4_value = /*tt*/
       ctx2[6].price + ""))
-        set_data(t3, t3_value);
+        set_data(t4, t4_value);
       if (!current || dirty & /*data*/
       1 && a1_href_value !== (a1_href_value = /*data*/
       ctx2[0].config.ticketingUrl)) {
@@ -29444,7 +29461,7 @@ function create_each_block_1(ctx) {
         } else {
           if_block0 = create_if_block_3(ctx2);
           if_block0.c();
-          if_block0.m(div3, t6);
+          if_block0.m(div4, t7);
         }
       } else if (if_block0) {
         if_block0.d(1);
@@ -29464,7 +29481,7 @@ function create_each_block_1(ctx) {
           if_block1 = create_if_block_2(ctx2);
           if_block1.c();
           transition_in(if_block1, 1);
-          if_block1.m(div3, t7);
+          if_block1.m(div4, null);
         }
       } else if (if_block1) {
         group_outros();
@@ -29474,10 +29491,10 @@ function create_each_block_1(ctx) {
         check_outros();
       }
       if (!current || dirty & /*data*/
-      1 && div3_class_value !== (div3_class_value = "ticket-item " + /*tt*/
-      ctx2[6].ticketTypeClass + " border py-10 px-10 hover:text-black hover:bg-white " + /*data*/
+      1 && div5_class_value !== (div5_class_value = "ticket-item " + /*tt*/
+      ctx2[6].ticketTypeClass + " border py-10 px-10 hover:text-black " + /*data*/
       (ctx2[0].config.ticketing ? "cursor-pointer" : ""))) {
-        attr(div3, "class", div3_class_value);
+        attr(div5, "class", div5_class_value);
       }
     },
     i(local) {
@@ -29492,7 +29509,7 @@ function create_each_block_1(ctx) {
     },
     d(detaching) {
       if (detaching)
-        detach(div3);
+        detach(div5);
       destroy_each(each_blocks, detaching);
       if (if_block0)
         if_block0.d();
