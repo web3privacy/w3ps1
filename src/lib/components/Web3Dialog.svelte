@@ -148,7 +148,7 @@
 					group
 				</div>
 			{:else}
-				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-12">
+				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6">
 					{#each badges as badge}
 						<div
 							class="justify-center text-center badge p-4 border border-white/30 hover:border-white border-dashed {userBadges?.badges &&
