@@ -219,7 +219,7 @@
 									</div>
 								{/if}
 								{#if badge.text}
-									<div class="text-sm leading-6 pt-4 text-mild">{badge.text}</div>
+									<div class="text-xs leading-6 pt-4 text-mild">{badge.text}</div>
 								{/if}
 							</div>
 						</div>
