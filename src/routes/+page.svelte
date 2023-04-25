@@ -73,7 +73,7 @@
 	</div>
 </div>
 
-<div class="bg-black" id="program">
+<!--div class="bg-black" id="program">
 	<div class="middle-pane-medium pt-16 mx-auto pb-32">
 		<div class="section-header" on:mouseenter={animateText}>Program</div>
 		{#if data.config.programNote}
@@ -86,13 +86,6 @@
 				<div class="w-auto xl:w-1/2 mb-10 xl:mb-0">
 					<div class="text-xl font-bold mb-4 font-mono2 lowercase">{stage.name}</div>
 					<table class="table-auto table-custom w-full mt-8">
-						<!--thead>
-							<tr>
-								<th class="text-right text-sm">time</th>
-								<th class="text-left text-sm">topic</th>
-							</tr>
-						</thead-->
-
 						<tbody>
 							{#each stage.program as pi}
 								<tr class="" on:mouseenter={animateSection(35)}>
@@ -126,7 +119,7 @@
 			{/each}
 		</div>
 	</div>
-</div>
+</div-->
 
 <div class="" id="ticket">
 	<div class="middle-pane-medium pt-16 mx-auto">
