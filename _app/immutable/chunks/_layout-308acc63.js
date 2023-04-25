@@ -5,7 +5,7 @@ const data = {
   venue: "X10, Prague",
   domain: "prague.web3privacy.info",
   image: "/web3privacy.png",
-  logo: "/web3privacy-cropped.jpg",
+  logo: "/logo.svg",
   twitter: "web3privacy",
   parent: "Web3Privacy Now",
   venueMapUrl: "https://goo.gl/maps/VCSC7wcNueEKgt996",
@@ -17,60 +17,68 @@ const data = {
   aggregator: "Prague Blockchain Week 2023",
   aggregatorUrl: "http://prgblockweek.com/",
   sponsorUrl: "https://prague.web3privacy.info/sponsors.pdf",
-  intro: "If privacy is a human right, then we need to protect it.\n\nPrivacy advocates worldwide are coming together to discuss how to mainstream privacy within the Web3 industry. So it will become a cultural phenomenon embodying both decentralisation & anti-surveillance capitalism practices.\n\nThe conference complements the research projects [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).\n",
+  intro_first: "If privacy is a human right, then we need to protect it.",
+  intro: "Privacy advocates worldwide are coming together to discuss how to mainstream privacy within the Web3 industry. So it will become a cultural phenomenon embodying both decentralisation & anti-surveillance capitalism practices.\n\nThe conference complements the research projects [Web3Privacy Now](http://web3privacy.info/) and was created by joining forces with the production team of the privacy hackathon [ETHBrno](https://ethbrno.cz/).\n\nPart of [Prague Blockchain Week 2023](http://prgblockweek.com/).\n",
   themes: [
     {
       title: "Regulations vs Privacy",
-      desc: "2023 will be a year of privacy regulations. Privacy coins will be banned, mixer's team become anon etc. How do we defend our rights for privacy?"
+      desc: "2023 will be a year of privacy regulations. Privacy coins will be banned, mixer's team become anon etc. How do we defend our rights for privacy?",
+      img: "regulations-vs-privacy"
     },
     {
       title: "MAINSTREAM ON-CHAIN PRIVACY",
-      desc: "Majority of privacy services are tech oriented. It's hard to use them among non-technical people. What should industry do help people onboard into privacy with ease?"
+      desc: "Majority of privacy services are tech oriented. It's hard to use them among non-technical people. What should industry do help people onboard into privacy with ease?",
+      img: "mainstream-privacy"
     },
     {
       title: "Human rights DAOs (pro-privacy)",
-      desc: "How privacy-enhancing tools could protect DAOs working within non-democratic countries."
+      desc: "How privacy-enhancing tools could protect DAOs working within non-democratic countries.",
+      img: "human-rights-dao"
     },
     {
       title: "Identity (ID)",
-      desc: "Decentralised identity is the key to Web3, but at the same time to KYC & AML. Ethical way of building DID without embedded surveillence logic."
+      desc: "Decentralised identity is the key to Web3, but at the same time to KYC & AML. Ethical way of building DID without embedded surveillence logic.",
+      img: "identity"
     },
     {
       title: "Full-Stack Privacy",
-      desc: "Full-Stack Privacy is achievable if we ensivion one. Combining both on-chain & off-chain privacy."
+      desc: "Full-Stack Privacy is achievable if we ensivion one. Combining both on-chain & off-chain privacy.",
+      img: "fullstack-privacy"
     },
     {
       title: "Private messaging protocols",
-      desc: "We need resilient privacy-preserving, p2p communication layers for Web3, that allows free and uncensored human-to-human, machine-to-machine or hybrid communication."
+      desc: "We need resilient privacy-preserving, p2p communication layers for Web3, that allows free and uncensored human-to-human, machine-to-machine or hybrid communication.",
+      img: "private-messaging-protocols"
     },
     {
       title: "Lunarpunk vs Solarpunk",
-      desc: "For solarpunk to succeed it must integrate the lunarpunk unconscious. The only hope for solarpunk is to [go dark](https://www.egirlcapital.com/writings/107533289). Do you agree?"
+      desc: "For solarpunk to succeed it must integrate the lunarpunk unconscious. The only hope for solarpunk is to [go dark](https://www.egirlcapital.com/writings/107533289). Do you agree?",
+      img: "lunarpunk-vs-solarpunk"
     },
     {
       title: "R&D: ZK, MPC, THE",
-      desc: "There are many different cryptography technics for privacy preservation. How to balance them all & avoid 1-tool chokepoint?"
+      desc: "There are many different cryptography technics for privacy preservation. How to balance them all & avoid 1-tool chokepoint?",
+      img: "rd-zk-mpc-the"
     },
     {
       title: "Privacy readiness levels",
-      desc: "Introduction of the privacy scoring mechanism to help non-tech people understand security level of the solution"
+      desc: "Introduction of the privacy scoring mechanism to help non-tech people understand security level of the solution",
+      img: "privacy-readiness-levels"
     },
     {
       title: "Privacy wars",
-      desc: "Why are privacy-blockchain socials so toxic? How could we stop hating each other & work together"
+      desc: "Why are privacy-blockchain socials so toxic? How could we stop hating each other & work together",
+      img: "privacy-wars"
     },
-    { title: "Privacy workforce" },
     {
       title: "Privacy activism",
-      desc: "Mapping down tools to protect privacy industry: from builders like Alexey Pertsev to projects."
+      desc: "Mapping down tools to protect privacy industry: from builders like Alexey Pertsev to projects.",
+      img: "privacy-activism"
     },
     {
       title: "Network states (with a privacy focus)",
-      desc: "Time ot imagine the network state-as-a-grassroots movement for privacy, freedom & better future."
-    },
-    {
-      title: "Veksl",
-      desc: "Easy onboarding to cryptocurrencies without KYC/AML using peer-to-peer tools is crucial for privacy. What options do we have today?"
+      desc: "Time ot imagine the network state-as-a-grassroots movement for privacy, freedom & better future.",
+      img: "network-states"
     }
   ],
   ticketsIntro: "Be a part of the first Web3Privacy Summit experience…",
@@ -102,7 +110,8 @@ const data = {
         '"Privacy experience"',
         "Networking with attendees, speakers & sponsors"
       ],
-      note: "*Party access is included in the All-day Pass"
+      note: "*Party access is included in the All-day Pass",
+      ticketTypeClass: "party"
     }
   ],
   faq: [
