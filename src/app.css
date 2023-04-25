@@ -39,7 +39,7 @@
 
 	.button {
 		/*@apply px-3 py-1.5 text-black bg-white border border-black cursor-pointer;*/
-		@apply px-5 py-2 text-white bg-black border border-white cursor-pointer no-underline uppercase;
+		@apply px-5 py-2 text-white bg-black border border-white cursor-pointer no-underline uppercase transition-all;
 	}
 	.button:hover,
 	.button-inactive {

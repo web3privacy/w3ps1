@@ -151,7 +151,7 @@
 				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-12">
 					{#each badges as badge}
 						<div
-							class="justify-center text-center badge {userBadges?.badges &&
+							class="justify-center text-center badge pt-4 {userBadges?.badges &&
 							userBadges?.badges[badge?.id]?.eligible
 								? 'bg-white text-black eligible'
 								: ' border-gray-800'}"
