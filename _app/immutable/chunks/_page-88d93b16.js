@@ -192,7 +192,7 @@ function create_each_block$2(ctx) {
       attr(a2, "class", "hover:underline animate-speaker");
       attr(div2, "class", "text-mild");
       attr(div3, "class", "pb-3.5 px-5");
-      attr(div4, "class", "border hover:bg-white hover:text-black person-item");
+      attr(div4, "class", "hover:bg-white hover:text-black person-item");
     },
     m(target, anchor) {
       insert_hydration(target, div4, anchor);
@@ -24325,7 +24325,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-78ecc295.js").then((n2) => n2.i), true ? ["./index-78ecc295.js","./tslib-574368ed.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-67506520.js").then((n2) => n2.i), true ? ["./index-67506520.js","./tslib-63f898a0.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24653,7 +24653,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-642f4042.js"), true ? ["./index-642f4042.js","./index-a2539990.js","./tslib-574368ed.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-d9aacd03.js"), true ? ["./index-d9aacd03.js","./index-5525e91d.js","./tslib-63f898a0.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24700,7 +24700,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-102eec72.js"), true ? ["./index-102eec72.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-cd650703.js"), true ? ["./index-cd650703.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24710,7 +24710,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-26ae344f.js"), true ? ["./index.es-26ae344f.js","./tslib-574368ed.js","./index-a2539990.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-fc4f9691.js"), true ? ["./index.es-fc4f9691.js","./tslib-63f898a0.js","./index-5525e91d.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27190,7 +27190,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-9242b17c.js"), true ? ["./index-9242b17c.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-d790dba9.js"), true ? ["./index-d790dba9.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
@@ -28052,7 +28052,7 @@ function create_each_block$1(ctx) {
       ((_e = (_d = ctx[3]) == null ? void 0 : _d.badges[
         /*badge*/
         (_c = ctx[18]) == null ? void 0 : _c.id
-      ]) == null ? void 0 : _e.eligible) ? "bg-white text-black eligible" : "border border-gray-800") + " p-6");
+      ]) == null ? void 0 : _e.eligible) ? "bg-white text-black eligible" : " border-gray-800") + " p-6");
     },
     m(target, anchor) {
       insert_hydration(target, div4, anchor);
@@ -28137,7 +28137,7 @@ function create_each_block$1(ctx) {
       ((_e = (_d = ctx2[3]) == null ? void 0 : _d.badges[
         /*badge*/
         (_c = ctx2[18]) == null ? void 0 : _c.id
-      ]) == null ? void 0 : _e.eligible) ? "bg-white text-black eligible" : "border border-gray-800") + " p-6")) {
+      ]) == null ? void 0 : _e.eligible) ? "bg-white text-black eligible" : " border-gray-800") + " p-6")) {
         attr(div4, "class", div4_class_value);
       }
     },
