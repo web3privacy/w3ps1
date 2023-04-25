@@ -910,9 +910,6 @@ person-item:hover .text-mild,
 .gap-4{
   gap: 1rem;
 }
-.gap-6{
-  gap: 1.5rem;
-}
 .gap-8{
   gap: 2rem;
 }
@@ -1212,8 +1209,8 @@ person-item:hover .text-mild,
   .lg\:grid-cols-5{
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-  .lg\:gap-12{
-    gap: 3rem;
+  .lg\:gap-6{
+    gap: 1.5rem;
   }
   .lg\:gap-8{
     gap: 2rem;
