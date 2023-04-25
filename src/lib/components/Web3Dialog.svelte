@@ -151,16 +151,16 @@
 				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-12">
 					{#each badges as badge}
 						<div
-							class="justify-center text-center badge pt-4 {userBadges?.badges &&
+							class="justify-center text-center badge p-4 border border-white/30 hover:border-white border-dashed {userBadges?.badges &&
 							userBadges?.badges[badge?.id]?.eligible
 								? 'bg-white text-black eligible'
-								: ' border-gray-800'}"
+								: ''}"
 							on:mouseenter={animateSection(30)}
 						>
 							<div class="mb-6 text-center">
 								<img
 									src={badge.img}
-									class="w-20 h-28 lg:w-32 lg:h-32 {connected &&
+									class="w-2/5 aspect-square {connected &&
 									userBadges &&
 									userBadges.badges[badge.id]?.eligible
 										? ''

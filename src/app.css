@@ -199,6 +199,6 @@
 		@apply transition-all duration-200;
 	}
 	.person-item {
-		@apply cursor-help transition-all duration-1000;
+		@apply cursor-help transition-all duration-500;
 	}
 }
