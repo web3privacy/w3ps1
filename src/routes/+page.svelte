@@ -138,8 +138,8 @@
 					<div class="ticket-bg" />
 					<div class="ticket-img" />
 					<div style="z-index: 1;">
-						<div class="text-2xl uppercase">
-							<a href={data.config.ticketingUrl} class="animate-section">{tt.title}</a>
+						<div class="text-2xl uppercase ticket-title">
+							<a href={data.config.ticketingUrl} class="animate-section font-mono2">{tt.title}</a>
 						</div>
 						<div class="text-2xl mt-5 font-bold">
 							<a href={data.config.ticketingUrl}>{tt.price}</a>

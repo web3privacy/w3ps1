@@ -39,7 +39,7 @@
 
 	.button {
 		/*@apply px-3 py-1.5 text-black bg-white border border-black cursor-pointer;*/
-		@apply px-5 py-2 text-white bg-black border border-white cursor-pointer no-underline;
+		@apply px-5 py-2 text-white bg-black border border-white cursor-pointer no-underline uppercase;
 	}
 	.button:hover,
 	.button-inactive {
@@ -130,6 +130,10 @@
 	.faq-item:hover .desc {
 		@apply text-white;
 	}
+	.topic-item,
+	.topic-item .topic-header {
+		@apply cursor-help transition-all duration-300;
+	}
 	.topic-item:hover .topic-header {
 		@apply bg-white text-black;
 	}
@@ -172,5 +176,29 @@
 		width: 100%;
 		height: 100%;
 		background-color: #010101;
+	}
+	.topic-item .topic-header {
+		@apply font-mono2;
+	}
+	.topic-item:hover .topic-header {
+		@apply lowercase;
+	}
+	.topic-item:hover .topic-img {
+		@apply invert;
+	}
+	.person-item:hover .speaker-name {
+		@apply lowercase;
+	}
+	.ticket-item:hover .ticket-title {
+		@apply lowercase;
+	}
+	.ticket-item,
+	.ticket-item .ticket-bg,
+	.ticket-item .ticket-img,
+	.person-item {
+		@apply transition-all duration-200;
+	}
+	.person-item {
+		@apply cursor-help transition-all duration-1000;
 	}
 }
