@@ -15,11 +15,11 @@
 		{ title: 'About', url: '#about' },
 		{ title: 'Speakers', url: '#speakers' },
 		{ title: 'Program', url: '#program' },
-		{ title: 'Sponsors', url: '#sponsors' },
-		{ title: 'Ticket', url: '#ticket', class: 'button' },
+		//{ title: 'Sponsors', url: '#sponsors' },
 		{ title: 'FAQ', url: '#faq' },
 		{ title: 'Chat', url: 'https://chat.web3privacy.info', external: true },
-		{ title: 'Twitter', url: 'https://twitter.com/web3privacy', external: true }
+		{ title: 'Twitter', url: 'https://twitter.com/web3privacy', external: true },
+		{ title: 'Ticket', url: '#ticket', class: 'button' }
 	];
 
 	const homepageAnimation = () => {
@@ -69,78 +69,95 @@
 </script>
 
 <div class="relative w-full min-h-screen text-white">
-	<div class="fixed w-full h-18 bg-black pt-2 pb-2 z-40">
-		<div class="middle-pane-big bg-black">
-			<div class="flex">
-				<div class="flex items-center gap-4 grow">
-					<div class="w-16 py-2">
-						<a href={data.config.parentUrl} target="_blank"
-							><img src={data.config.logo} alt={data.config.parent} /></a
-						>
+	<div class="fixed w-full h-18 z-40 " id="header">
+		<div class="bg-black pb-2 pt-2">
+			<div class="middle-pane-big">
+				<div class="flex my-1">
+					<div class="flex items-center gap-4 grow">
+						<div class="w-36 py-2">
+							<a href="/"><img src={data.config.logo} alt={data.config.title} /></a>
+						</div>
+						<!--h1 class="text-2xl uppercase">{data.config.title}</h1-->
 					</div>
-					<!--h1 class="text-2xl uppercase">{data.config.title}</h1-->
+					<div class="flex items-center lg:gap-8 xl:gap-14 text-base darker">
+						<button class="lg:hidden text-3xl" on:click={(ev) => (navbar = !navbar)}>☰</button>
+						{#each menu.filter((i) => !i.hidden) as mi}
+							<div class="hidden lg:block">
+								<a
+									class="{mi.class ? mi.class : 'hover:underline'} {choosed &&
+									mi.url === choosed[0].url
+										? 'underline font-bold'
+										: null} {mi.external ? 'external' : ''}"
+									href={mi.url}
+									on:mouseenter={animateText}
+									on:click={!mi.external ? handleAnchorClick : null}
+									target={mi.external ? '_blank' : ''}
+								>
+									{mi.name?.toUpperCase() || mi.title.toUpperCase()}
+								</a>
+							</div>
+						{/each}
+					</div>
 				</div>
-				<div class="flex items-center gap-6 text-xl">
-					<button class="md:hidden text-3xl" on:click={(ev) => (navbar = !navbar)}>☰</button>
+			</div>
+			{#if navbar}
+				<div class="w-full lg:hidden p-4">
 					{#each menu.filter((i) => !i.hidden) as mi}
-						<div class="hidden md:block">
-							<a
-								class="{mi.class ? mi.class : 'hover:underline'} {choosed &&
-								mi.url === choosed[0].url
-									? 'font-bold underline'
-									: null} {mi.external ? 'external' : ''}"
-								href={mi.url}
-								on:mouseenter={animateText}
-								on:click={!mi.external ? handleAnchorClick : null}
-								target={mi.external ? '_blank' : ''}
+						<div class="my-3 mx-4">
+							<a href={mi.url} on:click={() => (navbar = false)}
+								><button class="{mi.class} uppercase text-xl {mi.external ? 'external' : ''}"
+									>{mi.title}</button
+								></a
 							>
-								{mi.name?.toUpperCase() || mi.title.toUpperCase()}
-							</a>
 						</div>
 					{/each}
 				</div>
-			</div>
+			{/if}
 		</div>
-		{#if navbar}
-			<div class="w-full md:hidden p-4">
-				{#each menu.filter((i) => !i.hidden) as mi}
-					<div class="my-3 mx-4">
-						<a href={mi.url} on:click={() => (navbar = false)}
-							><button class="{mi.class} uppercase text-xl {mi.external ? 'external' : ''}"
-								>{mi.title}</button
-							></a
-						>
-					</div>
-				{/each}
-			</div>
-		{/if}
+		<div id="header-shade" />
 	</div>
 
 	<div class="w-full h-screen" id="intro">
 		<div class="w-full h-full flex items-center text-center">
 			<div class="mx-auto px-4">
 				<div
-					class="text-5xl md:text-8xl font-bold mb-4 md:mb-8 animation-crypt"
+					class="text-4xl md:text-6xl font-bold mb-4 md:mb-8 animation-crypt font-mono2 font-thin lowercase"
 					on:mouseenter={animateText}
 				>
-					{data.config.shortname.toUpperCase()}
+					{data.config.shortname.toLowerCase()}
 				</div>
-				<div class="text-3xl md:text-5xl md:mb-4 uppercase">
-					<span class="">{data.config.date}</span> @
-					<a href={data.config.venueMapUrl} target="_blank" class="underline hover:no-underline"
-						>{data.config.venue}</a
-					>
-				</div>
-				<div class="mt-8 text-lg text-mild mx-4">
-					<p class="">{data.config.slogan}</p>
-					<p>
-						<a
+				<div class="mt-12 text-xl mx-4">
+					<p class="italic">
+						{data.config.slogan}
+						<!-- Part of <a
 							href={data.config.aggregatorUrl}
 							target="_blank"
-							class="underline hover:no-underline external external-mild"
+							class="hover:underline external text-white"
 							>{data.config.aggregator}</a
-						>
+						-->
 					</p>
+					<p />
+				</div>
+				<div class="mt-14 text-lg md:text-xl uppercase">
+					<div class="inline-block bg-white text-black font-medium md:w-auto w-3/4">
+						<div class="px-6 py-2.5 inline-block font-medium">
+							<span class="font-medium">{data.config.date}</span> AT
+							<a
+								href={data.config.venueMapUrl}
+								target="_blank"
+								class="underline hover:underline font-medium">{data.config.venue}</a
+							>
+						</div>
+						<div class="inline-block w-full md:w-auto">
+							<a href="/#ticket" on:click={handleAnchorClick}
+								><button class="uppercase text-lg w-full"
+									><div class="m-1 button-inverse" on:mouseenter={animateText}>
+										Buy Ticket
+									</div></button
+								></a
+							>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -152,7 +169,7 @@
 		<div class="middle-pane-big pt-10 mx-auto">
 			<div class="flex gap-4">
 				<div class="grow">
-					<div class="w-32 sm:w-40">
+					<div class="w-32 lg:w-48">
 						<a href={data.config.parentUrl}
 							><img src={data.config.logo} alt={data.config.parent} /></a
 						>

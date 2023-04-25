@@ -7,7 +7,8 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				mono: ['Ubuntu Mono', ...defaultTheme.fontFamily.mono]
+				mono: ['DM Mono', ...defaultTheme.fontFamily.mono],
+				mono2: ['Major Mono Display', ...defaultTheme.fontFamily.mono]
 			}
 		}
 	},
