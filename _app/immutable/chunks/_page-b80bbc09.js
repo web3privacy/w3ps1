@@ -192,7 +192,7 @@ function create_each_block$2(ctx) {
       attr(a2, "class", "hover:underline animate-speaker");
       attr(div2, "class", "text-mild");
       attr(div3, "class", "pb-3.5 px-5");
-      attr(div4, "class", "hover:bg-white hover:text-black person-item");
+      attr(div4, "class", "hover:bg-white hover:text-black person-item border border-white/30");
     },
     m(target, anchor) {
       insert_hydration(target, div4, anchor);
@@ -24325,7 +24325,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-053db49c.js").then((n2) => n2.i), true ? ["./index-053db49c.js","./tslib-4783d4b7.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-7231842f.js").then((n2) => n2.i), true ? ["./index-7231842f.js","./tslib-810eddb7.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24653,7 +24653,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-acdaec05.js"), true ? ["./index-acdaec05.js","./index-79c6f12a.js","./tslib-4783d4b7.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-3b7936c0.js"), true ? ["./index-3b7936c0.js","./index-d082220d.js","./tslib-810eddb7.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24700,7 +24700,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-29d0f04b.js"), true ? ["./index-29d0f04b.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-20c16bab.js"), true ? ["./index-20c16bab.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24710,7 +24710,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-a4846ed6.js"), true ? ["./index.es-a4846ed6.js","./tslib-4783d4b7.js","./index-79c6f12a.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-e37d8dee.js"), true ? ["./index.es-e37d8dee.js","./tslib-810eddb7.js","./index-d082220d.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27190,7 +27190,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-0830a23b.js"), true ? ["./index-0830a23b.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-47eb5a21.js"), true ? ["./index-47eb5a21.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
@@ -28029,7 +28029,7 @@ function create_each_block$1(ctx) {
       if (!src_url_equal(img.src, img_src_value = /*badge*/
       ctx[18].img))
         attr(img, "src", img_src_value);
-      attr(img, "class", img_class_value = "w-20 h-28 lg:w-32 lg:h-32 " + /*connected*/
+      attr(img, "class", img_class_value = "w-2/5 aspect-square " + /*connected*/
       (ctx[6] && /*userBadges*/
       ctx[3] && /*userBadges*/
       ((_a = ctx[3].badges[
@@ -28054,12 +28054,12 @@ function create_each_block$1(ctx) {
       attr(span, "class", "font-bold");
       attr(div2, "class", "mt-4");
       attr(div3, "class", "w-full");
-      attr(div4, "class", div4_class_value = "justify-center text-center badge pt-4 " + /*userBadges*/
+      attr(div4, "class", div4_class_value = "justify-center text-center badge p-4 border border-white/30 hover:border-white border-dashed " + /*userBadges*/
       (((_b = ctx[3]) == null ? void 0 : _b.badges) && /*userBadges*/
       ((_e = (_d = ctx[3]) == null ? void 0 : _d.badges[
         /*badge*/
         (_c = ctx[18]) == null ? void 0 : _c.id
-      ]) == null ? void 0 : _e.eligible) ? "bg-white text-black eligible" : " border-gray-800"));
+      ]) == null ? void 0 : _e.eligible) ? "bg-white text-black eligible" : ""));
     },
     m(target, anchor) {
       insert_hydration(target, div4, anchor);
@@ -28097,7 +28097,7 @@ function create_each_block$1(ctx) {
     p(ctx2, dirty) {
       var _a, _b, _c, _d, _e;
       if (dirty & /*connected, userBadges*/
-      72 && img_class_value !== (img_class_value = "w-20 h-28 lg:w-32 lg:h-32 " + /*connected*/
+      72 && img_class_value !== (img_class_value = "w-2/5 aspect-square " + /*connected*/
       (ctx2[6] && /*userBadges*/
       ctx2[3] && /*userBadges*/
       ((_a = ctx2[3].badges[
@@ -28139,12 +28139,12 @@ function create_each_block$1(ctx) {
       )
         if_block2.p(ctx2, dirty);
       if (dirty & /*userBadges*/
-      8 && div4_class_value !== (div4_class_value = "justify-center text-center badge pt-4 " + /*userBadges*/
+      8 && div4_class_value !== (div4_class_value = "justify-center text-center badge p-4 border border-white/30 hover:border-white border-dashed " + /*userBadges*/
       (((_b = ctx2[3]) == null ? void 0 : _b.badges) && /*userBadges*/
       ((_e = (_d = ctx2[3]) == null ? void 0 : _d.badges[
         /*badge*/
         (_c = ctx2[18]) == null ? void 0 : _c.id
-      ]) == null ? void 0 : _e.eligible) ? "bg-white text-black eligible" : " border-gray-800"))) {
+      ]) == null ? void 0 : _e.eligible) ? "bg-white text-black eligible" : ""))) {
         attr(div4, "class", div4_class_value);
       }
     },
