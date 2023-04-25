@@ -24325,7 +24325,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-3caa25fa.js").then((n2) => n2.i), true ? ["./index-3caa25fa.js","./tslib-e65bf15b.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-053db49c.js").then((n2) => n2.i), true ? ["./index-053db49c.js","./tslib-4783d4b7.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24653,7 +24653,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-518908fd.js"), true ? ["./index-518908fd.js","./index-b12ee88e.js","./tslib-e65bf15b.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-acdaec05.js"), true ? ["./index-acdaec05.js","./index-79c6f12a.js","./tslib-4783d4b7.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24700,7 +24700,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-7b95aa2b.js"), true ? ["./index-7b95aa2b.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-29d0f04b.js"), true ? ["./index-29d0f04b.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24710,7 +24710,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-00eef1fe.js"), true ? ["./index.es-00eef1fe.js","./tslib-e65bf15b.js","./index-b12ee88e.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-a4846ed6.js"), true ? ["./index.es-a4846ed6.js","./tslib-4783d4b7.js","./index-79c6f12a.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27190,7 +27190,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-8c37659a.js"), true ? ["./index-8c37659a.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-0830a23b.js"), true ? ["./index-0830a23b.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
@@ -28054,7 +28054,7 @@ function create_each_block$1(ctx) {
       attr(span, "class", "font-bold");
       attr(div2, "class", "mt-4");
       attr(div3, "class", "w-full");
-      attr(div4, "class", div4_class_value = "justify-center text-center badge " + /*userBadges*/
+      attr(div4, "class", div4_class_value = "justify-center text-center badge pt-4 " + /*userBadges*/
       (((_b = ctx[3]) == null ? void 0 : _b.badges) && /*userBadges*/
       ((_e = (_d = ctx[3]) == null ? void 0 : _d.badges[
         /*badge*/
@@ -28139,7 +28139,7 @@ function create_each_block$1(ctx) {
       )
         if_block2.p(ctx2, dirty);
       if (dirty & /*userBadges*/
-      8 && div4_class_value !== (div4_class_value = "justify-center text-center badge " + /*userBadges*/
+      8 && div4_class_value !== (div4_class_value = "justify-center text-center badge pt-4 " + /*userBadges*/
       (((_b = ctx2[3]) == null ? void 0 : _b.badges) && /*userBadges*/
       ((_e = (_d = ctx2[3]) == null ? void 0 : _d.badges[
         /*badge*/

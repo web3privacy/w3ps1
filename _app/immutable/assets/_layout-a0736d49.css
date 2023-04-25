@@ -476,6 +476,9 @@ footer a:hover,
 		--tw-text-opacity: 1;
 		color: rgb(255 255 255 / var(--tw-text-opacity));
 		text-decoration-line: none;
+		transition-property: all;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 150ms;
 	}
 .button:hover,
 	.button-inactive{
