@@ -70,7 +70,7 @@
 
 <div class="relative w-full min-h-screen text-white">
 	<div class="fixed w-full h-18 z-40 " id="header">
-		<div class="bg-black pb-2 pt-2">
+		<div class="bg-black pb-0.5 pt-2">
 			<div class="middle-pane-big">
 				<div class="flex my-1">
 					<div class="flex items-center gap-4 grow">
