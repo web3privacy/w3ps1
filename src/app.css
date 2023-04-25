@@ -161,4 +161,16 @@
 	.ticket-item:hover .ticket-img {
 		filter: invert(100%);
 	}
+	.ticket-item:hover .ticket-bg {
+		@apply bg-white;
+	}
+	.ticket-item .ticket-bg {
+		z-index: -2;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #010101;
+	}
 }

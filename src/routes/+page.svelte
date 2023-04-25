@@ -135,31 +135,34 @@
 		<div class="grid lg:grid-cols-2 gap-10 mx-auto">
 			{#each data.config.tickets as tt}
 				<div
-					class="ticket-item {tt.ticketTypeClass} border py-10 px-10 hover:text-black hover:bg-white {data
-						.config.ticketing
+					class="ticket-item {tt.ticketTypeClass} border py-10 px-10 hover:text-black {data.config
+						.ticketing
 						? 'cursor-pointer'
 						: ''}"
 					on:mouseenter={animateSection(40)}
 					on:click={() => (data.config.ticketing ? goto(data.config.ticketingUrl) : false)}
 				>
+					<div class="ticket-bg" />
 					<div class="ticket-img" />
-					<div class="text-2xl uppercase">
-						<a href={data.config.ticketingUrl} class="animate-section">{tt.title}</a>
+					<div style="z-index: 1;">
+						<div class="text-2xl uppercase">
+							<a href={data.config.ticketingUrl} class="animate-section">{tt.title}</a>
+						</div>
+						<div class="text-2xl mt-5 font-bold">
+							<a href={data.config.ticketingUrl}>{tt.price}</a>
+						</div>
+						<ul class="mt-8 text-left list-disc px-6">
+							{#each tt.includes as ti}
+								<li class="mb-2 pl-2 text-sm">{ti}</li>
+							{/each}
+						</ul>
+						{#if tt.note}
+							<div class="mt-10 text-sm">{tt.note}</div>
+						{/if}
+						{#if tt.hint}
+							<div class="mt-10 markdown text-sm"><SvelteMarkdown source={tt.hint} /></div>
+						{/if}
 					</div>
-					<div class="text-2xl mt-5 font-bold">
-						<a href={data.config.ticketingUrl}>{tt.price}</a>
-					</div>
-					<ul class="mt-8 text-left list-disc px-6">
-						{#each tt.includes as ti}
-							<li class="mb-2 pl-2 text-sm">{ti}</li>
-						{/each}
-					</ul>
-					{#if tt.note}
-						<div class="mt-10 text-sm">{tt.note}</div>
-					{/if}
-					{#if tt.hint}
-						<div class="mt-10 markdown text-sm"><SvelteMarkdown source={tt.hint} /></div>
-					{/if}
 				</div>
 			{/each}
 		</div>
