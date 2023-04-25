@@ -167,7 +167,10 @@
 						<div class="lg:text-left w-full">
 							{#if badge.shortname}<div class="uppercase font-bold">{badge.shortname}</div>{/if}
 							<div class={badge.shortname ? '' : 'font-bold'}>
-								<a href={badge.url} target="_blank" class="external animate-section">{badge.name}</a
+								<a
+									href={badge.url}
+									target="_blank"
+									class="external animate-section font-mono2 lowercase">{badge.name}</a
 								>
 							</div>
 							<div class="mt-2">
