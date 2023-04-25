@@ -57,7 +57,7 @@
 			const account = getAccount();
 			web3store.set(account);
 			claimed = {};
-			userBadges = await checkBadges(account.address);
+			userBadges = (await checkBadges(account.address))s;
 		});
 	}
 
