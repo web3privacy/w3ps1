@@ -1,4 +1,4 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, l as claim_element, m as children, h as detach, n as attr, b as insert_hydration, f as transition_in, g as group_outros, d as check_outros, t as transition_out, M as destroy_each, a as space, q as text, c as claim_space, r as claim_text, G as src_url_equal, H as append_hydration, I as listen, u as set_data, x as create_component, y as claim_component, z as mount_component, A as destroy_component, N as run_all, Z as component_subscribe, _ as is_function, e as empty, C as noop, $ as head_selector, p as set_style } from "./index-88d77172.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, l as claim_element, m as children, h as detach, n as attr, b as insert_hydration, f as transition_in, g as group_outros, d as check_outros, t as transition_out, M as destroy_each, a as space, q as text, c as claim_space, r as claim_text, G as src_url_equal, H as append_hydration, I as listen, u as set_data, x as create_component, y as claim_component, z as mount_component, A as destroy_component, N as run_all, Z as component_subscribe, _ as is_function, C as noop, e as empty, $ as head_selector, p as set_style } from "./index-88d77172.js";
 import { a as animateText, S as SvelteMarkdown, b as animateSection } from "./helpers-c3e656fe.js";
 import { l as client$1, w as writable } from "./singletons-0b808b86.js";
 import { _ as __vitePreload } from "./preload-helper-f8376bb0.js";
@@ -24325,7 +24325,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-f68508c0.js").then((n2) => n2.i), true ? ["./index-f68508c0.js","./tslib-7134d097.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-c2fc4713.js").then((n2) => n2.i), true ? ["./index-c2fc4713.js","./tslib-8c8b3cbe.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24653,7 +24653,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-9fe89704.js"), true ? ["./index-9fe89704.js","./index-4539ed1b.js","./tslib-7134d097.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-95406bb9.js"), true ? ["./index-95406bb9.js","./index-182d74ff.js","./tslib-8c8b3cbe.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24700,7 +24700,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-52f25299.js"), true ? ["./index-52f25299.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-578f130c.js"), true ? ["./index-578f130c.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24710,7 +24710,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-b50ed811.js"), true ? ["./index.es-b50ed811.js","./tslib-7134d097.js","./index-4539ed1b.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-14c811dd.js"), true ? ["./index.es-14c811dd.js","./tslib-8c8b3cbe.js","./index-182d74ff.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27190,7 +27190,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-1368d249.js"), true ? ["./index-1368d249.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-2916378c.js"), true ? ["./index-2916378c.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
@@ -27370,7 +27370,7 @@ function create_if_block_7(ctx) {
   };
 }
 function create_else_block(ctx) {
-  let each_1_anchor;
+  let div;
   let each_value = (
     /*badges*/
     ctx[7]
@@ -27381,22 +27381,29 @@ function create_else_block(ctx) {
   }
   return {
     c() {
+      div = element("div");
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
         each_blocks[i2].c();
       }
-      each_1_anchor = empty();
+      this.h();
     },
     l(nodes) {
+      div = claim_element(nodes, "DIV", { class: true });
+      var div_nodes = children(div);
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].l(nodes);
+        each_blocks[i2].l(div_nodes);
       }
-      each_1_anchor = empty();
+      div_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      attr(div, "class", "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-12");
     },
     m(target, anchor) {
+      insert_hydration(target, div, anchor);
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].m(target, anchor);
+        each_blocks[i2].m(div, null);
       }
-      insert_hydration(target, each_1_anchor, anchor);
     },
     p(ctx2, dirty) {
       if (dirty & /*userBadges, badges, animateSection, redeemUrl, claimed, animateText, claimHandler, connected, data*/
@@ -27411,7 +27418,7 @@ function create_else_block(ctx) {
           } else {
             each_blocks[i2] = create_each_block$1(child_ctx);
             each_blocks[i2].c();
-            each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
+            each_blocks[i2].m(div, null);
           }
         }
         for (; i2 < each_blocks.length; i2 += 1) {
@@ -27421,9 +27428,9 @@ function create_else_block(ctx) {
       }
     },
     d(detaching) {
-      destroy_each(each_blocks, detaching);
       if (detaching)
-        detach(each_1_anchor);
+        detach(div);
+      destroy_each(each_blocks, detaching);
     }
   };
 }
@@ -27875,7 +27882,7 @@ function create_if_block_1$1(ctx) {
       this.h();
     },
     h() {
-      attr(div, "class", "text-sm leading-6 pt-2 text-mild");
+      attr(div, "class", "text-sm leading-6 pt-4 text-mild");
     },
     m(target, anchor) {
       insert_hydration(target, div, anchor);
@@ -27957,11 +27964,11 @@ function create_each_block$1(ctx) {
       t2 = text(t2_value);
       t3 = space();
       div2 = element("div");
-      t4 = text("Price: ");
+      t4 = text("Ticket: ");
       span = element("span");
       t5 = text("€");
       t6 = text(t6_value);
-      t7 = text("\n								(");
+      t7 = text("\n									(");
       t8 = text(t8_value);
       t9 = text("% discount)");
       t10 = space();
@@ -27996,13 +28003,13 @@ function create_each_block$1(ctx) {
       t3 = claim_space(div3_nodes);
       div2 = claim_element(div3_nodes, "DIV", { class: true });
       var div2_nodes = children(div2);
-      t4 = claim_text(div2_nodes, "Price: ");
+      t4 = claim_text(div2_nodes, "Ticket: ");
       span = claim_element(div2_nodes, "SPAN", { class: true });
       var span_nodes = children(span);
       t5 = claim_text(span_nodes, "€");
       t6 = claim_text(span_nodes, t6_value);
       span_nodes.forEach(detach);
-      t7 = claim_text(div2_nodes, "\n								(");
+      t7 = claim_text(div2_nodes, "\n									(");
       t8 = claim_text(div2_nodes, t8_value);
       t9 = claim_text(div2_nodes, "% discount)");
       div2_nodes.forEach(detach);
@@ -28022,14 +28029,14 @@ function create_each_block$1(ctx) {
       if (!src_url_equal(img.src, img_src_value = /*badge*/
       ctx[18].img))
         attr(img, "src", img_src_value);
-      attr(img, "class", img_class_value = "w-full " + /*connected*/
+      attr(img, "class", img_class_value = "w-20 h-28 lg:w-32 lg:h-32 " + /*connected*/
       (ctx[6] && /*userBadges*/
       ctx[3] && /*userBadges*/
       ((_a = ctx[3].badges[
         /*badge*/
         ctx[18].id
-      ]) == null ? void 0 : _a.eligible) ? "" : "grayscale") + " badge-image");
-      attr(div0, "class", "w-24 lg:w-32 mr-6 inline-block xl:block");
+      ]) == null ? void 0 : _a.eligible) ? "" : "grayscale") + " badge-image inline-block object-contain");
+      attr(div0, "class", "mb-6 text-center");
       attr(
         a2,
         "href",
@@ -28045,14 +28052,14 @@ function create_each_block$1(ctx) {
         ctx[18].shortname ? "" : "font-bold"
       );
       attr(span, "class", "font-bold");
-      attr(div2, "class", "mt-2");
-      attr(div3, "class", "lg:text-left w-full");
-      attr(div4, "class", div4_class_value = "lg:flex justify-center mb-4 badge " + /*userBadges*/
+      attr(div2, "class", "mt-4");
+      attr(div3, "class", "w-full");
+      attr(div4, "class", div4_class_value = "justify-center text-center badge " + /*userBadges*/
       (((_b = ctx[3]) == null ? void 0 : _b.badges) && /*userBadges*/
       ((_e = (_d = ctx[3]) == null ? void 0 : _d.badges[
         /*badge*/
         (_c = ctx[18]) == null ? void 0 : _c.id
-      ]) == null ? void 0 : _e.eligible) ? "bg-white text-black eligible" : " border-gray-800") + " p-6");
+      ]) == null ? void 0 : _e.eligible) ? "bg-white text-black eligible" : " border-gray-800"));
     },
     m(target, anchor) {
       insert_hydration(target, div4, anchor);
@@ -28090,13 +28097,13 @@ function create_each_block$1(ctx) {
     p(ctx2, dirty) {
       var _a, _b, _c, _d, _e;
       if (dirty & /*connected, userBadges*/
-      72 && img_class_value !== (img_class_value = "w-full " + /*connected*/
+      72 && img_class_value !== (img_class_value = "w-20 h-28 lg:w-32 lg:h-32 " + /*connected*/
       (ctx2[6] && /*userBadges*/
       ctx2[3] && /*userBadges*/
       ((_a = ctx2[3].badges[
         /*badge*/
         ctx2[18].id
-      ]) == null ? void 0 : _a.eligible) ? "" : "grayscale") + " badge-image")) {
+      ]) == null ? void 0 : _a.eligible) ? "" : "grayscale") + " badge-image inline-block object-contain")) {
         attr(img, "class", img_class_value);
       }
       if (
@@ -28132,12 +28139,12 @@ function create_each_block$1(ctx) {
       )
         if_block2.p(ctx2, dirty);
       if (dirty & /*userBadges*/
-      8 && div4_class_value !== (div4_class_value = "lg:flex justify-center mb-4 badge " + /*userBadges*/
+      8 && div4_class_value !== (div4_class_value = "justify-center text-center badge " + /*userBadges*/
       (((_b = ctx2[3]) == null ? void 0 : _b.badges) && /*userBadges*/
       ((_e = (_d = ctx2[3]) == null ? void 0 : _d.badges[
         /*badge*/
         (_c = ctx2[18]) == null ? void 0 : _c.id
-      ]) == null ? void 0 : _e.eligible) ? "bg-white text-black eligible" : " border-gray-800") + " p-6")) {
+      ]) == null ? void 0 : _e.eligible) ? "bg-white text-black eligible" : " border-gray-800"))) {
         attr(div4, "class", div4_class_value);
       }
     },
@@ -28280,7 +28287,7 @@ function create_fragment$1(ctx) {
     h() {
       attr(div0, "class", "text-xl font-mono2 lowercase mb-10");
       attr(div1, "class", "pb-8");
-      attr(div2, "class", "text-xl font-mono2 lowercase mb-8");
+      attr(div2, "class", "text-xl font-mono2 lowercase mt-12 mb-8");
       attr(div3, "class", "text-mild");
       attr(button, "class", "button");
       attr(a2, "href", a_href_value = /*data*/

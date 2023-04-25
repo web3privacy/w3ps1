@@ -1,5 +1,5 @@
 import { _ as __vitePreload } from "./preload-helper-f8376bb0.js";
-import { k, W, a as a$1 } from "./_page-d50290d7.js";
+import { k, W, a as a$1 } from "./_page-4e9ba490.js";
 var s = Object.defineProperty, a = Object.getOwnPropertySymbols, c = Object.prototype.hasOwnProperty, d = Object.prototype.propertyIsEnumerable, i = (o, e, t) => e in o ? s(o, e, { enumerable: true, configurable: true, writable: true, value: t }) : o[e] = t, b = (o, e) => {
   for (var t in e || (e = {}))
     c.call(e, t) && i(o, t, e[t]);
@@ -14,7 +14,7 @@ class f {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-1368d249.js"), true ? ["./index-1368d249.js","./_page-d50290d7.js","./index-88d77172.js","./helpers-c3e656fe.js","./singletons-0b808b86.js","./preload-helper-f8376bb0.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-2916378c.js"), true ? ["./index-2916378c.js","./_page-4e9ba490.js","./index-88d77172.js","./helpers-c3e656fe.js","./singletons-0b808b86.js","./preload-helper-f8376bb0.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
