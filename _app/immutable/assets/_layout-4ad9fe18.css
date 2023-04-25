@@ -472,6 +472,7 @@ footer a:hover,
 		padding-right: 1.25rem;
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
+		text-transform: uppercase;
 		--tw-text-opacity: 1;
 		color: rgb(255 255 255 / var(--tw-text-opacity));
 		text-decoration-line: none;
@@ -647,6 +648,13 @@ person-item:hover .text-mild,
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.topic-item,
+	.topic-item .topic-header{
+  cursor: help;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
 .topic-item:hover .topic-header{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -696,6 +704,36 @@ person-item:hover .text-mild,
 		height: 100%;
 		background-color: #010101;
 	}
+.topic-item .topic-header{
+  font-family: Major Mono Display, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.topic-item:hover .topic-header{
+  text-transform: lowercase;
+}
+.topic-item:hover .topic-img{
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.person-item:hover .speaker-name{
+  text-transform: lowercase;
+}
+.ticket-item:hover .ticket-title{
+  text-transform: lowercase;
+}
+.ticket-item,
+	.ticket-item .ticket-bg,
+	.ticket-item .ticket-img,
+	.person-item{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+.person-item{
+  cursor: help;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 1000ms;
+}
 .fixed{
   position: fixed;
 }
