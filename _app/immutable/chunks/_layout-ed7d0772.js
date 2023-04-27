@@ -4,7 +4,7 @@ const data = {
   date: "5. June 2023",
   venue: "X10, Prague",
   domain: "prague.web3privacy.info",
-  image: "/web3privacy.png",
+  image: "/banner-square.png",
   logo: "/logo.svg",
   twitter: "web3privacy",
   parent: "Web3Privacy Now",
