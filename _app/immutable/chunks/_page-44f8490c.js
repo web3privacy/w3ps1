@@ -24325,7 +24325,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-cdf114cc.js").then((n2) => n2.i), true ? ["./index-cdf114cc.js","./tslib-de5d6b8e.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-0d081f25.js").then((n2) => n2.i), true ? ["./index-0d081f25.js","./tslib-e8663318.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24653,7 +24653,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-56d26968.js"), true ? ["./index-56d26968.js","./index-5cd38bea.js","./tslib-de5d6b8e.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-10ebb825.js"), true ? ["./index-10ebb825.js","./index-6763091b.js","./tslib-e8663318.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24700,7 +24700,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-d7a60ac9.js"), true ? ["./index-d7a60ac9.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-3a108493.js"), true ? ["./index-3a108493.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24710,7 +24710,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-4fbb234c.js"), true ? ["./index.es-4fbb234c.js","./tslib-de5d6b8e.js","./index-5cd38bea.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-53c08b68.js"), true ? ["./index.es-53c08b68.js","./tslib-e8663318.js","./index-6763091b.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27190,7 +27190,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-e9886068.js"), true ? ["./index-e9886068.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-d64eec65.js"), true ? ["./index-d64eec65.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
@@ -28802,12 +28802,12 @@ function create_each_block_3(ctx) {
       ctx[11].web);
       attr(a1, "href", a1_href_value = /*partner*/
       ctx[11].web);
-      attr(a1, "class", "font-mono2 animate-section");
+      attr(a1, "class", "font-mono2 animate-section lowercase");
       attr(a2, "href", a2_href_value = "https://twitter.com/" + /*partner*/
       ctx[11].twitter);
-      attr(a2, "class", "text-sm");
+      attr(a2, "class", "text-sm text-mild");
       attr(div3, "class", "p-2 partner-text");
-      attr(div4, "class", "partner-item text-center uppercase hover:lowercase items-center p-4");
+      attr(div4, "class", "partner-item text-center items-center p-4");
     },
     m(target, anchor) {
       insert_hydration(target, div4, anchor);
