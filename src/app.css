@@ -201,9 +201,10 @@
 	.person-item {
 		@apply cursor-help transition-all duration-500;
 	}
-	.partner-item { @apply transition-all; }
 	.partner-item .partner-img { @apply grayscale; }
 	.partner-item:hover .partner-img { @apply grayscale-0; }
-	.partner-item .partner-text { @apply invisible; }
-	.partner-item:hover .partner-text { @apply visible; }
+	.partner-item .partner-text { @apply text-white/0 transition-all duration-300; }
+	.partner-item .partner-text .text-mild { @apply text-white/0; }
+	.partner-item:hover .partner-text { @apply text-white; }
+	.partner-item:hover .partner-text .text-mild { @apply text-white/50 duration-1000; }
 }
