@@ -145,7 +145,7 @@ const data = {
     },
     {
       title: "I have another question, where can I contact you?",
-      text: "You can contact the organizing team or the community around the event in our public Signal group: [chat.web3privacy.info](https://chat.web3privacy.info/)"
+      text: "You can contact the organizing team or the community around the event in our public Matrix space or Signal group: [chat.web3privacy.info](https://chat.web3privacy.info/)"
     }
   ],
   people: [

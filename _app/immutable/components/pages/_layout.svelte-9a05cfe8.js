@@ -11,26 +11,87 @@ function get_each_context_1(ctx, list, i) {
   child_ctx[11] = list[i];
   return child_ctx;
 }
-function create_each_block_1(ctx) {
+function create_else_block(ctx) {
   var _a;
-  let div;
-  let a;
-  let t0_value = (
+  let t_value = (
     /*mi*/
     (((_a = ctx[11].name) == null ? void 0 : _a.toUpperCase()) || /*mi*/
     ctx[11].title.toUpperCase()) + ""
   );
-  let t0;
+  let t;
+  return {
+    c() {
+      t = text(t_value);
+    },
+    l(nodes) {
+      t = claim_text(nodes, t_value);
+    },
+    m(target, anchor) {
+      insert_hydration(target, t, anchor);
+    },
+    p: noop,
+    d(detaching) {
+      if (detaching)
+        detach(t);
+    }
+  };
+}
+function create_if_block_2(ctx) {
+  let div1;
+  let div0;
+  return {
+    c() {
+      div1 = element("div");
+      div0 = element("div");
+      this.h();
+    },
+    l(nodes) {
+      div1 = claim_element(nodes, "DIV", { class: true });
+      var div1_nodes = children(div1);
+      div0 = claim_element(div1_nodes, "DIV", { class: true });
+      children(div0).forEach(detach);
+      div1_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      attr(div0, "class", "ico-children");
+      attr(div1, "class", "ico-" + /*mi*/
+      ctx[11].ico);
+    },
+    m(target, anchor) {
+      insert_hydration(target, div1, anchor);
+      append_hydration(div1, div0);
+    },
+    p: noop,
+    d(detaching) {
+      if (detaching)
+        detach(div1);
+    }
+  };
+}
+function create_each_block_1(ctx) {
+  let div;
+  let a;
   let a_class_value;
-  let t1;
+  let t;
   let mounted;
   let dispose;
+  function select_block_type(ctx2, dirty) {
+    if (
+      /*mi*/
+      ctx2[11].ico
+    )
+      return create_if_block_2;
+    return create_else_block;
+  }
+  let current_block_type = select_block_type(ctx);
+  let if_block = current_block_type(ctx);
   return {
     c() {
       div = element("div");
       a = element("a");
-      t0 = text(t0_value);
-      t1 = space();
+      if_block.c();
+      t = space();
       this.h();
     },
     l(nodes) {
@@ -38,9 +99,9 @@ function create_each_block_1(ctx) {
       var div_nodes = children(div);
       a = claim_element(div_nodes, "A", { class: true, href: true, target: true });
       var a_nodes = children(a);
-      t0 = claim_text(a_nodes, t0_value);
+      if_block.l(a_nodes);
       a_nodes.forEach(detach);
-      t1 = claim_space(div_nodes);
+      t = claim_space(div_nodes);
       div_nodes.forEach(detach);
       this.h();
     },
@@ -53,7 +114,8 @@ function create_each_block_1(ctx) {
       (ctx[2] && /*mi*/
       ctx[11].url === /*choosed*/
       ctx[2][0].url ? "underline font-bold" : null) + " " + /*mi*/
-      (ctx[11].external ? "external" : ""));
+      (ctx[11].external ? "external" : "") + " " + /*mi*/
+      (ctx[11].ico ? "mi-img" : ""));
       attr(
         a,
         "href",
@@ -71,11 +133,16 @@ function create_each_block_1(ctx) {
     m(target, anchor) {
       insert_hydration(target, div, anchor);
       append_hydration(div, a);
-      append_hydration(a, t0);
-      append_hydration(div, t1);
+      if_block.m(a, null);
+      append_hydration(div, t);
       if (!mounted) {
         dispose = [
-          listen(a, "mouseenter", animateText),
+          listen(
+            a,
+            "mouseenter",
+            /*mi*/
+            ctx[11].ico ? null : animateText
+          ),
           listen(a, "click", !/*mi*/
           ctx[11].external ? handleAnchorClick : null)
         ];
@@ -84,6 +151,7 @@ function create_each_block_1(ctx) {
     },
     p(new_ctx, dirty) {
       ctx = new_ctx;
+      if_block.p(ctx, dirty);
       if (dirty & /*choosed*/
       4 && a_class_value !== (a_class_value = /*mi*/
       (ctx[11].class ? (
@@ -93,13 +161,15 @@ function create_each_block_1(ctx) {
       (ctx[2] && /*mi*/
       ctx[11].url === /*choosed*/
       ctx[2][0].url ? "underline font-bold" : null) + " " + /*mi*/
-      (ctx[11].external ? "external" : ""))) {
+      (ctx[11].external ? "external" : "") + " " + /*mi*/
+      (ctx[11].ico ? "mi-img" : ""))) {
         attr(a, "class", a_class_value);
       }
     },
     d(detaching) {
       if (detaching)
         detach(div);
+      if_block.d();
       mounted = false;
       run_all(dispose);
     }
@@ -1026,12 +1096,14 @@ function instance($$self, $$props, $$invalidate) {
     { title: "FAQ", url: "#faq" },
     {
       title: "Chat",
-      url: "https://chat.web3privacy.info",
+      url: "https://matrix.to/#/#web3privacy:gwei.cz",
+      ico: "matrix",
       external: true
     },
     {
       title: "Twitter",
       url: "https://twitter.com/web3privacy",
+      ico: "twitter",
       external: true
     },
     {
