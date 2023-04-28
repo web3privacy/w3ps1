@@ -65,9 +65,9 @@
 <div class="" id="sponsors">
 	<div class="middle-pane-medium pt-16 mx-auto pb-32">
 		<div class="section-header" on:mouseenter={animateText}>Partners</div>
-		<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 mb-12">
+		<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 mb-12">
 			{#each data.config.partners as partner}
-				<div class="partner-item text-center items-center p-4" on:mouseenter={animateSection(40)}>
+				<div class="partner-item text-center items-center p-2" on:mouseenter={animateSection(40)}>
 					<div><a href={partner.web}><img src="/partners/{partner.img}" class="partner-img aspect-[16/11] w-full h-full object-contain {partner.padding ? `p-${partner.padding}` : ''}" /></a></div>
 					<div class="p-2 partner-text">
 						<div><a href={partner.web} class="font-mono2 animate-section lowercase">{partner.name}</a></div>
