@@ -24325,7 +24325,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-e03db6c9.js").then((n2) => n2.i), true ? ["./index-e03db6c9.js","./tslib-5ac78e72.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-54745d45.js").then((n2) => n2.i), true ? ["./index-54745d45.js","./tslib-a0ffab80.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24653,7 +24653,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-b86ca5b0.js"), true ? ["./index-b86ca5b0.js","./index-2bb7f3ba.js","./tslib-5ac78e72.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-dd2d71df.js"), true ? ["./index-dd2d71df.js","./index-1c4d5757.js","./tslib-a0ffab80.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24700,7 +24700,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-07e4ec67.js"), true ? ["./index-07e4ec67.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-0ed6d606.js"), true ? ["./index-0ed6d606.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24710,7 +24710,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-5f58382c.js"), true ? ["./index.es-5f58382c.js","./tslib-5ac78e72.js","./index-2bb7f3ba.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-3bf12242.js"), true ? ["./index.es-3bf12242.js","./tslib-a0ffab80.js","./index-1c4d5757.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27190,7 +27190,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-db51515e.js"), true ? ["./index-db51515e.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-ac5c0888.js"), true ? ["./index-ac5c0888.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
@@ -28546,10 +28546,15 @@ function get_each_context_2(ctx, list, i2) {
 }
 function get_each_context_3(ctx, list, i2) {
   const child_ctx = ctx.slice();
+  child_ctx[11] = list[i2];
+  return child_ctx;
+}
+function get_each_context_4(ctx, list, i2) {
+  const child_ctx = ctx.slice();
   child_ctx[8] = list[i2];
   return child_ctx;
 }
-function create_each_block_3(ctx) {
+function create_each_block_4(ctx) {
   let div2;
   let img;
   let img_src_value;
@@ -28699,6 +28704,164 @@ function create_if_block_4(ctx) {
     d(detaching) {
       if (detaching)
         detach(div);
+    }
+  };
+}
+function create_each_block_3(ctx) {
+  let div4;
+  let div0;
+  let a0;
+  let img;
+  let img_src_value;
+  let a0_href_value;
+  let t0;
+  let div3;
+  let div1;
+  let a1;
+  let t1_value = (
+    /*partner*/
+    ctx[11].name + ""
+  );
+  let t1;
+  let a1_href_value;
+  let t2;
+  let div2;
+  let a2;
+  let t3;
+  let t4_value = (
+    /*partner*/
+    ctx[11].twitter + ""
+  );
+  let t4;
+  let a2_href_value;
+  let t5;
+  let mounted;
+  let dispose;
+  return {
+    c() {
+      div4 = element("div");
+      div0 = element("div");
+      a0 = element("a");
+      img = element("img");
+      t0 = space();
+      div3 = element("div");
+      div1 = element("div");
+      a1 = element("a");
+      t1 = text(t1_value);
+      t2 = space();
+      div2 = element("div");
+      a2 = element("a");
+      t3 = text("@");
+      t4 = text(t4_value);
+      t5 = space();
+      this.h();
+    },
+    l(nodes) {
+      div4 = claim_element(nodes, "DIV", { class: true });
+      var div4_nodes = children(div4);
+      div0 = claim_element(div4_nodes, "DIV", {});
+      var div0_nodes = children(div0);
+      a0 = claim_element(div0_nodes, "A", { href: true });
+      var a0_nodes = children(a0);
+      img = claim_element(a0_nodes, "IMG", { src: true, class: true });
+      a0_nodes.forEach(detach);
+      div0_nodes.forEach(detach);
+      t0 = claim_space(div4_nodes);
+      div3 = claim_element(div4_nodes, "DIV", { class: true });
+      var div3_nodes = children(div3);
+      div1 = claim_element(div3_nodes, "DIV", {});
+      var div1_nodes = children(div1);
+      a1 = claim_element(div1_nodes, "A", { href: true, class: true });
+      var a1_nodes = children(a1);
+      t1 = claim_text(a1_nodes, t1_value);
+      a1_nodes.forEach(detach);
+      div1_nodes.forEach(detach);
+      t2 = claim_space(div3_nodes);
+      div2 = claim_element(div3_nodes, "DIV", {});
+      var div2_nodes = children(div2);
+      a2 = claim_element(div2_nodes, "A", { href: true, class: true });
+      var a2_nodes = children(a2);
+      t3 = claim_text(a2_nodes, "@");
+      t4 = claim_text(a2_nodes, t4_value);
+      a2_nodes.forEach(detach);
+      div2_nodes.forEach(detach);
+      div3_nodes.forEach(detach);
+      t5 = claim_space(div4_nodes);
+      div4_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      if (!src_url_equal(img.src, img_src_value = "/partners/" + /*partner*/
+      ctx[11].img))
+        attr(img, "src", img_src_value);
+      attr(img, "class", "partner-img aspect-[16/11] w-full h-full object-contain");
+      attr(a0, "href", a0_href_value = /*partner*/
+      ctx[11].web);
+      attr(a1, "href", a1_href_value = /*partner*/
+      ctx[11].web);
+      attr(a1, "class", "font-mono2 animate-section");
+      attr(a2, "href", a2_href_value = "https://twitter.com/" + /*partner*/
+      ctx[11].twitter);
+      attr(a2, "class", "text-sm");
+      attr(div3, "class", "p-2 partner-text");
+      attr(div4, "class", "partner-item text-center uppercase hover:lowercase items-center p-4");
+    },
+    m(target, anchor) {
+      insert_hydration(target, div4, anchor);
+      append_hydration(div4, div0);
+      append_hydration(div0, a0);
+      append_hydration(a0, img);
+      append_hydration(div4, t0);
+      append_hydration(div4, div3);
+      append_hydration(div3, div1);
+      append_hydration(div1, a1);
+      append_hydration(a1, t1);
+      append_hydration(div3, t2);
+      append_hydration(div3, div2);
+      append_hydration(div2, a2);
+      append_hydration(a2, t3);
+      append_hydration(a2, t4);
+      append_hydration(div4, t5);
+      if (!mounted) {
+        dispose = listen(div4, "mouseenter", animateSection(40));
+        mounted = true;
+      }
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*data*/
+      1 && !src_url_equal(img.src, img_src_value = "/partners/" + /*partner*/
+      ctx2[11].img)) {
+        attr(img, "src", img_src_value);
+      }
+      if (dirty & /*data*/
+      1 && a0_href_value !== (a0_href_value = /*partner*/
+      ctx2[11].web)) {
+        attr(a0, "href", a0_href_value);
+      }
+      if (dirty & /*data*/
+      1 && t1_value !== (t1_value = /*partner*/
+      ctx2[11].name + ""))
+        set_data(t1, t1_value);
+      if (dirty & /*data*/
+      1 && a1_href_value !== (a1_href_value = /*partner*/
+      ctx2[11].web)) {
+        attr(a1, "href", a1_href_value);
+      }
+      if (dirty & /*data*/
+      1 && t4_value !== (t4_value = /*partner*/
+      ctx2[11].twitter + ""))
+        set_data(t4, t4_value);
+      if (dirty & /*data*/
+      1 && a2_href_value !== (a2_href_value = "https://twitter.com/" + /*partner*/
+      ctx2[11].twitter)) {
+        attr(a2, "href", a2_href_value);
+      }
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div4);
+      mounted = false;
+      dispose();
     }
   };
 }
@@ -29363,46 +29526,48 @@ function create_fragment(ctx) {
   let div11;
   let peoplelist1;
   let t13;
+  let div18;
   let div17;
-  let div16;
   let div14;
   let t14;
   let t15;
   let div15;
+  let t16;
+  let div16;
   let a2;
   let button;
-  let t16;
-  let a_href_value;
   let t17;
-  let div25;
-  let div21;
-  let div18;
+  let a_href_value;
   let t18;
-  let t19;
+  let div26;
+  let div22;
   let div19;
-  let t20_value = (
+  let t19;
+  let t20;
+  let div20;
+  let t21_value = (
     /*data*/
     ctx[0].config.ticketsIntro + ""
   );
-  let t20;
   let t21;
-  let div20;
   let t22;
+  let div21;
   let t23;
   let t24;
-  let div24;
-  let div22;
   let t25;
-  let t26;
+  let div25;
   let div23;
-  let web3dialog;
+  let t26;
   let t27;
-  let div29;
-  let div28;
-  let div26;
+  let div24;
+  let web3dialog;
   let t28;
-  let t29;
+  let div30;
+  let div29;
   let div27;
+  let t29;
+  let t30;
+  let div28;
   let current;
   let mounted;
   let dispose;
@@ -29415,16 +29580,16 @@ function create_fragment(ctx) {
       ctx[0].config.intro
     ) }
   });
-  let each_value_3 = (
+  let each_value_4 = (
     /*data*/
     ctx[0].config.themes
   );
-  let each_blocks_2 = [];
-  for (let i2 = 0; i2 < each_value_3.length; i2 += 1) {
-    each_blocks_2[i2] = create_each_block_3(get_each_context_3(ctx, each_value_3, i2));
+  let each_blocks_3 = [];
+  for (let i2 = 0; i2 < each_value_4.length; i2 += 1) {
+    each_blocks_3[i2] = create_each_block_4(get_each_context_4(ctx, each_value_4, i2));
   }
-  const out = (i2) => transition_out(each_blocks_2[i2], 1, 1, () => {
-    each_blocks_2[i2] = null;
+  const out = (i2) => transition_out(each_blocks_3[i2], 1, 1, () => {
+    each_blocks_3[i2] = null;
   });
   peoplelist0 = new PeopleList({
     props: {
@@ -29455,6 +29620,14 @@ function create_fragment(ctx) {
       size: "small"
     }
   });
+  let each_value_3 = (
+    /*data*/
+    ctx[0].config.partners
+  );
+  let each_blocks_2 = [];
+  for (let i2 = 0; i2 < each_value_3.length; i2 += 1) {
+    each_blocks_2[i2] = create_each_block_3(get_each_context_3(ctx, each_value_3, i2));
+  }
   let each_value_1 = (
     /*data*/
     ctx[0].config.tickets
@@ -29511,8 +29684,8 @@ function create_fragment(ctx) {
       t4 = text("Main topics");
       t5 = space();
       div3 = element("div");
-      for (let i2 = 0; i2 < each_blocks_2.length; i2 += 1) {
-        each_blocks_2[i2].c();
+      for (let i2 = 0; i2 < each_blocks_3.length; i2 += 1) {
+        each_blocks_3[i2].c();
       }
       t6 = space();
       div9 = element("div");
@@ -29534,48 +29707,53 @@ function create_fragment(ctx) {
       div11 = element("div");
       create_component(peoplelist1.$$.fragment);
       t13 = space();
+      div18 = element("div");
       div17 = element("div");
-      div16 = element("div");
       div14 = element("div");
       t14 = text("Partners");
       t15 = space();
       div15 = element("div");
+      for (let i2 = 0; i2 < each_blocks_2.length; i2 += 1) {
+        each_blocks_2[i2].c();
+      }
+      t16 = space();
+      div16 = element("div");
       a2 = element("a");
       button = element("button");
-      t16 = text("Become a partner");
-      t17 = space();
-      div25 = element("div");
-      div21 = element("div");
-      div18 = element("div");
-      t18 = text("Ticket");
-      t19 = space();
+      t17 = text("Become a partner");
+      t18 = space();
+      div26 = element("div");
+      div22 = element("div");
       div19 = element("div");
-      t20 = text(t20_value);
-      t21 = space();
+      t19 = text("Ticket");
+      t20 = space();
       div20 = element("div");
+      t21 = text(t21_value);
+      t22 = space();
+      div21 = element("div");
       for (let i2 = 0; i2 < each_blocks_1.length; i2 += 1) {
         each_blocks_1[i2].c();
       }
-      t22 = space();
+      t23 = space();
       if (if_block1)
         if_block1.c();
-      t23 = space();
+      t24 = space();
       if (if_block2)
         if_block2.c();
-      t24 = space();
-      div24 = element("div");
-      div22 = element("div");
-      t25 = text("Get your discount");
-      t26 = space();
+      t25 = space();
+      div25 = element("div");
       div23 = element("div");
-      create_component(web3dialog.$$.fragment);
+      t26 = text("Get your discount");
       t27 = space();
+      div24 = element("div");
+      create_component(web3dialog.$$.fragment);
+      t28 = space();
+      div30 = element("div");
       div29 = element("div");
-      div28 = element("div");
-      div26 = element("div");
-      t28 = text("FAQ");
-      t29 = space();
       div27 = element("div");
+      t29 = text("FAQ");
+      t30 = space();
+      div28 = element("div");
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
         each_blocks[i2].c();
       }
@@ -29615,8 +29793,8 @@ function create_fragment(ctx) {
       t5 = claim_space(div4_nodes);
       div3 = claim_element(div4_nodes, "DIV", { class: true });
       var div3_nodes = children(div3);
-      for (let i2 = 0; i2 < each_blocks_2.length; i2 += 1) {
-        each_blocks_2[i2].l(div3_nodes);
+      for (let i2 = 0; i2 < each_blocks_3.length; i2 += 1) {
+        each_blocks_3[i2].l(div3_nodes);
       }
       div3_nodes.forEach(detach);
       div4_nodes.forEach(detach);
@@ -29657,87 +29835,94 @@ function create_fragment(ctx) {
       div12_nodes.forEach(detach);
       div13_nodes.forEach(detach);
       t13 = claim_space(nodes);
-      div17 = claim_element(nodes, "DIV", { class: true, id: true });
+      div18 = claim_element(nodes, "DIV", { class: true, id: true });
+      var div18_nodes = children(div18);
+      div17 = claim_element(div18_nodes, "DIV", { class: true });
       var div17_nodes = children(div17);
-      div16 = claim_element(div17_nodes, "DIV", { class: true });
-      var div16_nodes = children(div16);
-      div14 = claim_element(div16_nodes, "DIV", { class: true });
+      div14 = claim_element(div17_nodes, "DIV", { class: true });
       var div14_nodes = children(div14);
       t14 = claim_text(div14_nodes, "Partners");
       div14_nodes.forEach(detach);
-      t15 = claim_space(div16_nodes);
-      div15 = claim_element(div16_nodes, "DIV", {});
+      t15 = claim_space(div17_nodes);
+      div15 = claim_element(div17_nodes, "DIV", { class: true });
       var div15_nodes = children(div15);
-      a2 = claim_element(div15_nodes, "A", { href: true });
+      for (let i2 = 0; i2 < each_blocks_2.length; i2 += 1) {
+        each_blocks_2[i2].l(div15_nodes);
+      }
+      div15_nodes.forEach(detach);
+      t16 = claim_space(div17_nodes);
+      div16 = claim_element(div17_nodes, "DIV", {});
+      var div16_nodes = children(div16);
+      a2 = claim_element(div16_nodes, "A", { href: true });
       var a_nodes = children(a2);
       button = claim_element(a_nodes, "BUTTON", { class: true });
       var button_nodes = children(button);
-      t16 = claim_text(button_nodes, "Become a partner");
+      t17 = claim_text(button_nodes, "Become a partner");
       button_nodes.forEach(detach);
       a_nodes.forEach(detach);
-      div15_nodes.forEach(detach);
       div16_nodes.forEach(detach);
       div17_nodes.forEach(detach);
-      t17 = claim_space(nodes);
-      div25 = claim_element(nodes, "DIV", { class: true, id: true });
-      var div25_nodes = children(div25);
-      div21 = claim_element(div25_nodes, "DIV", { class: true });
-      var div21_nodes = children(div21);
-      div18 = claim_element(div21_nodes, "DIV", { class: true });
-      var div18_nodes = children(div18);
-      t18 = claim_text(div18_nodes, "Ticket");
       div18_nodes.forEach(detach);
-      t19 = claim_space(div21_nodes);
-      div19 = claim_element(div21_nodes, "DIV", { class: true });
-      var div19_nodes = children(div19);
-      t20 = claim_text(div19_nodes, t20_value);
-      div19_nodes.forEach(detach);
-      t21 = claim_space(div21_nodes);
-      div20 = claim_element(div21_nodes, "DIV", { class: true });
-      var div20_nodes = children(div20);
-      for (let i2 = 0; i2 < each_blocks_1.length; i2 += 1) {
-        each_blocks_1[i2].l(div20_nodes);
-      }
-      div20_nodes.forEach(detach);
-      t22 = claim_space(div21_nodes);
-      if (if_block1)
-        if_block1.l(div21_nodes);
-      t23 = claim_space(div21_nodes);
-      if (if_block2)
-        if_block2.l(div21_nodes);
-      div21_nodes.forEach(detach);
-      t24 = claim_space(div25_nodes);
-      div24 = claim_element(div25_nodes, "DIV", { class: true });
-      var div24_nodes = children(div24);
-      div22 = claim_element(div24_nodes, "DIV", { class: true });
+      t18 = claim_space(nodes);
+      div26 = claim_element(nodes, "DIV", { class: true, id: true });
+      var div26_nodes = children(div26);
+      div22 = claim_element(div26_nodes, "DIV", { class: true });
       var div22_nodes = children(div22);
-      t25 = claim_text(div22_nodes, "Get your discount");
+      div19 = claim_element(div22_nodes, "DIV", { class: true });
+      var div19_nodes = children(div19);
+      t19 = claim_text(div19_nodes, "Ticket");
+      div19_nodes.forEach(detach);
+      t20 = claim_space(div22_nodes);
+      div20 = claim_element(div22_nodes, "DIV", { class: true });
+      var div20_nodes = children(div20);
+      t21 = claim_text(div20_nodes, t21_value);
+      div20_nodes.forEach(detach);
+      t22 = claim_space(div22_nodes);
+      div21 = claim_element(div22_nodes, "DIV", { class: true });
+      var div21_nodes = children(div21);
+      for (let i2 = 0; i2 < each_blocks_1.length; i2 += 1) {
+        each_blocks_1[i2].l(div21_nodes);
+      }
+      div21_nodes.forEach(detach);
+      t23 = claim_space(div22_nodes);
+      if (if_block1)
+        if_block1.l(div22_nodes);
+      t24 = claim_space(div22_nodes);
+      if (if_block2)
+        if_block2.l(div22_nodes);
       div22_nodes.forEach(detach);
-      t26 = claim_space(div24_nodes);
-      div23 = claim_element(div24_nodes, "DIV", {});
+      t25 = claim_space(div26_nodes);
+      div25 = claim_element(div26_nodes, "DIV", { class: true });
+      var div25_nodes = children(div25);
+      div23 = claim_element(div25_nodes, "DIV", { class: true });
       var div23_nodes = children(div23);
-      claim_component(web3dialog.$$.fragment, div23_nodes);
+      t26 = claim_text(div23_nodes, "Get your discount");
       div23_nodes.forEach(detach);
+      t27 = claim_space(div25_nodes);
+      div24 = claim_element(div25_nodes, "DIV", {});
+      var div24_nodes = children(div24);
+      claim_component(web3dialog.$$.fragment, div24_nodes);
       div24_nodes.forEach(detach);
       div25_nodes.forEach(detach);
-      t27 = claim_space(nodes);
-      div29 = claim_element(nodes, "DIV", { class: true, id: true });
+      div26_nodes.forEach(detach);
+      t28 = claim_space(nodes);
+      div30 = claim_element(nodes, "DIV", { class: true, id: true });
+      var div30_nodes = children(div30);
+      div29 = claim_element(div30_nodes, "DIV", { class: true });
       var div29_nodes = children(div29);
+      div27 = claim_element(div29_nodes, "DIV", { class: true });
+      var div27_nodes = children(div27);
+      t29 = claim_text(div27_nodes, "FAQ");
+      div27_nodes.forEach(detach);
+      t30 = claim_space(div29_nodes);
       div28 = claim_element(div29_nodes, "DIV", { class: true });
       var div28_nodes = children(div28);
-      div26 = claim_element(div28_nodes, "DIV", { class: true });
-      var div26_nodes = children(div26);
-      t28 = claim_text(div26_nodes, "FAQ");
-      div26_nodes.forEach(detach);
-      t29 = claim_space(div28_nodes);
-      div27 = claim_element(div28_nodes, "DIV", { class: true });
-      var div27_nodes = children(div27);
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].l(div27_nodes);
+        each_blocks[i2].l(div28_nodes);
       }
-      div27_nodes.forEach(detach);
       div28_nodes.forEach(detach);
       div29_nodes.forEach(detach);
+      div30_nodes.forEach(detach);
       this.h();
     },
     h() {
@@ -29777,25 +29962,26 @@ function create_fragment(ctx) {
       attr(div12, "class", "middle-pane-medium pt-0 mx-auto pb-32");
       attr(div13, "id", "hosts");
       attr(div14, "class", "section-header");
+      attr(div15, "class", "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 mb-12");
       attr(button, "class", "button text-lg");
       attr(a2, "href", a_href_value = /*data*/
       ctx[0].config.sponsorUrl);
-      attr(div16, "class", "middle-pane-medium pt-16 mx-auto pb-32");
-      attr(div17, "class", "");
-      attr(div17, "id", "sponsors");
-      attr(div18, "class", "section-header");
-      attr(div19, "class", "mb-8 text-mild");
-      attr(div20, "class", "grid lg:grid-cols-2 gap-10 mx-auto");
-      attr(div21, "class", "middle-pane-medium pt-16 mx-auto");
-      attr(div22, "class", "section-subheader");
-      attr(div24, "class", "middle-pane-medium mx-auto pt-20 pb-32");
-      attr(div25, "class", "");
-      attr(div25, "id", "ticket");
-      attr(div26, "class", "section-header");
-      attr(div27, "class", "grid md:grid-cols-2 gap-8 md:gap-16");
-      attr(div28, "class", "middle-pane-medium pt-20 mx-auto");
-      attr(div29, "class", "pb-36 bg-[#0e0e0e]");
-      attr(div29, "id", "faq");
+      attr(div17, "class", "middle-pane-medium pt-16 mx-auto pb-32");
+      attr(div18, "class", "");
+      attr(div18, "id", "sponsors");
+      attr(div19, "class", "section-header");
+      attr(div20, "class", "mb-8 text-mild");
+      attr(div21, "class", "grid lg:grid-cols-2 gap-10 mx-auto");
+      attr(div22, "class", "middle-pane-medium pt-16 mx-auto");
+      attr(div23, "class", "section-subheader");
+      attr(div25, "class", "middle-pane-medium mx-auto pt-20 pb-32");
+      attr(div26, "class", "");
+      attr(div26, "id", "ticket");
+      attr(div27, "class", "section-header");
+      attr(div28, "class", "grid md:grid-cols-2 gap-8 md:gap-16");
+      attr(div29, "class", "middle-pane-medium pt-20 mx-auto");
+      attr(div30, "class", "pb-36 bg-[#0e0e0e]");
+      attr(div30, "id", "faq");
     },
     m(target, anchor) {
       append_hydration(document.head, meta0);
@@ -29818,8 +30004,8 @@ function create_fragment(ctx) {
       append_hydration(div2, t4);
       append_hydration(div4, t5);
       append_hydration(div4, div3);
-      for (let i2 = 0; i2 < each_blocks_2.length; i2 += 1) {
-        each_blocks_2[i2].m(div3, null);
+      for (let i2 = 0; i2 < each_blocks_3.length; i2 += 1) {
+        each_blocks_3[i2].m(div3, null);
       }
       insert_hydration(target, t6, anchor);
       insert_hydration(target, div9, anchor);
@@ -29841,50 +30027,55 @@ function create_fragment(ctx) {
       append_hydration(div12, div11);
       mount_component(peoplelist1, div11, null);
       insert_hydration(target, t13, anchor);
-      insert_hydration(target, div17, anchor);
-      append_hydration(div17, div16);
-      append_hydration(div16, div14);
+      insert_hydration(target, div18, anchor);
+      append_hydration(div18, div17);
+      append_hydration(div17, div14);
       append_hydration(div14, t14);
-      append_hydration(div16, t15);
-      append_hydration(div16, div15);
-      append_hydration(div15, a2);
-      append_hydration(a2, button);
-      append_hydration(button, t16);
-      insert_hydration(target, t17, anchor);
-      insert_hydration(target, div25, anchor);
-      append_hydration(div25, div21);
-      append_hydration(div21, div18);
-      append_hydration(div18, t18);
-      append_hydration(div21, t19);
-      append_hydration(div21, div19);
-      append_hydration(div19, t20);
-      append_hydration(div21, t21);
-      append_hydration(div21, div20);
-      for (let i2 = 0; i2 < each_blocks_1.length; i2 += 1) {
-        each_blocks_1[i2].m(div20, null);
+      append_hydration(div17, t15);
+      append_hydration(div17, div15);
+      for (let i2 = 0; i2 < each_blocks_2.length; i2 += 1) {
+        each_blocks_2[i2].m(div15, null);
       }
-      append_hydration(div21, t22);
+      append_hydration(div17, t16);
+      append_hydration(div17, div16);
+      append_hydration(div16, a2);
+      append_hydration(a2, button);
+      append_hydration(button, t17);
+      insert_hydration(target, t18, anchor);
+      insert_hydration(target, div26, anchor);
+      append_hydration(div26, div22);
+      append_hydration(div22, div19);
+      append_hydration(div19, t19);
+      append_hydration(div22, t20);
+      append_hydration(div22, div20);
+      append_hydration(div20, t21);
+      append_hydration(div22, t22);
+      append_hydration(div22, div21);
+      for (let i2 = 0; i2 < each_blocks_1.length; i2 += 1) {
+        each_blocks_1[i2].m(div21, null);
+      }
+      append_hydration(div22, t23);
       if (if_block1)
-        if_block1.m(div21, null);
-      append_hydration(div21, t23);
+        if_block1.m(div22, null);
+      append_hydration(div22, t24);
       if (if_block2)
-        if_block2.m(div21, null);
-      append_hydration(div25, t24);
+        if_block2.m(div22, null);
+      append_hydration(div26, t25);
+      append_hydration(div26, div25);
+      append_hydration(div25, div23);
+      append_hydration(div23, t26);
+      append_hydration(div25, t27);
       append_hydration(div25, div24);
-      append_hydration(div24, div22);
-      append_hydration(div22, t25);
-      append_hydration(div24, t26);
-      append_hydration(div24, div23);
-      mount_component(web3dialog, div23, null);
-      insert_hydration(target, t27, anchor);
-      insert_hydration(target, div29, anchor);
+      mount_component(web3dialog, div24, null);
+      insert_hydration(target, t28, anchor);
+      insert_hydration(target, div30, anchor);
+      append_hydration(div30, div29);
+      append_hydration(div29, div27);
+      append_hydration(div27, t29);
+      append_hydration(div29, t30);
       append_hydration(div29, div28);
-      append_hydration(div28, div26);
-      append_hydration(div26, t28);
-      append_hydration(div28, t29);
-      append_hydration(div28, div27);
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].m(div27, null);
+        each_blocks[i2].m(div28, null);
       }
       current = true;
       if (!mounted) {
@@ -29895,9 +30086,9 @@ function create_fragment(ctx) {
           listen(div10, "mouseenter", animateText),
           listen(div14, "mouseenter", animateText),
           listen(button, "mouseenter", animateText),
-          listen(div18, "mouseenter", animateText),
-          listen(div22, "mouseenter", animateText),
-          listen(div26, "mouseenter", animateText)
+          listen(div19, "mouseenter", animateText),
+          listen(div23, "mouseenter", animateText),
+          listen(div27, "mouseenter", animateText)
         ];
         mounted = true;
       }
@@ -29947,23 +30138,23 @@ function create_fragment(ctx) {
       sveltemarkdown.$set(sveltemarkdown_changes);
       if (dirty & /*animateSection, data*/
       1) {
-        each_value_3 = /*data*/
+        each_value_4 = /*data*/
         ctx2[0].config.themes;
         let i2;
-        for (i2 = 0; i2 < each_value_3.length; i2 += 1) {
-          const child_ctx = get_each_context_3(ctx2, each_value_3, i2);
-          if (each_blocks_2[i2]) {
-            each_blocks_2[i2].p(child_ctx, dirty);
-            transition_in(each_blocks_2[i2], 1);
+        for (i2 = 0; i2 < each_value_4.length; i2 += 1) {
+          const child_ctx = get_each_context_4(ctx2, each_value_4, i2);
+          if (each_blocks_3[i2]) {
+            each_blocks_3[i2].p(child_ctx, dirty);
+            transition_in(each_blocks_3[i2], 1);
           } else {
-            each_blocks_2[i2] = create_each_block_3(child_ctx);
-            each_blocks_2[i2].c();
-            transition_in(each_blocks_2[i2], 1);
-            each_blocks_2[i2].m(div3, null);
+            each_blocks_3[i2] = create_each_block_4(child_ctx);
+            each_blocks_3[i2].c();
+            transition_in(each_blocks_3[i2], 1);
+            each_blocks_3[i2].m(div3, null);
           }
         }
         group_outros();
-        for (i2 = each_value_3.length; i2 < each_blocks_2.length; i2 += 1) {
+        for (i2 = each_value_4.length; i2 < each_blocks_3.length; i2 += 1) {
           out(i2);
         }
         check_outros();
@@ -30003,15 +30194,35 @@ function create_fragment(ctx) {
         peoplelist1_changes.people = /*data*/
         ctx2[0].config.people;
       peoplelist1.$set(peoplelist1_changes);
+      if (dirty & /*animateSection, data*/
+      1) {
+        each_value_3 = /*data*/
+        ctx2[0].config.partners;
+        let i2;
+        for (i2 = 0; i2 < each_value_3.length; i2 += 1) {
+          const child_ctx = get_each_context_3(ctx2, each_value_3, i2);
+          if (each_blocks_2[i2]) {
+            each_blocks_2[i2].p(child_ctx, dirty);
+          } else {
+            each_blocks_2[i2] = create_each_block_3(child_ctx);
+            each_blocks_2[i2].c();
+            each_blocks_2[i2].m(div15, null);
+          }
+        }
+        for (; i2 < each_blocks_2.length; i2 += 1) {
+          each_blocks_2[i2].d(1);
+        }
+        each_blocks_2.length = each_value_3.length;
+      }
       if (!current || dirty & /*data*/
       1 && a_href_value !== (a_href_value = /*data*/
       ctx2[0].config.sponsorUrl)) {
         attr(a2, "href", a_href_value);
       }
       if ((!current || dirty & /*data*/
-      1) && t20_value !== (t20_value = /*data*/
+      1) && t21_value !== (t21_value = /*data*/
       ctx2[0].config.ticketsIntro + ""))
-        set_data(t20, t20_value);
+        set_data(t21, t21_value);
       if (dirty & /*data, animateSection, goto*/
       1) {
         each_value_1 = /*data*/
@@ -30026,7 +30237,7 @@ function create_fragment(ctx) {
             each_blocks_1[i2] = create_each_block_1(child_ctx);
             each_blocks_1[i2].c();
             transition_in(each_blocks_1[i2], 1);
-            each_blocks_1[i2].m(div20, null);
+            each_blocks_1[i2].m(div21, null);
           }
         }
         group_outros();
@@ -30044,7 +30255,7 @@ function create_fragment(ctx) {
         } else {
           if_block1 = create_if_block_1(ctx2);
           if_block1.c();
-          if_block1.m(div21, t23);
+          if_block1.m(div22, t24);
         }
       } else if (if_block1) {
         if_block1.d(1);
@@ -30059,7 +30270,7 @@ function create_fragment(ctx) {
         } else {
           if_block2 = create_if_block(ctx2);
           if_block2.c();
-          if_block2.m(div21, null);
+          if_block2.m(div22, null);
         }
       } else if (if_block2) {
         if_block2.d(1);
@@ -30085,7 +30296,7 @@ function create_fragment(ctx) {
             each_blocks[i2] = create_each_block(child_ctx);
             each_blocks[i2].c();
             transition_in(each_blocks[i2], 1);
-            each_blocks[i2].m(div27, null);
+            each_blocks[i2].m(div28, null);
           }
         }
         group_outros();
@@ -30099,8 +30310,8 @@ function create_fragment(ctx) {
       if (current)
         return;
       transition_in(sveltemarkdown.$$.fragment, local);
-      for (let i2 = 0; i2 < each_value_3.length; i2 += 1) {
-        transition_in(each_blocks_2[i2]);
+      for (let i2 = 0; i2 < each_value_4.length; i2 += 1) {
+        transition_in(each_blocks_3[i2]);
       }
       transition_in(peoplelist0.$$.fragment, local);
       transition_in(peoplelist1.$$.fragment, local);
@@ -30115,9 +30326,9 @@ function create_fragment(ctx) {
     },
     o(local) {
       transition_out(sveltemarkdown.$$.fragment, local);
-      each_blocks_2 = each_blocks_2.filter(Boolean);
-      for (let i2 = 0; i2 < each_blocks_2.length; i2 += 1) {
-        transition_out(each_blocks_2[i2]);
+      each_blocks_3 = each_blocks_3.filter(Boolean);
+      for (let i2 = 0; i2 < each_blocks_3.length; i2 += 1) {
+        transition_out(each_blocks_3[i2]);
       }
       transition_out(peoplelist0.$$.fragment, local);
       transition_out(peoplelist1.$$.fragment, local);
@@ -30144,7 +30355,7 @@ function create_fragment(ctx) {
       if (detaching)
         detach(div5);
       destroy_component(sveltemarkdown);
-      destroy_each(each_blocks_2, detaching);
+      destroy_each(each_blocks_3, detaching);
       if (detaching)
         detach(t6);
       if (detaching)
@@ -30160,11 +30371,12 @@ function create_fragment(ctx) {
       if (detaching)
         detach(t13);
       if (detaching)
-        detach(div17);
+        detach(div18);
+      destroy_each(each_blocks_2, detaching);
       if (detaching)
-        detach(t17);
+        detach(t18);
       if (detaching)
-        detach(div25);
+        detach(div26);
       destroy_each(each_blocks_1, detaching);
       if (if_block1)
         if_block1.d();
@@ -30172,9 +30384,9 @@ function create_fragment(ctx) {
         if_block2.d();
       destroy_component(web3dialog);
       if (detaching)
-        detach(t27);
+        detach(t28);
       if (detaching)
-        detach(div29);
+        detach(div30);
       destroy_each(each_blocks, detaching);
       mounted = false;
       run_all(dispose);

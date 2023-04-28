@@ -161,7 +161,7 @@ const data = {
       id: "tree",
       name: "Tree",
       twitter: "treecz",
-      img: "tree.jpeg",
+      img: "tree.jpg",
       caption: "Creator of lunarpunk hackathons & events",
       country: "cz"
     },
@@ -169,7 +169,7 @@ const data = {
       id: "juraj-bednar",
       name: "Juraj Bednar",
       twitter: "jurbed",
-      img: "juraj-bednar.jpeg",
+      img: "juraj-bednar.jpg",
       caption: "Educator, writer, cryptoanarchist & biohacker",
       country: "sk"
     },
@@ -177,7 +177,7 @@ const data = {
       id: "mario-havel",
       name: "Mario Havel",
       twitter: "TMIYChao",
-      img: "mario-havel.jpeg",
+      img: "mario-havel.jpg",
       caption: "Hacker, Co-Founder of [Bordel Hackerspace](https://bordel.paralelnipolis.cz/#/)",
       country: "cz"
     },
@@ -185,7 +185,7 @@ const data = {
       id: "guy-zyskind",
       name: "Guy Zyskind",
       twitter: "GuyZys",
-      img: "guy-zyskind.jpeg",
+      img: "guy-zyskind.jpg",
       caption: "Founder of [Secret Network](https://scrt.network/), CEO [SCRT Labs](https://www.scrtlabs.com/)",
       country: "is"
     },
@@ -193,9 +193,25 @@ const data = {
       id: "manu-alzuru",
       name: "Manu Alzuru",
       twitter: "ManuAlzuru",
-      img: "manu-alzuru.jpeg",
-      caption: "Humanist,  solarpunk, Founder of [DoinGud](https://doingud.com/) & [ETH Barcelona](https://ethbarcelona.com/)",
+      img: "manu-alzuru.jpg",
+      caption: "Humanist, solarpunk, Founder of [DoinGud](https://doingud.com/) & [ETH Barcelona](https://ethbarcelona.com/)",
       country: "es"
+    },
+    {
+      id: "max-hampshire",
+      name: "Max Hampshire",
+      twitter: "_wjth",
+      img: "max-hampshire.jpg",
+      caption: "Senior devrel of [Nym](https://nymtech.net/), Co-founder of [terra0](https://terra0.org/)",
+      country: "at"
+    },
+    {
+      id: "nick-almond",
+      name: "Nick Almond",
+      twitter: "DrNickA",
+      img: "nick-almond.jpg",
+      caption: "Building next gen DAOs with [FactoryDAO](https://www.factorydao.xyz/)",
+      country: "gb"
     }
   ],
   speakersNote: "We keep adding more and more speakers, stay tuned ...",
@@ -203,7 +219,32 @@ const data = {
     "guy-zyskind",
     "manu-alzuru",
     "juraj-bednar",
-    "mario-havel"
+    "mario-havel",
+    "max-hampshire",
+    "nick-almond"
+  ],
+  partners: [
+    {
+      id: "lunardao",
+      name: "LunarDAO",
+      web: "https://lunardao.net",
+      twitter: "lunarpunksquad",
+      img: "lunardao.jpg"
+    },
+    {
+      id: "gweicz",
+      name: "Gwei.cz",
+      web: "https://gwei.cz",
+      img: "gweicz.png",
+      twitter: "gweicz"
+    },
+    {
+      id: "ethbrno",
+      name: "ETHBrno",
+      web: "https://ethbrno.cz",
+      img: "ethbrno.svg",
+      twitter: "ETHBrno"
+    }
   ],
   hosts: [
     "mykola",

@@ -740,6 +740,25 @@ person-item:hover .text-mild,
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 }
+.partner-item{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.partner-item .partner-img{
+  --tw-grayscale: grayscale(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.partner-item:hover .partner-img{
+  --tw-grayscale: grayscale(0);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.partner-item .partner-text{
+  visibility: hidden;
+}
+.partner-item:hover .partner-text{
+  visibility: visible;
+}
 .fixed{
   position: fixed;
 }
@@ -777,6 +796,9 @@ person-item:hover .text-mild,
 }
 .mb-10{
   margin-bottom: 2.5rem;
+}
+.mb-12{
+  margin-bottom: 3rem;
 }
 .mb-16{
   margin-bottom: 4rem;
@@ -843,6 +865,9 @@ person-item:hover .text-mild,
 }
 .hidden{
   display: none;
+}
+.aspect-\[16\/11\]{
+  aspect-ratio: 16/11;
 }
 .aspect-square{
   aspect-ratio: 1 / 1;
@@ -945,6 +970,9 @@ person-item:hover .text-mild,
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+.p-2{
+  padding: 0.5rem;
 }
 .p-4{
   padding: 1rem;
@@ -1140,6 +1168,9 @@ person-item:hover .text-mild,
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.hover\:lowercase:hover{
+  text-transform: lowercase;
+}
 .hover\:text-black:hover{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1157,6 +1188,9 @@ person-item:hover .text-mild,
   .sm\:w-16{
     width: 4rem;
   }
+  .sm\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 @media (min-width: 768px){
   .md\:mb-8{
@@ -1173,6 +1207,9 @@ person-item:hover .text-mild,
   }
   .md\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .md\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .md\:gap-16{
     gap: 4rem;
@@ -1237,6 +1274,9 @@ person-item:hover .text-mild,
   }
   .xl\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .xl\:grid-cols-6{
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
   .xl\:gap-14{
     gap: 3.5rem;
