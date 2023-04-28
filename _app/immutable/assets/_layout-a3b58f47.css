@@ -1220,9 +1220,6 @@ person-item:hover .text-mild,
   .sm\:w-32{
     width: 8rem;
   }
-  .sm\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
   .sm\:gap-4{
     gap: 1rem;
   }
@@ -1242,9 +1239,6 @@ person-item:hover .text-mild,
   }
   .md\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .md\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .md\:gap-16{
     gap: 4rem;
@@ -1278,6 +1272,9 @@ person-item:hover .text-mild,
   .lg\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .lg\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
   .lg\:grid-cols-5{
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
@@ -1310,8 +1307,8 @@ person-item:hover .text-mild,
   .xl\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .xl\:grid-cols-6{
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+  .xl\:grid-cols-5{
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
   .xl\:gap-14{
     gap: 3.5rem;
