@@ -17,7 +17,12 @@
 		//{ title: 'Program', url: '#program' },
 		//{ title: 'Sponsors', url: '#sponsors' },
 		{ title: 'FAQ', url: '#faq' },
-		{ title: 'Chat', url: 'https://matrix.to/#/#web3privacy:gwei.cz', ico: 'matrix', external: true },
+		{
+			title: 'Chat',
+			url: 'https://matrix.to/#/#web3privacy:gwei.cz',
+			ico: 'matrix',
+			external: true
+		},
 		{ title: 'Twitter', url: 'https://twitter.com/web3privacy', ico: 'twitter', external: true },
 		{ title: 'Ticket', url: '#ticket', class: 'button' }
 	];
@@ -87,14 +92,14 @@
 									class="{mi.class ? mi.class : 'hover:underline'} {choosed &&
 									mi.url === choosed[0].url
 										? 'underline font-bold'
-										: null} {mi.external ? 'external' : ''} {mi.ico ? "mi-img" : ''}"
+										: null} {mi.external ? 'external' : ''} {mi.ico ? 'mi-img' : ''}"
 									href={mi.url}
 									on:mouseenter={mi.ico ? null : animateText}
 									on:click={!mi.external ? handleAnchorClick : null}
 									target={mi.external ? '_blank' : ''}
 								>
 									{#if mi.ico}
-										<div class="ico-{mi.ico}"><div class="ico-children"></div></div>
+										<div class="ico-{mi.ico}"><div class="ico-children" /></div>
 									{:else}
 										{mi.name?.toUpperCase() || mi.title.toUpperCase()}
 									{/if}
@@ -180,7 +185,10 @@
 					</div>
 				</div>
 				<div class="text-right">
-					<div class="text-sm flex flex-wrap gap-2 sm:gap-4 ml-8 mb-8 text-mild" on:mouseenter={animateSection()}>
+					<div
+						class="text-sm flex flex-wrap gap-2 sm:gap-4 ml-8 mb-8 text-mild"
+						on:mouseenter={animateSection()}
+					>
 						<div>
 							<span class="font-mono2 lowercase">Twitter</span>
 							<a
@@ -192,10 +200,20 @@
 							</a>
 						</div>
 						<div>
-							<span class="font-mono2 lowercase">Bluesky</span> <a href={data.config.blueskyUrl} class="external animate-section text-md no-underline hover:underline" target="_blank">@{data.config.bluesky}</a>
+							<span class="font-mono2 lowercase">Bluesky</span>
+							<a
+								href={data.config.blueskyUrl}
+								class="external animate-section text-md no-underline hover:underline"
+								target="_blank">@{data.config.bluesky}</a
+							>
 						</div>
 						<div>
-							<span class="font-mono2 lowercase">Matrix</span> <a href={data.config.matrixUrl} class="external animate-section text-md no-underline hover:underline" target="_blank">{data.config.matrix}</a>
+							<span class="font-mono2 lowercase">Matrix</span>
+							<a
+								href={data.config.matrixUrl}
+								class="external animate-section text-md no-underline hover:underline"
+								target="_blank">{data.config.matrix}</a
+							>
 						</div>
 					</div>
 					<!--div class="mt-4 text-mild">

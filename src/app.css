@@ -22,6 +22,9 @@
 	.markdown a {
 		@apply underline hover:no-underline text-white;
 	}
+	.markdown-basic a {
+		@apply underline hover:no-underline;
+	}
 
 	.markdown p {
 	}
@@ -117,7 +120,7 @@
 	.ico-matrix:hover .ico-children {
 		@apply opacity-100;
 	}
-	
+
 	.person-item:hover img {
 		@apply grayscale-0 invert-0 blur-none;
 	}
@@ -216,10 +219,22 @@
 	.person-item {
 		@apply cursor-help transition-all duration-500;
 	}
-	.partner-item .partner-img { @apply grayscale; }
-	.partner-item:hover .partner-img { @apply grayscale-0; }
-	.partner-item .partner-text { @apply text-white/0 transition-all duration-300; }
-	.partner-item .partner-text .text-mild { @apply text-white/0; }
-	.partner-item:hover .partner-text { @apply text-white; }
-	.partner-item:hover .partner-text .text-mild { @apply text-white/50 duration-1000; }
+	.partner-item .partner-img {
+		@apply grayscale;
+	}
+	.partner-item:hover .partner-img {
+		@apply grayscale-0;
+	}
+	.partner-item .partner-text {
+		@apply text-white/0 transition-all duration-300;
+	}
+	.partner-item .partner-text .text-mild {
+		@apply text-white/0;
+	}
+	.partner-item:hover .partner-text {
+		@apply text-white;
+	}
+	.partner-item:hover .partner-text .text-mild {
+		@apply text-white/50 duration-1000;
+	}
 }
