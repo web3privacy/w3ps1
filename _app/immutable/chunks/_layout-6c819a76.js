@@ -158,7 +158,7 @@ const data = {
       name: "Mykola Siusko",
       twitter: "nicksvyaznoy",
       img: "mykola.png",
-      caption: "Web3 privacy advocate behind [Web3Privacy Now](https://web3privacy.info/)",
+      caption: "Web3 privacy advocate behind [Web3Privacy Now](https://web3privacy.info/), [NYM](https://nymtech.net/) ambassador",
       country: "es"
     },
     {
@@ -166,8 +166,15 @@ const data = {
       name: "Tree",
       twitter: "treecz",
       img: "tree.jpg",
-      caption: "Orchestrator of lunarpunk events like [ETHBrno](https://ethbrno.cz) or [w3ps](https://github.com/web3privacy/w3ps)",
+      caption: "Orchestrating lunarpunk events [ETHBrno](https://ethbrno.cz) & [w3ps](https://github.com/web3privacy/w3ps) w/ [gwei.cz](https://gwei.cz)",
       country: "cz"
+    },
+    {
+      id: "pg",
+      name: "PG",
+      twitter: "PG_CDG",
+      img: "pg.jpg",
+      caption: "Organizing [ETHRome](https://ethrome.org) w/ [SpaghettETH](https://linktr.ee/spaghetteth) & [urbe.eth](https://linktr.ee/urbe.eth), [w3pn](https://web3privacy.info) advocate"
     },
     {
       id: "juraj-bednar",
@@ -214,7 +221,7 @@ const data = {
       name: "Nick Almond",
       twitter: "DrNickA",
       img: "nick-almond.jpg",
-      caption: "Building next gen DAOs with [FactoryDAO](https://www.factorydao.xyz/)",
+      caption: "Building next generation DAOs with [FactoryDAO](https://www.factorydao.xyz/)",
       country: "gb"
     },
     {
@@ -233,6 +240,11 @@ const data = {
       caption: "Unapologetic Ukrainian behind [Ukraine DAO](https://ukrainedao.love/) & [Kyiv Tech Summit](https://www.kyivtechsummit.com/)",
       country: "ua"
     }
+  ],
+  hosts: [
+    "mykola",
+    "tree",
+    "pg"
   ],
   speakersNote: "We keep adding more and more speakers, stay tuned ...",
   speakers: [
@@ -283,10 +295,6 @@ const data = {
       img: "ukraine-dao.png",
       twitter: "Ukraine_DAO"
     }
-  ],
-  hosts: [
-    "mykola",
-    "tree"
   ],
   stages: [
     {
