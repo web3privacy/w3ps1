@@ -17,8 +17,8 @@
 		//{ title: 'Program', url: '#program' },
 		//{ title: 'Sponsors', url: '#sponsors' },
 		{ title: 'FAQ', url: '#faq' },
-		{ title: 'Chat', url: 'https://chat.web3privacy.info', external: true },
-		{ title: 'Twitter', url: 'https://twitter.com/web3privacy', external: true },
+		{ title: 'Chat', url: 'https://matrix.to/#/#web3privacy:gwei.cz', ico: 'matrix', external: true },
+		{ title: 'Twitter', url: 'https://twitter.com/web3privacy', ico: 'twitter', external: true },
 		{ title: 'Ticket', url: '#ticket', class: 'button' }
 	];
 
@@ -87,13 +87,17 @@
 									class="{mi.class ? mi.class : 'hover:underline'} {choosed &&
 									mi.url === choosed[0].url
 										? 'underline font-bold'
-										: null} {mi.external ? 'external' : ''}"
+										: null} {mi.external ? 'external' : ''} {mi.ico ? "mi-img" : ''}"
 									href={mi.url}
-									on:mouseenter={animateText}
+									on:mouseenter={mi.ico ? null : animateText}
 									on:click={!mi.external ? handleAnchorClick : null}
 									target={mi.external ? '_blank' : ''}
 								>
-									{mi.name?.toUpperCase() || mi.title.toUpperCase()}
+									{#if mi.ico}
+										<div class="ico-{mi.ico}"><div class="ico-children"></div></div>
+									{:else}
+										{mi.name?.toUpperCase() || mi.title.toUpperCase()}
+									{/if}
 								</a>
 							</div>
 						{/each}
