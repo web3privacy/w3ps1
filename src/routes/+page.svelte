@@ -68,7 +68,7 @@
 		<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 mb-12">
 			{#each data.config.partners as partner}
 				<div class="partner-item text-center uppercase hover:lowercase items-center p-4" on:mouseenter={animateSection(40)}>
-					<div><a href={partner.web}><img src="/partners/{partner.img}" class="partner-img aspect-[16/11] w-full h-full object-contain" /></a></div>
+					<div><a href={partner.web}><img src="/partners/{partner.img}" class="partner-img aspect-[16/11] w-full h-full object-contain {partner.padding ? `p-${partner.padding}` : ''}" /></a></div>
 					<div class="p-2 partner-text">
 						<div><a href={partner.web} class="font-mono2 animate-section">{partner.name}</a></div>
 						<div><a href="https://twitter.com/{partner.twitter}" class="text-sm">@{partner.twitter}</a></div>
