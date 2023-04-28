@@ -243,7 +243,16 @@ const data = {
       name: "ETHBrno",
       web: "https://ethbrno.cz",
       img: "ethbrno.svg",
-      twitter: "ETHBrno"
+      twitter: "ETHBrno",
+      padding: 2
+    },
+    {
+      id: "ethrome",
+      name: "ETHRome",
+      web: "https://ethrome.org",
+      img: "ethrome.svg",
+      twitter: "ethereumrome",
+      padding: 4
     }
   ],
   hosts: [

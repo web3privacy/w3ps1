@@ -24325,7 +24325,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-54745d45.js").then((n2) => n2.i), true ? ["./index-54745d45.js","./tslib-a0ffab80.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-cdf114cc.js").then((n2) => n2.i), true ? ["./index-cdf114cc.js","./tslib-de5d6b8e.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24653,7 +24653,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-dd2d71df.js"), true ? ["./index-dd2d71df.js","./index-1c4d5757.js","./tslib-a0ffab80.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-56d26968.js"), true ? ["./index-56d26968.js","./index-5cd38bea.js","./tslib-de5d6b8e.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24700,7 +24700,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-0ed6d606.js"), true ? ["./index-0ed6d606.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-d7a60ac9.js"), true ? ["./index-d7a60ac9.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24710,7 +24710,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-3bf12242.js"), true ? ["./index.es-3bf12242.js","./tslib-a0ffab80.js","./index-1c4d5757.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-4fbb234c.js"), true ? ["./index.es-4fbb234c.js","./tslib-de5d6b8e.js","./index-5cd38bea.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27190,7 +27190,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-ac5c0888.js"), true ? ["./index-ac5c0888.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-e9886068.js"), true ? ["./index-e9886068.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
@@ -28713,6 +28713,7 @@ function create_each_block_3(ctx) {
   let a0;
   let img;
   let img_src_value;
+  let img_class_value;
   let a0_href_value;
   let t0;
   let div3;
@@ -28794,7 +28795,9 @@ function create_each_block_3(ctx) {
       if (!src_url_equal(img.src, img_src_value = "/partners/" + /*partner*/
       ctx[11].img))
         attr(img, "src", img_src_value);
-      attr(img, "class", "partner-img aspect-[16/11] w-full h-full object-contain");
+      attr(img, "class", img_class_value = "partner-img aspect-[16/11] w-full h-full object-contain " + /*partner*/
+      (ctx[11].padding ? `p-${/*partner*/
+      ctx[11].padding}` : ""));
       attr(a0, "href", a0_href_value = /*partner*/
       ctx[11].web);
       attr(a1, "href", a1_href_value = /*partner*/
@@ -28832,6 +28835,12 @@ function create_each_block_3(ctx) {
       1 && !src_url_equal(img.src, img_src_value = "/partners/" + /*partner*/
       ctx2[11].img)) {
         attr(img, "src", img_src_value);
+      }
+      if (dirty & /*data*/
+      1 && img_class_value !== (img_class_value = "partner-img aspect-[16/11] w-full h-full object-contain " + /*partner*/
+      (ctx2[11].padding ? `p-${/*partner*/
+      ctx2[11].padding}` : ""))) {
+        attr(img, "class", img_class_value);
       }
       if (dirty & /*data*/
       1 && a0_href_value !== (a0_href_value = /*partner*/
