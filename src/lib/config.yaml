@@ -187,17 +187,17 @@ partners:
     web: https://lunardao.net
     twitter: lunarpunksquad
     img: lunardao.jpg
-  - id: gweicz
-    name: Gwei.cz
-    web: https://gwei.cz
-    img: gweicz.png
-    twitter: gweicz
   - id: ethbrno
     name: ETHBrno
     web: https://ethbrno.cz
     img: ethbrno.svg
     twitter: ETHBrno
     padding: 2
+  - id: gweicz
+    name: Gwei.cz
+    web: https://gwei.cz
+    img: gweicz.png
+    twitter: gweicz
   - id: ethrome
     name: ETHRome
     web: https://ethrome.org
