@@ -299,9 +299,6 @@ function claim_element_base(nodes, name, attributes, create_element) {
 function claim_element(nodes, name, attributes) {
   return claim_element_base(nodes, name, attributes, element);
 }
-function claim_svg_element(nodes, name, attributes) {
-  return claim_element_base(nodes, name, attributes, svg_element);
-}
 function claim_text(nodes, data) {
   return claim_node(
     nodes,
@@ -749,34 +746,32 @@ class SvelteComponent {
   }
 }
 export {
-  head_selector as $,
   destroy_component as A,
   tick as B,
   noop as C,
   create_slot as D,
-  svg_element as E,
-  claim_svg_element as F,
-  src_url_equal as G,
-  append_hydration as H,
-  listen as I,
-  update_slot_base as J,
-  get_all_dirty_from_scope as K,
-  get_slot_changes as L,
-  destroy_each as M,
-  run_all as N,
-  compute_rest_props as O,
-  assign as P,
-  exclude_internal_props as Q,
-  get_spread_update as R,
+  src_url_equal as E,
+  append_hydration as F,
+  listen as G,
+  update_slot_base as H,
+  get_all_dirty_from_scope as I,
+  get_slot_changes as J,
+  destroy_each as K,
+  run_all as L,
+  compute_rest_props as M,
+  assign as N,
+  exclude_internal_props as O,
+  get_spread_update as P,
+  get_spread_object as Q,
+  getContext as R,
   SvelteComponent as S,
-  get_spread_object as T,
-  getContext as U,
-  HtmlTagHydration as V,
-  claim_html_tag as W,
-  createEventDispatcher as X,
-  setContext as Y,
-  component_subscribe as Z,
-  is_function as _,
+  HtmlTagHydration as T,
+  claim_html_tag as U,
+  createEventDispatcher as V,
+  setContext as W,
+  component_subscribe as X,
+  is_function as Y,
+  head_selector as Z,
   space as a,
   insert_hydration as b,
   claim_space as c,

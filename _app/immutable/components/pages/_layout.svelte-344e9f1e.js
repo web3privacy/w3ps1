@@ -1,5 +1,5 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, E as svg_element, x as create_component, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, F as claim_svg_element, y as claim_component, G as src_url_equal, n as attr, b as insert_hydration, H as append_hydration, z as mount_component, I as listen, u as set_data, J as update_slot_base, K as get_all_dirty_from_scope, L as get_slot_changes, f as transition_in, t as transition_out, d as check_outros, M as destroy_each, A as destroy_component, N as run_all, o as onMount, C as noop, g as group_outros } from "../../chunks/index-88d77172.js";
-import { S as SvelteMarkdown, a as animateText, h as handleAnchorClick, b as animateSection } from "../../chunks/helpers-c3e656fe.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, a as space, q as text, l as claim_element, m as children, h as detach, c as claim_space, r as claim_text, E as src_url_equal, n as attr, b as insert_hydration, F as append_hydration, G as listen, u as set_data, H as update_slot_base, I as get_all_dirty_from_scope, J as get_slot_changes, f as transition_in, t as transition_out, d as check_outros, K as destroy_each, L as run_all, o as onMount, C as noop, x as create_component, y as claim_component, z as mount_component, A as destroy_component, g as group_outros } from "../../chunks/index-2a025a89.js";
+import { a as animateText, h as handleAnchorClick, S as SvelteMarkdown, b as animateSection } from "../../chunks/helpers-88229792.js";
 const app = "";
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
@@ -340,7 +340,7 @@ function create_if_block(ctx) {
       this.h();
     },
     h() {
-      attr(div, "class", "mt-4 text-sm text-supermild");
+      attr(div, "class", "mt-4 text-sm text-supermild text-right");
     },
     m(target, anchor) {
       insert_hydration(target, div, anchor);
@@ -373,7 +373,7 @@ function create_if_block(ctx) {
   };
 }
 function create_fragment(ctx) {
-  let div25;
+  let div27;
   let div7;
   let div5;
   let div4;
@@ -416,7 +416,7 @@ function create_fragment(ctx) {
   let div14;
   let div13;
   let div10;
-  let span;
+  let span0;
   let t11_value = (
     /*data*/
     ctx[0].config.date + ""
@@ -439,8 +439,8 @@ function create_fragment(ctx) {
   let t16;
   let t17;
   let footer;
-  let div24;
-  let div23;
+  let div26;
+  let div25;
   let div19;
   let div18;
   let a3;
@@ -449,25 +449,46 @@ function create_fragment(ctx) {
   let img1_alt_value;
   let a3_href_value;
   let t18;
-  let div22;
+  let div24;
+  let div23;
   let div20;
-  let a4;
-  let svg;
-  let path;
-  let a4_href_value;
+  let span1;
   let t19;
-  let a5;
   let t20;
-  let t21_value = (
+  let a4;
+  let t21;
+  let t22_value = (
     /*data*/
     ctx[0].config.twitter + ""
   );
-  let t21;
-  let a5_href_value;
   let t22;
-  let div21;
-  let sveltemarkdown;
+  let a4_href_value;
   let t23;
+  let div21;
+  let span2;
+  let t24;
+  let t25;
+  let a5;
+  let t26;
+  let t27_value = (
+    /*data*/
+    ctx[0].config.bluesky + ""
+  );
+  let t27;
+  let a5_href_value;
+  let t28;
+  let div22;
+  let span3;
+  let t29;
+  let t30;
+  let a6;
+  let t31_value = (
+    /*data*/
+    ctx[0].config.matrix + ""
+  );
+  let t31;
+  let a6_href_value;
+  let t32;
   let current;
   let mounted;
   let dispose;
@@ -494,19 +515,13 @@ function create_fragment(ctx) {
     ctx[4],
     null
   );
-  sveltemarkdown = new SvelteMarkdown({
-    props: { source: (
-      /*data*/
-      ctx[0].config.authors
-    ) }
-  });
   let if_block1 = (
     /*data*/
     ctx[0].config.license && create_if_block(ctx)
   );
   return {
     c() {
-      div25 = element("div");
+      div27 = element("div");
       div7 = element("div");
       div5 = element("div");
       div4 = element("div");
@@ -544,7 +559,7 @@ function create_fragment(ctx) {
       div14 = element("div");
       div13 = element("div");
       div10 = element("div");
-      span = element("span");
+      span0 = element("span");
       t11 = text(t11_value);
       t12 = text(" AT\n							");
       a1 = element("a");
@@ -560,34 +575,46 @@ function create_fragment(ctx) {
         default_slot.c();
       t17 = space();
       footer = element("footer");
-      div24 = element("div");
-      div23 = element("div");
+      div26 = element("div");
+      div25 = element("div");
       div19 = element("div");
       div18 = element("div");
       a3 = element("a");
       img1 = element("img");
       t18 = space();
-      div22 = element("div");
+      div24 = element("div");
+      div23 = element("div");
       div20 = element("div");
+      span1 = element("span");
+      t19 = text("Twitter");
+      t20 = space();
       a4 = element("a");
-      svg = svg_element("svg");
-      path = svg_element("path");
-      t19 = space();
-      a5 = element("a");
-      t20 = text("@");
-      t21 = text(t21_value);
-      t22 = space();
-      div21 = element("div");
-      create_component(sveltemarkdown.$$.fragment);
+      t21 = text("@");
+      t22 = text(t22_value);
       t23 = space();
+      div21 = element("div");
+      span2 = element("span");
+      t24 = text("Bluesky");
+      t25 = space();
+      a5 = element("a");
+      t26 = text("@");
+      t27 = text(t27_value);
+      t28 = space();
+      div22 = element("div");
+      span3 = element("span");
+      t29 = text("Matrix");
+      t30 = space();
+      a6 = element("a");
+      t31 = text(t31_value);
+      t32 = space();
       if (if_block1)
         if_block1.c();
       this.h();
     },
     l(nodes) {
-      div25 = claim_element(nodes, "DIV", { class: true });
-      var div25_nodes = children(div25);
-      div7 = claim_element(div25_nodes, "DIV", { class: true, id: true });
+      div27 = claim_element(nodes, "DIV", { class: true });
+      var div27_nodes = children(div27);
+      div7 = claim_element(div27_nodes, "DIV", { class: true, id: true });
       var div7_nodes = children(div7);
       div5 = claim_element(div7_nodes, "DIV", { class: true });
       var div5_nodes = children(div5);
@@ -627,8 +654,8 @@ function create_fragment(ctx) {
       div6 = claim_element(div7_nodes, "DIV", { id: true });
       children(div6).forEach(detach);
       div7_nodes.forEach(detach);
-      t5 = claim_space(div25_nodes);
-      div17 = claim_element(div25_nodes, "DIV", { class: true, id: true });
+      t5 = claim_space(div27_nodes);
+      div17 = claim_element(div27_nodes, "DIV", { class: true, id: true });
       var div17_nodes = children(div17);
       div16 = claim_element(div17_nodes, "DIV", { class: true });
       var div16_nodes = children(div16);
@@ -656,10 +683,10 @@ function create_fragment(ctx) {
       var div13_nodes = children(div13);
       div10 = claim_element(div13_nodes, "DIV", { class: true });
       var div10_nodes = children(div10);
-      span = claim_element(div10_nodes, "SPAN", { class: true });
-      var span_nodes = children(span);
-      t11 = claim_text(span_nodes, t11_value);
-      span_nodes.forEach(detach);
+      span0 = claim_element(div10_nodes, "SPAN", { class: true });
+      var span0_nodes = children(span0);
+      t11 = claim_text(span0_nodes, t11_value);
+      span0_nodes.forEach(detach);
       t12 = claim_text(div10_nodes, " AT\n							");
       a1 = claim_element(div10_nodes, "A", { href: true, target: true, class: true });
       var a1_nodes = children(a1);
@@ -685,17 +712,17 @@ function create_fragment(ctx) {
       div15_nodes.forEach(detach);
       div16_nodes.forEach(detach);
       div17_nodes.forEach(detach);
-      t16 = claim_space(div25_nodes);
+      t16 = claim_space(div27_nodes);
       if (default_slot)
-        default_slot.l(div25_nodes);
-      t17 = claim_space(div25_nodes);
-      footer = claim_element(div25_nodes, "FOOTER", { class: true });
+        default_slot.l(div27_nodes);
+      t17 = claim_space(div27_nodes);
+      footer = claim_element(div27_nodes, "FOOTER", { class: true });
       var footer_nodes = children(footer);
-      div24 = claim_element(footer_nodes, "DIV", { class: true });
-      var div24_nodes = children(div24);
-      div23 = claim_element(div24_nodes, "DIV", { class: true });
-      var div23_nodes = children(div23);
-      div19 = claim_element(div23_nodes, "DIV", { class: true });
+      div26 = claim_element(footer_nodes, "DIV", { class: true });
+      var div26_nodes = children(div26);
+      div25 = claim_element(div26_nodes, "DIV", { class: true });
+      var div25_nodes = children(div25);
+      div19 = claim_element(div25_nodes, "DIV", { class: true });
       var div19_nodes = children(div19);
       div18 = claim_element(div19_nodes, "DIV", { class: true });
       var div18_nodes = children(div18);
@@ -705,39 +732,60 @@ function create_fragment(ctx) {
       a3_nodes.forEach(detach);
       div18_nodes.forEach(detach);
       div19_nodes.forEach(detach);
-      t18 = claim_space(div23_nodes);
-      div22 = claim_element(div23_nodes, "DIV", { class: true });
-      var div22_nodes = children(div22);
-      div20 = claim_element(div22_nodes, "DIV", { class: true });
+      t18 = claim_space(div25_nodes);
+      div24 = claim_element(div25_nodes, "DIV", { class: true });
+      var div24_nodes = children(div24);
+      div23 = claim_element(div24_nodes, "DIV", { class: true });
+      var div23_nodes = children(div23);
+      div20 = claim_element(div23_nodes, "DIV", {});
       var div20_nodes = children(div20);
-      a4 = claim_element(div20_nodes, "A", { class: true, href: true });
+      span1 = claim_element(div20_nodes, "SPAN", { class: true });
+      var span1_nodes = children(span1);
+      t19 = claim_text(span1_nodes, "Twitter");
+      span1_nodes.forEach(detach);
+      t20 = claim_space(div20_nodes);
+      a4 = claim_element(div20_nodes, "A", { href: true, class: true, target: true });
       var a4_nodes = children(a4);
-      svg = claim_svg_element(a4_nodes, "svg", { viewBox: true, fill: true, xmlns: true });
-      var svg_nodes = children(svg);
-      path = claim_svg_element(svg_nodes, "path", { d: true, fill: true });
-      children(path).forEach(detach);
-      svg_nodes.forEach(detach);
+      t21 = claim_text(a4_nodes, "@");
+      t22 = claim_text(a4_nodes, t22_value);
       a4_nodes.forEach(detach);
-      t19 = claim_space(div20_nodes);
-      a5 = claim_element(div20_nodes, "A", { href: true, class: true, target: true });
-      var a5_nodes = children(a5);
-      t20 = claim_text(a5_nodes, "@");
-      t21 = claim_text(a5_nodes, t21_value);
-      a5_nodes.forEach(detach);
       div20_nodes.forEach(detach);
-      t22 = claim_space(div22_nodes);
-      div21 = claim_element(div22_nodes, "DIV", { class: true });
+      t23 = claim_space(div23_nodes);
+      div21 = claim_element(div23_nodes, "DIV", {});
       var div21_nodes = children(div21);
-      claim_component(sveltemarkdown.$$.fragment, div21_nodes);
+      span2 = claim_element(div21_nodes, "SPAN", { class: true });
+      var span2_nodes = children(span2);
+      t24 = claim_text(span2_nodes, "Bluesky");
+      span2_nodes.forEach(detach);
+      t25 = claim_space(div21_nodes);
+      a5 = claim_element(div21_nodes, "A", { href: true, class: true, target: true });
+      var a5_nodes = children(a5);
+      t26 = claim_text(a5_nodes, "@");
+      t27 = claim_text(a5_nodes, t27_value);
+      a5_nodes.forEach(detach);
       div21_nodes.forEach(detach);
-      t23 = claim_space(div22_nodes);
-      if (if_block1)
-        if_block1.l(div22_nodes);
+      t28 = claim_space(div23_nodes);
+      div22 = claim_element(div23_nodes, "DIV", {});
+      var div22_nodes = children(div22);
+      span3 = claim_element(div22_nodes, "SPAN", { class: true });
+      var span3_nodes = children(span3);
+      t29 = claim_text(span3_nodes, "Matrix");
+      span3_nodes.forEach(detach);
+      t30 = claim_space(div22_nodes);
+      a6 = claim_element(div22_nodes, "A", { href: true, class: true, target: true });
+      var a6_nodes = children(a6);
+      t31 = claim_text(a6_nodes, t31_value);
+      a6_nodes.forEach(detach);
       div22_nodes.forEach(detach);
       div23_nodes.forEach(detach);
       div24_nodes.forEach(detach);
-      footer_nodes.forEach(detach);
       div25_nodes.forEach(detach);
+      t32 = claim_space(div26_nodes);
+      if (if_block1)
+        if_block1.l(div26_nodes);
+      div26_nodes.forEach(detach);
+      footer_nodes.forEach(detach);
+      div27_nodes.forEach(detach);
       this.h();
     },
     h() {
@@ -760,7 +808,7 @@ function create_fragment(ctx) {
       attr(div8, "class", "text-4xl md:text-6xl font-bold mb-4 md:mb-8 animation-crypt font-mono2 font-thin lowercase");
       attr(p0, "class", "italic");
       attr(div9, "class", "mt-12 text-xl mx-4");
-      attr(span, "class", "font-medium block sm:inline-block");
+      attr(span0, "class", "font-medium block sm:inline-block");
       attr(a1, "href", a1_href_value = /*data*/
       ctx[0].config.venueMapUrl);
       attr(a1, "target", "_blank");
@@ -783,31 +831,33 @@ function create_fragment(ctx) {
       ctx[0].config.parent);
       attr(a3, "href", a3_href_value = /*data*/
       ctx[0].config.parentUrl);
-      attr(div18, "class", "w-32 lg:w-48");
+      attr(div18, "class", "w-28 sm:w-32 lg:w-48");
       attr(div19, "class", "grow");
-      attr(path, "d", "M28.0266 3.12733C26.9955 3.62938 25.8872 3.96853 24.7242 4.12112C25.9113 3.34005 26.8231 2.10325 27.2524 0.629411C26.1413 1.35279 24.9107 1.87791 23.6009 2.16092C22.5522 0.934264 21.0578 0.167969 19.4039 0.167969C16.2285 0.167969 13.6538 2.99367 13.6538 6.47907C13.6538 6.97373 13.7047 7.45548 13.8028 7.91738C9.02398 7.6542 4.78719 5.14151 1.95117 1.3231C1.45622 2.25521 1.17259 3.33929 1.17259 4.49596C1.17259 6.68564 2.18771 8.61738 3.73058 9.74913C2.78804 9.71637 1.90142 9.43244 1.1262 8.95977C1.12555 8.98607 1.12555 9.01252 1.12555 9.03913C1.12555 12.0969 3.1076 14.6476 5.73804 15.2278C5.25556 15.3721 4.74758 15.4491 4.2232 15.4491C3.85268 15.4491 3.49255 15.4095 3.14137 15.3359C3.87315 17.8432 5.99658 19.6679 8.51282 19.7187C6.54493 21.4115 4.06569 22.4206 1.37163 22.4206C0.907503 22.4206 0.449828 22.3906 0 22.3323C2.54468 24.1231 5.56708 25.168 8.81424 25.168C19.3905 25.168 25.1742 15.5511 25.1742 7.21076C25.1742 6.93712 25.1686 6.66503 25.1576 6.39416C26.2809 5.50451 27.2556 4.39306 28.0265 3.12733H28.0266Z");
-      attr(path, "fill", "white");
-      attr(svg, "viewBox", "0 0 29 26");
-      attr(svg, "fill", "none");
-      attr(svg, "xmlns", "http://www.w3.org/2000/svg");
-      attr(a4, "class", "inline-block w-5 mr-1");
+      attr(span1, "class", "font-mono2 lowercase");
       attr(a4, "href", a4_href_value = "https://twitter.com/" + /*data*/
       ctx[0].config.twitter);
-      attr(a5, "href", a5_href_value = "https://twitter.com/" + /*data*/
-      ctx[0].config.twitter);
-      attr(a5, "class", "text-xl no-underline hover:underline external animate-section");
+      attr(a4, "class", "text-md no-underline hover:underline external animate-section");
+      attr(a4, "target", "_blank");
+      attr(span2, "class", "font-mono2 lowercase");
+      attr(a5, "href", a5_href_value = /*data*/
+      ctx[0].config.blueskyUrl);
+      attr(a5, "class", "external animate-section text-md no-underline hover:underline");
       attr(a5, "target", "_blank");
-      attr(div20, "class", "");
-      attr(div21, "class", "mt-4 text-mild");
-      attr(div22, "class", "text-right");
-      attr(div23, "class", "flex gap-4");
-      attr(div24, "class", "middle-pane-big pt-10 mx-auto");
+      attr(span3, "class", "font-mono2 lowercase");
+      attr(a6, "href", a6_href_value = /*data*/
+      ctx[0].config.matrixUrl);
+      attr(a6, "class", "external animate-section text-md no-underline hover:underline");
+      attr(a6, "target", "_blank");
+      attr(div23, "class", "text-sm flex flex-wrap gap-2 sm:gap-4 ml-8 mb-8 text-mild");
+      attr(div24, "class", "text-right");
+      attr(div25, "class", "flex gap-4");
+      attr(div26, "class", "middle-pane-big pt-10 mx-auto");
       attr(footer, "class", "pb-16 bg-black");
-      attr(div25, "class", "relative w-full min-h-screen text-white");
+      attr(div27, "class", "relative w-full min-h-screen text-white");
     },
     m(target, anchor) {
-      insert_hydration(target, div25, anchor);
-      append_hydration(div25, div7);
+      insert_hydration(target, div27, anchor);
+      append_hydration(div27, div7);
       append_hydration(div7, div5);
       append_hydration(div5, div4);
       append_hydration(div4, div3);
@@ -828,8 +878,8 @@ function create_fragment(ctx) {
         if_block0.m(div5, null);
       append_hydration(div7, t4);
       append_hydration(div7, div6);
-      append_hydration(div25, t5);
-      append_hydration(div25, div17);
+      append_hydration(div27, t5);
+      append_hydration(div27, div17);
       append_hydration(div17, div16);
       append_hydration(div16, div15);
       append_hydration(div15, div8);
@@ -844,8 +894,8 @@ function create_fragment(ctx) {
       append_hydration(div15, div14);
       append_hydration(div14, div13);
       append_hydration(div13, div10);
-      append_hydration(div10, span);
-      append_hydration(span, t11);
+      append_hydration(div10, span0);
+      append_hydration(span0, t11);
       append_hydration(div10, t12);
       append_hydration(div10, a1);
       append_hydration(a1, t13);
@@ -855,34 +905,46 @@ function create_fragment(ctx) {
       append_hydration(a2, button1);
       append_hydration(button1, div11);
       append_hydration(div11, t15);
-      append_hydration(div25, t16);
+      append_hydration(div27, t16);
       if (default_slot) {
-        default_slot.m(div25, null);
+        default_slot.m(div27, null);
       }
-      append_hydration(div25, t17);
-      append_hydration(div25, footer);
-      append_hydration(footer, div24);
-      append_hydration(div24, div23);
-      append_hydration(div23, div19);
+      append_hydration(div27, t17);
+      append_hydration(div27, footer);
+      append_hydration(footer, div26);
+      append_hydration(div26, div25);
+      append_hydration(div25, div19);
       append_hydration(div19, div18);
       append_hydration(div18, a3);
       append_hydration(a3, img1);
-      append_hydration(div23, t18);
-      append_hydration(div23, div22);
-      append_hydration(div22, div20);
+      append_hydration(div25, t18);
+      append_hydration(div25, div24);
+      append_hydration(div24, div23);
+      append_hydration(div23, div20);
+      append_hydration(div20, span1);
+      append_hydration(span1, t19);
+      append_hydration(div20, t20);
       append_hydration(div20, a4);
-      append_hydration(a4, svg);
-      append_hydration(svg, path);
-      append_hydration(div20, t19);
-      append_hydration(div20, a5);
-      append_hydration(a5, t20);
-      append_hydration(a5, t21);
-      append_hydration(div22, t22);
-      append_hydration(div22, div21);
-      mount_component(sveltemarkdown, div21, null);
-      append_hydration(div22, t23);
+      append_hydration(a4, t21);
+      append_hydration(a4, t22);
+      append_hydration(div23, t23);
+      append_hydration(div23, div21);
+      append_hydration(div21, span2);
+      append_hydration(span2, t24);
+      append_hydration(div21, t25);
+      append_hydration(div21, a5);
+      append_hydration(a5, t26);
+      append_hydration(a5, t27);
+      append_hydration(div23, t28);
+      append_hydration(div23, div22);
+      append_hydration(div22, span3);
+      append_hydration(span3, t29);
+      append_hydration(div22, t30);
+      append_hydration(div22, a6);
+      append_hydration(a6, t31);
+      append_hydration(div26, t32);
       if (if_block1)
-        if_block1.m(div22, null);
+        if_block1.m(div26, null);
       current = true;
       if (!mounted) {
         dispose = [
@@ -895,7 +957,7 @@ function create_fragment(ctx) {
           listen(div8, "mouseenter", animateText),
           listen(div11, "mouseenter", animateText),
           listen(a2, "click", handleAnchorClick),
-          listen(div20, "mouseenter", animateSection())
+          listen(div23, "mouseenter", animateSection())
         ];
         mounted = true;
       }
@@ -1005,26 +1067,33 @@ function create_fragment(ctx) {
       ctx2[0].config.parentUrl)) {
         attr(a3, "href", a3_href_value);
       }
+      if ((!current || dirty & /*data*/
+      1) && t22_value !== (t22_value = /*data*/
+      ctx2[0].config.twitter + ""))
+        set_data(t22, t22_value);
       if (!current || dirty & /*data*/
       1 && a4_href_value !== (a4_href_value = "https://twitter.com/" + /*data*/
       ctx2[0].config.twitter)) {
         attr(a4, "href", a4_href_value);
       }
       if ((!current || dirty & /*data*/
-      1) && t21_value !== (t21_value = /*data*/
-      ctx2[0].config.twitter + ""))
-        set_data(t21, t21_value);
+      1) && t27_value !== (t27_value = /*data*/
+      ctx2[0].config.bluesky + ""))
+        set_data(t27, t27_value);
       if (!current || dirty & /*data*/
-      1 && a5_href_value !== (a5_href_value = "https://twitter.com/" + /*data*/
-      ctx2[0].config.twitter)) {
+      1 && a5_href_value !== (a5_href_value = /*data*/
+      ctx2[0].config.blueskyUrl)) {
         attr(a5, "href", a5_href_value);
       }
-      const sveltemarkdown_changes = {};
-      if (dirty & /*data*/
-      1)
-        sveltemarkdown_changes.source = /*data*/
-        ctx2[0].config.authors;
-      sveltemarkdown.$set(sveltemarkdown_changes);
+      if ((!current || dirty & /*data*/
+      1) && t31_value !== (t31_value = /*data*/
+      ctx2[0].config.matrix + ""))
+        set_data(t31, t31_value);
+      if (!current || dirty & /*data*/
+      1 && a6_href_value !== (a6_href_value = /*data*/
+      ctx2[0].config.matrixUrl)) {
+        attr(a6, "href", a6_href_value);
+      }
       if (
         /*data*/
         ctx2[0].config.license
@@ -1039,7 +1108,7 @@ function create_fragment(ctx) {
           if_block1 = create_if_block(ctx2);
           if_block1.c();
           transition_in(if_block1, 1);
-          if_block1.m(div22, null);
+          if_block1.m(div26, null);
         }
       } else if (if_block1) {
         group_outros();
@@ -1053,25 +1122,22 @@ function create_fragment(ctx) {
       if (current)
         return;
       transition_in(default_slot, local);
-      transition_in(sveltemarkdown.$$.fragment, local);
       transition_in(if_block1);
       current = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      transition_out(sveltemarkdown.$$.fragment, local);
       transition_out(if_block1);
       current = false;
     },
     d(detaching) {
       if (detaching)
-        detach(div25);
+        detach(div27);
       destroy_each(each_blocks, detaching);
       if (if_block0)
         if_block0.d();
       if (default_slot)
         default_slot.d(detaching);
-      destroy_component(sveltemarkdown);
       if (if_block1)
         if_block1.d();
       mounted = false;

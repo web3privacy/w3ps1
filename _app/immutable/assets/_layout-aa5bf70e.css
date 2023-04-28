@@ -844,8 +844,8 @@ person-item:hover .text-mild,
 .mb-8{
   margin-bottom: 2rem;
 }
-.mr-1{
-  margin-right: 0.25rem;
+.ml-8{
+  margin-left: 2rem;
 }
 .mt-10{
   margin-top: 2.5rem;
@@ -913,17 +913,14 @@ person-item:hover .text-mild,
 .w-2\/5{
   width: 40%;
 }
+.w-28{
+  width: 7rem;
+}
 .w-3\/4{
   width: 75%;
 }
-.w-32{
-  width: 8rem;
-}
 .w-36{
   width: 9rem;
-}
-.w-5{
-  width: 1.25rem;
 }
 .w-auto{
   width: auto;
@@ -952,6 +949,9 @@ person-item:hover .text-mild,
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+.flex-wrap{
+  flex-wrap: wrap;
+}
 .items-center{
   align-items: center;
 }
@@ -960,6 +960,9 @@ person-item:hover .text-mild,
 }
 .gap-10{
   gap: 2.5rem;
+}
+.gap-2{
+  gap: 0.5rem;
 }
 .gap-4{
   gap: 1rem;
@@ -1214,8 +1217,14 @@ person-item:hover .text-mild,
   .sm\:w-16{
     width: 4rem;
   }
+  .sm\:w-32{
+    width: 8rem;
+  }
   .sm\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .sm\:gap-4{
+    gap: 1rem;
   }
 }
 @media (min-width: 768px){

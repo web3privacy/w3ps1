@@ -1,6 +1,6 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, l as claim_element, m as children, h as detach, n as attr, b as insert_hydration, f as transition_in, g as group_outros, d as check_outros, t as transition_out, M as destroy_each, a as space, q as text, c as claim_space, r as claim_text, G as src_url_equal, H as append_hydration, I as listen, u as set_data, x as create_component, y as claim_component, z as mount_component, A as destroy_component, N as run_all, Z as component_subscribe, _ as is_function, C as noop, e as empty, $ as head_selector, p as set_style } from "./index-88d77172.js";
-import { a as animateText, S as SvelteMarkdown, b as animateSection } from "./helpers-c3e656fe.js";
-import { l as client$1, w as writable } from "./singletons-0b808b86.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, l as claim_element, m as children, h as detach, n as attr, b as insert_hydration, f as transition_in, g as group_outros, d as check_outros, t as transition_out, K as destroy_each, a as space, q as text, c as claim_space, r as claim_text, E as src_url_equal, F as append_hydration, G as listen, u as set_data, x as create_component, y as claim_component, z as mount_component, A as destroy_component, L as run_all, X as component_subscribe, Y as is_function, C as noop, e as empty, Z as head_selector, p as set_style } from "./index-2a025a89.js";
+import { a as animateText, S as SvelteMarkdown, b as animateSection } from "./helpers-88229792.js";
+import { l as client$1, w as writable } from "./singletons-286ffebd.js";
 import { _ as __vitePreload } from "./preload-helper-f8376bb0.js";
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 function getDefaultExportFromCjs(x) {
@@ -24325,7 +24325,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-0d081f25.js").then((n2) => n2.i), true ? ["./index-0d081f25.js","./tslib-e8663318.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-9647dc32.js").then((n2) => n2.i), true ? ["./index-9647dc32.js","./tslib-10b32299.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24653,7 +24653,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-10ebb825.js"), true ? ["./index-10ebb825.js","./index-6763091b.js","./tslib-e8663318.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-8a3ceb5b.js"), true ? ["./index-8a3ceb5b.js","./index-f5510c95.js","./tslib-10b32299.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24700,7 +24700,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-3a108493.js"), true ? ["./index-3a108493.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-7e735159.js"), true ? ["./index-7e735159.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24710,7 +24710,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-53c08b68.js"), true ? ["./index.es-53c08b68.js","./tslib-e8663318.js","./index-6763091b.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-e38cb15a.js"), true ? ["./index.es-e38cb15a.js","./tslib-10b32299.js","./index-f5510c95.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27190,7 +27190,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-d64eec65.js"), true ? ["./index-d64eec65.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-93b2d070.js"), true ? ["./index-93b2d070.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
