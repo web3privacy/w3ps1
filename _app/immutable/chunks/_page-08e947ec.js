@@ -165,7 +165,7 @@ function create_each_block$2(ctx) {
       t2 = claim_space(div3_nodes);
       div2 = claim_element(div3_nodes, "DIV", { class: true });
       var div2_nodes = children(div2);
-      a2 = claim_element(div2_nodes, "A", { href: true, class: true });
+      a2 = claim_element(div2_nodes, "A", { href: true, class: true, target: true });
       var a_nodes = children(a2);
       t3 = claim_text(a_nodes, "@");
       t4 = claim_text(a_nodes, t4_value);
@@ -190,6 +190,7 @@ function create_each_block$2(ctx) {
         ctx[5].twitter
       ));
       attr(a2, "class", "hover:underline animate-speaker");
+      attr(a2, "target", "_blank");
       attr(div2, "class", "text-mild");
       attr(div3, "class", "pb-3.5 px-5");
       attr(div4, "class", "hover:bg-white hover:text-black person-item border border-white/30");
@@ -24325,7 +24326,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-9647dc32.js").then((n2) => n2.i), true ? ["./index-9647dc32.js","./tslib-10b32299.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-3842764d.js").then((n2) => n2.i), true ? ["./index-3842764d.js","./tslib-c7a463c9.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24653,7 +24654,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-8a3ceb5b.js"), true ? ["./index-8a3ceb5b.js","./index-f5510c95.js","./tslib-10b32299.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-fabf4c85.js"), true ? ["./index-fabf4c85.js","./index-5e8d0308.js","./tslib-c7a463c9.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24700,7 +24701,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-7e735159.js"), true ? ["./index-7e735159.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-3892eb68.js"), true ? ["./index-3892eb68.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24710,7 +24711,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-e38cb15a.js"), true ? ["./index.es-e38cb15a.js","./tslib-10b32299.js","./index-f5510c95.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-f4390627.js"), true ? ["./index.es-f4390627.js","./tslib-c7a463c9.js","./index-5e8d0308.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27190,7 +27191,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-93b2d070.js"), true ? ["./index-93b2d070.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-fddd6465.js"), true ? ["./index-fddd6465.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }

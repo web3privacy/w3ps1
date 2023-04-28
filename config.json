@@ -216,6 +216,14 @@
       "img": "nick-almond.jpg",
       "caption": "Building next gen DAOs with [FactoryDAO](https://www.factorydao.xyz/)",
       "country": "gb"
+    },
+    {
+      "id": "dcbuilder",
+      "name": "dcbuilder.eth",
+      "twitter": "DCbuild3r",
+      "img": "dcbuilder.jpg",
+      "caption": "Research engineer of [Worldcoin](https://worldcoin.org/), ZKML & Rust enthusiast",
+      "country": "cz"
     }
   ],
   "speakersNote": "We keep adding more and more speakers, stay tuned ...",
@@ -225,7 +233,8 @@
     "juraj-bednar",
     "mario-havel",
     "max-hampshire",
-    "nick-almond"
+    "nick-almond",
+    "dcbuilder"
   ],
   "partners": [
     {
