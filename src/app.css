@@ -201,4 +201,9 @@
 	.person-item {
 		@apply cursor-help transition-all duration-500;
 	}
+	.partner-item { @apply transition-all; }
+	.partner-item .partner-img { @apply grayscale; }
+	.partner-item:hover .partner-img { @apply grayscale-0; }
+	.partner-item .partner-text { @apply invisible; }
+	.partner-item:hover .partner-text { @apply visible; }
 }
