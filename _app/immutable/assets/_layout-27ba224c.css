@@ -429,6 +429,12 @@ footer a:hover,
 	.markdown a:hover{
   text-decoration-line: none;
 }
+.markdown-basic a{
+  text-decoration-line: underline;
+}
+.markdown-basic a:hover{
+  text-decoration-line: none;
+}
 .markdown p {
 	}
 .markdown.multiline > p:not(:last-child){

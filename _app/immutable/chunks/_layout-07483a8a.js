@@ -158,7 +158,7 @@ const data = {
       name: "Mykola Siusko",
       twitter: "nicksvyaznoy",
       img: "mykola.png",
-      caption: "Web3 privacy advocate",
+      caption: "Web3 privacy advocate behind [Web3Privacy Now](https://web3privacy.info/)",
       country: "es"
     },
     {
@@ -166,7 +166,7 @@ const data = {
       name: "Tree",
       twitter: "treecz",
       img: "tree.jpg",
-      caption: "Creator of lunarpunk hackathons & events",
+      caption: "Orchestrator of lunarpunk events like [ETHBrno](https://ethbrno.cz) or [w3ps](https://github.com/web3privacy/w3ps)",
       country: "cz"
     },
     {
@@ -174,7 +174,7 @@ const data = {
       name: "Juraj Bednar",
       twitter: "jurbed",
       img: "juraj-bednar.jpg",
-      caption: "Educator, writer, cryptoanarchist & biohacker",
+      caption: "Educator, writer, cryptoanarchist & biohacker ([blog](https://juraj.bednar.io/))",
       country: "sk"
     },
     {
@@ -224,6 +224,14 @@ const data = {
       img: "dcbuilder.jpg",
       caption: "Research engineer of [Worldcoin](https://worldcoin.org/), ZKML & Rust enthusiast",
       country: "cz"
+    },
+    {
+      id: "alona-shevchenko",
+      name: "Alona Shevchenko",
+      twitter: "cryptodrftng",
+      img: "alona-shevchenko.jpg",
+      caption: "Unapologetic Ukrainian behind [Ukraine DAO](https://ukrainedao.love/) & [Kyiv Tech Summit](https://www.kyivtechsummit.com/)",
+      country: "ua"
     }
   ],
   speakersNote: "We keep adding more and more speakers, stay tuned ...",
@@ -234,7 +242,8 @@ const data = {
     "mario-havel",
     "max-hampshire",
     "nick-almond",
-    "dcbuilder"
+    "dcbuilder",
+    "alona-shevchenko"
   ],
   partners: [
     {
