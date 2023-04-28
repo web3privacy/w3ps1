@@ -266,6 +266,13 @@ const data = {
       img: "ethrome.svg",
       twitter: "ethereumrome",
       padding: 4
+    },
+    {
+      id: "ukraine-dao",
+      name: "Ukraine DAO",
+      web: "https://ukrainedao.love",
+      img: "ukraine-dao.png",
+      twitter: "Ukraine_DAO"
     }
   ],
   hosts: [
