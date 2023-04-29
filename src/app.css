@@ -237,4 +237,5 @@
 	.partner-item:hover .partner-text .text-mild {
 		@apply text-white/50 duration-1000;
 	}
+	.badge:hover .badge-image { @apply grayscale-0; }
 }
