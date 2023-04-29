@@ -794,6 +794,10 @@ person-item:hover .text-mild,
   color: rgb(255 255 255 / 0.5);
   transition-duration: 1000ms;
 }
+.badge:hover .badge-image{
+  --tw-grayscale: grayscale(0);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
 .fixed{
   position: fixed;
 }
