@@ -857,7 +857,7 @@ class Root extends SvelteComponent {
 }
 const matchers = {};
 const nodes = [
-  () => __vitePreload(() => import("./chunks/0-5b68c6c8.js"), true ? ["./chunks/0-5b68c6c8.js","./chunks/_layout-0a86f1dc.js","./components/pages/_layout.svelte-3fdd8ada.js","./chunks/index-2a025a89.js","./chunks/helpers-88229792.js","./assets/_layout-a56c57f7.css"] : void 0, import.meta.url),
+  () => __vitePreload(() => import("./chunks/0-4a39c8e6.js"), true ? ["./chunks/0-4a39c8e6.js","./chunks/_layout-6f52409b.js","./components/pages/_layout.svelte-3fdd8ada.js","./chunks/index-2a025a89.js","./chunks/helpers-88229792.js","./assets/_layout-a56c57f7.css"] : void 0, import.meta.url),
   () => __vitePreload(() => import("./chunks/1-1b14460c.js"), true ? ["./chunks/1-1b14460c.js","./components/error.svelte-67e543b8.js","./chunks/index-2a025a89.js","./chunks/singletons-286ffebd.js"] : void 0, import.meta.url),
   () => __vitePreload(() => import("./chunks/2-c5f13b45.js"), true ? ["./chunks/2-c5f13b45.js","./chunks/_page-8c1cf24b.js","./chunks/index-2a025a89.js","./chunks/helpers-88229792.js","./chunks/singletons-286ffebd.js","./chunks/preload-helper-f8376bb0.js"] : void 0, import.meta.url)
 ];

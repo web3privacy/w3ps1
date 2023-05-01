@@ -284,19 +284,27 @@ const data = {
       padding: 2
     },
     {
-      id: "gweicz",
-      name: "Gwei.cz",
-      web: "https://gwei.cz",
-      img: "gweicz.png",
-      twitter: "gweicz"
-    },
-    {
       id: "ethrome",
       name: "ETHRome",
       web: "https://ethrome.org",
       img: "ethrome.svg",
       twitter: "ethereumrome",
       padding: 4
+    },
+    {
+      id: "ethbarcelona",
+      name: "ETHBarcelona",
+      web: "https://ethbarcelona.com/",
+      img: "ethbarcelona.svg",
+      twitter: "eth_barcelona",
+      padding: 4
+    },
+    {
+      id: "gweicz",
+      name: "Gwei.cz",
+      web: "https://gwei.cz",
+      img: "gweicz.png",
+      twitter: "gweicz"
     },
     {
       id: "ukraine-dao",
