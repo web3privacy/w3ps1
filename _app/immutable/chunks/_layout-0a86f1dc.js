@@ -240,6 +240,14 @@ const data = {
       img: "alona-shevchenko.jpg",
       caption: "Unapologetic Ukrainian behind [Ukraine DAO](https://ukrainedao.love/) & [Kyiv Tech Summit](https://www.kyivtechsummit.com/)",
       country: "ua"
+    },
+    {
+      id: "ameen-soleimani",
+      name: "Ameen Soleimani",
+      twitter: "ameensol",
+      img: "ameen-soleimani.jpg",
+      caption: "Summoner of [IranUnchained](https://www.iranunchained.com/), [Privacy Pools](https://www.privacypools.com/), [MolochDAO](https://molochdao.com/)\n",
+      country: "us"
     }
   ],
   hosts: [
@@ -249,12 +257,13 @@ const data = {
   ],
   speakersNote: "We keep adding more and more speakers, stay tuned ...",
   speakers: [
+    "ameen-soleimani",
     "guy-zyskind",
-    "manu-alzuru",
-    "juraj-bednar",
-    "mario-havel",
     "max-hampshire",
+    "mario-havel",
+    "manu-alzuru",
     "nick-almond",
+    "juraj-bednar",
     "dcbuilder",
     "alona-shevchenko"
   ],

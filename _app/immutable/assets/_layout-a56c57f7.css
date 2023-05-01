@@ -1031,10 +1031,6 @@ person-item:hover .text-mild,
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.px-5{
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1072,17 +1068,14 @@ person-item:hover .text-mild,
 .pb-16{
   padding-bottom: 4rem;
 }
-.pb-3{
-  padding-bottom: 0.75rem;
-}
-.pb-3\.5{
-  padding-bottom: 0.875rem;
-}
 .pb-32{
   padding-bottom: 8rem;
 }
 .pb-36{
   padding-bottom: 9rem;
+}
+.pb-4{
+  padding-bottom: 1rem;
 }
 .pb-8{
   padding-bottom: 2rem;
