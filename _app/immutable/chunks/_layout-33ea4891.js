@@ -162,14 +162,6 @@ const data = {
       country: "es"
     },
     {
-      id: "tree",
-      name: "Tree",
-      twitter: "treecz",
-      img: "tree.jpg",
-      caption: "Orchestrating lunarpunk events [ETHBrno](https://ethbrno.cz) & [w3ps](https://github.com/web3privacy/w3ps) w/ [gwei.cz](https://gwei.cz)",
-      country: "cz"
-    },
-    {
       id: "pg",
       name: "PG",
       twitter: "PG_CDG",
@@ -252,7 +244,6 @@ const data = {
   ],
   hosts: [
     "mykola",
-    "tree",
     "pg"
   ],
   speakersNote: "We keep adding more and more speakers, stay tuned ...",
@@ -303,8 +294,7 @@ const data = {
       id: "gweicz",
       name: "Gwei.cz",
       web: "https://gwei.cz",
-      img: "gweicz.png",
-      twitter: "gweicz"
+      img: "gweicz.png"
     },
     {
       id: "ukraine-dao",
