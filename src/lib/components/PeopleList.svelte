@@ -32,11 +32,15 @@
 			<div class="pb-4 px-4">
 				<div class="mt-4 speaker-name animate-speaker font-mono2">{item.name.toUpperCase()}</div>
 				<div class="text-mild">
+					{#if item.twitter}
 					<a
 						href={twitterLink(item.twitter)}
 						class="hover:underline animate-speaker"
 						target="_blank">@{item.twitter}</a
 					>
+					{:else if item.link}
+					<a href={item.link} class="hover:underline animate-speaker" target="_blank">{item.linkText || "link"}</a>
+					{/if}
 				</div>
 				{#if item.caption}
 					<div class="mt-2 text-sm text-supermild markdown-basic">

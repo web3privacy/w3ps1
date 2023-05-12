@@ -63,35 +63,38 @@
 </div>
 
 <div class="" id="sponsors">
-	<div class="middle-pane-medium pt-16 mx-auto pb-32">
+	<div class="middle-pane-medium pt-16 mx-auto pb-24">
 		<div class="section-header" on:mouseenter={animateText}>Partners</div>
-		<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 mb-12">
-			{#each data.config.partners as partner}
-				<div class="partner-item text-center items-center p-2" on:mouseenter={animateSection(40)}>
-					<div>
-						<a href={partner.web}
-							><img
-								src="/partners/{partner.img}"
-								class="partner-img aspect-[16/11] w-full h-full object-contain {partner.padding
-									? `p-${partner.padding}`
-									: ''}"
-							/></a
-						>
-					</div>
-					<div class="p-2 partner-text">
+		{#each data.config.partnerLevels as level}
+			<div class="lowercase pb-6 text-xl font-mono2">{level.name}</div>
+			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 mb-6">
+				{#each data.config.partners.filter(p => p.level == level.key) as partner}
+					<div class="partner-item text-center items-center p-2" on:mouseenter={animateSection(40)}>
 						<div>
-							<a href={partner.web} class="font-mono2 animate-section lowercase">{partner.name}</a>
-						</div>
-						<div>
-							<a href="https://twitter.com/{partner.twitter}" class="text-sm text-mild"
-								>@{partner.twitter}</a
+							<a href={partner.web}
+								><img
+									src="/partners/{partner.img}"
+									class="partner-img aspect-[16/11] w-full h-full object-contain {partner.padding
+										? `p-${partner.padding}`
+										: ''}"
+								/></a
 							>
 						</div>
+						<div class="p-2 partner-text">
+							<div>
+								<a href={partner.web} class="font-mono2 animate-section lowercase">{partner.name}</a>
+							</div>
+							<div>
+								<a href="https://twitter.com/{partner.twitter}" class="text-sm text-mild"
+									>@{partner.twitter}</a
+								>
+							</div>
+						</div>
 					</div>
-				</div>
-			{/each}
-		</div>
-		<div>
+				{/each}
+			</div>
+		{/each}
+		<div class="mt-10">
 			<a href={data.config.sponsorUrl}
 				><button class="button text-lg" on:mouseenter={animateText}>Become a partner</button></a
 			>
