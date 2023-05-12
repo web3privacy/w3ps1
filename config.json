@@ -240,6 +240,21 @@
       "img": "ameen-soleimani.jpg",
       "caption": "Summoner of [IranUnchained](https://www.iranunchained.com/), [Privacy Pools](https://www.privacypools.com/), [MolochDAO](https://molochdao.com/)\n",
       "country": "us"
+    },
+    {
+      "id": "alex-kampa",
+      "name": "Alex Kampa",
+      "img": "alex-kampa.jpg",
+      "link": "https://lu.linkedin.com/in/alex-kampa",
+      "linkText": "@alex-kampa",
+      "caption": "Director at [Aragon ZK Research](https://research.aragon.org/)\n"
+    },
+    {
+      "id": "antoni-zolciak",
+      "name": "Antoni Zolciak",
+      "img": "antoni-zolciak.jpg",
+      "twitter": "AntoniZolciak",
+      "caption": "Co-founder of [Aleph Zero](https://alephzero.org/) & [Cardinal](https://cardinal.co/)\n"
     }
   ],
   "hosts": [
@@ -251,6 +266,8 @@
     "ameen-soleimani",
     "guy-zyskind",
     "max-hampshire",
+    "antoni-zolciak",
+    "alex-kampa",
     "mario-havel",
     "manu-alzuru",
     "nick-almond",
@@ -258,7 +275,26 @@
     "dcbuilder",
     "alona-shevchenko"
   ],
+  "partnerLevels": [
+    {
+      "key": 2,
+      "name": "Sponsors"
+    },
+    {
+      "key": null,
+      "name": "Media partners"
+    }
+  ],
   "partners": [
+    {
+      "id": "aragon-zk-research",
+      "name": "Aragon ZK Research",
+      "web": "https://research.aragon.org/",
+      "twitter": "aragon_zk",
+      "img": "aragon-zk-research.svg",
+      "padding": 4,
+      "level": 2
+    },
     {
       "id": "lunardao",
       "name": "LunarDAO",
