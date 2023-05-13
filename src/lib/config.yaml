@@ -200,12 +200,14 @@ people:
     linkText: "@alex-kampa"
     caption: |
       Director at [Aragon ZK Research](https://research.aragon.org/)
+    country: lu
   - id: antoni-zolciak
     name: Antoni Zolciak  
     img: antoni-zolciak.jpg
     twitter: AntoniZolciak
     caption: |
       Co-founder of [Aleph Zero](https://alephzero.org/) & [Cardinal](https://cardinal.co/)
+    country: pl
 hosts:
   - mykola
   - tree
