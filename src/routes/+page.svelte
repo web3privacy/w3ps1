@@ -16,6 +16,11 @@
 	<meta name="twitter:title" content={data.config.title} />
 	<meta name="twitter:description" content={data.config.desc} />
 	<meta name="twitter:image" content="https://{data.config.domain}{data.config.image}" />
+
+	<meta name="og:url" content="https://{data.config.domain}"/>
+	<meta name="og:title" content={data.config.title} />
+	<meta name="og:description" content={data.config.desc} />
+	<meta name="og:image" content="https://{data.config.domain}{data.config.image}" />
 </svelte:head>
 
 <div class="bg-black" id="about">
