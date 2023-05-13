@@ -1,5 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display:wght@400&display=swap');
+/* major-mono-display-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Major Mono Display';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/major-mono-display-v13-latin-regular.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/major-mono-display-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('/fonts/major-mono-display-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('/fonts/major-mono-display-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+		 url('/fonts/major-mono-display-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('/fonts/major-mono-display-v13-latin-regular.svg#MajorMonoDisplay') format('svg'); /* Legacy iOS */
+}
+
+/* dm-mono-300 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'DM Mono';
+	font-style: normal;
+	font-weight: 300;
+	src: url('/fonts/dm-mono-v11-latin-300.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/dm-mono-v11-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('/fonts/dm-mono-v11-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('/fonts/dm-mono-v11-latin-300.woff') format('woff'), /* Modern Browsers */
+		 url('/fonts/dm-mono-v11-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('/fonts/dm-mono-v11-latin-300.svg#DMMono') format('svg'); /* Legacy iOS */
+  }
+  /* dm-mono-regular - latin */
+  @font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'DM Mono';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/dm-mono-v11-latin-regular.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/dm-mono-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('/fonts/dm-mono-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('/fonts/dm-mono-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+		 url('/fonts/dm-mono-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('/fonts/dm-mono-v11-latin-regular.svg#DMMono') format('svg'); /* Legacy iOS */
+  }
+  /* dm-mono-500 - latin */
+  @font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'DM Mono';
+	font-style: normal;
+	font-weight: 500;
+	src: url('/fonts/dm-mono-v11-latin-500.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/dm-mono-v11-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('/fonts/dm-mono-v11-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('/fonts/dm-mono-v11-latin-500.woff') format('woff'), /* Modern Browsers */
+		 url('/fonts/dm-mono-v11-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('/fonts/dm-mono-v11-latin-500.svg#DMMono') format('svg'); /* Legacy iOS */
+  }
 
 @tailwind base;
 @tailwind components;
