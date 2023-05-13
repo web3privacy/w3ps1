@@ -24428,7 +24428,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-f64e10cf.js").then((n2) => n2.i), true ? ["./index-f64e10cf.js","./tslib-9b9d7fbf.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-980c17a0.js").then((n2) => n2.i), true ? ["./index-980c17a0.js","./tslib-764346db.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24756,7 +24756,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-5ec4d7f4.js"), true ? ["./index-5ec4d7f4.js","./index-81e93661.js","./tslib-9b9d7fbf.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-faf1d3fd.js"), true ? ["./index-faf1d3fd.js","./index-1e556457.js","./tslib-764346db.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24803,7 +24803,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-7eb901e1.js"), true ? ["./index-7eb901e1.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-4557fe86.js"), true ? ["./index-4557fe86.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24813,7 +24813,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-a4c02aed.js"), true ? ["./index.es-a4c02aed.js","./tslib-9b9d7fbf.js","./index-81e93661.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-85e45a7c.js"), true ? ["./index.es-85e45a7c.js","./tslib-764346db.js","./index-1e556457.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27293,7 +27293,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-2ea2649c.js"), true ? ["./index-2ea2649c.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-fbfab4bf.js"), true ? ["./index-fbfab4bf.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
@@ -29708,6 +29708,14 @@ function create_fragment(ctx) {
   let meta4_content_value;
   let meta5;
   let meta5_content_value;
+  let meta6;
+  let meta6_content_value;
+  let meta7;
+  let meta7_content_value;
+  let meta8;
+  let meta8_content_value;
+  let meta9;
+  let meta9_content_value;
   let t0;
   let div5;
   let div4;
@@ -29887,6 +29895,10 @@ function create_fragment(ctx) {
       meta3 = element("meta");
       meta4 = element("meta");
       meta5 = element("meta");
+      meta6 = element("meta");
+      meta7 = element("meta");
+      meta8 = element("meta");
+      meta9 = element("meta");
       t0 = space();
       div5 = element("div");
       div4 = element("div");
@@ -29976,13 +29988,17 @@ function create_fragment(ctx) {
       this.h();
     },
     l(nodes) {
-      const head_nodes = head_selector("svelte-1xuttk2", document.head);
+      const head_nodes = head_selector("svelte-z1gllm", document.head);
       meta0 = claim_element(head_nodes, "META", { name: true, content: true });
       meta1 = claim_element(head_nodes, "META", { name: true, content: true });
       meta2 = claim_element(head_nodes, "META", { name: true, content: true });
       meta3 = claim_element(head_nodes, "META", { name: true, content: true });
       meta4 = claim_element(head_nodes, "META", { name: true, content: true });
       meta5 = claim_element(head_nodes, "META", { name: true, content: true });
+      meta6 = claim_element(head_nodes, "META", { name: true, content: true });
+      meta7 = claim_element(head_nodes, "META", { name: true, content: true });
+      meta8 = claim_element(head_nodes, "META", { name: true, content: true });
+      meta9 = claim_element(head_nodes, "META", { name: true, content: true });
       head_nodes.forEach(detach);
       t0 = claim_space(nodes);
       div5 = claim_element(nodes, "DIV", { class: true, id: true });
@@ -30157,6 +30173,19 @@ function create_fragment(ctx) {
       attr(meta5, "content", meta5_content_value = "https://" + /*data*/
       ctx[0].config.domain + /*data*/
       ctx[0].config.image);
+      attr(meta6, "name", "og:url");
+      attr(meta6, "content", meta6_content_value = "https://" + /*data*/
+      ctx[0].config.domain);
+      attr(meta7, "name", "og:title");
+      attr(meta7, "content", meta7_content_value = /*data*/
+      ctx[0].config.title);
+      attr(meta8, "name", "og:description");
+      attr(meta8, "content", meta8_content_value = /*data*/
+      ctx[0].config.desc);
+      attr(meta9, "name", "og:image");
+      attr(meta9, "content", meta9_content_value = "https://" + /*data*/
+      ctx[0].config.domain + /*data*/
+      ctx[0].config.image);
       attr(p2, "class", "animate-section text-white font-mono2 lowercase");
       attr(div0, "class", "markdown multiline pt-10");
       attr(div1, "class", "py-16 md:py-32 md:w-5/6 mx-auto text-mild");
@@ -30203,6 +30232,10 @@ function create_fragment(ctx) {
       append_hydration(document.head, meta3);
       append_hydration(document.head, meta4);
       append_hydration(document.head, meta5);
+      append_hydration(document.head, meta6);
+      append_hydration(document.head, meta7);
+      append_hydration(document.head, meta8);
+      append_hydration(document.head, meta9);
       insert_hydration(target, t0, anchor);
       insert_hydration(target, div5, anchor);
       append_hydration(div5, div4);
@@ -30337,6 +30370,27 @@ function create_fragment(ctx) {
       ctx2[0].config.domain + /*data*/
       ctx2[0].config.image)) {
         attr(meta5, "content", meta5_content_value);
+      }
+      if (!current || dirty & /*data*/
+      1 && meta6_content_value !== (meta6_content_value = "https://" + /*data*/
+      ctx2[0].config.domain)) {
+        attr(meta6, "content", meta6_content_value);
+      }
+      if (!current || dirty & /*data*/
+      1 && meta7_content_value !== (meta7_content_value = /*data*/
+      ctx2[0].config.title)) {
+        attr(meta7, "content", meta7_content_value);
+      }
+      if (!current || dirty & /*data*/
+      1 && meta8_content_value !== (meta8_content_value = /*data*/
+      ctx2[0].config.desc)) {
+        attr(meta8, "content", meta8_content_value);
+      }
+      if (!current || dirty & /*data*/
+      1 && meta9_content_value !== (meta9_content_value = "https://" + /*data*/
+      ctx2[0].config.domain + /*data*/
+      ctx2[0].config.image)) {
+        attr(meta9, "content", meta9_content_value);
       }
       if ((!current || dirty & /*data*/
       1) && t1_value !== (t1_value = /*data*/
@@ -30562,6 +30616,10 @@ function create_fragment(ctx) {
       detach(meta3);
       detach(meta4);
       detach(meta5);
+      detach(meta6);
+      detach(meta7);
+      detach(meta8);
+      detach(meta9);
       if (detaching)
         detach(t0);
       if (detaching)
