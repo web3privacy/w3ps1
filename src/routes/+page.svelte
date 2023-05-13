@@ -74,7 +74,7 @@
 							<a href={partner.web}
 								><img
 									src="/partners/{partner.img}"
-									class="partner-img aspect-[16/11] w-full h-full object-contain {partner.padding
+									class="partner-img aspect-[16/11] w-full h-full object-contain {partner.class} {partner.padding
 										? `p-${partner.padding}`
 										: ''}"
 								/></a
