@@ -256,14 +256,16 @@ const data = {
       img: "alex-kampa.jpg",
       link: "https://lu.linkedin.com/in/alex-kampa",
       linkText: "@alex-kampa",
-      caption: "Director at [Aragon ZK Research](https://research.aragon.org/)\n"
+      caption: "Director at [Aragon ZK Research](https://research.aragon.org/)\n",
+      country: "lu"
     },
     {
       id: "antoni-zolciak",
       name: "Antoni Zolciak",
       img: "antoni-zolciak.jpg",
       twitter: "AntoniZolciak",
-      caption: "Co-founder of [Aleph Zero](https://alephzero.org/) & [Cardinal](https://cardinal.co/)\n"
+      caption: "Co-founder of [Aleph Zero](https://alephzero.org/) & [Cardinal](https://cardinal.co/)\n",
+      country: "pl"
     }
   ],
   hosts: [
