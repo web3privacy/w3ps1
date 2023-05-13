@@ -162,6 +162,15 @@ const data = {
       country: "es"
     },
     {
+      id: "tree",
+      name: "Tree",
+      link: "https://staging.bsky.app/profile/tree.gwei.cz",
+      linkText: "@tree.gwei.cz",
+      img: "tree.jpg",
+      caption: "Orchestrating lunarpunk events [ETHBrno](https://ethbrno.cz) & [w3ps](https://github.com/web3privacy/w3ps) w/ [gwei.cz](https://gwei.cz)",
+      country: "cz"
+    },
+    {
       id: "pg",
       name: "PG",
       twitter: "PG_CDG",
@@ -259,6 +268,7 @@ const data = {
   ],
   hosts: [
     "mykola",
+    "tree",
     "pg"
   ],
   speakersNote: "We keep adding more and more speakers, stay tuned ...",
@@ -278,7 +288,7 @@ const data = {
   partnerLevels: [
     {
       key: 2,
-      name: "Sponsors"
+      name: "Community sponsors"
     },
     {
       key: null,
@@ -292,8 +302,17 @@ const data = {
       web: "https://research.aragon.org/",
       twitter: "aragon_zk",
       img: "aragon-zk-research.svg",
-      padding: 4,
+      "class": "p-4",
       level: 2
+    },
+    {
+      id: "hopr",
+      name: "HOPR",
+      web: "https://hoprnet.org/",
+      twitter: "hoprnet",
+      img: "hopr.svg",
+      level: 2,
+      "class": "p-6 invert hover:invert-0"
     },
     {
       id: "lunardao",

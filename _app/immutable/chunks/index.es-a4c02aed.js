@@ -1,6 +1,6 @@
-import { t as tslibExports, e as eventsExports } from "./tslib-27e2d856.js";
-import { e as commonjsGlobal, h as getAugmentedNamespace, r as require$$1 } from "./_page-87169cf6.js";
-import { b as safeJsonStringify$1, s as splitOnFirst, a as strictUriEncode, d as decodeUriComponent, i as isWsUrl, c as cjs$8, e as isLocalhostUrl, g as safeJsonParse$1, f as formatJsonRpcError, h as parseConnectionError, J as JsonRpcProvider, j as isJsonRpcRequest, k as formatJsonRpcResult, l as isJsonRpcResult, m as isJsonRpcError, n as isJsonRpcResponse, o as formatJsonRpcRequest, H as HttpConnection } from "./index-187b989c.js";
+import { t as tslibExports, e as eventsExports } from "./tslib-9b9d7fbf.js";
+import { e as commonjsGlobal, h as getAugmentedNamespace, r as require$$1 } from "./_page-e4465869.js";
+import { b as safeJsonStringify$1, s as splitOnFirst, a as strictUriEncode, d as decodeUriComponent, i as isWsUrl, c as cjs$8, e as isLocalhostUrl, g as safeJsonParse$1, f as formatJsonRpcError, h as parseConnectionError, J as JsonRpcProvider, j as isJsonRpcRequest, k as formatJsonRpcResult, l as isJsonRpcResult, m as isJsonRpcError, n as isJsonRpcResponse, o as formatJsonRpcRequest, H as HttpConnection } from "./index-81e93661.js";
 function tryStringify(o2) {
   try {
     return JSON.stringify(o2);

@@ -24428,7 +24428,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-69467f61.js").then((n2) => n2.i), true ? ["./index-69467f61.js","./tslib-27e2d856.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-f64e10cf.js").then((n2) => n2.i), true ? ["./index-f64e10cf.js","./tslib-9b9d7fbf.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24756,7 +24756,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-00fa6138.js"), true ? ["./index-00fa6138.js","./index-187b989c.js","./tslib-27e2d856.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-5ec4d7f4.js"), true ? ["./index-5ec4d7f4.js","./index-81e93661.js","./tslib-9b9d7fbf.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24803,7 +24803,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-3778a64d.js"), true ? ["./index-3778a64d.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-7eb901e1.js"), true ? ["./index-7eb901e1.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24813,7 +24813,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-7151f3ca.js"), true ? ["./index.es-7151f3ca.js","./tslib-27e2d856.js","./index-187b989c.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-a4c02aed.js"), true ? ["./index.es-a4c02aed.js","./tslib-9b9d7fbf.js","./index-81e93661.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27293,7 +27293,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-5dfd8024.js"), true ? ["./index-5dfd8024.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-2ea2649c.js"), true ? ["./index-2ea2649c.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
@@ -28901,6 +28901,7 @@ function create_each_block_4(ctx) {
       ctx[15].img))
         attr(img, "src", img_src_value);
       attr(img, "class", img_class_value = "partner-img aspect-[16/11] w-full h-full object-contain " + /*partner*/
+      ctx[15].class + " " + /*partner*/
       (ctx[15].padding ? `p-${/*partner*/
       ctx[15].padding}` : ""));
       attr(a0, "href", a0_href_value = /*partner*/
@@ -28942,6 +28943,7 @@ function create_each_block_4(ctx) {
       }
       if (dirty & /*data*/
       1 && img_class_value !== (img_class_value = "partner-img aspect-[16/11] w-full h-full object-contain " + /*partner*/
+      ctx2[15].class + " " + /*partner*/
       (ctx2[15].padding ? `p-${/*partner*/
       ctx2[15].padding}` : ""))) {
         attr(img, "class", img_class_value);
