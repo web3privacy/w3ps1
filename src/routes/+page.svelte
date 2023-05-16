@@ -180,7 +180,7 @@
 						</div>
 						<ul class="mt-8 text-left list-disc px-6">
 							{#each tt.includes as ti}
-								<li class="mb-2 pl-2 text-sm">{ti}</li>
+								<li class="mb-2 pl-2 text-sm">{@html ti}</li>
 							{/each}
 						</ul>
 						{#if tt.note}
