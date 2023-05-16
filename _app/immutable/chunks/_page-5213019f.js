@@ -24428,7 +24428,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-980c17a0.js").then((n2) => n2.i), true ? ["./index-980c17a0.js","./tslib-764346db.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-2bdcf748.js").then((n2) => n2.i), true ? ["./index-2bdcf748.js","./tslib-bb523be7.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24756,7 +24756,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-faf1d3fd.js"), true ? ["./index-faf1d3fd.js","./index-1e556457.js","./tslib-764346db.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-a0bc99f6.js"), true ? ["./index-a0bc99f6.js","./index-fbf1926a.js","./tslib-bb523be7.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24803,7 +24803,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-4557fe86.js"), true ? ["./index-4557fe86.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-87de7c9c.js"), true ? ["./index-87de7c9c.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24813,7 +24813,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-85e45a7c.js"), true ? ["./index.es-85e45a7c.js","./tslib-764346db.js","./index-1e556457.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-0ba1da57.js"), true ? ["./index.es-0ba1da57.js","./tslib-bb523be7.js","./index-fbf1926a.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27293,7 +27293,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-fbfab4bf.js"), true ? ["./index-fbfab4bf.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-65007766.js"), true ? ["./index-65007766.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
@@ -29085,21 +29085,18 @@ function create_each_block_3(ctx) {
 }
 function create_each_block_2(ctx) {
   let li;
-  let t_value = (
+  let raw_value = (
     /*ti*/
     ctx[9] + ""
   );
-  let t2;
   return {
     c() {
       li = element("li");
-      t2 = text(t_value);
       this.h();
     },
     l(nodes) {
       li = claim_element(nodes, "LI", { class: true });
       var li_nodes = children(li);
-      t2 = claim_text(li_nodes, t_value);
       li_nodes.forEach(detach);
       this.h();
     },
@@ -29108,13 +29105,13 @@ function create_each_block_2(ctx) {
     },
     m(target, anchor) {
       insert_hydration(target, li, anchor);
-      append_hydration(li, t2);
+      li.innerHTML = raw_value;
     },
     p(ctx2, dirty) {
       if (dirty & /*data*/
-      1 && t_value !== (t_value = /*ti*/
+      1 && raw_value !== (raw_value = /*ti*/
       ctx2[9] + ""))
-        set_data(t2, t_value);
+        li.innerHTML = raw_value;
     },
     d(detaching) {
       if (detaching)

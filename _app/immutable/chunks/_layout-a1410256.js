@@ -100,7 +100,7 @@ const data = {
         "Food and drinks included",
         "Web3Privacy t-shirt",
         "Networking drinks with speakers & attendees",
-        "#Lunarpunk party"
+        '<span class="font-bold">#Lunarpunk party included!</span>'
       ],
       hint: "Discounts: We offer various discounts up to 100%, see below\n"
     },
@@ -112,7 +112,8 @@ const data = {
         "Prague rave from top DJs",
         "VJs and projections",
         '"Privacy experience"',
-        "Networking with attendees, speakers & sponsors"
+        "Networking with attendees, speakers & sponsors",
+        'More info at <a href="http://lunarpunk.party/" class="underline">lunarpunk.party</a>'
       ],
       note: "*Party access is included in the All-day Pass",
       ticketTypeClass: "party"
