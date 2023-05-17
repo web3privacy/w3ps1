@@ -72,7 +72,7 @@
 		<div class="section-header" on:mouseenter={animateText}>Partners</div>
 		{#each data.config.partnerLevels as level}
 			<div class="lowercase pb-6 text-xl font-mono2">{level.name}</div>
-			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 mb-6">
+			<div class="grid {level.grid || "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"} gap-2 mb-6">
 				{#each data.config.partners.filter(p => p.level == level.key) as partner}
 					<div class="partner-item text-center items-center p-2" on:mouseenter={animateSection(40)}>
 						<div>
