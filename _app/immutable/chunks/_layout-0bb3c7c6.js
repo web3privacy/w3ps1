@@ -290,6 +290,11 @@ const data = {
   ],
   partnerLevels: [
     {
+      key: 3,
+      name: "Tier 3 Sponsors",
+      grid: "grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+    },
+    {
       key: 2,
       name: "Community sponsors"
     },
@@ -299,6 +304,15 @@ const data = {
     }
   ],
   partners: [
+    {
+      id: "panther-protocol",
+      name: "Panther Protocol",
+      web: "https://www.pantherprotocol.io/",
+      twitter: "ZkPanther",
+      img: "panther.svg",
+      "class": "p-0",
+      level: 3
+    },
     {
       id: "aragon-zk-research",
       name: "Aragon ZK Research",

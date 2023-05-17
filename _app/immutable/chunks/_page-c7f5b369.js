@@ -24428,7 +24428,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-2bdcf748.js").then((n2) => n2.i), true ? ["./index-2bdcf748.js","./tslib-bb523be7.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-dc472ac1.js").then((n2) => n2.i), true ? ["./index-dc472ac1.js","./tslib-c93af25e.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24756,7 +24756,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-a0bc99f6.js"), true ? ["./index-a0bc99f6.js","./index-fbf1926a.js","./tslib-bb523be7.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-a909111f.js"), true ? ["./index-a909111f.js","./index-77ddb852.js","./tslib-c93af25e.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24803,7 +24803,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-87de7c9c.js"), true ? ["./index-87de7c9c.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-6712fe24.js"), true ? ["./index-6712fe24.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24813,7 +24813,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-0ba1da57.js"), true ? ["./index.es-0ba1da57.js","./tslib-bb523be7.js","./index-fbf1926a.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-13f735fd.js"), true ? ["./index.es-13f735fd.js","./tslib-c93af25e.js","./index-77ddb852.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27293,7 +27293,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-65007766.js"), true ? ["./index-65007766.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-023642a8.js"), true ? ["./index-023642a8.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
@@ -28989,6 +28989,7 @@ function create_each_block_3(ctx) {
   let t0;
   let t1;
   let div1;
+  let div1_class_value;
   function func(...args) {
     return (
       /*func*/
@@ -29034,7 +29035,8 @@ function create_each_block_3(ctx) {
     },
     h() {
       attr(div0, "class", "lowercase pb-6 text-xl font-mono2");
-      attr(div1, "class", "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 mb-6");
+      attr(div1, "class", div1_class_value = "grid " + /*level*/
+      (ctx[12].grid || "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5") + " gap-2 mb-6");
     },
     m(target, anchor) {
       insert_hydration(target, div0, anchor);
@@ -29070,6 +29072,11 @@ function create_each_block_3(ctx) {
           each_blocks[i2].d(1);
         }
         each_blocks.length = each_value_4.length;
+      }
+      if (dirty & /*data*/
+      1 && div1_class_value !== (div1_class_value = "grid " + /*level*/
+      (ctx[12].grid || "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5") + " gap-2 mb-6")) {
+        attr(div1, "class", div1_class_value);
       }
     },
     d(detaching) {
