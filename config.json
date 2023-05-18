@@ -305,21 +305,21 @@
   ],
   "partners": [
     {
-      "id": "ens",
-      "name": "ENS",
-      "web": "https://ens.domains/",
-      "twitter": "ensdomains",
-      "img": "ens.svg",
-      "class": "p-2",
-      "level": 3
-    },
-    {
       "id": "panther-protocol",
       "name": "Panther Protocol",
       "web": "https://www.pantherprotocol.io/",
       "twitter": "ZkPanther",
       "img": "panther.svg",
       "class": "p-0",
+      "level": 3
+    },
+    {
+      "id": "ens",
+      "name": "ENS",
+      "web": "https://ens.domains/",
+      "twitter": "ensdomains",
+      "img": "ens.svg",
+      "class": "p-2",
       "level": 3
     },
     {
