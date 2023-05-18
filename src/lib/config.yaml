@@ -229,12 +229,19 @@ speakers:
 partnerLevels:
   - key: 3
     name: Tier 3 Sponsors
-    grid: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
+    grid: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:gap-8 xl:gap-12
   - key: 2
     name: Community sponsors
   - key: null
     name: Media partners
 partners:
+  - id: ens
+    name: ENS
+    web: https://ens.domains/
+    twitter: ensdomains
+    img: ens.svg
+    class: p-2
+    level: 3
   - id: panther-protocol
     name: Panther Protocol
     web: https://www.pantherprotocol.io/
