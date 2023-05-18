@@ -1460,6 +1460,9 @@ person-item:hover .text-mild,
 	.xl\:grid-cols-5 {
 		grid-template-columns: repeat(5, minmax(0, 1fr));
 	}
+	.xl\:gap-12 {
+		gap: 3rem;
+	}
 	.xl\:gap-14 {
 		gap: 3.5rem;
 	}
