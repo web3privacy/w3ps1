@@ -248,7 +248,7 @@
       "name": "Ameen Soleimani",
       "twitter": "ameensol",
       "img": "ameen-soleimani.jpg",
-      "caption": "Summoner of [IranUnchained](https://www.iranunchained.com/), [Privacy Pools](https://www.privacypools.com/), [MolochDAO](https://molochdao.com/)\n",
+      "caption": "Summoner of [IranUnchained](https://www.iranunchained.com/), [Privacy Pools](https://www.privacypools.com/), [MolochDAO](https://molochdao.com/)",
       "country": "us"
     },
     {
@@ -257,7 +257,7 @@
       "img": "alex-kampa.jpg",
       "link": "https://lu.linkedin.com/in/alex-kampa",
       "linkText": "@alex-kampa",
-      "caption": "Director at [Aragon ZK Research](https://research.aragon.org/)\n",
+      "caption": "Director at [Aragon ZK Research](https://research.aragon.org/)",
       "country": "lu"
     },
     {
@@ -265,8 +265,15 @@
       "name": "Antoni Zolciak",
       "img": "antoni-zolciak.jpg",
       "twitter": "AntoniZolciak",
-      "caption": "Co-founder of [Aleph Zero](https://alephzero.org/) & [Cardinal](https://cardinal.co/)\n",
+      "caption": "Co-founder of [Aleph Zero](https://alephzero.org/) & [Cardinal](https://cardinal.co/)",
       "country": "pl"
+    },
+    {
+      "id": "oliver-gale",
+      "name": "Oliver Gale",
+      "img": "oliver-gale.jpeg",
+      "twitter": "OriginalOlii",
+      "caption": "CEO of [Panther Protocol](https://www.pantherprotocol.io/)"
     }
   ],
   "hosts": [
@@ -281,6 +288,7 @@
     "max-hampshire",
     "antoni-zolciak",
     "alex-kampa",
+    "oliver-gale",
     "mario-havel",
     "manu-alzuru",
     "nick-almond",
@@ -320,6 +328,15 @@
       "twitter": "ensdomains",
       "img": "ens.svg",
       "class": "p-2",
+      "level": 3
+    },
+    {
+      "id": "pse",
+      "name": "Privacy and Scaling Explorations (PSE)",
+      "web": "https://appliedzkp.org/",
+      "twitter": "PrivacyScaling",
+      "img": "pse.svg",
+      "class": "p-4 invert",
       "level": 3
     },
     {
