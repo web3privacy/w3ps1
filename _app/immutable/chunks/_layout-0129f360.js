@@ -274,6 +274,13 @@ const data = {
       img: "oliver-gale.jpeg",
       twitter: "OriginalOlii",
       caption: "CEO of [Panther Protocol](https://www.pantherprotocol.io/)"
+    },
+    {
+      id: "rachel-rose-oleary",
+      name: "Rachel-Rose O'Leary",
+      img: "rachel-rose-oleary.jpeg",
+      twitter: "lunar_mining",
+      caption: "[DarkFi](https://dark.fi/) core dev, writer"
     }
   ],
   hosts: [
@@ -287,6 +294,7 @@ const data = {
     "guy-zyskind",
     "max-hampshire",
     "antoni-zolciak",
+    "rachel-rose-oleary",
     "alex-kampa",
     "oliver-gale",
     "mario-havel",
@@ -327,7 +335,7 @@ const data = {
       web: "https://ens.domains/",
       twitter: "ensdomains",
       img: "ens.svg",
-      "class": "p-2",
+      "class": "p-3",
       level: 3
     },
     {
@@ -337,6 +345,15 @@ const data = {
       twitter: "PrivacyScaling",
       img: "pse.svg",
       "class": "p-4 invert",
+      level: 3
+    },
+    {
+      id: "navcoin",
+      name: "Navcoin",
+      web: "https://navcoin.org/",
+      twitter: "navcoin",
+      img: "navcoin.svg",
+      "class": "p-6",
       level: 3
     },
     {
