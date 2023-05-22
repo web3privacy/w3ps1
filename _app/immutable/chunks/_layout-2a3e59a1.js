@@ -331,9 +331,9 @@ const data = {
     },
     {
       id: "ens",
-      name: "ENS",
-      web: "https://ens.domains/",
-      twitter: "ensdomains",
+      name: "ENS DAO",
+      web: "https://ensdao.org/",
+      twitter: "ENS_DAO",
       img: "ens.svg",
       "class": "p-3",
       level: 3
