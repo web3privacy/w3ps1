@@ -269,6 +269,12 @@ const data = {
       country: "pl"
     },
     {
+      id: "tibor-csoka",
+      name: "Tibor Csóka",
+      img: "tibor-csoka.jpg",
+      caption: "Software Engineer at [HOPR](https://hoprnet.org/)"
+    },
+    {
       id: "oliver-gale",
       name: "Oliver Gale",
       img: "oliver-gale.jpeg",
@@ -278,9 +284,17 @@ const data = {
     {
       id: "rachel-rose-oleary",
       name: "Rachel-Rose O'Leary",
-      img: "rachel-rose-oleary.jpeg",
+      img: "rachel-rose-oleary.jpg",
       twitter: "lunar_mining",
       caption: "[DarkFi](https://dark.fi/) core dev, writer"
+    },
+    {
+      id: "costanza-gallo",
+      name: "Constanza Gallo",
+      img: "costanza-gallo.jpeg",
+      twitter: "costgallo",
+      caption: "Head of partnerships at the [The Swarm Foundation](https://www.ethswarm.org/foundation)",
+      country: "it"
     }
   ],
   hosts: [
@@ -298,11 +312,13 @@ const data = {
     "alex-kampa",
     "oliver-gale",
     "mario-havel",
+    "costanza-gallo",
     "manu-alzuru",
     "nick-almond",
     "juraj-bednar",
     "dcbuilder",
-    "alona-shevchenko"
+    "alona-shevchenko",
+    "tibor-csoka"
   ],
   partnerLevels: [
     {
@@ -409,7 +425,8 @@ const data = {
       id: "gweicz",
       name: "Gwei.cz",
       web: "https://gwei.cz",
-      img: "gweicz.png"
+      img: "gweicz.png",
+      twitter: "gweicz"
     },
     {
       id: "ukraine-dao",
