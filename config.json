@@ -394,7 +394,7 @@
       "id": "zcash",
       "name": "Zcash",
       "web": "https://z.cash/",
-      "twitter": null,
+      "twitter": "zcash",
       "img": "zcash.svg",
       "level": 2,
       "class": "p-2 invert hover:invert-0"
