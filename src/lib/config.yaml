@@ -298,6 +298,13 @@ partners:
     img: hopr.svg
     level: 2
     class: p-6 invert hover:invert-0
+  - id: zcash
+    name: Zcash
+    web: https://z.cash/
+    twitter: 
+    img: zcash.svg
+    level: 2
+    class: p-2 invert hover:invert-0
   - id: lunardao
     name: LunarDAO
     web: https://lunardao.net
