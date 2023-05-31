@@ -373,6 +373,15 @@ const data = {
       level: 3
     },
     {
+      id: "firo",
+      name: "Firo",
+      web: "https://firo.org/",
+      twitter: "firoorg",
+      img: "firo.svg",
+      "class": "p-2",
+      level: 3
+    },
+    {
       id: "aragon-zk-research",
       name: "Aragon ZK Research",
       web: "https://research.aragon.org/",
