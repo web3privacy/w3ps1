@@ -295,12 +295,45 @@
       "twitter": "costgallo",
       "caption": "Head of partnerships at the [The Swarm Foundation](https://www.ethswarm.org/foundation)",
       "country": "it"
+    },
+    {
+      "id": "merula",
+      "name": "Merula",
+      "img": "merula.jpeg",
+      "caption": "Software engineer and cryptographer Circles Entropy"
+    },
+    {
+      "id": "serinko",
+      "name": "Serinko",
+      "img": "serinko.jpeg",
+      "caption": "Privacy Researcher"
+    },
+    {
+      "id": "steffen-kux",
+      "name": "Steffen Kux",
+      "img": "steffen.jpeg",
+      "twitter": "SteffenKux",
+      "caption": "CEO dm3"
+    },
+    {
+      "id": "althea",
+      "name": "Althea",
+      "img": "althea.jpeg",
+      "caption": "Head of Comms, Privacy & Scaling Exploration"
+    },
+    {
+      "id": "wslyvh",
+      "name": "Wesley",
+      "img": "wslyvh.png",
+      "caption": "Events @ Ethereum 🛠️ Indie Maker",
+      "twitter": "wslyvh"
     }
   ],
   "hosts": [
     "mykola",
     "tree",
-    "pg"
+    "pg",
+    "wslyvh"
   ],
   "speakersNote": "We keep adding more and more speakers, stay tuned ...",
   "speakers": [
@@ -318,7 +351,11 @@
     "juraj-bednar",
     "dcbuilder",
     "alona-shevchenko",
-    "tibor-csoka"
+    "tibor-csoka",
+    "merula",
+    "serinko",
+    "steffen-kux",
+    "althea"
   ],
   "partnerLevels": [
     {
