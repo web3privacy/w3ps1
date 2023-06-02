@@ -375,9 +375,7 @@ partners:
 stages:
   - id: main
     name: Main stage
-  - id: second
-    name: Workshop stage
-programNote: WIP. The final schedule will be published a few weeks before the conference in May 2023.
+programNote: WIP. 
 program:
   main:
     - time: 9:00 - 9:30
