@@ -382,54 +382,84 @@ program:
   main:
     - time: 9:00 - 9:30
       title: Registration & networking
-    - time: 9:30 - 9:35
-      title: Welcome to Web3Privacy
+    - time: 9:30 - 9:40
+      title: Opening Ceremony
       speakers:
-        - name: TBA
+        - name: Mykola Siusko
       desc: Welcoming visitors to our private-centric research, community and conference
-    - time: 9:35 - 10:55
-      title: Talks I. - TBA
-    - time: 10:55 - 11:20
-      title: 25min Coffee Break
-      type: other
-    - time: 11:25 - 12:40
-      title: Talks II. - TBA
-    - time: 12:40 - 14:00
-      title: Lunch & Networking
-      type: other
-    - time: 14:00 - 15:40
-      title: Talks III. - TBA
-    - time: 15:40 - 16:05
-      title: 25min Coffee Break
-      type: other
-    - time: 16:10 - 18:30
-      title: Talks IV. - TBA
-    - time: 18:30 - 18:35
-      title: Closing Remarks
+    - time: 9:45 - 10:05
+      title: Tornado Cash 2023: key learnings
+      speakers:
+        - name: Ameen Soleimani
+    - time: 10:10 - 10:35
+      title: Privacy Infrastructure Maintenance
+      speakers:
+        - name: Max Hampshire, Guy Zyskind
+    - time: 10:40 - 11:10
+      title: Rise, anon. Lunarpunk and memetic warfare
+      speakers:
+        - name: Rachel-Rose O'Leary
+    - time: 11:15 - 11:35
+      title: Privacy projects sustainability
+      speakers:
+        - name: Oliver Gale, Antoni Zolciak
+    - time: 11:40 - 12:10
+      title: Cypherpunks vs Mainstream privacy
+      speakers:
+        - name: Juraj Bednar, Ameen Soleimani, dcbuilder.eth
+    - time: 12:15 - 12:35
+      title: How privacy could enable human rights 
+      speakers:
+        - name: Alona Shevchenko, Manu Alzuru, Serinko
+    - time: 12:40 - 13:00
+      title: Privacy dystopia & how to handle it
+      speakers:
+        - name: Nick Almond
+    - time: 13:00 - 14:00
+      title: Lunch break
       speakers:
         - name: TBA
-    - time: 18:30 - 20:00
-      title: Networking & Drinks
-      type: other
+    - time: 14:00 - 14:20
+      title: How privacy, electronic cash and cypherpunk tech increase our freedom
+      speakers:
+        - name: Juraj Bednar
+    - time: 14:25 - 14:45
+      title: Why private voting matters?
+      speakers:
+        - name: Alex Kampa
+    - time: 14:50 - 15:10
+      title: Data & meta-data exposed in wallets & RPC
+      speakers:
+        - name: Tibor Csóka
+    - time: 15:15 - 15:35
+      title: Zero leaks communication  
+      speakers:
+        - name: Costanza Gallo
+    - time: 15:40 - 16:00
+      title: An Anonymous Trust and Credit System  
+      speakers:
+        - name: Merula
+    - time: 16:05 - 16:25
+      title: Private messaging protocols  
+      speakers:
+        - name: Steffen Kux
+    - time: 16:30 - 16:50
+      title: Privacy tooling fireside  
+      speakers:
+        - name: Steffen Kux, ALEX KAMPA, COSTANZA GALLO
+    - time: 16:55 - 17:15
+      title:  Privacy ecosystem scalability  
+      speakers:
+        - name: Althea, Mario Havel
+    - time: 17:20 - 17:40
+      title:  Private coins regulation  
+      speakers:
+        - name: TBA
+    - time: 17:45 - 18:00
+      title:  W3PN ecosystem launch - closing ceremony  
+      speakers:
+        - name: PG, Wesley, TREE, MYKOLA SIUSKO
     - time: 20:00 - 4:00
       title: '#Lunarpunk party'
       desc: Enjoy our afterparty in Lunarpunk style with quality Prague rave DJs, which will take place in the same venue until the morning (4am).
-  second:
-    - time: 09:35 - 10:55
-      title: Workshops I. - TBA
-    - time: 10:55 - 11:20
-      title: 25min Coffee Break
-      type: other
-    - time: 11:25 - 12:40
-      title: Workshops II. - TBA
-    - time: 12:40 - 14:00
-      title: Lunch & Networking
-      type: other
-    - time: 14:00 - 15:40
-      title: Workshops III. - TBA
-    - time: 15:40 - 16:05
-      title: 25min Coffee Break
-      type: other
-    - time: 16:10 - 18:30
-      title: Workshops IV.
 badgesApiUrl: https://badges-pretix-voucher-api.web3privacy.info
