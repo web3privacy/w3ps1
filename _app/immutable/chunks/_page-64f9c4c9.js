@@ -24428,7 +24428,7 @@ var CoinbaseWalletConnector = class extends Connector {
   async getProvider() {
     var _a;
     if (!__privateGet(this, _provider$1)) {
-      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-dc472ac1.js").then((n2) => n2.i), true ? ["./index-dc472ac1.js","./tslib-c93af25e.js"] : void 0, import.meta.url)).default;
+      let CoinbaseWalletSDK = (await __vitePreload(() => import("./index-54e5943d.js").then((n2) => n2.i), true ? ["./index-54e5943d.js","./tslib-7f2ddd73.js"] : void 0, import.meta.url)).default;
       if (typeof CoinbaseWalletSDK !== "function" && typeof CoinbaseWalletSDK.default === "function")
         CoinbaseWalletSDK = CoinbaseWalletSDK.default;
       __privateSet(this, _client, new CoinbaseWalletSDK(this.options));
@@ -24756,7 +24756,7 @@ var WalletConnectConnector = class extends Connector {
         }),
         {}
       ) : {};
-      const WalletConnectProvider = (await __vitePreload(() => import("./index-a909111f.js"), true ? ["./index-a909111f.js","./index-77ddb852.js","./tslib-c93af25e.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
+      const WalletConnectProvider = (await __vitePreload(() => import("./index-1ea4ad6c.js"), true ? ["./index-1ea4ad6c.js","./index-c90ae7e2.js","./tslib-7f2ddd73.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url)).default;
       __privateSet(this, _provider, new WalletConnectProvider({
         ...this.options,
         chainId,
@@ -24803,7 +24803,7 @@ _initUniversalProviderPromise = /* @__PURE__ */ new WeakMap();
 _web3Modal = /* @__PURE__ */ new WeakMap();
 _createWeb3Modal = /* @__PURE__ */ new WeakSet();
 createWeb3Modal_fn = async function() {
-  const { Web3Modal } = await __vitePreload(() => import("./index-6712fe24.js"), true ? ["./index-6712fe24.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
+  const { Web3Modal } = await __vitePreload(() => import("./index-43eb2dd4.js"), true ? ["./index-43eb2dd4.js","./preload-helper-f8376bb0.js"] : void 0, import.meta.url);
   const { version: version2 } = this.options;
   __privateSet(this, _web3Modal, new Web3Modal({
     walletConnectVersion: version2 === "2" ? 2 : 1,
@@ -24813,7 +24813,7 @@ createWeb3Modal_fn = async function() {
 };
 _initUniversalProvider = /* @__PURE__ */ new WeakSet();
 initUniversalProvider_fn = async function() {
-  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-13f735fd.js"), true ? ["./index.es-13f735fd.js","./tslib-c93af25e.js","./index-77ddb852.js"] : void 0, import.meta.url)).default;
+  const WalletConnectProvider = (await __vitePreload(() => import("./index.es-ef68f956.js"), true ? ["./index.es-ef68f956.js","./tslib-7f2ddd73.js","./index-c90ae7e2.js"] : void 0, import.meta.url)).default;
   if (typeof (WalletConnectProvider == null ? void 0 : WalletConnectProvider.init) === "function") {
     __privateSet(this, _provider, await WalletConnectProvider.init(
       this.options
@@ -27293,7 +27293,7 @@ class h {
   }
   async initUi() {
     if (typeof window < "u") {
-      await __vitePreload(() => import("./index-023642a8.js"), true ? ["./index-023642a8.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
+      await __vitePreload(() => import("./index-67fe8f5b.js"), true ? ["./index-67fe8f5b.js","./dijkstra-cb1f074b.js"] : void 0, import.meta.url);
       const e = document.createElement("w3m-modal");
       document.body.insertAdjacentElement("beforeend", e), a$1.setIsUiLoaded(true);
     }
@@ -27574,7 +27574,7 @@ function create_if_block$1(ctx) {
     }
   };
 }
-function create_if_block_6(ctx) {
+function create_if_block_6$1(ctx) {
   let div;
   let t_value = (
     /*badge*/
@@ -27627,7 +27627,7 @@ function create_if_block_2$1(ctx) {
         ctx2[18].id
       ]) == null ? void 0 : _a.eligible
     )
-      return create_if_block_5;
+      return create_if_block_5$1;
     return create_else_block_2;
   }
   let current_block_type = select_block_type_1(ctx);
@@ -27701,7 +27701,7 @@ function create_else_block_2(ctx) {
     }
   };
 }
-function create_if_block_5(ctx) {
+function create_if_block_5$1(ctx) {
   let button;
   let t2;
   let mounted;
@@ -28041,7 +28041,7 @@ function create_each_block$1(ctx) {
   let dispose;
   let if_block0 = (
     /*badge*/
-    ctx[18].shortname && create_if_block_6(ctx)
+    ctx[18].shortname && create_if_block_6$1(ctx)
   );
   let if_block1 = (
     /*connected*/
@@ -28634,35 +28634,45 @@ class Web3Dialog extends SvelteComponent {
 }
 function get_each_context(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[3] = list[i2];
+  child_ctx[4] = list[i2];
   return child_ctx;
 }
 function get_each_context_1(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[6] = list[i2];
+  child_ctx[7] = list[i2];
   return child_ctx;
 }
 function get_each_context_2(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[9] = list[i2];
+  child_ctx[10] = list[i2];
   return child_ctx;
 }
 function get_each_context_3(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[12] = list[i2];
+  child_ctx[13] = list[i2];
   return child_ctx;
 }
 function get_each_context_4(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[15] = list[i2];
+  child_ctx[16] = list[i2];
   return child_ctx;
 }
 function get_each_context_5(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[9] = list[i2];
+  child_ctx[19] = list[i2];
   return child_ctx;
 }
-function create_each_block_5(ctx) {
+function get_each_context_6(ctx, list, i2) {
+  const child_ctx = ctx.slice();
+  child_ctx[22] = list[i2];
+  return child_ctx;
+}
+function get_each_context_7(ctx, list, i2) {
+  const child_ctx = ctx.slice();
+  child_ctx[10] = list[i2];
+  return child_ctx;
+}
+function create_each_block_7(ctx) {
   let div2;
   let img;
   let img_src_value;
@@ -28670,7 +28680,7 @@ function create_each_block_5(ctx) {
   let div0;
   let t1_value = (
     /*ti*/
-    ctx[9].title.toUpperCase() + ""
+    ctx[10].title.toUpperCase() + ""
   );
   let t1;
   let t2;
@@ -28682,7 +28692,7 @@ function create_each_block_5(ctx) {
   let dispose;
   sveltemarkdown = new SvelteMarkdown({ props: { source: (
     /*ti*/
-    ctx[9].desc
+    ctx[10].desc
   ) } });
   return {
     c() {
@@ -28718,7 +28728,7 @@ function create_each_block_5(ctx) {
     h() {
       attr(img, "class", "topic-img");
       if (!src_url_equal(img.src, img_src_value = "/topics/" + /*ti*/
-      ctx[9].img + ".webp"))
+      ctx[10].img + ".webp"))
         attr(img, "src", img_src_value);
       attr(div0, "class", "topic-header inline-block px-3 py-1.5 text-lg");
       attr(div1, "class", "mt-6 text-mild markdown animate-section text-sm leading-6");
@@ -28743,18 +28753,18 @@ function create_each_block_5(ctx) {
     p(ctx2, dirty) {
       if (!current || dirty & /*data*/
       1 && !src_url_equal(img.src, img_src_value = "/topics/" + /*ti*/
-      ctx2[9].img + ".webp")) {
+      ctx2[10].img + ".webp")) {
         attr(img, "src", img_src_value);
       }
       if ((!current || dirty & /*data*/
       1) && t1_value !== (t1_value = /*ti*/
-      ctx2[9].title.toUpperCase() + ""))
+      ctx2[10].title.toUpperCase() + ""))
         set_data(t1, t1_value);
       const sveltemarkdown_changes = {};
       if (dirty & /*data*/
       1)
         sveltemarkdown_changes.source = /*ti*/
-        ctx2[9].desc;
+        ctx2[10].desc;
       sveltemarkdown.$set(sveltemarkdown_changes);
     },
     i(local) {
@@ -28776,7 +28786,7 @@ function create_each_block_5(ctx) {
     }
   };
 }
-function create_if_block_4(ctx) {
+function create_if_block_6(ctx) {
   let div;
   let t_value = (
     /*data*/
@@ -28815,7 +28825,7 @@ function create_if_block_4(ctx) {
     }
   };
 }
-function create_each_block_4(ctx) {
+function create_each_block_6(ctx) {
   let div4;
   let div0;
   let a0;
@@ -28829,7 +28839,7 @@ function create_each_block_4(ctx) {
   let a1;
   let t1_value = (
     /*partner*/
-    ctx[15].name + ""
+    ctx[22].name + ""
   );
   let t1;
   let a1_href_value;
@@ -28839,7 +28849,7 @@ function create_each_block_4(ctx) {
   let t3;
   let t4_value = (
     /*partner*/
-    ctx[15].twitter + ""
+    ctx[22].twitter + ""
   );
   let t4;
   let a2_href_value;
@@ -28898,19 +28908,19 @@ function create_each_block_4(ctx) {
     },
     h() {
       if (!src_url_equal(img.src, img_src_value = "/partners/" + /*partner*/
-      ctx[15].img))
+      ctx[22].img))
         attr(img, "src", img_src_value);
       attr(img, "class", img_class_value = "partner-img aspect-[16/11] w-full h-full object-contain " + /*partner*/
-      ctx[15].class + " " + /*partner*/
-      (ctx[15].padding ? `p-${/*partner*/
-      ctx[15].padding}` : ""));
+      ctx[22].class + " " + /*partner*/
+      (ctx[22].padding ? `p-${/*partner*/
+      ctx[22].padding}` : ""));
       attr(a0, "href", a0_href_value = /*partner*/
-      ctx[15].web);
+      ctx[22].web);
       attr(a1, "href", a1_href_value = /*partner*/
-      ctx[15].web);
+      ctx[22].web);
       attr(a1, "class", "font-mono2 animate-section lowercase");
       attr(a2, "href", a2_href_value = "https://twitter.com/" + /*partner*/
-      ctx[15].twitter);
+      ctx[22].twitter);
       attr(a2, "class", "text-sm text-mild");
       attr(div3, "class", "p-2 partner-text");
       attr(div4, "class", "partner-item text-center items-center p-2");
@@ -28938,37 +28948,37 @@ function create_each_block_4(ctx) {
     p(ctx2, dirty) {
       if (dirty & /*data*/
       1 && !src_url_equal(img.src, img_src_value = "/partners/" + /*partner*/
-      ctx2[15].img)) {
+      ctx2[22].img)) {
         attr(img, "src", img_src_value);
       }
       if (dirty & /*data*/
       1 && img_class_value !== (img_class_value = "partner-img aspect-[16/11] w-full h-full object-contain " + /*partner*/
-      ctx2[15].class + " " + /*partner*/
-      (ctx2[15].padding ? `p-${/*partner*/
-      ctx2[15].padding}` : ""))) {
+      ctx2[22].class + " " + /*partner*/
+      (ctx2[22].padding ? `p-${/*partner*/
+      ctx2[22].padding}` : ""))) {
         attr(img, "class", img_class_value);
       }
       if (dirty & /*data*/
       1 && a0_href_value !== (a0_href_value = /*partner*/
-      ctx2[15].web)) {
+      ctx2[22].web)) {
         attr(a0, "href", a0_href_value);
       }
       if (dirty & /*data*/
       1 && t1_value !== (t1_value = /*partner*/
-      ctx2[15].name + ""))
+      ctx2[22].name + ""))
         set_data(t1, t1_value);
       if (dirty & /*data*/
       1 && a1_href_value !== (a1_href_value = /*partner*/
-      ctx2[15].web)) {
+      ctx2[22].web)) {
         attr(a1, "href", a1_href_value);
       }
       if (dirty & /*data*/
       1 && t4_value !== (t4_value = /*partner*/
-      ctx2[15].twitter + ""))
+      ctx2[22].twitter + ""))
         set_data(t4, t4_value);
       if (dirty & /*data*/
       1 && a2_href_value !== (a2_href_value = "https://twitter.com/" + /*partner*/
-      ctx2[15].twitter)) {
+      ctx2[22].twitter)) {
         attr(a2, "href", a2_href_value);
       }
     },
@@ -28980,11 +28990,11 @@ function create_each_block_4(ctx) {
     }
   };
 }
-function create_each_block_3(ctx) {
+function create_each_block_5(ctx) {
   let div0;
   let t0_value = (
     /*level*/
-    ctx[12].name + ""
+    ctx[19].name + ""
   );
   let t0;
   let t1;
@@ -28995,18 +29005,18 @@ function create_each_block_3(ctx) {
       /*func*/
       ctx[1](
         /*level*/
-        ctx[12],
+        ctx[19],
         ...args
       )
     );
   }
-  let each_value_4 = (
+  let each_value_6 = (
     /*data*/
     ctx[0].config.partners.filter(func)
   );
   let each_blocks = [];
-  for (let i2 = 0; i2 < each_value_4.length; i2 += 1) {
-    each_blocks[i2] = create_each_block_4(get_each_context_4(ctx, each_value_4, i2));
+  for (let i2 = 0; i2 < each_value_6.length; i2 += 1) {
+    each_blocks[i2] = create_each_block_6(get_each_context_6(ctx, each_value_6, i2));
   }
   return {
     c() {
@@ -29036,7 +29046,7 @@ function create_each_block_3(ctx) {
     h() {
       attr(div0, "class", "lowercase pb-6 text-xl font-mono2");
       attr(div1, "class", div1_class_value = "grid " + /*level*/
-      (ctx[12].grid || "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5") + " gap-2 mb-6");
+      (ctx[19].grid || "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5") + " gap-2 mb-6");
     },
     m(target, anchor) {
       insert_hydration(target, div0, anchor);
@@ -29051,19 +29061,19 @@ function create_each_block_3(ctx) {
       ctx = new_ctx;
       if (dirty & /*data*/
       1 && t0_value !== (t0_value = /*level*/
-      ctx[12].name + ""))
+      ctx[19].name + ""))
         set_data(t0, t0_value);
       if (dirty & /*animateSection, data*/
       1) {
-        each_value_4 = /*data*/
+        each_value_6 = /*data*/
         ctx[0].config.partners.filter(func);
         let i2;
-        for (i2 = 0; i2 < each_value_4.length; i2 += 1) {
-          const child_ctx = get_each_context_4(ctx, each_value_4, i2);
+        for (i2 = 0; i2 < each_value_6.length; i2 += 1) {
+          const child_ctx = get_each_context_6(ctx, each_value_6, i2);
           if (each_blocks[i2]) {
             each_blocks[i2].p(child_ctx, dirty);
           } else {
-            each_blocks[i2] = create_each_block_4(child_ctx);
+            each_blocks[i2] = create_each_block_6(child_ctx);
             each_blocks[i2].c();
             each_blocks[i2].m(div1, null);
           }
@@ -29071,11 +29081,11 @@ function create_each_block_3(ctx) {
         for (; i2 < each_blocks.length; i2 += 1) {
           each_blocks[i2].d(1);
         }
-        each_blocks.length = each_value_4.length;
+        each_blocks.length = each_value_6.length;
       }
       if (dirty & /*data*/
       1 && div1_class_value !== (div1_class_value = "grid " + /*level*/
-      (ctx[12].grid || "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5") + " gap-2 mb-6")) {
+      (ctx[19].grid || "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5") + " gap-2 mb-6")) {
         attr(div1, "class", div1_class_value);
       }
     },
@@ -29090,11 +29100,421 @@ function create_each_block_3(ctx) {
     }
   };
 }
+function create_if_block_5(ctx) {
+  let div;
+  let t_value = (
+    /*data*/
+    ctx[0].config.programNote + ""
+  );
+  let t2;
+  return {
+    c() {
+      div = element("div");
+      t2 = text(t_value);
+      this.h();
+    },
+    l(nodes) {
+      div = claim_element(nodes, "DIV", { class: true });
+      var div_nodes = children(div);
+      t2 = claim_text(div_nodes, t_value);
+      div_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      attr(div, "class", "text-supermild mb-16");
+    },
+    m(target, anchor) {
+      insert_hydration(target, div, anchor);
+      append_hydration(div, t2);
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*data*/
+      1 && t_value !== (t_value = /*data*/
+      ctx2[0].config.programNote + ""))
+        set_data(t2, t_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+    }
+  };
+}
+function create_if_block_4(ctx) {
+  let div;
+  let sveltemarkdown;
+  let current;
+  sveltemarkdown = new SvelteMarkdown({ props: { source: (
+    /*pi*/
+    ctx[16].desc
+  ) } });
+  return {
+    c() {
+      div = element("div");
+      create_component(sveltemarkdown.$$.fragment);
+      this.h();
+    },
+    l(nodes) {
+      div = claim_element(nodes, "DIV", { class: true });
+      var div_nodes = children(div);
+      claim_component(sveltemarkdown.$$.fragment, div_nodes);
+      div_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      attr(div, "class", "mt-2 text-sm description text-mild markdown");
+    },
+    m(target, anchor) {
+      insert_hydration(target, div, anchor);
+      mount_component(sveltemarkdown, div, null);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const sveltemarkdown_changes = {};
+      if (dirty & /*data*/
+      1)
+        sveltemarkdown_changes.source = /*pi*/
+        ctx2[16].desc;
+      sveltemarkdown.$set(sveltemarkdown_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(sveltemarkdown.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(sveltemarkdown.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      destroy_component(sveltemarkdown);
+    }
+  };
+}
+function create_each_block_4(ctx) {
+  var _a;
+  let tr;
+  let td0;
+  let raw_value = (
+    /*pi*/
+    ctx[16].time.split("-").map(func_3).join('<div class="xl:inline-block hidden mx-1">-</div>') + ""
+  );
+  let td0_class_value;
+  let t0;
+  let td1;
+  let div2;
+  let div0;
+  let span;
+  let t1_value = (
+    /*pi*/
+    ctx[16].title + ""
+  );
+  let t1;
+  let span_class_value;
+  let t2;
+  let div1;
+  let t3_value = (
+    /*pi*/
+    ctx[16].speakers ? "― " + /*pi*/
+    ((_a = ctx[16].speakers[0]) == null ? void 0 : _a.name) : ""
+  );
+  let t3;
+  let t4;
+  let t5;
+  let current;
+  let mounted;
+  let dispose;
+  let if_block = (
+    /*pi*/
+    ctx[16].desc && create_if_block_4(ctx)
+  );
+  return {
+    c() {
+      tr = element("tr");
+      td0 = element("td");
+      t0 = space();
+      td1 = element("td");
+      div2 = element("div");
+      div0 = element("div");
+      span = element("span");
+      t1 = text(t1_value);
+      t2 = space();
+      div1 = element("div");
+      t3 = text(t3_value);
+      t4 = space();
+      if (if_block)
+        if_block.c();
+      t5 = space();
+      this.h();
+    },
+    l(nodes) {
+      tr = claim_element(nodes, "TR", { class: true });
+      var tr_nodes = children(tr);
+      td0 = claim_element(tr_nodes, "TD", { class: true });
+      var td0_nodes = children(td0);
+      td0_nodes.forEach(detach);
+      t0 = claim_space(tr_nodes);
+      td1 = claim_element(tr_nodes, "TD", { class: true });
+      var td1_nodes = children(td1);
+      div2 = claim_element(td1_nodes, "DIV", { class: true });
+      var div2_nodes = children(div2);
+      div0 = claim_element(div2_nodes, "DIV", {});
+      var div0_nodes = children(div0);
+      span = claim_element(div0_nodes, "SPAN", { class: true });
+      var span_nodes = children(span);
+      t1 = claim_text(span_nodes, t1_value);
+      span_nodes.forEach(detach);
+      div0_nodes.forEach(detach);
+      t2 = claim_space(div2_nodes);
+      div1 = claim_element(div2_nodes, "DIV", {});
+      var div1_nodes = children(div1);
+      t3 = claim_text(div1_nodes, t3_value);
+      div1_nodes.forEach(detach);
+      div2_nodes.forEach(detach);
+      t4 = claim_space(td1_nodes);
+      if (if_block)
+        if_block.l(td1_nodes);
+      td1_nodes.forEach(detach);
+      t5 = claim_space(tr_nodes);
+      tr_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      attr(td0, "class", td0_class_value = "text-right time xl:whitespace-nowrap sm:w-16 xl:w-36 " + /*pi*/
+      (ctx[16].type === "other" ? "text-mild" : ""));
+      attr(span, "class", span_class_value = "animate-section " + /*pi*/
+      (ctx[16].type === "other" ? "text-mild" : ""));
+      attr(div2, "class", "");
+      attr(td1, "class", "text-left");
+      attr(tr, "class", "");
+    },
+    m(target, anchor) {
+      insert_hydration(target, tr, anchor);
+      append_hydration(tr, td0);
+      td0.innerHTML = raw_value;
+      append_hydration(tr, t0);
+      append_hydration(tr, td1);
+      append_hydration(td1, div2);
+      append_hydration(div2, div0);
+      append_hydration(div0, span);
+      append_hydration(span, t1);
+      append_hydration(div2, t2);
+      append_hydration(div2, div1);
+      append_hydration(div1, t3);
+      append_hydration(td1, t4);
+      if (if_block)
+        if_block.m(td1, null);
+      append_hydration(tr, t5);
+      current = true;
+      if (!mounted) {
+        dispose = listen(tr, "mouseenter", animateSection(35));
+        mounted = true;
+      }
+    },
+    p(ctx2, dirty) {
+      var _a2;
+      if ((!current || dirty & /*data*/
+      1) && raw_value !== (raw_value = /*pi*/
+      ctx2[16].time.split("-").map(func_3).join('<div class="xl:inline-block hidden mx-1">-</div>') + ""))
+        td0.innerHTML = raw_value;
+      if (!current || dirty & /*data*/
+      1 && td0_class_value !== (td0_class_value = "text-right time xl:whitespace-nowrap sm:w-16 xl:w-36 " + /*pi*/
+      (ctx2[16].type === "other" ? "text-mild" : ""))) {
+        attr(td0, "class", td0_class_value);
+      }
+      if ((!current || dirty & /*data*/
+      1) && t1_value !== (t1_value = /*pi*/
+      ctx2[16].title + ""))
+        set_data(t1, t1_value);
+      if (!current || dirty & /*data*/
+      1 && span_class_value !== (span_class_value = "animate-section " + /*pi*/
+      (ctx2[16].type === "other" ? "text-mild" : ""))) {
+        attr(span, "class", span_class_value);
+      }
+      if ((!current || dirty & /*data*/
+      1) && t3_value !== (t3_value = /*pi*/
+      ctx2[16].speakers ? "― " + /*pi*/
+      ((_a2 = ctx2[16].speakers[0]) == null ? void 0 : _a2.name) : ""))
+        set_data(t3, t3_value);
+      if (
+        /*pi*/
+        ctx2[16].desc
+      ) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+          if (dirty & /*data*/
+          1) {
+            transition_in(if_block, 1);
+          }
+        } else {
+          if_block = create_if_block_4(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(td1, null);
+        }
+      } else if (if_block) {
+        group_outros();
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
+        });
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(tr);
+      if (if_block)
+        if_block.d();
+      mounted = false;
+      dispose();
+    }
+  };
+}
+function create_each_block_3(ctx) {
+  let div1;
+  let div0;
+  let t0_value = (
+    /*stage*/
+    ctx[13].name + ""
+  );
+  let t0;
+  let t1;
+  let table;
+  let tbody;
+  let t2;
+  let current;
+  let each_value_4 = (
+    /*stage*/
+    ctx[13].program
+  );
+  let each_blocks = [];
+  for (let i2 = 0; i2 < each_value_4.length; i2 += 1) {
+    each_blocks[i2] = create_each_block_4(get_each_context_4(ctx, each_value_4, i2));
+  }
+  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
+    each_blocks[i2] = null;
+  });
+  return {
+    c() {
+      div1 = element("div");
+      div0 = element("div");
+      t0 = text(t0_value);
+      t1 = space();
+      table = element("table");
+      tbody = element("tbody");
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].c();
+      }
+      t2 = space();
+      this.h();
+    },
+    l(nodes) {
+      div1 = claim_element(nodes, "DIV", { class: true });
+      var div1_nodes = children(div1);
+      div0 = claim_element(div1_nodes, "DIV", { class: true });
+      var div0_nodes = children(div0);
+      t0 = claim_text(div0_nodes, t0_value);
+      div0_nodes.forEach(detach);
+      t1 = claim_space(div1_nodes);
+      table = claim_element(div1_nodes, "TABLE", { class: true });
+      var table_nodes = children(table);
+      tbody = claim_element(table_nodes, "TBODY", {});
+      var tbody_nodes = children(tbody);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].l(tbody_nodes);
+      }
+      tbody_nodes.forEach(detach);
+      table_nodes.forEach(detach);
+      t2 = claim_space(div1_nodes);
+      div1_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      attr(div0, "class", "text-xl font-bold mb-4 font-mono2 lowercase");
+      attr(table, "class", "mx-auto xl:max-w-5xl table-auto table-custom w-full mt-8");
+      attr(div1, "class", "w-auto mb-10 xl:mb-0 mx-auto");
+    },
+    m(target, anchor) {
+      insert_hydration(target, div1, anchor);
+      append_hydration(div1, div0);
+      append_hydration(div0, t0);
+      append_hydration(div1, t1);
+      append_hydration(div1, table);
+      append_hydration(table, tbody);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].m(tbody, null);
+      }
+      append_hydration(div1, t2);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if ((!current || dirty & /*data*/
+      1) && t0_value !== (t0_value = /*stage*/
+      ctx2[13].name + ""))
+        set_data(t0, t0_value);
+      if (dirty & /*animateSection, data*/
+      1) {
+        each_value_4 = /*stage*/
+        ctx2[13].program;
+        let i2;
+        for (i2 = 0; i2 < each_value_4.length; i2 += 1) {
+          const child_ctx = get_each_context_4(ctx2, each_value_4, i2);
+          if (each_blocks[i2]) {
+            each_blocks[i2].p(child_ctx, dirty);
+            transition_in(each_blocks[i2], 1);
+          } else {
+            each_blocks[i2] = create_each_block_4(child_ctx);
+            each_blocks[i2].c();
+            transition_in(each_blocks[i2], 1);
+            each_blocks[i2].m(tbody, null);
+          }
+        }
+        group_outros();
+        for (i2 = each_value_4.length; i2 < each_blocks.length; i2 += 1) {
+          out(i2);
+        }
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      for (let i2 = 0; i2 < each_value_4.length; i2 += 1) {
+        transition_in(each_blocks[i2]);
+      }
+      current = true;
+    },
+    o(local) {
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        transition_out(each_blocks[i2]);
+      }
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div1);
+      destroy_each(each_blocks, detaching);
+    }
+  };
+}
 function create_each_block_2(ctx) {
   let li;
   let raw_value = (
     /*ti*/
-    ctx[9] + ""
+    ctx[10] + ""
   );
   return {
     c() {
@@ -29117,7 +29537,7 @@ function create_each_block_2(ctx) {
     p(ctx2, dirty) {
       if (dirty & /*data*/
       1 && raw_value !== (raw_value = /*ti*/
-      ctx2[9] + ""))
+      ctx2[10] + ""))
         li.innerHTML = raw_value;
     },
     d(detaching) {
@@ -29130,7 +29550,7 @@ function create_if_block_3(ctx) {
   let div;
   let t_value = (
     /*tt*/
-    ctx[6].note + ""
+    ctx[7].note + ""
   );
   let t2;
   return {
@@ -29156,7 +29576,7 @@ function create_if_block_3(ctx) {
     p(ctx2, dirty) {
       if (dirty & /*data*/
       1 && t_value !== (t_value = /*tt*/
-      ctx2[6].note + ""))
+      ctx2[7].note + ""))
         set_data(t2, t_value);
     },
     d(detaching) {
@@ -29171,7 +29591,7 @@ function create_if_block_2(ctx) {
   let current;
   sveltemarkdown = new SvelteMarkdown({ props: { source: (
     /*tt*/
-    ctx[6].hint
+    ctx[7].hint
   ) } });
   return {
     c() {
@@ -29199,7 +29619,7 @@ function create_if_block_2(ctx) {
       if (dirty & /*data*/
       1)
         sveltemarkdown_changes.source = /*tt*/
-        ctx2[6].hint;
+        ctx2[7].hint;
       sveltemarkdown.$set(sveltemarkdown_changes);
     },
     i(local) {
@@ -29230,7 +29650,7 @@ function create_each_block_1(ctx) {
   let a0;
   let t2_value = (
     /*tt*/
-    ctx[6].title + ""
+    ctx[7].title + ""
   );
   let t2;
   let a0_href_value;
@@ -29239,7 +29659,7 @@ function create_each_block_1(ctx) {
   let a1;
   let t4_value = (
     /*tt*/
-    ctx[6].price + ""
+    ctx[7].price + ""
   );
   let t4;
   let a1_href_value;
@@ -29254,7 +29674,7 @@ function create_each_block_1(ctx) {
   let dispose;
   let each_value_2 = (
     /*tt*/
-    ctx[6].includes
+    ctx[7].includes
   );
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value_2.length; i2 += 1) {
@@ -29262,11 +29682,11 @@ function create_each_block_1(ctx) {
   }
   let if_block0 = (
     /*tt*/
-    ctx[6].note && create_if_block_3(ctx)
+    ctx[7].note && create_if_block_3(ctx)
   );
   let if_block1 = (
     /*tt*/
-    ctx[6].hint && create_if_block_2(ctx)
+    ctx[7].hint && create_if_block_2(ctx)
   );
   return {
     c() {
@@ -29354,7 +29774,7 @@ function create_each_block_1(ctx) {
       attr(ul, "class", "mt-8 text-left list-disc px-6");
       set_style(div4, "z-index", "1");
       attr(div5, "class", div5_class_value = "ticket-item " + /*tt*/
-      ctx[6].ticketTypeClass + " border py-10 px-10 hover:text-black " + /*data*/
+      ctx[7].ticketTypeClass + " border py-10 px-10 hover:text-black " + /*data*/
       (ctx[0].config.ticketing ? "cursor-pointer" : ""));
     },
     m(target, anchor) {
@@ -29391,7 +29811,7 @@ function create_each_block_1(ctx) {
             div5,
             "click",
             /*click_handler*/
-            ctx[2]
+            ctx[3]
           )
         ];
         mounted = true;
@@ -29400,7 +29820,7 @@ function create_each_block_1(ctx) {
     p(ctx2, dirty) {
       if ((!current || dirty & /*data*/
       1) && t2_value !== (t2_value = /*tt*/
-      ctx2[6].title + ""))
+      ctx2[7].title + ""))
         set_data(t2, t2_value);
       if (!current || dirty & /*data*/
       1 && a0_href_value !== (a0_href_value = /*data*/
@@ -29409,7 +29829,7 @@ function create_each_block_1(ctx) {
       }
       if ((!current || dirty & /*data*/
       1) && t4_value !== (t4_value = /*tt*/
-      ctx2[6].price + ""))
+      ctx2[7].price + ""))
         set_data(t4, t4_value);
       if (!current || dirty & /*data*/
       1 && a1_href_value !== (a1_href_value = /*data*/
@@ -29419,7 +29839,7 @@ function create_each_block_1(ctx) {
       if (dirty & /*data*/
       1) {
         each_value_2 = /*tt*/
-        ctx2[6].includes;
+        ctx2[7].includes;
         let i2;
         for (i2 = 0; i2 < each_value_2.length; i2 += 1) {
           const child_ctx = get_each_context_2(ctx2, each_value_2, i2);
@@ -29438,7 +29858,7 @@ function create_each_block_1(ctx) {
       }
       if (
         /*tt*/
-        ctx2[6].note
+        ctx2[7].note
       ) {
         if (if_block0) {
           if_block0.p(ctx2, dirty);
@@ -29453,7 +29873,7 @@ function create_each_block_1(ctx) {
       }
       if (
         /*tt*/
-        ctx2[6].hint
+        ctx2[7].hint
       ) {
         if (if_block1) {
           if_block1.p(ctx2, dirty);
@@ -29476,7 +29896,7 @@ function create_each_block_1(ctx) {
       }
       if (!current || dirty & /*data*/
       1 && div5_class_value !== (div5_class_value = "ticket-item " + /*tt*/
-      ctx2[6].ticketTypeClass + " border py-10 px-10 hover:text-black " + /*data*/
+      ctx2[7].ticketTypeClass + " border py-10 px-10 hover:text-black " + /*data*/
       (ctx2[0].config.ticketing ? "cursor-pointer" : ""))) {
         attr(div5, "class", div5_class_value);
       }
@@ -29608,7 +30028,7 @@ function create_each_block(ctx) {
   let div0;
   let t0_value = (
     /*fi*/
-    ctx[3].title + ""
+    ctx[4].title + ""
   );
   let t0;
   let t1;
@@ -29620,7 +30040,7 @@ function create_each_block(ctx) {
   let dispose;
   sveltemarkdown = new SvelteMarkdown({ props: { source: (
     /*fi*/
-    ctx[3].text
+    ctx[4].text
   ) } });
   return {
     c() {
@@ -29671,13 +30091,13 @@ function create_each_block(ctx) {
     p(ctx2, dirty) {
       if ((!current || dirty & /*data*/
       1) && t0_value !== (t0_value = /*fi*/
-      ctx2[3].title + ""))
+      ctx2[4].title + ""))
         set_data(t0, t0_value);
       const sveltemarkdown_changes = {};
       if (dirty & /*data*/
       1)
         sveltemarkdown_changes.source = /*fi*/
-        ctx2[3].text;
+        ctx2[4].text;
       sveltemarkdown.$set(sveltemarkdown_changes);
     },
     i(local) {
@@ -29768,35 +30188,43 @@ function create_fragment(ctx) {
   let t17;
   let a_href_value;
   let t18;
-  let div25;
   let div21;
+  let div20;
   let div18;
   let t19;
   let t20;
+  let t21;
   let div19;
-  let t21_value = (
+  let t22;
+  let div29;
+  let div25;
+  let div22;
+  let t23;
+  let t24;
+  let div23;
+  let t25_value = (
     /*data*/
     ctx[0].config.ticketsIntro + ""
   );
-  let t21;
-  let t22;
-  let div20;
-  let t23;
-  let t24;
   let t25;
-  let div24;
-  let div22;
   let t26;
+  let div24;
   let t27;
-  let div23;
-  let web3dialog;
   let t28;
-  let div29;
+  let t29;
   let div28;
   let div26;
-  let t29;
   let t30;
+  let t31;
   let div27;
+  let web3dialog;
+  let t32;
+  let div33;
+  let div32;
+  let div30;
+  let t33;
+  let t34;
+  let div31;
   let current;
   let mounted;
   let dispose;
@@ -29809,16 +30237,16 @@ function create_fragment(ctx) {
       ctx[0].config.intro
     ) }
   });
-  let each_value_5 = (
+  let each_value_7 = (
     /*data*/
     ctx[0].config.themes
   );
-  let each_blocks_3 = [];
-  for (let i2 = 0; i2 < each_value_5.length; i2 += 1) {
-    each_blocks_3[i2] = create_each_block_5(get_each_context_5(ctx, each_value_5, i2));
+  let each_blocks_4 = [];
+  for (let i2 = 0; i2 < each_value_7.length; i2 += 1) {
+    each_blocks_4[i2] = create_each_block_7(get_each_context_7(ctx, each_value_7, i2));
   }
-  const out = (i2) => transition_out(each_blocks_3[i2], 1, 1, () => {
-    each_blocks_3[i2] = null;
+  const out = (i2) => transition_out(each_blocks_4[i2], 1, 1, () => {
+    each_blocks_4[i2] = null;
   });
   peoplelist0 = new PeopleList({
     props: {
@@ -29834,7 +30262,7 @@ function create_fragment(ctx) {
   });
   let if_block0 = (
     /*data*/
-    ctx[0].config.speakersNote && create_if_block_4(ctx)
+    ctx[0].config.speakersNote && create_if_block_6(ctx)
   );
   peoplelist1 = new PeopleList({
     props: {
@@ -29849,14 +30277,32 @@ function create_fragment(ctx) {
       size: "small"
     }
   });
-  let each_value_3 = (
+  let each_value_5 = (
     /*data*/
     ctx[0].config.partnerLevels
+  );
+  let each_blocks_3 = [];
+  for (let i2 = 0; i2 < each_value_5.length; i2 += 1) {
+    each_blocks_3[i2] = create_each_block_5(get_each_context_5(ctx, each_value_5, i2));
+  }
+  let if_block1 = (
+    /*data*/
+    ctx[0].config.programNote && create_if_block_5(ctx)
+  );
+  let each_value_3 = (
+    /*data*/
+    ctx[0].config.stages.map(
+      /*func_1*/
+      ctx[2]
+    ).filter(func_2)
   );
   let each_blocks_2 = [];
   for (let i2 = 0; i2 < each_value_3.length; i2 += 1) {
     each_blocks_2[i2] = create_each_block_3(get_each_context_3(ctx, each_value_3, i2));
   }
+  const out_1 = (i2) => transition_out(each_blocks_2[i2], 1, 1, () => {
+    each_blocks_2[i2] = null;
+  });
   let each_value_1 = (
     /*data*/
     ctx[0].config.tickets
@@ -29865,14 +30311,14 @@ function create_fragment(ctx) {
   for (let i2 = 0; i2 < each_value_1.length; i2 += 1) {
     each_blocks_1[i2] = create_each_block_1(get_each_context_1(ctx, each_value_1, i2));
   }
-  const out_1 = (i2) => transition_out(each_blocks_1[i2], 1, 1, () => {
+  const out_2 = (i2) => transition_out(each_blocks_1[i2], 1, 1, () => {
     each_blocks_1[i2] = null;
   });
-  let if_block1 = (
+  let if_block2 = (
     /*data*/
     ctx[0].config.ticketing && create_if_block_1(ctx)
   );
-  let if_block2 = (
+  let if_block3 = (
     /*data*/
     ctx[0].config.ticketsNote && create_if_block(ctx)
   );
@@ -29888,7 +30334,7 @@ function create_fragment(ctx) {
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
     each_blocks[i2] = create_each_block(get_each_context(ctx, each_value, i2));
   }
-  const out_2 = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
+  const out_3 = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
     each_blocks[i2] = null;
   });
   return {
@@ -29917,8 +30363,8 @@ function create_fragment(ctx) {
       t4 = text("Main topics");
       t5 = space();
       div3 = element("div");
-      for (let i2 = 0; i2 < each_blocks_3.length; i2 += 1) {
-        each_blocks_3[i2].c();
+      for (let i2 = 0; i2 < each_blocks_4.length; i2 += 1) {
+        each_blocks_4[i2].c();
       }
       t6 = space();
       div9 = element("div");
@@ -29945,8 +30391,8 @@ function create_fragment(ctx) {
       div14 = element("div");
       t14 = text("Partners");
       t15 = space();
-      for (let i2 = 0; i2 < each_blocks_2.length; i2 += 1) {
-        each_blocks_2[i2].c();
+      for (let i2 = 0; i2 < each_blocks_3.length; i2 += 1) {
+        each_blocks_3[i2].c();
       }
       t16 = space();
       div15 = element("div");
@@ -29954,38 +30400,51 @@ function create_fragment(ctx) {
       button = element("button");
       t17 = text("Become a partner");
       t18 = space();
-      div25 = element("div");
       div21 = element("div");
-      div18 = element("div");
-      t19 = text("Ticket");
-      t20 = space();
-      div19 = element("div");
-      t21 = text(t21_value);
-      t22 = space();
       div20 = element("div");
+      div18 = element("div");
+      t19 = text("Program");
+      t20 = space();
+      if (if_block1)
+        if_block1.c();
+      t21 = space();
+      div19 = element("div");
+      for (let i2 = 0; i2 < each_blocks_2.length; i2 += 1) {
+        each_blocks_2[i2].c();
+      }
+      t22 = space();
+      div29 = element("div");
+      div25 = element("div");
+      div22 = element("div");
+      t23 = text("Ticket");
+      t24 = space();
+      div23 = element("div");
+      t25 = text(t25_value);
+      t26 = space();
+      div24 = element("div");
       for (let i2 = 0; i2 < each_blocks_1.length; i2 += 1) {
         each_blocks_1[i2].c();
       }
-      t23 = space();
-      if (if_block1)
-        if_block1.c();
-      t24 = space();
+      t27 = space();
       if (if_block2)
         if_block2.c();
-      t25 = space();
-      div24 = element("div");
-      div22 = element("div");
-      t26 = text("Get your discount");
-      t27 = space();
-      div23 = element("div");
-      create_component(web3dialog.$$.fragment);
       t28 = space();
-      div29 = element("div");
+      if (if_block3)
+        if_block3.c();
+      t29 = space();
       div28 = element("div");
       div26 = element("div");
-      t29 = text("FAQ");
-      t30 = space();
+      t30 = text("Get your discount");
+      t31 = space();
       div27 = element("div");
+      create_component(web3dialog.$$.fragment);
+      t32 = space();
+      div33 = element("div");
+      div32 = element("div");
+      div30 = element("div");
+      t33 = text("FAQ");
+      t34 = space();
+      div31 = element("div");
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
         each_blocks[i2].c();
       }
@@ -30029,8 +30488,8 @@ function create_fragment(ctx) {
       t5 = claim_space(div4_nodes);
       div3 = claim_element(div4_nodes, "DIV", { class: true });
       var div3_nodes = children(div3);
-      for (let i2 = 0; i2 < each_blocks_3.length; i2 += 1) {
-        each_blocks_3[i2].l(div3_nodes);
+      for (let i2 = 0; i2 < each_blocks_4.length; i2 += 1) {
+        each_blocks_4[i2].l(div3_nodes);
       }
       div3_nodes.forEach(detach);
       div4_nodes.forEach(detach);
@@ -30080,8 +30539,8 @@ function create_fragment(ctx) {
       t14 = claim_text(div14_nodes, "Partners");
       div14_nodes.forEach(detach);
       t15 = claim_space(div16_nodes);
-      for (let i2 = 0; i2 < each_blocks_2.length; i2 += 1) {
-        each_blocks_2[i2].l(div16_nodes);
+      for (let i2 = 0; i2 < each_blocks_3.length; i2 += 1) {
+        each_blocks_3[i2].l(div16_nodes);
       }
       t16 = claim_space(div16_nodes);
       div15 = claim_element(div16_nodes, "DIV", { class: true });
@@ -30097,65 +30556,86 @@ function create_fragment(ctx) {
       div16_nodes.forEach(detach);
       div17_nodes.forEach(detach);
       t18 = claim_space(nodes);
-      div25 = claim_element(nodes, "DIV", { class: true, id: true });
-      var div25_nodes = children(div25);
-      div21 = claim_element(div25_nodes, "DIV", { class: true });
+      div21 = claim_element(nodes, "DIV", { class: true, id: true });
       var div21_nodes = children(div21);
-      div18 = claim_element(div21_nodes, "DIV", { class: true });
-      var div18_nodes = children(div18);
-      t19 = claim_text(div18_nodes, "Ticket");
-      div18_nodes.forEach(detach);
-      t20 = claim_space(div21_nodes);
-      div19 = claim_element(div21_nodes, "DIV", { class: true });
-      var div19_nodes = children(div19);
-      t21 = claim_text(div19_nodes, t21_value);
-      div19_nodes.forEach(detach);
-      t22 = claim_space(div21_nodes);
       div20 = claim_element(div21_nodes, "DIV", { class: true });
       var div20_nodes = children(div20);
-      for (let i2 = 0; i2 < each_blocks_1.length; i2 += 1) {
-        each_blocks_1[i2].l(div20_nodes);
-      }
-      div20_nodes.forEach(detach);
-      t23 = claim_space(div21_nodes);
+      div18 = claim_element(div20_nodes, "DIV", { class: true });
+      var div18_nodes = children(div18);
+      t19 = claim_text(div18_nodes, "Program");
+      div18_nodes.forEach(detach);
+      t20 = claim_space(div20_nodes);
       if (if_block1)
-        if_block1.l(div21_nodes);
-      t24 = claim_space(div21_nodes);
-      if (if_block2)
-        if_block2.l(div21_nodes);
+        if_block1.l(div20_nodes);
+      t21 = claim_space(div20_nodes);
+      div19 = claim_element(div20_nodes, "DIV", { class: true });
+      var div19_nodes = children(div19);
+      for (let i2 = 0; i2 < each_blocks_2.length; i2 += 1) {
+        each_blocks_2[i2].l(div19_nodes);
+      }
+      div19_nodes.forEach(detach);
+      div20_nodes.forEach(detach);
       div21_nodes.forEach(detach);
-      t25 = claim_space(div25_nodes);
-      div24 = claim_element(div25_nodes, "DIV", { class: true });
-      var div24_nodes = children(div24);
-      div22 = claim_element(div24_nodes, "DIV", { class: true });
-      var div22_nodes = children(div22);
-      t26 = claim_text(div22_nodes, "Get your discount");
-      div22_nodes.forEach(detach);
-      t27 = claim_space(div24_nodes);
-      div23 = claim_element(div24_nodes, "DIV", {});
-      var div23_nodes = children(div23);
-      claim_component(web3dialog.$$.fragment, div23_nodes);
-      div23_nodes.forEach(detach);
-      div24_nodes.forEach(detach);
-      div25_nodes.forEach(detach);
-      t28 = claim_space(nodes);
+      t22 = claim_space(nodes);
       div29 = claim_element(nodes, "DIV", { class: true, id: true });
       var div29_nodes = children(div29);
+      div25 = claim_element(div29_nodes, "DIV", { class: true });
+      var div25_nodes = children(div25);
+      div22 = claim_element(div25_nodes, "DIV", { class: true });
+      var div22_nodes = children(div22);
+      t23 = claim_text(div22_nodes, "Ticket");
+      div22_nodes.forEach(detach);
+      t24 = claim_space(div25_nodes);
+      div23 = claim_element(div25_nodes, "DIV", { class: true });
+      var div23_nodes = children(div23);
+      t25 = claim_text(div23_nodes, t25_value);
+      div23_nodes.forEach(detach);
+      t26 = claim_space(div25_nodes);
+      div24 = claim_element(div25_nodes, "DIV", { class: true });
+      var div24_nodes = children(div24);
+      for (let i2 = 0; i2 < each_blocks_1.length; i2 += 1) {
+        each_blocks_1[i2].l(div24_nodes);
+      }
+      div24_nodes.forEach(detach);
+      t27 = claim_space(div25_nodes);
+      if (if_block2)
+        if_block2.l(div25_nodes);
+      t28 = claim_space(div25_nodes);
+      if (if_block3)
+        if_block3.l(div25_nodes);
+      div25_nodes.forEach(detach);
+      t29 = claim_space(div29_nodes);
       div28 = claim_element(div29_nodes, "DIV", { class: true });
       var div28_nodes = children(div28);
       div26 = claim_element(div28_nodes, "DIV", { class: true });
       var div26_nodes = children(div26);
-      t29 = claim_text(div26_nodes, "FAQ");
+      t30 = claim_text(div26_nodes, "Get your discount");
       div26_nodes.forEach(detach);
-      t30 = claim_space(div28_nodes);
-      div27 = claim_element(div28_nodes, "DIV", { class: true });
+      t31 = claim_space(div28_nodes);
+      div27 = claim_element(div28_nodes, "DIV", {});
       var div27_nodes = children(div27);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].l(div27_nodes);
-      }
+      claim_component(web3dialog.$$.fragment, div27_nodes);
       div27_nodes.forEach(detach);
       div28_nodes.forEach(detach);
       div29_nodes.forEach(detach);
+      t32 = claim_space(nodes);
+      div33 = claim_element(nodes, "DIV", { class: true, id: true });
+      var div33_nodes = children(div33);
+      div32 = claim_element(div33_nodes, "DIV", { class: true });
+      var div32_nodes = children(div32);
+      div30 = claim_element(div32_nodes, "DIV", { class: true });
+      var div30_nodes = children(div30);
+      t33 = claim_text(div30_nodes, "FAQ");
+      div30_nodes.forEach(detach);
+      t34 = claim_space(div32_nodes);
+      div31 = claim_element(div32_nodes, "DIV", { class: true });
+      var div31_nodes = children(div31);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].l(div31_nodes);
+      }
+      div31_nodes.forEach(detach);
+      div32_nodes.forEach(detach);
+      div33_nodes.forEach(detach);
       this.h();
     },
     h() {
@@ -30216,18 +30696,23 @@ function create_fragment(ctx) {
       attr(div17, "class", "");
       attr(div17, "id", "sponsors");
       attr(div18, "class", "section-header");
-      attr(div19, "class", "mb-8 text-mild");
-      attr(div20, "class", "grid lg:grid-cols-2 gap-10 mx-auto");
-      attr(div21, "class", "middle-pane-medium pt-16 mx-auto");
-      attr(div22, "class", "section-subheader");
-      attr(div24, "class", "middle-pane-medium mx-auto pt-20 pb-32");
-      attr(div25, "class", "");
-      attr(div25, "id", "ticket");
-      attr(div26, "class", "section-header");
-      attr(div27, "class", "grid md:grid-cols-2 gap-8 md:gap-16");
-      attr(div28, "class", "middle-pane-medium pt-20 mx-auto");
-      attr(div29, "class", "pb-36 bg-[#0e0e0e]");
-      attr(div29, "id", "faq");
+      attr(div19, "class", "program xl:flex gap-10 xl:gap-4");
+      attr(div20, "class", "middle-pane-medium pt-16 mx-auto pb-32");
+      attr(div21, "class", "bg-black");
+      attr(div21, "id", "program");
+      attr(div22, "class", "section-header");
+      attr(div23, "class", "mb-8 text-mild");
+      attr(div24, "class", "grid lg:grid-cols-2 gap-10 mx-auto");
+      attr(div25, "class", "middle-pane-medium pt-16 mx-auto");
+      attr(div26, "class", "section-subheader");
+      attr(div28, "class", "middle-pane-medium mx-auto pt-20 pb-32");
+      attr(div29, "class", "");
+      attr(div29, "id", "ticket");
+      attr(div30, "class", "section-header");
+      attr(div31, "class", "grid md:grid-cols-2 gap-8 md:gap-16");
+      attr(div32, "class", "middle-pane-medium pt-20 mx-auto");
+      attr(div33, "class", "pb-36 bg-[#0e0e0e]");
+      attr(div33, "id", "faq");
     },
     m(target, anchor) {
       append_hydration(document.head, meta0);
@@ -30254,8 +30739,8 @@ function create_fragment(ctx) {
       append_hydration(div2, t4);
       append_hydration(div4, t5);
       append_hydration(div4, div3);
-      for (let i2 = 0; i2 < each_blocks_3.length; i2 += 1) {
-        each_blocks_3[i2].m(div3, null);
+      for (let i2 = 0; i2 < each_blocks_4.length; i2 += 1) {
+        each_blocks_4[i2].m(div3, null);
       }
       insert_hydration(target, t6, anchor);
       insert_hydration(target, div9, anchor);
@@ -30282,8 +30767,8 @@ function create_fragment(ctx) {
       append_hydration(div16, div14);
       append_hydration(div14, t14);
       append_hydration(div16, t15);
-      for (let i2 = 0; i2 < each_blocks_2.length; i2 += 1) {
-        each_blocks_2[i2].m(div16, null);
+      for (let i2 = 0; i2 < each_blocks_3.length; i2 += 1) {
+        each_blocks_3[i2].m(div16, null);
       }
       append_hydration(div16, t16);
       append_hydration(div16, div15);
@@ -30291,40 +30776,53 @@ function create_fragment(ctx) {
       append_hydration(a2, button);
       append_hydration(button, t17);
       insert_hydration(target, t18, anchor);
-      insert_hydration(target, div25, anchor);
-      append_hydration(div25, div21);
-      append_hydration(div21, div18);
-      append_hydration(div18, t19);
-      append_hydration(div21, t20);
-      append_hydration(div21, div19);
-      append_hydration(div19, t21);
-      append_hydration(div21, t22);
+      insert_hydration(target, div21, anchor);
       append_hydration(div21, div20);
-      for (let i2 = 0; i2 < each_blocks_1.length; i2 += 1) {
-        each_blocks_1[i2].m(div20, null);
-      }
-      append_hydration(div21, t23);
+      append_hydration(div20, div18);
+      append_hydration(div18, t19);
+      append_hydration(div20, t20);
       if (if_block1)
-        if_block1.m(div21, null);
-      append_hydration(div21, t24);
-      if (if_block2)
-        if_block2.m(div21, null);
-      append_hydration(div25, t25);
-      append_hydration(div25, div24);
-      append_hydration(div24, div22);
-      append_hydration(div22, t26);
-      append_hydration(div24, t27);
-      append_hydration(div24, div23);
-      mount_component(web3dialog, div23, null);
-      insert_hydration(target, t28, anchor);
+        if_block1.m(div20, null);
+      append_hydration(div20, t21);
+      append_hydration(div20, div19);
+      for (let i2 = 0; i2 < each_blocks_2.length; i2 += 1) {
+        each_blocks_2[i2].m(div19, null);
+      }
+      insert_hydration(target, t22, anchor);
       insert_hydration(target, div29, anchor);
+      append_hydration(div29, div25);
+      append_hydration(div25, div22);
+      append_hydration(div22, t23);
+      append_hydration(div25, t24);
+      append_hydration(div25, div23);
+      append_hydration(div23, t25);
+      append_hydration(div25, t26);
+      append_hydration(div25, div24);
+      for (let i2 = 0; i2 < each_blocks_1.length; i2 += 1) {
+        each_blocks_1[i2].m(div24, null);
+      }
+      append_hydration(div25, t27);
+      if (if_block2)
+        if_block2.m(div25, null);
+      append_hydration(div25, t28);
+      if (if_block3)
+        if_block3.m(div25, null);
+      append_hydration(div29, t29);
       append_hydration(div29, div28);
       append_hydration(div28, div26);
-      append_hydration(div26, t29);
-      append_hydration(div28, t30);
+      append_hydration(div26, t30);
+      append_hydration(div28, t31);
       append_hydration(div28, div27);
+      mount_component(web3dialog, div27, null);
+      insert_hydration(target, t32, anchor);
+      insert_hydration(target, div33, anchor);
+      append_hydration(div33, div32);
+      append_hydration(div32, div30);
+      append_hydration(div30, t33);
+      append_hydration(div32, t34);
+      append_hydration(div32, div31);
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].m(div27, null);
+        each_blocks[i2].m(div31, null);
       }
       current = true;
       if (!mounted) {
@@ -30337,7 +30835,8 @@ function create_fragment(ctx) {
           listen(button, "mouseenter", animateText),
           listen(div18, "mouseenter", animateText),
           listen(div22, "mouseenter", animateText),
-          listen(div26, "mouseenter", animateText)
+          listen(div26, "mouseenter", animateText),
+          listen(div30, "mouseenter", animateText)
         ];
         mounted = true;
       }
@@ -30408,23 +30907,23 @@ function create_fragment(ctx) {
       sveltemarkdown.$set(sveltemarkdown_changes);
       if (dirty & /*animateSection, data*/
       1) {
-        each_value_5 = /*data*/
+        each_value_7 = /*data*/
         ctx2[0].config.themes;
         let i2;
-        for (i2 = 0; i2 < each_value_5.length; i2 += 1) {
-          const child_ctx = get_each_context_5(ctx2, each_value_5, i2);
-          if (each_blocks_3[i2]) {
-            each_blocks_3[i2].p(child_ctx, dirty);
-            transition_in(each_blocks_3[i2], 1);
+        for (i2 = 0; i2 < each_value_7.length; i2 += 1) {
+          const child_ctx = get_each_context_7(ctx2, each_value_7, i2);
+          if (each_blocks_4[i2]) {
+            each_blocks_4[i2].p(child_ctx, dirty);
+            transition_in(each_blocks_4[i2], 1);
           } else {
-            each_blocks_3[i2] = create_each_block_5(child_ctx);
-            each_blocks_3[i2].c();
-            transition_in(each_blocks_3[i2], 1);
-            each_blocks_3[i2].m(div3, null);
+            each_blocks_4[i2] = create_each_block_7(child_ctx);
+            each_blocks_4[i2].c();
+            transition_in(each_blocks_4[i2], 1);
+            each_blocks_4[i2].m(div3, null);
           }
         }
         group_outros();
-        for (i2 = each_value_5.length; i2 < each_blocks_3.length; i2 += 1) {
+        for (i2 = each_value_7.length; i2 < each_blocks_4.length; i2 += 1) {
           out(i2);
         }
         check_outros();
@@ -30446,7 +30945,7 @@ function create_fragment(ctx) {
         if (if_block0) {
           if_block0.p(ctx2, dirty);
         } else {
-          if_block0 = create_if_block_4(ctx2);
+          if_block0 = create_if_block_6(ctx2);
           if_block0.c();
           if_block0.m(div8, null);
         }
@@ -30466,33 +30965,74 @@ function create_fragment(ctx) {
       peoplelist1.$set(peoplelist1_changes);
       if (dirty & /*data, animateSection*/
       1) {
-        each_value_3 = /*data*/
+        each_value_5 = /*data*/
         ctx2[0].config.partnerLevels;
         let i2;
-        for (i2 = 0; i2 < each_value_3.length; i2 += 1) {
-          const child_ctx = get_each_context_3(ctx2, each_value_3, i2);
-          if (each_blocks_2[i2]) {
-            each_blocks_2[i2].p(child_ctx, dirty);
+        for (i2 = 0; i2 < each_value_5.length; i2 += 1) {
+          const child_ctx = get_each_context_5(ctx2, each_value_5, i2);
+          if (each_blocks_3[i2]) {
+            each_blocks_3[i2].p(child_ctx, dirty);
           } else {
-            each_blocks_2[i2] = create_each_block_3(child_ctx);
-            each_blocks_2[i2].c();
-            each_blocks_2[i2].m(div16, t16);
+            each_blocks_3[i2] = create_each_block_5(child_ctx);
+            each_blocks_3[i2].c();
+            each_blocks_3[i2].m(div16, t16);
           }
         }
-        for (; i2 < each_blocks_2.length; i2 += 1) {
-          each_blocks_2[i2].d(1);
+        for (; i2 < each_blocks_3.length; i2 += 1) {
+          each_blocks_3[i2].d(1);
         }
-        each_blocks_2.length = each_value_3.length;
+        each_blocks_3.length = each_value_5.length;
       }
       if (!current || dirty & /*data*/
       1 && a_href_value !== (a_href_value = /*data*/
       ctx2[0].config.sponsorUrl)) {
         attr(a2, "href", a_href_value);
       }
+      if (
+        /*data*/
+        ctx2[0].config.programNote
+      ) {
+        if (if_block1) {
+          if_block1.p(ctx2, dirty);
+        } else {
+          if_block1 = create_if_block_5(ctx2);
+          if_block1.c();
+          if_block1.m(div20, t21);
+        }
+      } else if (if_block1) {
+        if_block1.d(1);
+        if_block1 = null;
+      }
+      if (dirty & /*data, animateSection*/
+      1) {
+        each_value_3 = /*data*/
+        ctx2[0].config.stages.map(
+          /*func_1*/
+          ctx2[2]
+        ).filter(func_2);
+        let i2;
+        for (i2 = 0; i2 < each_value_3.length; i2 += 1) {
+          const child_ctx = get_each_context_3(ctx2, each_value_3, i2);
+          if (each_blocks_2[i2]) {
+            each_blocks_2[i2].p(child_ctx, dirty);
+            transition_in(each_blocks_2[i2], 1);
+          } else {
+            each_blocks_2[i2] = create_each_block_3(child_ctx);
+            each_blocks_2[i2].c();
+            transition_in(each_blocks_2[i2], 1);
+            each_blocks_2[i2].m(div19, null);
+          }
+        }
+        group_outros();
+        for (i2 = each_value_3.length; i2 < each_blocks_2.length; i2 += 1) {
+          out_1(i2);
+        }
+        check_outros();
+      }
       if ((!current || dirty & /*data*/
-      1) && t21_value !== (t21_value = /*data*/
+      1) && t25_value !== (t25_value = /*data*/
       ctx2[0].config.ticketsIntro + ""))
-        set_data(t21, t21_value);
+        set_data(t25, t25_value);
       if (dirty & /*data, animateSection, goto*/
       1) {
         each_value_1 = /*data*/
@@ -30507,12 +31047,12 @@ function create_fragment(ctx) {
             each_blocks_1[i2] = create_each_block_1(child_ctx);
             each_blocks_1[i2].c();
             transition_in(each_blocks_1[i2], 1);
-            each_blocks_1[i2].m(div20, null);
+            each_blocks_1[i2].m(div24, null);
           }
         }
         group_outros();
         for (i2 = each_value_1.length; i2 < each_blocks_1.length; i2 += 1) {
-          out_1(i2);
+          out_2(i2);
         }
         check_outros();
       }
@@ -30520,31 +31060,31 @@ function create_fragment(ctx) {
         /*data*/
         ctx2[0].config.ticketing
       ) {
-        if (if_block1) {
-          if_block1.p(ctx2, dirty);
+        if (if_block2) {
+          if_block2.p(ctx2, dirty);
         } else {
-          if_block1 = create_if_block_1(ctx2);
-          if_block1.c();
-          if_block1.m(div21, t24);
+          if_block2 = create_if_block_1(ctx2);
+          if_block2.c();
+          if_block2.m(div25, t28);
         }
-      } else if (if_block1) {
-        if_block1.d(1);
-        if_block1 = null;
+      } else if (if_block2) {
+        if_block2.d(1);
+        if_block2 = null;
       }
       if (
         /*data*/
         ctx2[0].config.ticketsNote
       ) {
-        if (if_block2) {
-          if_block2.p(ctx2, dirty);
+        if (if_block3) {
+          if_block3.p(ctx2, dirty);
         } else {
-          if_block2 = create_if_block(ctx2);
-          if_block2.c();
-          if_block2.m(div21, null);
+          if_block3 = create_if_block(ctx2);
+          if_block3.c();
+          if_block3.m(div25, null);
         }
-      } else if (if_block2) {
-        if_block2.d(1);
-        if_block2 = null;
+      } else if (if_block3) {
+        if_block3.d(1);
+        if_block3 = null;
       }
       const web3dialog_changes = {};
       if (dirty & /*data*/
@@ -30566,12 +31106,12 @@ function create_fragment(ctx) {
             each_blocks[i2] = create_each_block(child_ctx);
             each_blocks[i2].c();
             transition_in(each_blocks[i2], 1);
-            each_blocks[i2].m(div27, null);
+            each_blocks[i2].m(div31, null);
           }
         }
         group_outros();
         for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
-          out_2(i2);
+          out_3(i2);
         }
         check_outros();
       }
@@ -30580,11 +31120,14 @@ function create_fragment(ctx) {
       if (current)
         return;
       transition_in(sveltemarkdown.$$.fragment, local);
-      for (let i2 = 0; i2 < each_value_5.length; i2 += 1) {
-        transition_in(each_blocks_3[i2]);
+      for (let i2 = 0; i2 < each_value_7.length; i2 += 1) {
+        transition_in(each_blocks_4[i2]);
       }
       transition_in(peoplelist0.$$.fragment, local);
       transition_in(peoplelist1.$$.fragment, local);
+      for (let i2 = 0; i2 < each_value_3.length; i2 += 1) {
+        transition_in(each_blocks_2[i2]);
+      }
       for (let i2 = 0; i2 < each_value_1.length; i2 += 1) {
         transition_in(each_blocks_1[i2]);
       }
@@ -30596,12 +31139,16 @@ function create_fragment(ctx) {
     },
     o(local) {
       transition_out(sveltemarkdown.$$.fragment, local);
-      each_blocks_3 = each_blocks_3.filter(Boolean);
-      for (let i2 = 0; i2 < each_blocks_3.length; i2 += 1) {
-        transition_out(each_blocks_3[i2]);
+      each_blocks_4 = each_blocks_4.filter(Boolean);
+      for (let i2 = 0; i2 < each_blocks_4.length; i2 += 1) {
+        transition_out(each_blocks_4[i2]);
       }
       transition_out(peoplelist0.$$.fragment, local);
       transition_out(peoplelist1.$$.fragment, local);
+      each_blocks_2 = each_blocks_2.filter(Boolean);
+      for (let i2 = 0; i2 < each_blocks_2.length; i2 += 1) {
+        transition_out(each_blocks_2[i2]);
+      }
       each_blocks_1 = each_blocks_1.filter(Boolean);
       for (let i2 = 0; i2 < each_blocks_1.length; i2 += 1) {
         transition_out(each_blocks_1[i2]);
@@ -30629,7 +31176,7 @@ function create_fragment(ctx) {
       if (detaching)
         detach(div5);
       destroy_component(sveltemarkdown);
-      destroy_each(each_blocks_3, detaching);
+      destroy_each(each_blocks_4, detaching);
       if (detaching)
         detach(t6);
       if (detaching)
@@ -30646,36 +31193,46 @@ function create_fragment(ctx) {
         detach(t13);
       if (detaching)
         detach(div17);
-      destroy_each(each_blocks_2, detaching);
+      destroy_each(each_blocks_3, detaching);
       if (detaching)
         detach(t18);
       if (detaching)
-        detach(div25);
-      destroy_each(each_blocks_1, detaching);
+        detach(div21);
       if (if_block1)
         if_block1.d();
-      if (if_block2)
-        if_block2.d();
-      destroy_component(web3dialog);
+      destroy_each(each_blocks_2, detaching);
       if (detaching)
-        detach(t28);
+        detach(t22);
       if (detaching)
         detach(div29);
+      destroy_each(each_blocks_1, detaching);
+      if (if_block2)
+        if_block2.d();
+      if (if_block3)
+        if_block3.d();
+      destroy_component(web3dialog);
+      if (detaching)
+        detach(t32);
+      if (detaching)
+        detach(div33);
       destroy_each(each_blocks, detaching);
       mounted = false;
       run_all(dispose);
     }
   };
 }
+const func_2 = (s2) => s2.program;
+const func_3 = (x) => x;
 function instance($$self, $$props, $$invalidate) {
   let { data } = $$props;
   const func = (level, p2) => p2.level == level.key;
+  const func_1 = (s2) => ({ ...s2, program: data.config.program[s2.id] });
   const click_handler = () => data.config.ticketing ? goto(data.config.ticketingUrl) : false;
   $$self.$$set = ($$props2) => {
     if ("data" in $$props2)
       $$invalidate(0, data = $$props2.data);
   };
-  return [data, func, click_handler];
+  return [data, func, func_1, click_handler];
 }
 class Page extends SvelteComponent {
   constructor(options) {

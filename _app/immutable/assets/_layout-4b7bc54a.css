@@ -1448,11 +1448,11 @@ person-item:hover .text-mild,
 	.xl\:flex {
 		display: flex;
 	}
-	.xl\:w-1\/2 {
-		width: 50%;
-	}
 	.xl\:w-36 {
 		width: 9rem;
+	}
+	.xl\:max-w-5xl {
+		max-width: 64rem;
 	}
 	.xl\:grid-cols-3 {
 		grid-template-columns: repeat(3, minmax(0, 1fr));

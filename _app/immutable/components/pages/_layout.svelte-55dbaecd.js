@@ -1157,8 +1157,8 @@ function instance($$self, $$props, $$invalidate) {
     { title: "intro", name: "#", url: "" },
     { title: "About", url: "#about" },
     { title: "Speakers", url: "#speakers" },
-    //{ title: 'Program', url: '#program' },
-    //{ title: 'Sponsors', url: '#sponsors' },
+    { title: "Program", url: "#program" },
+    { title: "Sponsors", url: "#sponsors" },
     { title: "FAQ", url: "#faq" },
     {
       title: "Chat",
