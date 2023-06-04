@@ -318,6 +318,13 @@ partners:
     img: firo.svg
     class: p-2
     level: 3
+  - id: firn
+    name: Firn
+    web: https://app.firn.cash/
+    twitter: firnprotocol
+    img: firn.png
+    class: p-4 invert hover:invert-0
+    level: 3
   - id: aragon-zk-research
     name: Aragon ZK Research
     web: https://research.aragon.org/
@@ -375,7 +382,7 @@ partners:
 stages:
   - id: main
     name: Main stage
-programNote: WIP. 
+#programNote: WIP. 
 program:
   main:
     - time: 9:00 - 9:30
@@ -386,7 +393,7 @@ program:
         - name: Mykola Siusko
       desc: Welcoming visitors to our private-centric research, community and conference
     - time: 9:45 - 10:05
-      title: Tornado Cash 2023: key learnings
+      title: "Tornado Cash 2023: key learnings"
       speakers:
         - name: Ameen Soleimani
     - time: 10:10 - 10:35
@@ -415,8 +422,6 @@ program:
         - name: Nick Almond
     - time: 13:00 - 14:00
       title: Lunch break
-      speakers:
-        - name: TBA
     - time: 14:00 - 14:20
       title: How privacy, electronic cash and cypherpunk tech increase our freedom
       speakers:

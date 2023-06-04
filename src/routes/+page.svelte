@@ -107,7 +107,7 @@
 	</div>
 </div>
 
-<!--div class="bg-black" id="program">
+<div class="bg-black" id="program">
 	<div class="middle-pane-medium pt-16 mx-auto pb-32">
 		<div class="section-header" on:mouseenter={animateText}>Program</div>
 		{#if data.config.programNote}
@@ -117,9 +117,9 @@
 			{#each data.config.stages
 				.map((s) => ({ ...s, program: data.config.program[s.id] }))
 				.filter((s) => s.program) as stage}
-				<div class="w-auto xl:w-1/2 mb-10 xl:mb-0">
+				<div class="w-auto mb-10 xl:mb-0 mx-auto">
 					<div class="text-xl font-bold mb-4 font-mono2 lowercase">{stage.name}</div>
-					<table class="table-auto table-custom w-full mt-8">
+					<table class="mx-auto xl:max-w-5xl table-auto table-custom w-full mt-8">
 						<tbody>
 							{#each stage.program as pi}
 								<tr class="" on:mouseenter={animateSection(35)}>
@@ -134,10 +134,10 @@
 									</td>
 									<td class="text-left">
 										<div class="">
-											<span class="animate-section {pi.type === 'other' ? 'text-mild' : ''}"
+											<div><span class="animate-section {pi.type === 'other' ? 'text-mild' : ''}"
 												>{pi.title}</span
-											>
-											{pi.speakers ? '― ' + pi.speakers[0]?.name : ''}
+											></div>
+											<div>{pi.speakers ? '― ' + pi.speakers[0]?.name : ''}</div>
 										</div>
 										{#if pi.desc}
 											<div class="mt-2 text-sm description text-mild markdown">
@@ -153,7 +153,7 @@
 			{/each}
 		</div>
 	</div>
-</div-->
+</div>
 
 <div class="" id="ticket">
 	<div class="middle-pane-medium pt-16 mx-auto">
