@@ -586,11 +586,11 @@
         ]
       },
       {
-        "time": "13:00 - 14:00",
+        "time": "13:00 - 14:30",
         "title": "Lunch break"
       },
       {
-        "time": "14:00 - 14:20",
+        "time": "14:30 - 14:50",
         "title": "How privacy, electronic cash and cypherpunk tech increase our freedom",
         "speakers": [
           {
@@ -599,7 +599,7 @@
         ]
       },
       {
-        "time": "14:25 - 14:45",
+        "time": "14:55 - 15:15",
         "title": "Why private voting matters?",
         "speakers": [
           {
@@ -608,7 +608,7 @@
         ]
       },
       {
-        "time": "14:50 - 15:10",
+        "time": "15:20 - 15:40",
         "title": "Data & meta-data exposed in wallets & RPC",
         "speakers": [
           {
@@ -617,7 +617,7 @@
         ]
       },
       {
-        "time": "15:15 - 15:35",
+        "time": "15:45 - 16:05",
         "title": "Zero leaks communication",
         "speakers": [
           {
@@ -626,7 +626,7 @@
         ]
       },
       {
-        "time": "15:40 - 16:00",
+        "time": "16:10 - 16:30",
         "title": "An Anonymous Trust and Credit System",
         "speakers": [
           {
@@ -635,7 +635,7 @@
         ]
       },
       {
-        "time": "16:05 - 16:25",
+        "time": "16:35 - 16:55",
         "title": "Private messaging protocols",
         "speakers": [
           {
@@ -644,7 +644,7 @@
         ]
       },
       {
-        "time": "16:30 - 16:50",
+        "time": "17:00 - 17:20",
         "title": "Privacy tooling fireside",
         "speakers": [
           {
@@ -653,7 +653,7 @@
         ]
       },
       {
-        "time": "16:55 - 17:15",
+        "time": "17:25 - 17:45",
         "title": "Privacy ecosystem scalability",
         "speakers": [
           {
@@ -662,7 +662,7 @@
         ]
       },
       {
-        "time": "17:20 - 17:40",
+        "time": "17:50 - 18:10",
         "title": "Private coins regulation",
         "speakers": [
           {
@@ -671,7 +671,7 @@
         ]
       },
       {
-        "time": "17:45 - 18:00",
+        "time": "18:15 - 18:30",
         "title": "W3PN ecosystem launch - closing ceremony",
         "speakers": [
           {
