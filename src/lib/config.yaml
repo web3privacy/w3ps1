@@ -420,45 +420,45 @@ program:
       title: Privacy dystopia & how to handle it
       speakers:
         - name: Nick Almond
-    - time: 13:00 - 14:00
+    - time: 13:00 - 14:30
       title: Lunch break
-    - time: 14:00 - 14:20
+    - time: 14:30 - 14:50
       title: How privacy, electronic cash and cypherpunk tech increase our freedom
       speakers:
         - name: Juraj Bednar
-    - time: 14:25 - 14:45
+    - time: 14:55 - 15:15
       title: Why private voting matters?
       speakers:
         - name: Alex Kampa
-    - time: 14:50 - 15:10
+    - time: 15:20 - 15:40
       title: Data & meta-data exposed in wallets & RPC
       speakers:
         - name: Tibor Csóka
-    - time: 15:15 - 15:35
+    - time: 15:45 - 16:05
       title: Zero leaks communication  
       speakers:
         - name: Costanza Gallo
-    - time: 15:40 - 16:00
+    - time: 16:10 - 16:30
       title: An Anonymous Trust and Credit System  
       speakers:
         - name: Merula
-    - time: 16:05 - 16:25
+    - time: 16:35 - 16:55
       title: Private messaging protocols  
       speakers:
         - name: Steffen Kux
-    - time: 16:30 - 16:50
+    - time: 17:00 - 17:20
       title: Privacy tooling fireside  
       speakers:
         - name: Steffen Kux, ALEX KAMPA, COSTANZA GALLO
-    - time: 16:55 - 17:15
+    - time: 17:25 - 17:45
       title:  Privacy ecosystem scalability  
       speakers:
         - name: Althea, Mario Havel
-    - time: 17:20 - 17:40
+    - time: 17:50 - 18:10
       title:  Private coins regulation  
       speakers:
         - name: TBA
-    - time: 17:45 - 18:00
+    - time: 18:15 - 18:30
       title:  W3PN ecosystem launch - closing ceremony  
       speakers:
         - name: PG, Wesley, TREE, MYKOLA SIUSKO
