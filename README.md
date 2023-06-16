@@ -16,7 +16,7 @@ JSON data about `w3ps1`:
 - Tree ([@treecz](https://twitter.com/treecz))
 - Mykola Siusko ([@nicksvyaznoy](https://twitter.com/nicksvyaznoy))
 - Coinmandeer ([@KeenOfCoin](https://twitter.com/KeenOfCoin))
-- Roman Mazur ([@romanmazur](https://twitter.com/romanmazur))
+- PG ([@EclecticSamurai](https://github.com/EclecticSamurai))
 
 ## License
 
