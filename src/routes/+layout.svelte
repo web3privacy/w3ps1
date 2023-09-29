@@ -24,7 +24,7 @@
 			external: true
 		},
 		{ title: 'Twitter', url: 'https://twitter.com/web3privacy', ico: 'twitter', external: true },
-		{ title: 'Ticket', url: '#ticket', class: 'button' }
+		{ title: 'Watch Talks', url: 'https://watch.web3privacy.info/', class: 'button', external: true }
 	];
 
 	const homepageAnimation = () => {
