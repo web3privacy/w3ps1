@@ -569,7 +569,7 @@ function create_fragment(ctx) {
       a2 = element("a");
       button1 = element("button");
       div11 = element("div");
-      t15 = text("Buy Ticket");
+      t15 = text("Watch recorded talks");
       t16 = space();
       if (default_slot)
         default_slot.c();
@@ -702,7 +702,7 @@ function create_fragment(ctx) {
       var button1_nodes = children(button1);
       div11 = claim_element(button1_nodes, "DIV", { class: true });
       var div11_nodes = children(div11);
-      t15 = claim_text(div11_nodes, "Buy Ticket");
+      t15 = claim_text(div11_nodes, "Watch recorded talks");
       div11_nodes.forEach(detach);
       button1_nodes.forEach(detach);
       a2_nodes.forEach(detach);
@@ -816,7 +816,7 @@ function create_fragment(ctx) {
       attr(div10, "class", "px-6 py-2.5 inline-block font-medium");
       attr(div11, "class", "m-1 button-inverse");
       attr(button1, "class", "uppercase text-lg w-full");
-      attr(a2, "href", "/#ticket");
+      attr(a2, "href", "https://watch.web3privacy.info/");
       attr(div12, "class", "inline-block w-full md:w-auto");
       attr(div13, "class", "inline-block bg-white text-black font-medium md:w-auto w-3/4");
       attr(div14, "class", "mt-14 text-lg md:text-xl uppercase");
@@ -956,7 +956,6 @@ function create_fragment(ctx) {
           ),
           listen(div8, "mouseenter", animateText),
           listen(div11, "mouseenter", animateText),
-          listen(a2, "click", handleAnchorClick),
           listen(div23, "mouseenter", animateSection())
         ];
         mounted = true;
@@ -1173,9 +1172,10 @@ function instance($$self, $$props, $$invalidate) {
       external: true
     },
     {
-      title: "Ticket",
-      url: "#ticket",
-      class: "button"
+      title: "Watch Talks",
+      url: "https://watch.web3privacy.info/",
+      class: "button",
+      external: true
     }
   ];
   const homepageAnimation = () => {

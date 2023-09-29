@@ -613,8 +613,12 @@ const data = {
   badgesApiUrl: "https://badges-pretix-voucher-api.web3privacy.info"
 };
 async function load({ params, url, fetch }) {
-  const resp = await fetch(data.badgesApiUrl + "/badges");
-  const badges = await resp.json();
+  let resp;
+  try {
+    resp = await fetch(data.badgesApiUrl + "/badges");
+  } catch {
+  }
+  const badges = resp ? await resp.json() : [];
   return {
     config: data,
     badges
