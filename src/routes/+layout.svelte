@@ -158,10 +158,10 @@
 							>
 						</div>
 						<div class="inline-block w-full md:w-auto">
-							<a href="/#ticket" on:click={handleAnchorClick}
+							<a href="https://watch.web3privacy.info/"
 								><button class="uppercase text-lg w-full"
 									><div class="m-1 button-inverse" on:mouseenter={animateText}>
-										Buy Ticket
+										Watch recorded talks
 									</div></button
 								></a
 							>
