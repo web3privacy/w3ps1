@@ -29,7 +29,7 @@ jobs:
         run: npm run build
 
       - name: Add custom domain
-        run: 'touch build/CNAME && echo "prague.web3privacy.info" >> build/CNAME'
+        run: 'touch build/CNAME && echo "prague22.web3privacy.info" >> build/CNAME'
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
